@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — Social Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;
+--fb:#1877f2;--ig:#e1306c;--yt:#ff0000;--li:#0a66c2;--pos:#12b76a;--neg:#f04438;--rail:#0b1533;--accent:#5b6bf5;--radius:14px;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+.app{display:flex;min-height:100vh}
+.rail{width:74px;background:var(--rail);flex:none;display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:4px;position:sticky;top:0;height:100vh}
+.rail .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#5b6bf5,#22d3ee);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;margin-bottom:10px}
+.rbtn{width:46px;height:46px;border-radius:12px;border:none;cursor:pointer;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;opacity:.5;transition:.15s;background:#26304f}
+.rbtn:hover{opacity:.85}
+.rbtn.active{opacity:1;box-shadow:0 0 0 2px #fff inset}
+.rlabel{color:#9aa6c6;font-size:9px;margin-top:-2px;margin-bottom:4px}
+.main{flex:1;padding:20px 24px;min-width:0;max-width:1400px}
+.hd{background:var(--card);border-radius:var(--radius);padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.hd .ttl{display:flex;align-items:center;gap:12px}
+.hd .badge{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+.hd h1{font-size:18px;font-weight:800}
+.hd .per{font-size:12px;color:var(--muted)}
+.hd .right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{font-size:11px;background:#eef2ff;color:#3949ab;padding:5px 10px;border-radius:999px;font-weight:700}
+.tbtn{font-size:12px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.tbtn:hover{background:#eef1f6}
+.tbtn.p{background:var(--accent);color:#fff;border-color:var(--accent)}
+.kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:16px}
+.kpi{background:var(--card);border-radius:var(--radius);padding:15px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);border-top:3px solid var(--accent)}
+.kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.kpi .v{font-size:26px;font-weight:800;margin-top:6px}
+.kpi .c{font-size:12px;font-weight:700;margin-top:3px}
+.c.up{color:var(--pos)}.c.down{color:var(--neg)}.c.flat{color:var(--muted)}
+.grid{display:grid;gap:16px;margin-bottom:16px}
+.g2{grid-template-columns:1.5fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g2e{grid-template-columns:1fr 1fr}
+@media(max-width:900px){.g2,.g3,.g2e{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06)}
+.panel h3{font-size:13px;font-weight:800;margin-bottom:12px}
+.chart{position:relative;height:250px}.chart.sm{height:210px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.4px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.post{max-width:360px;color:#3b4560}
+a{color:var(--fb);text-decoration:none}a:hover{text-decoration:underline}
+ul.clean{list-style:none}ul.clean li{font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px}
+ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(--accent);font-weight:800}
+.pill{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px}
+.pill.on{background:#dcfce7;color:#166534}.pill.off{background:#fef3c7;color:#92400e}.pill.none{background:#eef2ff;color:#3730a3}
+.snap{display:flex;align-items:center;gap:14px}.snap .big{font-size:40px;font-weight:800}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.foot{font-size:12px;color:#9aa6c6;margin:18px 0 6px;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(10,15,30,.5);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal.open{display:flex}
+.modal .box{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal h2{font-size:17px;margin-bottom:12px}
+.modal ol{margin:0 0 8px 18px}.modal li{font-size:13px;margin:7px 0}
+.modal .x{float:right;cursor:pointer;color:var(--muted);font-weight:800;border:none;background:none;font-size:18px}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="rail">
+    <div class="logo">DX</div>
+    <button class="rbtn" data-k="all" style="background:#5b6bf5">All</button><div class="rlabel">All</div>
+    <button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
+    <button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
+    <button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
+    <button class="rbtn" data-k="linkedin" style="background:#0a66c2">in</button><div class="rlabel">LI</div>
+  </nav>
+  <main class="main">
+    <div class="hd">
+      <div class="ttl"><div class="badge" id="hdBadge">f</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
+      <div class="right">
+        <span class="chip" id="hdChip"></span>
+        <button class="tbtn" id="shareBtn"></button>
+        <button class="tbtn p" id="langBtn">VI</button>
+      </div>
+    </div>
+    <div id="view"></div>
+    <div class="foot" id="foot"></div>
+  </main>
+</div>
+
+<div class="modal" id="shareModal"><div class="box"><button class="x" onclick="closeShare()">×</button><div id="shareContent"></div></div></div>
+
+<script>
+// ============ REAL DATA — captured 16 Jul 2026 via Chrome (Meta Business Suite + YouTube Studio) ============
+const PERIOD_EN="Last 28 days: 17 Jun – 14 Jul 2026", PERIOD_VI="28 ngày qua: 17/6 – 14/7/2026";
+const dlabels=(()=>{const a=[];const d=new Date(2026,5,17);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
+
+const FB={ followers:111,
+  kpis:[{en:"Views",vi:"Lượt xem",v:1900,c:32.6},{en:"Reach (viewers)",vi:"Người tiếp cận",v:291,c:3},{en:"Facebook visits",vi:"Lượt truy cập",v:67,c:103},{en:"Content interactions",vi:"Tương tác ND",v:71,c:16.4},{en:"Video 3s views",vi:"Video 3s views",v:72,c:31.4},{en:"Net new followers",vi:"Follower ròng",v:0,c:0}],
+  viewsDaily:[41,52,23,10,148,52,17,95,127,56,35,20,77,50,29,234,94,25,40,61,11,150,79,50,41,13,200,100],
+  interactionsDaily:[2,6,0,0,3,0,1,7,3,2,2,0,4,1,2,9,4,0,2,2,0,7,5,2,0,0,6,1],
+  visitsDaily:[0,0,0,1,3,4,6,0,2,0,1,0,5,10,2,8,4,0,1,0,1,1,0,0,3,1,7,7],
+  video3sDaily:[12,10,3,4,12,3,0,0,4,0,0,1,1,0,1,3,2,3,0,1,0,1,1,1,1,1,7,0],
+  viewsSrc:[50.3,49.7], intSrc:[55,16], watch:{en:"19m 45s",vi:"19 phút 45 giây"}, watchC:48.1,
+  posts:[{d:"2 Jul",t:"The Fire Pit Before It Existed — VR",reach:340,react:5,com:0,sh:2},{d:"6 Jul",t:"Uncontrolled Luxury Builds — 5D BIM",reach:121,react:3,com:0,sh:1},{d:"10 Jul",t:"The Most Valuable Part Isn't Visible",reach:112,react:4,com:0,sh:1},{d:"8 Jul",t:"Why Do Some Homes Feel Better?",reach:90,react:5,com:0,sh:2},{d:"15 Jul",t:"Luxury isn't just about spaces — Millboard",reach:62,react:6,com:0,sh:0},{d:"13 Jul",t:"Is your builder protecting asset value?",reach:36,react:2,com:0,sh:0}],
+  insights:{en:["Views ▲32.6% but net followers flat — reach grows, doesn't convert. Add a 'Follow for the build series' CTA.","49.7% of views are from non-followers (▲13%) — content escapes the bubble; double down on Reels & 'before it's built' hooks.","The 2 Jul VR fire-pit post reached 340 — ~5× the average. VR/interactive reveals are your highest-reach format; make one weekly.","Comments ≈ 0 — captions tell, they don't ask. End each post with a question to trigger comments."],
+    vi:["Views ▲32,6% nhưng follower ròng không đổi — reach tăng mà không chuyển đổi. Thêm CTA 'Theo dõi để xem chuỗi thi công'.","49,7% lượt xem đến từ người chưa theo dõi (▲13%) — nội dung thoát khỏi vòng follower; đẩy mạnh Reels & hook 'trước khi xây'.","Bài VR fire-pit 2/7 đạt reach 340 — gấp ~5 lần trung bình. Reveal VR/tương tác là định dạng reach cao nhất; làm 1 bài/tuần.","Bình luận ≈ 0 — caption chỉ kể, không hỏi. Kết mỗi bài bằng 1 câu hỏi để kích bình luận."]},
+  next:{en:["1 VR/interactive project reveal per week","Add a follow CTA + a question to every caption","Reply to comments <2h; DM warm reactors","Repurpose the fire-pit post as a Reel + YouTube Short"],
+    vi:["1 reveal dự án VR/tương tác mỗi tuần","Thêm CTA theo dõi + 1 câu hỏi vào mỗi caption","Trả lời bình luận <2h; nhắn tin người thả cảm xúc","Tái sử dụng bài fire-pit thành Reel + YouTube Short"]} };
+
+const IG={ followers:33, posts:90,
+  kpis:[{en:"Views",vi:"Lượt xem",v:519,c:2.6},{en:"Reach",vi:"Người tiếp cận",v:115,c:70.7},{en:"Content interactions",vi:"Tương tác ND",v:5,c:-73.7},{en:"Followers",vi:"Người theo dõi",v:33,c:null},{en:"Posts",vi:"Bài đăng",v:90,c:null},{en:"New follows",vi:"Follow mới",v:0,c:0}],
+  viewsDaily:[95,16,1,0,91,0,0,91,41,15,17,1,14,8,4,5,3,1,0,3,0,68,12,7,4,3,11,8],
+  reachDaily:[91,17,1,0,3,0,0,2,0,0,0,0,5,0,2,2,2,0,0,0,0,2,1,2,1,1,0,2],
+  interactionsDaily:[1,0,1,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  viewsSrc:[52.2,47.8], reachSrc:[11,105],
+  posts:[{d:"18 Jun",t:"Architecture isn't static (Reel)",reach:108,react:2,com:0,sh:0},{d:"8 Jul",t:"Why Do Some Homes Feel Better",reach:3,react:5,com:0,sh:2},{d:"24 Jun",t:"Aether atrium — pond & waterfall",reach:3,react:3,com:0,sh:2},{d:"29 Jun",t:"Medical-grade Star Ceiling cinema",reach:4,react:1,com:0,sh:0},{d:"2 Jul",t:"The Fire Pit Before It Existed",reach:6,react:1,com:0,sh:0},{d:"15 Jul",t:"Luxury isn't just about spaces",reach:5,react:0,com:0,sh:0}],
+  insights:{en:["Reach ▲70.7% and 72.6% of it from non-followers — discovery works, but interactions crashed −73.7% (only 5). The hooks aren't landing.","The 18 Jun Reel reached 108 vs 3–6 for static posts — Reels are ~20× your image reach. Shift the mix to mostly Reels.","0 new follows despite reach — no follow trigger. Add 'Follow @dxliving.au for the Project 251 build' on every Reel.","Only 2 posts & 0 Stories last week — cadence is thin. Batch 5 Reels/week, post daily, use 3–5 niche hashtags."],
+    vi:["Reach ▲70,7% và 72,6% đến từ người chưa follow — khám phá tốt, nhưng tương tác sụt −73,7% (chỉ 5). Hook chưa ăn.","Reel 18/6 đạt reach 108 so với 3–6 của bài ảnh — Reels reach gấp ~20 lần ảnh. Chuyển tỷ trọng sang chủ yếu Reels.","0 follow mới dù có reach — thiếu 'mồi' theo dõi. Thêm 'Follow @dxliving.au để xem thi công Project 251' vào mỗi Reel.","Tuần qua chỉ 2 bài & 0 Story — tần suất mỏng. Sản xuất 5 Reels/tuần, đăng hằng ngày, dùng 3–5 hashtag ngách."]},
+  next:{en:["Make Reels the primary format (3–5/week)","Add a follow CTA + question to every caption","Post 1–2 Stories/day with poll or link sticker","Use 3–5 niche hashtags (#archviz #bim #luxuryhomesau)"],
+    vi:["Ưu tiên Reels làm định dạng chính (3–5/tuần)","Thêm CTA theo dõi + câu hỏi vào mỗi caption","Đăng 1–2 Story/ngày kèm poll hoặc link sticker","Dùng 3–5 hashtag ngách (#archviz #bim #luxuryhomesau)"]} };
+
+const YT={ subs:4, videos:24,
+  kpis:[{en:"Views (28d)",vi:"Lượt xem (28n)",v:11,c:-96},{en:"Watch time (hrs)",vi:"Giờ xem",v:0,c:-94},{en:"Subscribers",vi:"Người đăng ký",v:4,c:null},{en:"Videos",vi:"Số video",v:24,c:null},{en:"Latest CTR",vi:"CTR mới nhất",v:"4.9%",c:null},{en:"Avg view dur.",vi:"TG xem TB",v:"0:17",c:null}],
+  viewsNow:11, viewsPrior:275,
+  topVideos:[{t:"Architecture Isn't Static: Sunrise to Nightfall",v:3,dur:"0:17",ctr:"4.9%"},{t:"24 Hours of Precision, 15 Seconds of Progress",v:1,dur:"—",ctr:"—"}],
+  insights:{en:["Views collapsed −96% (11 in 28 days) and watch time ≈0h — the channel has stalled. The fix is consistency: a fixed weekly upload slot.","Avg view duration 0:17 — viewers drop almost immediately. Put the payoff (the finished render) in the first 3 seconds.","CTR 4.9% is healthy — the problem isn't titles/thumbnails, it's retention & upload frequency.","4 subs on 24 videos — nothing is built for search. Title for intent + publish Shorts to feed the channel."],
+    vi:["Lượt xem sụt −96% (11 trong 28 ngày), watch time ≈0h — kênh đang chững. Cách chữa là đều đặn: cố định 1 khung đăng/tuần.","Thời gian xem TB 0:17 — người xem thoát gần như ngay. Đưa 'điểm hay' (render hoàn thiện) vào 3 giây đầu.","CTR 4,9% khá tốt — vấn đề không phải tiêu đề/thumbnail mà là giữ chân & tần suất đăng.","4 subs/24 video — chưa có gì tối ưu cho tìm kiếm. Đặt tiêu đề theo intent + đăng Shorts để nuôi kênh."]},
+  next:{en:["Fix a weekly upload slot (1 long + 2 Shorts)","Hook with the finished render in the first 3s","Title for search ('3D home walkthrough before building — Australia')","Repurpose IG Reels / TikToks as Shorts daily"],
+    vi:["Cố định khung đăng tuần (1 video dài + 2 Shorts)","Hook bằng render hoàn thiện trong 3 giây đầu","Đặt tiêu đề theo tìm kiếm ('3D home walkthrough before building — Australia')","Tái dùng Reels/TikTok thành Shorts mỗi ngày"]} };
+
+const LI={ url:"https://www.linkedin.com/company/108389291/", followers:51,
+  kpis:[{en:"Followers",vi:"Người theo dõi",v:51,c:null},{en:"New followers (30d)",vi:"Follower mới (30n)",v:3,c:50},{en:"Impressions",vi:"Impressions",v:1273,c:60.5},{en:"Reactions",vi:"Cảm xúc",v:71,c:144.8},{en:"Page views",vi:"Lượt xem trang",v:29,c:0},{en:"Unique visitors",vi:"Khách duy nhất",v:13,c:18.2}],
+  locLabels:["Melbourne","Ho Chi Minh City","Brisbane","Metro Manila",{en:"Other",vi:"Khác"}], locData:[41.2,7.8,5.9,5.9,39.2],
+  imprPrior:793, imprNow:1273,
+  insights:{en:["LinkedIn is your best-engaging channel: 71 reactions on 1,273 impressions ≈ 5.6% engagement rate (vs FB ~3.7%, IG ~1%). This is where your B2B audience actually responds.","Impressions ▲60.5% and reactions ▲144.8% — strong momentum; the growth lever is simply posting more consistently.","41.2% of followers are in Greater Melbourne — your exact target market. HCMC (7.8%) reflects your team; content is reaching the right local buyers.","0 comments & 0 reposts — reactions are easy, conversation isn't. Ask a direct question and tag partners to unlock comments & extra reach."],
+    vi:["LinkedIn là kênh tương tác tốt nhất: 71 reactions trên 1.273 impressions ≈ 5,6% engagement rate (so với FB ~3,7%, IG ~1%). Đây là nơi khách B2B thực sự phản hồi.","Impressions ▲60,5% và reactions ▲144,8% — đà rất tốt; đòn bẩy tăng trưởng chỉ là đăng đều hơn.","41,2% follower ở Greater Melbourne — đúng thị trường mục tiêu. HCMC (7,8%) là team; nội dung đang chạm đúng khách địa phương.","0 comment & 0 repost — reactions dễ, hội thoại thì chưa. Đặt câu hỏi trực tiếp + tag đối tác để mở comment & thêm reach."]},
+  next:{en:["Post 3–4 times/week — consistency compounds fastest here","Ask a question + tag partners to spark comments","Founder reshares every company post","Lean into Melbourne-specific project stories (41% of followers)"],
+    vi:["Đăng 3–4 lần/tuần — đều đặn cộng dồn nhanh nhất ở đây","Đặt câu hỏi + tag đối tác để kích comment","Founder reshare mỗi bài của trang","Đẩy mạnh câu chuyện dự án tại Melbourne (41% follower)"]} };
+
+const DAILY={en:["Reply every comment & DM within 2h across channels","Publish/verify today's scheduled post per active channel","Add 1 Story (FB/IG) with a poll or link sticker","Engage 10 target AEC / home accounts (comment, not just like)","Log each post's early numbers; note the winning format"],
+  vi:["Trả lời mọi bình luận & tin nhắn trong 2h ở tất cả kênh","Đăng/kiểm tra bài đã lên lịch hôm nay của mỗi kênh","Thêm 1 Story (FB/IG) kèm poll hoặc link sticker","Tương tác 10 tài khoản AEC/nhà ở mục tiêu (bình luận, không chỉ like)","Ghi lại số liệu sớm mỗi bài; note định dạng thắng"]};
+
+const T={
+  title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
+  live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
+  dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
+  viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
+  reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
+  intByDay:{en:"Content interactions by day",vi:"Tương tác nội dung theo ngày"},
+  visitsByDay:{en:"Facebook visits by day",vi:"Lượt truy cập theo ngày"},
+  videoByDay:{en:"Video 3s views by day",vi:"Video 3s views theo ngày"},
+  reachByDay:{en:"Reach by day",vi:"Reach theo ngày"},
+  intBySrc:{en:"Interactions: followers vs non-followers",vi:"Tương tác: follower vs chưa follow"},
+  topPosts:{en:"Top posts (recent)",vi:"Top bài (gần đây)"},
+  insights:{en:"Insights",vi:"Nhận định"}, next:{en:"Next steps to improve",vi:"Bước cải thiện"},
+  snapshot:{en:"Snapshot",vi:"Ảnh chụp"}, viewsDrop:{en:"Views: this 28d vs prior 28d",vi:"Lượt xem: 28n này vs 28n trước"},
+  topVideos:{en:"Recent videos",vi:"Video gần đây"}, foll:{en:"followers",vi:"người theo dõi"},
+  followersBy:{en:"Followers by channel",vi:"Người theo dõi theo kênh"}, chStatus:{en:"Channel status",vi:"Trạng thái kênh"},
+  crossInsights:{en:"Cross-channel insights",vi:"Nhận định chéo kênh"}, routine:{en:"Daily routine (all channels · ~35 min)",vi:"Việc hằng ngày (mọi kênh · ~35 phút)"},
+  post:{en:"Post",vi:"Bài"},date:{en:"Date",vi:"Ngày"},reach:{en:"Reach",vi:"Reach"},react:{en:"React",vi:"Cảm xúc"},likes:{en:"Likes",vi:"Likes"},cmts:{en:"Cmts",vi:"BL"},shares:{en:"Shares",vi:"Chia sẻ"},
+  channel:{en:"Channel",vi:"Kênh"},followers2:{en:"Followers",vi:"Người theo dõi"},status:{en:"Status",vi:"Trạng thái"},
+  loginNeeded:{en:"login needed",vi:"cần đăng nhập"}, subs:{en:"subscribers",vi:"người đăng ký"},
+  deepNote:{en:"Deeper metrics for this channel are read live via Chrome. Ask me to refresh anytime.",vi:"Số liệu sâu của kênh này được đọc trực tiếp qua Chrome. Nhờ tôi làm mới bất cứ lúc nào."},
+  vsPrior:{en:"vs prior",vi:"vs kỳ trước"}, snapshotTag:{en:"snapshot",vi:"ảnh chụp"},
+  footer:{en:"DX Living / FeelDX · data read live from Meta Business Suite & YouTube Studio via Chrome on 16 Jul 2026 · point-in-time snapshot · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · số liệu đọc trực tiếp từ Meta Business Suite & YouTube Studio qua Chrome ngày 16/7/2026 · ảnh chụp tại thời điểm · lịch tự làm mới mỗi ngày."}
+};
+const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 16 Jul 2026. The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
+vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 16/7/2026. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
+
+// ============ render ============
+let lang="en", current="facebook", charts=[];
+const $=id=>document.getElementById(id);
+const tt=(o)=>o[lang];
+const num=v=>typeof v==="string"?v:v.toLocaleString();
+const COLORS=["#1877f2","#5b6bf5","#22c55e","#f59e0b","#e1306c","#06b6d4"];
+function clearCharts(){charts.forEach(c=>{try{c.destroy()}catch(e){}});charts=[];}
+function chg(c){if(c==null)return `<div class="c flat">${tt(T.snapshotTag)}</div>`;const cls=c>0?"up":(c<0?"down":"flat");const a=c>0?"▲":(c<0?"▼":"■");return `<div class="c ${cls}">${a} ${Math.abs(c)}% ${tt(T.vsPrior)}</div>`;}
+function kpis(arr){return `<div class="kpirow">`+arr.map(k=>`<div class="kpi"><div class="l">${k[lang]}</div><div class="v">${num(k.v)}</div>${chg(k.c)}</div>`).join("")+`</div>`;}
+function line(id,labels,data,color){charts.push(new Chart($(id),{type:"line",data:{labels,datasets:[{data,borderColor:color,backgroundColor:color+"22",fill:true,tension:.35,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:7,font:{size:10}}},y:{beginAtZero:true,ticks:{font:{size:10}}}}}}));}
+function bar(id,labels,data,colors){charts.push(new Chart($(id),{type:"bar",data:{labels,datasets:[{data,backgroundColor:colors||"#5b6bf5",borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}}));}
+function dough(id,labels,data){charts.push(new Chart($(id),{type:"doughnut",data:{labels,datasets:[{data,backgroundColor:COLORS,borderColor:"#fff",borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:"60%",plugins:{legend:{position:"bottom",labels:{boxWidth:12,font:{size:11}}}}}}));}
+function list(arr){return `<ul class="clean">`+arr.map(t=>`<li>${t}</li>`).join("")+`</ul>`;}
+Object.assign(T,{
+  deepDive:{en:"Deep dive — computed metrics",vi:"Phân tích sâu — chỉ số tính toán"},
+  topByReach:{en:"Top posts by reach",vi:"Top bài theo reach"},
+  audience:{en:"Audience",vi:"Đối tượng"},
+  audNote:{en:"Detailed age, gender & city breakdowns aren't available — Meta hides demographics for audiences under ~100 per segment (FB 111 / IG 33 followers). They unlock as the audience grows. Follower vs non-follower reach below is the available proxy.",vi:"Phân tích tuổi/giới tính/thành phố chưa có — Meta ẩn nhân khẩu học khi đối tượng dưới ~100/nhóm (FB 111 / IG 33 follower). Sẽ mở khi đối tượng lớn hơn. Tỷ lệ reach follower vs chưa follow bên dưới là chỉ số thay thế."},
+  engRate:{en:"Engagement rate",vi:"Tỷ lệ tương tác"},
+  avgReachPost:{en:"Avg reach / post",vi:"Reach TB/bài"},
+  nonFollReach:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},
+  avgPerDay:{en:"Avg / day",vi:"Trung bình/ngày"},
+  bestDay:{en:"Best day",vi:"Ngày tốt nhất"},
+  postsSampled:{en:"Posts sampled",vi:"Số bài mẫu"},
+  keyInsight:{en:"Key insight",vi:"Nhận định then chốt"}
+});
+function deepCards(items){return `<div class="kpirow">`+items.map(i=>`<div class="kpi" style="border-top-color:#22c55e"><div class="l">${i.l}</div><div class="v" style="font-size:20px">${i.v}</div>${i.s?`<div class="c flat">${i.s}</div>`:""}</div>`).join("")+`</div>`;}
+function hbar(id,labels,data,color){charts.push(new Chart($(id),{type:"bar",data:{labels,datasets:[{data,backgroundColor:color,borderRadius:5}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}}));}
+function audiencePanel(srcLabelA,srcLabelB,vals){return `<div class="panel"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div><div class="chart sm" style="height:180px;margin-top:8px"><canvas id="aud"></canvas></div></div>`;}
+function mean(a){return a.length?a.reduce((x,y)=>x+y,0)/a.length:0;}
+function bestOf(daily){const m=Math.max(...daily);return {v:m,label:dlabels[daily.indexOf(m)]};}
+function postsTable(posts,firstColReactLabel){return `<table><thead><tr><th>${tt(T.post)}</th><th>${tt(T.date)}</th><th class="num">${tt(T.reach)}</th><th class="num">${firstColReactLabel}</th><th class="num">${tt(T.cmts)}</th><th class="num">${tt(T.shares)}</th></tr></thead><tbody>`+posts.map(p=>`<tr><td class="post">${p.t}</td><td>${p.d}</td><td class="num">${p.reach}</td><td class="num">${p.react!=null?p.react:p.likes}</td><td class="num">${p.com}</td><td class="num">${p.sh}</td></tr>`).join("")+`</tbody></table>`;}
+
+function head(k,badge,color,per,chip){$("hdBadge").style.background=color;$("hdBadge").textContent=badge;$("hdTitle").textContent=tt(T.title[k]);$("hdPer").textContent=per;$("hdChip").textContent=chip;}
+
+function renderFacebook(){
+  head("facebook","f","#1877f2",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · DX Living · 111 "+tt(T.foll),tt(T.live));
+  const b=bestOf(FB.viewsDaily);
+  const stats=[{l:tt(T.engRate),v:(71/1900*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"49.7%",s:"▲ 13%"},{l:tt(T.avgPerDay),v:Math.round(1900/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
+  const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+  $("view").innerHTML=kpis(FB.kpis)+`
+   <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+   <div class="grid g3"><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.visitsByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.videoByDay)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">Watch time: <b>${tt(FB.watch)}</b> (▲ ${FB.watchC}%). Non-follower interactions ▲ 300%.</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+   <div class="grid g3"><div class="panel"><h3>${tt(T.intBySrc)}</h3><div class="chart sm"><canvas id="c6"></canvas></div></div><div class="panel" style="grid-column:span 2"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div></div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(FB.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(FB.next))}</div></div>`;
+  clearCharts();
+  line("c1",dlabels,FB.viewsDaily,"#1877f2");dough("c2",[fl,nf],FB.viewsSrc);
+  line("c3",dlabels,FB.interactionsDaily,"#5b6bf5");line("c4",dlabels,FB.visitsDaily,"#22c55e");line("c5",dlabels,FB.video3sDaily,"#f59e0b");
+  hbar("cb1",FB.posts.map(p=>p.d),FB.posts.map(p=>p.reach),"#1877f2");
+  dough("c6",[fl,nf],FB.intSrc);
+}
+function renderInstagram(){
+  head("instagram","ig","#e1306c",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @dxliving.au · 33 "+tt(T.foll),tt(T.live));
+  const b=bestOf(IG.viewsDaily);
+  const stats=[{l:tt(T.engRate),v:(5/115*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"72.6%",s:"▲ 70.7%"},{l:tt(T.avgPerDay),v:Math.round(519/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Reel vs static reach",vi:"Reach Reel vs ảnh"}),v:"108 vs ~4",s:tt({en:"~20× lift",vi:"gấp ~20 lần"})}];
+  const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+  $("view").innerHTML=kpis(IG.kpis)+`
+   <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.reachBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+   <div class="grid g3"><div class="panel"><h3>${tt(T.reachByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(IG.posts,tt(T.likes))}<div class="note">${tt({en:"The 18 Jun Reel reached 108 — ~20× any static post. Reels are the growth lever.",vi:"Reel 18/6 đạt reach 108 — gấp ~20 lần bài ảnh. Reels là đòn bẩy tăng trưởng."})}</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(IG.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(IG.next))}</div></div>`;
+  clearCharts();
+  line("c1",dlabels,IG.viewsDaily,"#e1306c");dough("c2",[fl,nf],IG.reachSrc);
+  line("c3",dlabels,IG.reachDaily,"#8b5cf6");line("c4",dlabels,IG.interactionsDaily,"#f59e0b");dough("c5",[fl,nf],IG.viewsSrc);
+  hbar("cb1",IG.posts.map(p=>p.d),IG.posts.map(p=>p.reach),"#e1306c");
+}
+function renderYoutube(){
+  head("youtube","yt","#ff0000",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @DXLVNG · 4 "+tt(T.subs),tt(T.live));
+  $("view").innerHTML=kpis(YT.kpis)+`
+   <div class="grid g2"><div class="panel"><h3>${tt(T.viewsDrop)}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note">${tt({en:"Views fell 96% vs the prior 28 days — the channel stalled. Consistency is the single biggest fix.",vi:"Lượt xem giảm 96% so với 28 ngày trước — kênh chững lại. Đều đặn là cách chữa lớn nhất."})}</div></div>
+     <div class="panel"><h3>${tt(T.topVideos)}</h3><table><thead><tr><th>${tt(T.post)}</th><th class="num">${tt(T.reach)}</th><th class="num">Dur</th><th class="num">CTR</th></tr></thead><tbody>${YT.topVideos.map(v=>`<tr><td class="post">${v.t}</td><td class="num">${v.v}</td><td class="num">${v.dur}</td><td class="num">${v.ctr}</td></tr>`).join("")}</tbody></table><div class="note">${tt({en:"Avg view duration 0:17 — hook harder in the first 3 seconds.",vi:"Thời gian xem TB 0:17 — hook mạnh hơn trong 3 giây đầu."})}</div></div></div>
+   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards([{l:tt(T.avgPerDay),v:(11/28).toFixed(1)+" views"},{l:tt({en:"Avg view duration",vi:"TG xem TB"}),v:"0:17",s:tt({en:"retention low",vi:"giữ chân thấp"})},{l:tt({en:"Latest CTR",vi:"CTR mới nhất"}),v:"4.9%",s:tt({en:"healthy",vi:"tốt"})},{l:tt({en:"Views vs prior 28d",vi:"Views vs 28n trước"}),v:"−96%"},{l:tt({en:"Subscribers",vi:"Người đăng ký"}),v:"4"},{l:tt({en:"Videos",vi:"Số video"}),v:"24"}])}</div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(YT.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(YT.next))}</div></div>`;
+  clearCharts();bar("c1",[tt({en:"Prior 28d",vi:"28n trước"}),tt({en:"This 28d",vi:"28n này"})],[YT.viewsPrior,YT.viewsNow],["#c7ccd6","#ff0000"]);
+}
+function renderLinkedin(){
+  head("linkedin","in","#0a66c2",tt({en:"Content 15 Jun – 14 Jul 2026 · 51 followers",vi:"Nội dung 15/6 – 14/7/2026 · 51 follower"}),tt(T.live));
+  const stats=[{l:tt(T.engRate),v:(71/1273*100).toFixed(1)+"%",s:tt({en:"reactions / impressions",vi:"reactions / impressions"})},{l:tt({en:"Impressions / follower",vi:"Impressions/follower"}),v:Math.round(1273/51)},{l:tt({en:"Melbourne share",vi:"Tỷ lệ Melbourne"}),v:"41.2%"},{l:tt({en:"New follower rate",vi:"Tăng follower"}),v:"▲50%",s:"30d"},{l:tt({en:"Unique visitors",vi:"Khách duy nhất"}),v:"13",s:"▲18.2%"},{l:tt({en:"Comments",vi:"Bình luận"}),v:"0",s:tt({en:"conversation gap",vi:"thiếu hội thoại"})}];
+  const locLbl=LI.locLabels.map(l=>typeof l==="string"?l:tt(l));
+  $("view").innerHTML=kpis(LI.kpis)+`
+   <div class="grid g2"><div class="panel"><h3>${tt({en:"Followers by location",vi:"Follower theo vị trí"})}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"41% in Greater Melbourne — bullseye on your target market.",vi:"41% ở Greater Melbourne — trúng thị trường mục tiêu."})}</div></div>
+     <div class="panel"><h3>${tt({en:"Impressions vs prior 28d",vi:"Impressions vs 28n trước"})}</h3><div class="chart"><canvas id="c2"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"Reactions ▲144.8% — the audience is warming up fast.",vi:"Reactions ▲144,8% — đối tượng đang ấm lên nhanh."})}</div></div></div>
+   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(LI.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(LI.next))}</div></div>`;
+  clearCharts();
+  hbar("c1",locLbl,LI.locData,"#0a66c2");
+  bar("c2",[tt({en:"Prior",vi:"Kỳ trước"}),tt({en:"Now",vi:"Hiện tại"})],[LI.imprPrior,LI.imprNow],["#c7ccd6","#0a66c2"]);
+}
+function renderAll(){
+  head("all","◆","#5b6bf5",tt({en:"Snapshot · 16 Jul 2026 · FB/IG/YT 28-day insights live",vi:"Ảnh chụp · 16/7/2026 · FB/IG/YT insights 28 ngày trực tiếp"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không Supermetrics)"}));
+  const kp=[{en:"FB Views",vi:"FB Lượt xem",v:1900,c:32.6},{en:"IG Reach",vi:"IG Reach",v:115,c:70.7},{en:"LI Impressions",vi:"LI Impressions",v:1273,c:60.5},{en:"LI Reactions",vi:"LI Reactions",v:71,c:144.8},{en:"YT Views",vi:"YT Lượt xem",v:11,c:-96},{en:"FB Followers",vi:"FB Follower",v:111,c:null},{en:"LI Followers",vi:"LI Follower",v:51,c:null},{en:"IG Followers",vi:"IG Follower",v:33,c:null}];
+  $("view").innerHTML=kpis(kp)+`
+   <div class="grid g2"><div class="panel"><h3>${tt(T.followersBy)}</h3><div class="chart"><canvas id="a1"></canvas></div></div>
+     <div class="panel"><h3>${tt(T.chStatus)}</h3><table><thead><tr><th>${tt(T.channel)}</th><th>${tt(T.followers2)}</th><th>${tt(T.status)}</th></tr></thead><tbody>
+       <tr><td>Facebook</td><td>111</td><td><span class="pill on">live</span></td></tr><tr><td>Instagram</td><td>33</td><td><span class="pill on">live</span></td></tr><tr><td>LinkedIn</td><td>51</td><td><span class="pill on">live</span></td></tr><tr><td>YouTube</td><td>4</td><td><span class="pill on">live</span></td></tr><tr><td>TikTok / X</td><td>—</td><td><span class="pill none">no account</span></td></tr></tbody></table></div></div>
+   <div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["LinkedIn is the standout: ~5.6% engagement rate (71 reactions / 1,273 impressions) — your best-performing channel and your true B2B audience. Prioritise it.","Facebook is the reach engine (▲32.6%) but follows are flat — add follow CTAs + questions to convert reach.","Instagram reach ▲70.7% yet interactions −73.7% — discovery works, hooks don't. Reels + a follow trigger are the fix.","YouTube views −96% — the channel stalled; a fixed weekly upload + 3s hooks restart it."],vi:["LinkedIn là điểm sáng: engagement ~5,6% (71 reactions / 1.273 impressions) — kênh hiệu quả nhất và đúng đối tượng B2B. Ưu tiên kênh này.","Facebook là cỗ máy reach (▲32,6%) nhưng follow đứng yên — thêm CTA theo dõi + câu hỏi để chuyển đổi reach.","Instagram reach ▲70,7% mà tương tác −73,7% — khám phá tốt, hook chưa ăn. Reels + 'mồi' theo dõi là cách chữa.","YouTube views −96% — kênh chững; cố định 1 khung đăng/tuần + hook 3 giây để khởi động lại."]}))}</div>
+     <div class="panel"><h3>${tt(T.routine)}</h3>${list(tt(DAILY))}</div></div>`;
+  clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[111,51,33,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
+}
+
+function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);}
+function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
+document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
+$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
+$("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
+function closeShare(){$("shareModal").classList.remove("open");}
+$("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
+select("facebook");
+</script>
+</body>
+</html>
