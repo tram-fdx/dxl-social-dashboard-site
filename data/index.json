@@ -1,0 +1,49 @@
+{
+  "site": "DX Living — social dashboard",
+  "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
+  "latest": "2026-07-31",
+  "snapshots": [
+    {
+      "date": "2026-07-23",
+      "data": "data/2026-07-23.json",
+      "report": "archive/2026-07-23.html",
+      "label_vi": "Bản dashboard nền sáng đầu tiên · FB views 2,900",
+      "label_en": "First light-theme dashboard · FB views 2,900"
+    },
+    {
+      "date": "2026-07-27",
+      "data": "data/2026-07-27.json",
+      "report": "archive/2026-07-27.html",
+      "label_vi": "FB views 2,900→3,100; IG reach 111→180; LI impressions 1,526→1,366",
+      "label_en": "FB views 2,900→3,100; IG reach 111→180; LI impressions 1,526→1,366"
+    },
+    {
+      "date": "2026-07-28",
+      "data": "data/2026-07-28.json",
+      "report": "archive/2026-07-28.html",
+      "label_vi": "FB views 3,100→3,200; LI impressions 1,366→1,295",
+      "label_en": "FB views 3,100→3,200; LI impressions 1,366→1,295"
+    },
+    {
+      "date": "2026-07-29",
+      "data": "data/2026-07-29.json",
+      "report": "archive/2026-07-29.html",
+      "label_vi": "LI impressions 1,295→1,287",
+      "label_en": "LI impressions 1,295→1,287"
+    },
+    {
+      "date": "2026-07-30",
+      "data": "data/2026-07-30.json",
+      "report": "archive/2026-07-30.html",
+      "label_vi": "FB views 3,200→3,440; IG reach 180→187; LI impressions 1,287→1,306",
+      "label_en": "FB views 3,200→3,440; IG reach 180→187; LI impressions 1,287→1,306"
+    },
+    {
+      "date": "2026-07-31",
+      "data": "data/2026-07-31.json",
+      "report": "archive/2026-07-31.html",
+      "label_vi": "FB views 3,440→3,635; IG reach 187→192; LI impressions 1,306→1,351",
+      "label_en": "FB views 3,440→3,635; IG reach 187→192; LI impressions 1,306→1,351"
+    }
+  ]
+}

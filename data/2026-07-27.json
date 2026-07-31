@@ -1,0 +1,498 @@
+{
+  "date": "2026-07-27",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "2ca067c",
+  "provenance": "Read directly from Chrome (Meta Business Suite FB + IG, YouTube Studio, LinkedIn Page admin). No Supermetrics, no third-party aggregator. No estimated values.",
+  "window": {
+    "en": "Last 28 days: 28 Jun – 25 Jul 2026",
+    "vi": "28 ngày qua: 28/6 – 25/7/2026"
+  },
+  "facebook": {
+    "followers": 113,
+    "views": {
+      "v": 3100,
+      "change_pct": 116.3
+    },
+    "viewers": {
+      "v": 348,
+      "change_pct": 43.2
+    },
+    "visits": {
+      "v": 142,
+      "change_pct": 330.3
+    },
+    "interactions": {
+      "v": 115,
+      "change_pct": 98.3
+    },
+    "video_3s": {
+      "v": 86,
+      "change_pct": -2.3
+    },
+    "net_new_followers": {
+      "v": 2,
+      "change_pct": 100
+    },
+    "views_from_followers_pct": 48.8,
+    "views_from_non_followers_pct": 51.2,
+    "interactions_from_followers": 83,
+    "interactions_from_non_followers": 32,
+    "watch_time": "41m 36s",
+    "watch_time_change_pct": 23.8,
+    "daily": {
+      "views": [
+        20,
+        77,
+        50,
+        29,
+        234,
+        94,
+        25,
+        40,
+        61,
+        11,
+        150,
+        79,
+        50,
+        41,
+        13,
+        200,
+        100,
+        370,
+        177,
+        224,
+        87,
+        204,
+        101,
+        165,
+        189,
+        202,
+        55,
+        63
+      ],
+      "interactions": [
+        0,
+        4,
+        1,
+        2,
+        9,
+        4,
+        0,
+        2,
+        2,
+        0,
+        7,
+        5,
+        2,
+        0,
+        0,
+        6,
+        1,
+        21,
+        6,
+        11,
+        2,
+        5,
+        4,
+        8,
+        1,
+        9,
+        2,
+        1
+      ],
+      "visits": [
+        0,
+        5,
+        10,
+        2,
+        8,
+        4,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        3,
+        1,
+        7,
+        7,
+        17,
+        3,
+        9,
+        0,
+        23,
+        10,
+        15,
+        10,
+        3,
+        0,
+        2
+      ],
+      "video_3s": [
+        1,
+        1,
+        0,
+        1,
+        3,
+        2,
+        3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        34,
+        12,
+        3,
+        5,
+        0
+      ]
+    },
+    "top_posts": [
+      {
+        "date": "16 Jul",
+        "title": "Most people see a finished deck — Project 251",
+        "reach": 391,
+        "reactions": 9,
+        "comments": 1,
+        "shares": 3
+      },
+      {
+        "date": "17 Jul",
+        "title": "Luxury is rarely defined — Aman Dalmond, CEO",
+        "reach": 322,
+        "reactions": 9,
+        "comments": 0,
+        "shares": 1
+      },
+      {
+        "date": "22 Jul",
+        "title": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 85,
+        "reactions": 6,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "20 Jul",
+        "title": "Every exceptional home is built twice — Project 2238",
+        "reach": 78,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "23 Jul",
+        "title": "Circadian lighting — modelled in the digital twin",
+        "reach": 73,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 1
+      },
+      {
+        "date": "18 Jul",
+        "title": "BIM Australia: 9 execution errors (ISO 19650)",
+        "reach": 56,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      }
+    ]
+  },
+  "instagram": {
+    "followers": 33,
+    "posts_total": [
+      {
+        "d": "22 Jul",
+        "t": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 97,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "16 Jul",
+        "t": "Most people see a finished deck — Project 251",
+        "reach": 86,
+        "react": 8,
+        "com": 1,
+        "sh": 3
+      },
+      {
+        "d": "17 Jul",
+        "t": "Luxury is rarely defined — CEO",
+        "reach": 14,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "15 Jul",
+        "t": "Luxury isn't just about spaces — Millboard",
+        "reach": 13,
+        "react": 3,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "20 Jul",
+        "t": "Every exceptional home is built twice — Project 2238",
+        "reach": 10,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "23 Jul",
+        "t": "Circadian lighting",
+        "reach": 9,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      }
+    ],
+    "views": {
+      "v": 701,
+      "change_pct": 55.4
+    },
+    "reach": {
+      "v": 180,
+      "change_pct": 37.4
+    },
+    "interactions": {
+      "v": 40,
+      "change_pct": 81.8
+    },
+    "views_from_followers_pct": 45.6,
+    "views_from_non_followers_pct": 54.4,
+    "reach_from_followers": 19,
+    "reach_from_non_followers": 162,
+    "daily": {
+      "views": [
+        1,
+        14,
+        8,
+        4,
+        5,
+        3,
+        1,
+        0,
+        3,
+        0,
+        68,
+        12,
+        7,
+        4,
+        3,
+        11,
+        8,
+        53,
+        61,
+        26,
+        10,
+        18,
+        9,
+        172,
+        49,
+        91,
+        55,
+        5
+      ],
+      "reach": [
+        0,
+        5,
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        9,
+        26,
+        9,
+        2,
+        6,
+        4,
+        73,
+        22,
+        24,
+        38,
+        1
+      ],
+      "interactions": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        6,
+        2,
+        0,
+        3,
+        2,
+        3,
+        3,
+        10,
+        0,
+        0
+      ]
+    },
+    "top_posts": [
+      {
+        "date": "22 Jul",
+        "title": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 97,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "16 Jul",
+        "title": "Most people see a finished deck — Project 251",
+        "reach": 86,
+        "reactions": 8,
+        "comments": 1,
+        "shares": 3
+      },
+      {
+        "date": "17 Jul",
+        "title": "Luxury is rarely defined — CEO",
+        "reach": 14,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "15 Jul",
+        "title": "Luxury isn't just about spaces — Millboard",
+        "reach": 13,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "20 Jul",
+        "title": "Every exceptional home is built twice — Project 2238",
+        "reach": 10,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "23 Jul",
+        "title": "Circadian lighting",
+        "reach": 9,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 25,
+    "views_28d": {
+      "v": 27,
+      "change_pct": 0
+    },
+    "watch_time_hours": {
+      "v": 2.4,
+      "change_pct": 999
+    },
+    "latest_video_views": null,
+    "views_now": 27,
+    "views_prior": 26,
+    "top_videos": [
+      {
+        "title": "DX Living | Project 2238 Mosman, NSW (Short)",
+        "views": 18,
+        "avg_view_duration": "35:07"
+      },
+      {
+        "title": "Architecture Isn't Static: Sunrise to Nightfall",
+        "views": 2,
+        "avg_view_duration": "0:29"
+      }
+    ]
+  },
+  "linkedin": {
+    "followers": 54,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": {
+      "v": 4,
+      "change_pct": 100
+    },
+    "impressions": {
+      "v": 1366,
+      "change_pct": 35.2
+    },
+    "reactions": {
+      "v": 54,
+      "change_pct": 21.7
+    },
+    "page_views": {
+      "v": 36,
+      "change_pct": 89.5
+    },
+    "unique_visitors": {
+      "v": 17,
+      "change_pct": 70
+    },
+    "impressions_prior": 1010,
+    "impressions_now": 1366,
+    "followers_by_location_pct": {
+      "Melbourne": 38.9,
+      "Ho Chi Minh City": 7.4,
+      "Brisbane": 5.6,
+      "Metro Manila": 5.6,
+      "Other": 42.5
+    }
+  },
+  "notes": {
+    "vi": [
+      "Views hơn gấp đôi (▲116,3% lên 3.100) và visits nhảy ▲330% — series Project 2238 + bài CEO tiếp tục tạo cú hích thật. Tuần qua làm gì thì làm thêm cái đó.",
+      "Tương tác từ người chưa follow ▲540% và 51,2% lượt xem đến từ người chưa follow — nội dung thoát khỏi vòng follower. Giữ hook 'xây hai lần / trước khi xây'.",
+      "LinkedIn tiếp tục cộng dồn: 54 reactions trên 1.366 impressions ≈ 4,0% engagement rate — vẫn là kênh tốt nhất và đúng đối tượng B2B."
+    ],
+    "en": [
+      "Views more than doubled (▲116.3% to 3,100) and visits jumped ▲330% — the Project 2238 series + CEO post keep driving a real spike. Do more of what you did this week.",
+      "Interactions from non-followers ▲540% and 51.2% of views are now from non-followers — content is breaking out of the bubble. Keep the 'built twice / before it's built' hooks.",
+      "LinkedIn keeps compounding: 54 reactions on 1,366 impressions ≈ 4.0% engagement rate — still your best channel and your true B2B audience."
+    ]
+  }
+}

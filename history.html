@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — Social Dashboard · Lịch sử theo ngày</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;--accent:#5b6bf5;--radius:14px;
+--fb:#1877f2;--ig:#e1306c;--yt:#ff0000;--li:#0a66c2;--pos:#12b76a;--neg:#f04438;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;padding:22px 24px;max-width:1240px;margin:0 auto}
+.panel{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+h1{font-size:20px;font-weight:800;margin-bottom:4px}
+.sub{font-size:12.5px;color:var(--muted)}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.tbtn{font-size:12px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+.tbtn:hover{background:#eef1f6}
+.tbtn.p{background:var(--accent);color:#fff;border-color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
+th{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.4px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.chart{position:relative;height:290px}
+h3{font-size:13px;font-weight:800;margin-bottom:12px}
+.up{color:var(--pos);font-weight:700}.down{color:var(--neg);font-weight:700}.flat{color:var(--muted)}
+.chip{font-size:11px;background:#eef2ff;color:#3949ab;padding:5px 10px;border-radius:999px;font-weight:700}
+/* ---- date picker (ported from the SEO report, restyled to this palette) ---- */
+:root{--faint:#98a2b3;--accent-soft:#eef0ff;--line2:#eef1f6}
+body.lang-en .vi{display:none}body:not(.lang-en) .en{display:none}
+.filterbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.section-label .bar{width:26px;height:3px;border-radius:2px;background:var(--accent)}
+.section-sub{font-size:12.5px;color:var(--muted);margin:0 0 12px;line-height:1.5;max-width:1000px}
+.dpwrap{position:relative}
+.dpbtn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #cfd4da;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+.dpbtn:hover{border-color:#a9b0b8}
+.dpbtn .car{color:var(--muted);font-size:10px}
+.dppanel{position:absolute;top:calc(100% + 7px);left:0;z-index:70;display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,.16);overflow:hidden}
+.dppanel[hidden]{display:none}
+.dp-presets{width:212px;flex:0 0 auto;border-right:1px solid var(--line);padding:9px 0;max-height:340px;overflow-y:auto}
+.dp-preset{display:flex;align-items:center;gap:10px;padding:7px 14px;width:100%;border:0;background:transparent;font-family:inherit;font-size:13px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer}
+.dp-preset:hover{background:#f5f6f8}
+.dp-preset .rad{width:15px;height:15px;border-radius:50%;border:1.5px solid #b9bfc6;flex:0 0 auto;transition:.15s}
+.dp-preset.sel{font-weight:700}
+.dp-preset.sel .rad{border-color:var(--accent);border-width:4.5px}
+.dp-preset .pc{margin-left:auto;font-size:10.5px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}
+.dp-preset[disabled]{color:#b9bfc6;cursor:not-allowed}
+.dp-preset[disabled]:hover{background:transparent}
+.dp-preset[disabled] .rad{border-color:#dde1e5}
+.dp-right{padding:14px 16px 11px;flex:1 1 auto}
+.dp-cals{display:flex;gap:24px}
+.dp-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;min-height:26px}
+.dp-mname{font-size:14px;font-weight:700}
+.dp-nav{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:1px 7px;border-radius:6px;font-family:inherit}
+.dp-nav:hover{background:#f5f6f8;color:var(--ink)}
+.dp-nav[disabled]{color:#dde1e5;cursor:not-allowed}
+.dp-nav[disabled]:hover{background:transparent}
+.dp-grid{display:grid;grid-template-columns:repeat(7,30px);gap:2px 0}
+.dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
+.dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
+.dp-day.blank{visibility:hidden}
+.dp-day.off{color:#c2c7cd}
+.dp-day:not(.blank):hover{background:var(--accent-soft)}
+.dp-day.edge:hover{background:var(--accent)}
+.dp-day.inr{background:var(--accent-soft);border-radius:0}
+.dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
+.dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
+.dp-day.edge .dot{background:#fff}
+.dp-foot{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
+.dp-rng{font-size:13.5px;font-weight:700;display:block}
+.dp-hint{font-size:11.5px;color:var(--faint);font-weight:600;display:block}
+.dp-btns{margin-left:auto;display:flex;gap:9px}
+.dp-b{border:1px solid #cfd4da;background:#fff;border-radius:8px;padding:8px 17px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
+.dp-b:hover{background:#f5f6f8}
+.dp-b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.dp-b.pri:hover{background:#4857e0}
+.dp-b[disabled]{opacity:.42;cursor:not-allowed}
+.dp-b.pri[disabled]:hover{background:var(--accent)}
+.dp-legend{font-size:11px;color:var(--faint);font-weight:600;margin:9px 0 0}
+.daylinks{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line2)}
+.daylinks-lb{font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--faint);margin-right:2px}
+.daylink{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-family:inherit;font-size:12px;font-weight:700;line-height:1.3;color:var(--ink);cursor:pointer;transition:.15s;text-decoration:none}
+.daylink:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.daylink small{font-weight:600;color:var(--faint);font-size:10.5px}
+.daylink:hover small{color:var(--accent)}
+.daylink.cur{border-color:var(--accent);background:var(--accent);color:#fff;cursor:default}
+.daylink.cur small{color:#dfe3ff}
+
+</style>
+</head>
+<body class="lang-en">
+<div class="panel top">
+  <div>
+    <h1><span class="vi">Lịch sử dữ liệu theo ngày — Social</span><span class="en">Daily data history — Social</span></h1>
+    <div class="sub"><span class="vi">Mỗi dòng là một ngày đã quét thật. Số liệu không nội suy: mở một ngày sẽ ra đúng bản dashboard đã đóng băng hôm đó.</span><span class="en">Each row is a day that was actually scanned. Nothing is interpolated: opening a day shows exactly the dashboard frozen that day.</span></div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a class="tbtn" href="index.html"><span class="vi">← Bản mới nhất</span><span class="en">← Latest</span></a>
+    <button class="tbtn p" id="langBtn">VI</button>
+  </div>
+</div>
+<section class="panel" id="sec-filter" style="display:none;margin-bottom:16px">
+  <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày hoặc khoảng ngày</span><span class="en">Pick a day or a range</span></p>
+  <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản dashboard đã lưu của ngày đó. Ngày <b>có dấu chấm</b> là ngày đã quét và có bản lưu; ngày làm mờ vẫn chọn được làm đầu/cuối khoảng, nhưng không có bản lưu riêng để mở.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored dashboard. A <b>dot</b> marks a day that was scanned and has a stored snapshot; a dimmed day can still bound a range, but has no snapshot of its own to open.</span></p>
+  <div class="filterbar">
+    <div class="dpwrap">
+      <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
+        <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
+      </button>
+      <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
+        <div class="dp-presets" id="dppresets"></div>
+        <div class="dp-right">
+          <div class="dp-cals" id="dpcals"></div>
+          <div class="dp-foot">
+            <div><span class="dp-rng" id="dprng"></span><span class="dp-hint" id="dphint"></span></div>
+            <div class="dp-btns">
+              <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
+              <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
+            </div>
+          </div>
+          <p class="dp-legend"><span class="vi">Dấu chấm = ngày đã có bản lưu. Ngày làm mờ = chưa quét: dùng được làm đầu/cuối khoảng, nhưng không mở được bản lưu riêng.</span><span class="en">A dot marks a day with a stored snapshot. A dimmed day was never scanned: it can bound a range, but cannot open a snapshot of its own.</span></p>
+        </div>
+      </div>
+    </div>
+    <span id="dpchip"></span>
+  </div>
+  <div class="daylinks" id="daylinks"></div>
+</section>
+
+<div class="panel"><h3><span class="vi">Xu hướng qua các ngày đã lưu</span><span class="en">Trend across stored days</span></h3><div class="chart"><canvas id="trend"></canvas></div></div>
+<div class="panel"><h3><span class="vi">Bảng số liệu theo ngày</span><span class="en">Day-by-day figures</span></h3><div id="tbl"></div></div>
+<script>
+document.getElementById('langBtn').addEventListener('click',function(){
+  var en=document.body.classList.toggle('lang-en');
+  this.textContent=en?'VI':'EN';
+  if(window.__redraw)window.__redraw();
+  if(window.__redrawTable)window.__redrawTable();
+});
+/* ---- date picker: navigates to the stored snapshot of the chosen day ---- */
+function pkLang(){ return document.body.classList.contains("lang-en") ? "en" : "vi"; }
+function t(vi, en){ return pkLang() === "en" ? en : vi; }
+
+/* =====================================================================
+   DATE PICKER — same control as history.html, but here it NAVIGATES.
+   This page is the report of the newest scan; picking an older day opens
+   that day's frozen report instead of re-rendering this one, so the
+   numbers on screen are always the numbers that were actually measured
+   on the chosen date. Nothing is interpolated.
+   ===================================================================== */
+(function(){
+  /* A frozen archive copy of this page has the picker section stripped out (it
+     lives one folder down, where data/index.json 404s and every relative target
+     would be wrong). Bail out before anything here touches a missing node. */
+  if (!document.getElementById('sec-filter')) return;
+
+  let ALL = [];                 /* [{date, report, label_vi, label_en}] ascending */
+  let LATEST = null;            /* the day this page reports on */
+  let DATASET = new Set();      /* stored days, for O(1) calendar lookups */
+  let SEL = {from: null, to: null, preset: 'custom'};
+  let DRAFT = {from: null, to: null, preset: 'custom'};
+  let calM = null;
+
+  const MN_VI = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+  const MN_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DOW_VI = ['CN','T2','T3','T4','T5','T6','T7'];
+  const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function iso(y, m, d){ return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
+  function todayISO(){ const n = new Date(); return iso(n.getFullYear(), n.getMonth(), n.getDate()); }
+  function shiftISO(s, days){ const d = new Date(s + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
+  function monthAdd(o, n){ const d = new Date(Date.UTC(o.y, o.m + n, 1)); return {y: d.getUTCFullYear(), m: d.getUTCMonth()}; }
+  function monthKey(o){ return o.y * 12 + o.m; }
+  function monthOf(s){ return {y: Number(s.slice(0, 4)), m: Number(s.slice(5, 7)) - 1}; }
+  function dmy(s){ const p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function el(id){ return document.getElementById(id); }
+
+  /* presets resolve against the client clock; `all` spans the whole archive */
+  const PRESETS = [
+    {id:'yesterday', vi:'Hôm qua', en:'Yesterday', calc:td => ({from: shiftISO(td, -1), to: shiftISO(td, -1)})},
+    {id:'d7',  vi:'7 ngày qua',  en:'Last 7 days',  calc:td => ({from: shiftISO(td, -6),  to: td})},
+    {id:'d28', vi:'28 ngày qua', en:'Last 28 days', calc:td => ({from: shiftISO(td, -27), to: td})},
+    {id:'d90', vi:'90 ngày qua', en:'Last 90 days', calc:td => ({from: shiftISO(td, -89), to: td})},
+    {id:'wk',  vi:'Tuần này',    en:'This week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); return {from: shiftISO(td, -d.getUTCDay()), to: td}; }},
+    {id:'mo',  vi:'Tháng này',   en:'This month',   calc:td => ({from: td.slice(0, 8) + '01', to: td})},
+    {id:'yr',  vi:'Năm nay',     en:'This year',    calc:td => ({from: td.slice(0, 4) + '-01-01', to: td})},
+    {id:'lwk', vi:'Tuần trước',  en:'Last week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); const s = shiftISO(td, -d.getUTCDay() - 7); return {from: s, to: shiftISO(s, 6)}; }},
+    {id:'lmo', vi:'Tháng trước', en:'Last month',   calc:function(td){ const mo = monthAdd(monthOf(td), -1); const last = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate(); return {from: iso(mo.y, mo.m, 1), to: iso(mo.y, mo.m, last)}; }},
+    {id:'all', vi:'Toàn bộ dữ liệu đã lưu', en:'All stored data', calc:function(){ return {from: ALL[0].date, to: ALL[ALL.length - 1].date}; }}
+  ];
+  function presetById(id){ return PRESETS.filter(p => p.id === id)[0] || null; }
+  function inRange(dt, from, to){ return (!from || dt >= from) && (!to || dt <= to); }
+  function daysIn(from, to){ return ALL.filter(r => inRange(r.date, from, to)); }
+  function countIn(from, to){ return daysIn(from, to).length; }
+  function rowFor(d){ return ALL.filter(r => r.date === d)[0] || null; }
+
+  function rangeText(r){
+    if (!r.from) return t('Chưa chọn ngày', 'No day picked yet');
+    if (!r.to || r.from === r.to) return dmy(r.from);
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+  function labelFor(r){
+    const p = r.preset && r.preset !== 'custom' ? presetById(r.preset) : null;
+    if (p) return '<span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span>';
+    if (!r.from) return '<span class="vi">Chọn ngày</span><span class="en">Pick a date</span>';
+    if (!r.to || r.from === r.to) return '<span class="vi">Ngày ' + dmy(r.from) + '</span><span class="en">' + dmy(r.from) + '</span>';
+    return dmy(r.from) + ' – ' + dmy(r.to);
+  }
+
+  function renderPresets(){
+    const td = todayISO();
+    el('dppresets').innerHTML = PRESETS.map(function(p){
+      const rg = p.calc(td);
+      const n = countIn(rg.from, rg.to);
+      return '<button class="dp-preset' + (DRAFT.preset === p.id ? ' sel' : '') + '" type="button" data-p="' + p.id + '"' + (n === 0 ? ' disabled' : '') + '>'
+        + '<span class="rad"></span>'
+        + '<span><span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span></span>'
+        + '<span class="pc">' + n + '</span>'
+        + '</button>';
+    }).join('');
+  }
+
+  function renderCals(){
+    const minM = monthKey(monthOf(ALL[0].date));
+    const maxM = monthKey(monthOf(todayISO()));
+    /* keep the two visible months inside [earliest stored month … current month] */
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+    if (monthKey(monthAdd(calM, 1)) > maxM) calM = monthAdd({y: Math.floor(maxM / 12), m: maxM % 12}, -1);
+    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
+
+    const months = [calM, monthAdd(calM, 1)];
+    el('dpcals').innerHTML = months.map(function(mo, side){
+      const first = new Date(Date.UTC(mo.y, mo.m, 1)).getUTCDay();
+      const days = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate();
+      const canPrev = side === 0 && monthKey(mo) > minM;
+      const canNext = side === 1 && monthKey(mo) < maxM;
+      let head = '<div class="dp-mhead">'
+        + (side === 0 ? '<button class="dp-nav" type="button" data-nav="-1"' + (canPrev ? '' : ' disabled') + ' aria-label="Previous month">‹</button>' : '<span></span>')
+        + '<span class="dp-mname"><span class="vi">' + MN_VI[mo.m] + ' ' + mo.y + '</span><span class="en">' + MN_EN[mo.m] + ' ' + mo.y + '</span></span>'
+        + (side === 1 ? '<button class="dp-nav" type="button" data-nav="1"' + (canNext ? '' : ' disabled') + ' aria-label="Next month">›</button>' : '<span></span>')
+        + '</div>';
+      let cells = DOW_VI.map((v, i) => '<div class="dp-dow"><span class="vi">' + v + '</span><span class="en">' + DOW_EN[i] + '</span></div>').join('');
+      for (let i = 0; i < first; i++) cells += '<button class="dp-day blank" type="button" disabled tabindex="-1"></button>';
+      for (let d = 1; d <= days; d++){
+        const s = iso(mo.y, mo.m, d);
+        const stored = DATASET.has(s);
+        const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
+        const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
+        const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
+        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"'
+          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét, chỉ dùng làm đầu/cuối khoảng', 'never scanned; usable only as a range edge')) + '">'
+          + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
+      }
+      return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
+    }).join('');
+  }
+
+  function renderPanel(){
+    renderPresets(); renderCals();
+    el('dprng').textContent = rangeText(DRAFT);
+    const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
+    /* when the draft holds no stored day, say why Update is dead instead of
+       leaving the reader to guess at a greyed-out button */
+    el('dphint').innerHTML = (DRAFT.from && n === 0)
+      ? '<span class="vi">Khoảng này chưa có ngày nào được quét — không có bản lưu để mở. Chọn ngày có dấu chấm.</span>'
+      + '<span class="en">No day in this range was ever scanned — there is no snapshot to open. Pick a day with a dot.</span>'
+      : '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
+      + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
+    el('dpupdate').disabled = !DRAFT.from || n === 0;
+  }
+
+  function renderBar(){
+    el('dplabel').innerHTML = labelFor(SEL);
+    el('dpchip').innerHTML = (SEL.from === LATEST && SEL.to === LATEST)
+      ? '<span class="chip"><span class="vi">Đang xem dashboard ngày ' + dmy(LATEST) + ' (mới nhất)</span><span class="en">Now showing the ' + dmy(LATEST) + ' dashboard (latest)</span></span>'
+      : '';
+    el('daylinks').innerHTML = '<span class="daylinks-lb"><span class="vi">Mở nhanh</span><span class="en">Jump to</span></span>'
+      + ALL.slice().reverse().map(function(r){
+          const cur = r.date === LATEST;
+          const label = '<span class="vi">' + dmy(r.date) + '</span><span class="en">' + dmy(r.date) + '</span>'
+            + ' <small><span class="vi">' + r.label_vi + '</span><span class="en">' + r.label_en + '</span></small>';
+          if (cur) return '<span class="daylink cur">' + label + '</span>';
+          return '<a class="daylink" href="' + targetFor(r.date, r.date) + '">' + label + '</a>';
+        }).join('');
+  }
+
+  /* Where a chosen range should take the reader.
+     - the newest day  -> this page, which already is that report
+     - a day with a frozen HTML report -> that exact archived report
+     - a stored day with no frozen HTML (the June baseline) -> the history browser, focused on it
+     - a real range -> the history browser, filtered to the range (that page draws trends) */
+  function targetFor(from, to){
+    const rows = daysIn(from, to);
+    if (rows.length === 1){
+      const r = rows[0];
+      if (r.date === LATEST) return 'index.html';
+      if (r.report) return r.report;
+      return 'history.html?day=' + r.date;
+    }
+    return 'history.html?from=' + from + '&to=' + to;
+  }
+
+  function openPanel(open){
+    if (open){
+      DRAFT = {from: SEL.from, to: SEL.to, preset: SEL.preset};
+      calM = monthAdd(monthOf(DRAFT.to || ALL[ALL.length - 1].date), -1);
+      renderPanel();
+    }
+    el('dppanel').hidden = !open;
+    el('dpbtn').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function wire(){
+    el('dpbtn').addEventListener('click', function(e){
+      e.stopPropagation();
+      openPanel(el('dppanel').hidden);
+    });
+    el('dppanel').addEventListener('click', function(e){
+      e.stopPropagation();
+      const pb = e.target.closest('.dp-preset');
+      if (pb && !pb.disabled){
+        const p = presetById(pb.dataset.p), rg = p.calc(todayISO());
+        DRAFT = {from: rg.from, to: rg.to, preset: p.id};
+        renderPanel(); return;
+      }
+      const nav = e.target.closest('.dp-nav');
+      if (nav && !nav.disabled){ calM = monthAdd(calM, Number(nav.dataset.nav)); renderCals(); return; }
+      const day = e.target.closest('.dp-day');
+      if (day && !day.disabled){
+        const s = day.dataset.d;
+        if (!DRAFT.from || DRAFT.to) DRAFT = {from: s, to: null, preset: 'custom'};
+        else if (s >= DRAFT.from) DRAFT = {from: DRAFT.from, to: s, preset: 'custom'};
+        else DRAFT = {from: s, to: DRAFT.from, preset: 'custom'};
+        renderPanel();
+      }
+    });
+    el('dpcancel').addEventListener('click', function(){ openPanel(false); });
+    el('dpupdate').addEventListener('click', function(){
+      if (!DRAFT.from) return;
+      const from = DRAFT.from, to = DRAFT.to || DRAFT.from;
+      if (!countIn(from, to)) return;
+      const url = targetFor(from, to);
+      if (url === 'index.html'){
+        /* already here — say so instead of reloading the same page */
+        SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+        renderBar(); openPanel(false); return;
+      }
+      window.location.href = url;
+    });
+    document.addEventListener('click', function(){ if (!el('dppanel').hidden) openPanel(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !el('dppanel').hidden) openPanel(false); });
+  }
+
+  fetch('data/index.json', {cache: 'no-store'})
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(ix){
+      ALL = (ix.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
+      if (!ALL.length) throw new Error('no snapshots');
+      LATEST = ix.latest || ALL[ALL.length - 1].date;
+      DATASET = new Set(ALL.map(r => r.date));
+      SEL = {from: LATEST, to: LATEST, preset: 'custom'};
+      el('sec-filter').style.display = '';
+      renderBar();
+      wire();
+      window.__redraw = renderBar;
+    })
+    .catch(function(){
+      /* no manifest -> no honest way to offer dates; leave the control hidden
+         rather than showing a picker that cannot open anything */
+      el('sec-filter').style.display = 'none';
+    });
+})();
+
+
+/* ---- trend chart + table over every stored day ---- */
+(function(){
+  var Q=new URLSearchParams(location.search), FROM=Q.get('from'), TO=Q.get('to'), DAY=Q.get('day');
+  fetch('data/index.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(ix){
+    var snaps=(ix.snapshots||[]).slice().sort(function(a,b){return a.date<b.date?-1:1;});
+    if(DAY){snaps=snaps.filter(function(s){return s.date===DAY;});}
+    else if(FROM&&TO){snaps=snaps.filter(function(s){return s.date>=FROM&&s.date<=TO;});}
+    return Promise.all(snaps.map(function(s){
+      return fetch(s.data,{cache:'no-store'}).then(function(r){return r.json();})
+        .then(function(d){return {row:s,d:d};});
+    }));
+  }).then(function(rows){
+    if(!rows.length){document.getElementById('tbl').innerHTML='<p class="sub">No stored day in this range.</p>';return;}
+    var lbl=rows.map(function(x){var p=x.row.date.split('-');return p[2]+'/'+p[1];});
+    var series=[
+      {k:'FB views',c:'#1877f2',v:rows.map(function(x){return x.d.facebook.views.v;})},
+      {k:'IG reach',c:'#e1306c',v:rows.map(function(x){return x.d.instagram.reach.v;})},
+      {k:'LI impressions',c:'#0a66c2',v:rows.map(function(x){return x.d.linkedin.impressions.v;})},
+      {k:'YT views',c:'#ff0000',v:rows.map(function(x){return x.d.youtube.views_28d.v;})}
+    ];
+    /* chart is a nicety; the table is the substance. Never let a CDN failure
+       take the table down with it. */
+    try{
+    new Chart(document.getElementById('trend'),{type:'line',
+      data:{labels:lbl,datasets:series.map(function(s){return {label:s.k,data:s.v,borderColor:s.c,backgroundColor:s.c+'22',tension:.3,pointRadius:3,borderWidth:2};})},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:11}}}},
+        scales:{y:{beginAtZero:true,type:'logarithmic'}}}});
+    }catch(e){ document.getElementById('trend').closest('.panel').style.display='none'; }
+
+    function delta(cur,prev){
+      if(prev==null)return '<span class="flat">—</span>';
+      var d=cur-prev; if(!d)return '<span class="flat">0</span>';
+      return '<span class="'+(d>0?'up':'down')+'">'+(d>0?'▲ +':'▼ ')+d.toLocaleString()+'</span>';
+    }
+    window.__redrawTable=function(){
+      var en=document.body.classList.contains('lang-en');
+      var h='<table><thead><tr><th>'+(en?'Day':'Ngày')+'</th><th>'+(en?'What changed':'Thay đổi')+'</th>'
+        +'<th class="num">FB views</th><th class="num">IG reach</th><th class="num">LI impr</th><th class="num">YT views</th>'
+        +'<th class="num">FB foll</th><th class="num">LI foll</th><th></th></tr></thead><tbody>';
+      rows.slice().reverse().forEach(function(x,i,arr){
+        var prev=arr[i+1]?arr[i+1].d:null, d=x.d, p=x.row.date.split('-');
+        h+='<tr><td><b>'+p[2]+'/'+p[1]+'/'+p[0]+'</b></td>'
+          +'<td style="color:#7b8496;font-size:12px;max-width:300px">'+(en?x.row.label_en:x.row.label_vi)+'</td>'
+          +'<td class="num">'+d.facebook.views.v.toLocaleString()+'<br>'+delta(d.facebook.views.v,prev&&prev.facebook.views.v)+'</td>'
+          +'<td class="num">'+d.instagram.reach.v.toLocaleString()+'<br>'+delta(d.instagram.reach.v,prev&&prev.instagram.reach.v)+'</td>'
+          +'<td class="num">'+d.linkedin.impressions.v.toLocaleString()+'<br>'+delta(d.linkedin.impressions.v,prev&&prev.linkedin.impressions.v)+'</td>'
+          +'<td class="num">'+d.youtube.views_28d.v.toLocaleString()+'<br>'+delta(d.youtube.views_28d.v,prev&&prev.youtube.views_28d.v)+'</td>'
+          +'<td class="num">'+d.facebook.followers+'</td><td class="num">'+d.linkedin.followers+'</td>'
+          +'<td><a class="tbtn" href="'+x.row.report+'">'+(en?'Open':'Mở')+'</a></td></tr>';
+      });
+      document.getElementById('tbl').innerHTML=h+'</tbody></table>';
+    };
+    window.__redrawTable();
+  }).catch(function(e){document.getElementById('tbl').innerHTML='<p class="sub">Could not load history: '+e.message+'</p>';});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+{
+  "date": "2026-07-30",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "c4c4dc0",
+  "provenance": "Read directly from Chrome (Meta Business Suite FB + IG, YouTube Studio, LinkedIn Page admin). No Supermetrics, no third-party aggregator. No estimated values.",
+  "window": {
+    "en": "Last 28 days: 1 – 28 Jul 2026",
+    "vi": "28 ngày qua: 1/7 – 28/7/2026"
+  },
+  "facebook": {
+    "followers": 115,
+    "views": {
+      "v": 3440,
+      "change_pct": 164
+    },
+    "viewers": {
+      "v": 346,
+      "change_pct": 43.6
+    },
+    "visits": {
+      "v": 160,
+      "change_pct": 240.4
+    },
+    "interactions": {
+      "v": 127,
+      "change_pct": 135.2
+    },
+    "video_3s": {
+      "v": 101,
+      "change_pct": 60.3
+    },
+    "net_new_followers": {
+      "v": 2,
+      "change_pct": 100
+    },
+    "views_from_followers_pct": 48.8,
+    "views_from_non_followers_pct": 51.2,
+    "interactions_from_followers": 93,
+    "interactions_from_non_followers": 34,
+    "watch_time": "46m 19s",
+    "watch_time_change_pct": 160.5,
+    "daily": {
+      "views": [
+        29,
+        234,
+        94,
+        25,
+        40,
+        61,
+        11,
+        150,
+        79,
+        50,
+        41,
+        13,
+        200,
+        100,
+        370,
+        177,
+        224,
+        87,
+        204,
+        101,
+        165,
+        189,
+        202,
+        55,
+        63,
+        73,
+        74,
+        329
+      ],
+      "interactions": [
+        2,
+        9,
+        4,
+        0,
+        2,
+        2,
+        0,
+        7,
+        5,
+        2,
+        0,
+        0,
+        6,
+        1,
+        21,
+        6,
+        11,
+        2,
+        5,
+        4,
+        8,
+        1,
+        9,
+        2,
+        1,
+        2,
+        0,
+        15
+      ],
+      "visits": [
+        2,
+        8,
+        4,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        3,
+        1,
+        7,
+        7,
+        17,
+        3,
+        9,
+        0,
+        23,
+        10,
+        15,
+        10,
+        3,
+        0,
+        2,
+        0,
+        0,
+        33
+      ],
+      "video_3s": [
+        1,
+        3,
+        2,
+        3,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        34,
+        12,
+        3,
+        5,
+        0,
+        0,
+        14,
+        3
+      ]
+    },
+    "top_posts": [
+      {
+        "date": "28 Jul",
+        "title": "Project 251 | Millboard west-facing façade engineering",
+        "reach": 182,
+        "reactions": 8,
+        "comments": 0,
+        "shares": 3
+      },
+      {
+        "date": "23 Jul",
+        "title": "Circadian lighting — modelled in the digital twin",
+        "reach": 110,
+        "reactions": 3,
+        "comments": 0,
+        "shares": 1
+      },
+      {
+        "date": "22 Jul",
+        "title": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 97,
+        "reactions": 7,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "27 Jul",
+        "title": "What Makes a Home Feel Intuitive?",
+        "reach": 50,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "24 Jul",
+        "title": "Project management construction (article)",
+        "reach": 48,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "29 Jul",
+        "title": "The invisible layer — you'll feel it every day",
+        "reach": 32,
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0
+      }
+    ]
+  },
+  "instagram": {
+    "followers": 33,
+    "posts_total": [
+      {
+        "d": "22 Jul",
+        "t": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 98,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "28 Jul",
+        "t": "Project 251 | Millboard west-facing façade",
+        "reach": 34,
+        "react": 4,
+        "com": 2,
+        "sh": 1
+      },
+      {
+        "d": "17 Jul",
+        "t": "Luxury is rarely defined — CEO",
+        "reach": 15,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "20 Jul",
+        "t": "Every exceptional home is built twice — Project 2238",
+        "reach": 11,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "23 Jul",
+        "t": "Circadian lighting",
+        "reach": 10,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "21 Jul",
+        "t": "Why Some Homes Simply Feel Better?",
+        "reach": 10,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      }
+    ],
+    "views": {
+      "v": 810,
+      "change_pct": 82.4
+    },
+    "reach": {
+      "v": 187,
+      "change_pct": 57.1
+    },
+    "interactions": {
+      "v": 48,
+      "change_pct": 108.7
+    },
+    "views_from_followers_pct": 47.9,
+    "views_from_non_followers_pct": 52.1,
+    "reach_from_followers": 20,
+    "reach_from_non_followers": 168,
+    "daily": {
+      "views": [
+        4,
+        5,
+        3,
+        1,
+        0,
+        3,
+        0,
+        68,
+        12,
+        7,
+        4,
+        3,
+        11,
+        8,
+        53,
+        61,
+        26,
+        10,
+        18,
+        9,
+        172,
+        49,
+        91,
+        55,
+        5,
+        20,
+        14,
+        98
+      ],
+      "reach": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        9,
+        26,
+        9,
+        2,
+        6,
+        4,
+        73,
+        22,
+        24,
+        38,
+        1,
+        3,
+        3,
+        27
+      ],
+      "interactions": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        6,
+        2,
+        0,
+        3,
+        2,
+        3,
+        3,
+        10,
+        0,
+        0,
+        2
+      ]
+    },
+    "top_posts": [
+      {
+        "date": "22 Jul",
+        "title": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 98,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "28 Jul",
+        "title": "Project 251 | Millboard west-facing façade",
+        "reach": 34,
+        "reactions": 4,
+        "comments": 2,
+        "shares": 1
+      },
+      {
+        "date": "17 Jul",
+        "title": "Luxury is rarely defined — CEO",
+        "reach": 15,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "20 Jul",
+        "title": "Every exceptional home is built twice — Project 2238",
+        "reach": 11,
+        "reactions": 4,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "23 Jul",
+        "title": "Circadian lighting",
+        "reach": 10,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      },
+      {
+        "date": "21 Jul",
+        "title": "Why Some Homes Simply Feel Better?",
+        "reach": 10,
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0
+      }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 25,
+    "views_28d": {
+      "v": 27,
+      "change_pct": 0
+    },
+    "watch_time_hours": {
+      "v": 2.4,
+      "change_pct": 999
+    },
+    "latest_video_views": {
+      "v": 19,
+      "change_pct": null
+    },
+    "views_now": 27,
+    "views_prior": 26,
+    "top_videos": [
+      {
+        "title": "DX Living | Project 2238 Mosman, NSW",
+        "views": 18,
+        "avg_view_duration": "35:07"
+      },
+      {
+        "title": "251 PROJECT — PROGRESS UPDATE",
+        "views": 2,
+        "avg_view_duration": "—"
+      },
+      {
+        "title": "Architecture Isn't Static: Sunrise to Nightfall",
+        "views": 1,
+        "avg_view_duration": "0:28"
+      }
+    ]
+  },
+  "linkedin": {
+    "followers": 55,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": {
+      "v": 4,
+      "change_pct": 100
+    },
+    "impressions": {
+      "v": 1306,
+      "change_pct": 28.9
+    },
+    "reactions": {
+      "v": 57,
+      "change_pct": 14.9
+    },
+    "page_views": {
+      "v": 41,
+      "change_pct": 115.8
+    },
+    "unique_visitors": {
+      "v": 20,
+      "change_pct": 100
+    },
+    "impressions_prior": 1013,
+    "impressions_now": 1306,
+    "followers_by_location_pct": {
+      "Melbourne": 38.2,
+      "Ho Chi Minh City": 7.3,
+      "Brisbane": 5.5,
+      "Metro Manila": 5.5,
+      "Other": 43.5
+    }
+  },
+  "notes": {
+    "vi": [
+      "Views ▲164% lên 3.440 và visits ▲240,4% — series Project 2238 / Project 251 tiếp tục tạo cú hích thật, đỉnh 370 views/ngày. Tháng qua làm gì thì làm thêm cái đó.",
+      "Tương tác từ người chưa follow ▲466,7% và 51,2% lượt xem đến từ người chưa follow — nội dung thoát khỏi vòng follower. Giữ hook 'xây hai lần / trước khi xây'.",
+      "LinkedIn tiếp tục cộng dồn: 57 reactions trên 1.306 impressions ≈ 4,4% engagement rate — vẫn là kênh tốt nhất và đúng đối tượng B2B."
+    ],
+    "en": [
+      "Views ▲164% to 3,440 and visits ▲240.4% — the Project 2238 / Project 251 series keeps driving a real spike, peaking at 370 views in a single day. Do more of what you did this month.",
+      "Interactions from non-followers ▲466.7% and 51.2% of views are now from non-followers — content is breaking out of the bubble. Keep the 'built twice / before it's built' hooks.",
+      "LinkedIn keeps compounding: 57 reactions on 1,306 impressions ≈ 4.4% engagement rate — still your best channel and your true B2B audience."
+    ]
+  }
+}
