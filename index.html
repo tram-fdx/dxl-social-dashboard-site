@@ -59,71 +59,9 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 .modal h2{font-size:17px;margin-bottom:12px}
 .modal ol{margin:0 0 8px 18px}.modal li{font-size:13px;margin:7px 0}
 .modal .x{float:right;cursor:pointer;color:var(--muted);font-weight:800;border:none;background:none;font-size:18px}
-/* ---- date picker (ported from the SEO report, restyled to this palette) ---- */
-:root{--faint:#98a2b3;--accent-soft:#eef0ff;--line2:#eef1f6}
-body.lang-en .vi{display:none}body:not(.lang-en) .en{display:none}
-.filterbar{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
-.section-label{font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.section-label .bar{width:26px;height:3px;border-radius:2px;background:var(--accent)}
-.section-sub{font-size:12.5px;color:var(--muted);margin:0 0 12px;line-height:1.5;max-width:1000px}
-.dpwrap{position:relative}
-.dpbtn{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid #cfd4da;border-radius:9px;padding:9px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
-.dpbtn:hover{border-color:#a9b0b8}
-.dpbtn .car{color:var(--muted);font-size:10px}
-.dppanel{position:absolute;top:calc(100% + 7px);left:0;z-index:70;display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,.16);overflow:hidden}
-.dppanel[hidden]{display:none}
-.dp-presets{width:212px;flex:0 0 auto;border-right:1px solid var(--line);padding:9px 0;max-height:340px;overflow-y:auto}
-.dp-preset{display:flex;align-items:center;gap:10px;padding:7px 14px;width:100%;border:0;background:transparent;font-family:inherit;font-size:13px;line-height:1.35;color:var(--ink);text-align:left;cursor:pointer}
-.dp-preset:hover{background:#f5f6f8}
-.dp-preset .rad{width:15px;height:15px;border-radius:50%;border:1.5px solid #b9bfc6;flex:0 0 auto;transition:.15s}
-.dp-preset.sel{font-weight:700}
-.dp-preset.sel .rad{border-color:var(--accent);border-width:4.5px}
-.dp-preset .pc{margin-left:auto;font-size:10.5px;font-weight:700;color:var(--faint);font-variant-numeric:tabular-nums}
-.dp-preset[disabled]{color:#b9bfc6;cursor:not-allowed}
-.dp-preset[disabled]:hover{background:transparent}
-.dp-preset[disabled] .rad{border-color:#dde1e5}
-.dp-right{padding:14px 16px 11px;flex:1 1 auto}
-.dp-cals{display:flex;gap:24px}
-.dp-mhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;min-height:26px}
-.dp-mname{font-size:14px;font-weight:700}
-.dp-nav{border:0;background:transparent;cursor:pointer;color:var(--muted);font-size:18px;line-height:1;padding:1px 7px;border-radius:6px;font-family:inherit}
-.dp-nav:hover{background:#f5f6f8;color:var(--ink)}
-.dp-nav[disabled]{color:#dde1e5;cursor:not-allowed}
-.dp-nav[disabled]:hover{background:transparent}
-.dp-grid{display:grid;grid-template-columns:repeat(7,30px);gap:2px 0}
-.dp-dow{font-size:10.5px;font-weight:700;color:var(--faint);text-align:center;padding:3px 0}
-.dp-day{height:29px;border:0;background:transparent;border-radius:7px;font-family:inherit;font-size:12.5px;font-weight:600;line-height:1;color:var(--ink);cursor:pointer;position:relative;padding:0}
-.dp-day.blank{visibility:hidden}
-.dp-day.off{color:#c2c7cd}
-.dp-day:not(.blank):hover{background:var(--accent-soft)}
-.dp-day.edge:hover{background:var(--accent)}
-.dp-day.inr{background:var(--accent-soft);border-radius:0}
-.dp-day.edge{background:var(--accent);color:#fff;border-radius:7px}
-.dp-day .dot{position:absolute;left:50%;transform:translateX(-50%);bottom:3.5px;width:3.5px;height:3.5px;border-radius:50%;background:var(--accent)}
-.dp-day.edge .dot{background:#fff}
-.dp-foot{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:11px}
-.dp-rng{font-size:13.5px;font-weight:700;display:block}
-.dp-hint{font-size:11.5px;color:var(--faint);font-weight:600;display:block}
-.dp-btns{margin-left:auto;display:flex;gap:9px}
-.dp-b{border:1px solid #cfd4da;background:#fff;border-radius:8px;padding:8px 17px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;color:var(--ink);cursor:pointer;transition:.15s}
-.dp-b:hover{background:#f5f6f8}
-.dp-b.pri{background:var(--accent);border-color:var(--accent);color:#fff}
-.dp-b.pri:hover{background:#4857e0}
-.dp-b[disabled]{opacity:.42;cursor:not-allowed}
-.dp-b.pri[disabled]:hover{background:var(--accent)}
-.dp-legend{font-size:11px;color:var(--faint);font-weight:600;margin:9px 0 0}
-.daylinks{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0 0;padding-top:12px;border-top:1px solid var(--line2)}
-.daylinks-lb{font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--faint);margin-right:2px}
-.daylink{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;font-family:inherit;font-size:12px;font-weight:700;line-height:1.3;color:var(--ink);cursor:pointer;transition:.15s;text-decoration:none}
-.daylink:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-.daylink small{font-weight:600;color:var(--faint);font-size:10.5px}
-.daylink:hover small{color:var(--accent)}
-.daylink.cur{border-color:var(--accent);background:var(--accent);color:#fff;cursor:default}
-.daylink.cur small{color:#dfe3ff}
-
 </style>
 </head>
-<body class="lang-en">
+<body>
 <div class="app">
 <nav class="rail">
 <div class="logo">DX</div>
@@ -142,34 +80,6 @@ body.lang-en .vi{display:none}body:not(.lang-en) .en{display:none}
 <button class="tbtn p" id="langBtn">VI</button>
 </div>
 </div>
-<section class="panel" id="sec-filter" style="display:none;margin-bottom:16px">
-  <p class="section-label"><span class="bar"></span> <span class="vi">Chọn ngày để xem dashboard</span><span class="en">Pick a date to open its dashboard</span></p>
-  <p class="section-sub"><span class="vi">Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản dashboard đã lưu của ngày đó. Ngày <b>có dấu chấm</b> là ngày đã quét và có bản lưu; ngày làm mờ vẫn chọn được làm đầu/cuối khoảng, nhưng không có bản lưu riêng để mở.</span><span class="en">Pick <b>a single day</b> and press <b>Update</b> to open exactly that day's stored dashboard. A <b>dot</b> marks a day that was scanned and has a stored snapshot; a dimmed day can still bound a range, but has no snapshot of its own to open.</span></p>
-  <div class="filterbar">
-    <div class="dpwrap">
-      <button class="dpbtn" id="dpbtn" type="button" aria-haspopup="dialog" aria-expanded="false">
-        <span>🗓</span> <span id="dplabel"></span> <span class="car">▾</span>
-      </button>
-      <div class="dppanel" id="dppanel" hidden role="dialog" aria-label="Date range">
-        <div class="dp-presets" id="dppresets"></div>
-        <div class="dp-right">
-          <div class="dp-cals" id="dpcals"></div>
-          <div class="dp-foot">
-            <div><span class="dp-rng" id="dprng"></span><span class="dp-hint" id="dphint"></span></div>
-            <div class="dp-btns">
-              <button class="dp-b" id="dpcancel" type="button"><span class="vi">Hủy</span><span class="en">Cancel</span></button>
-              <button class="dp-b pri" id="dpupdate" type="button"><span class="vi">Cập nhật</span><span class="en">Update</span></button>
-            </div>
-          </div>
-          <p class="dp-legend"><span class="vi">Dấu chấm = ngày đã có bản lưu. Ngày làm mờ = chưa quét: dùng được làm đầu/cuối khoảng, nhưng không mở được bản lưu riêng.</span><span class="en">A dot marks a day with a stored snapshot. A dimmed day was never scanned: it can bound a range, but cannot open a snapshot of its own.</span></p>
-        </div>
-      </div>
-    </div>
-    <span id="dpchip"></span>
-  </div>
-  <div class="daylinks" id="daylinks"></div>
-</section>
-
 <div id="view"></div>
 <div class="foot" id="foot"></div>
 </main>
@@ -178,32 +88,32 @@ body.lang-en .vi{display:none}body:not(.lang-en) .en{display:none}
 <div class="modal" id="shareModal"><div class="box"><button class="x" onclick="closeShare()">×</button><div id="shareContent"></div></div></div>
 
 <script>
-// ============ REAL DATA — captured 31 Jul 2026 via Chrome (all channels read live: Meta Business Suite FB + IG, YouTube Studio, LinkedIn admin) ============
-const PERIOD_EN="Last 28 days: 2 – 29 Jul 2026", PERIOD_VI="28 ngày qua: 2/7 – 29/7/2026";
-const dlabels=(()=>{const a=[];const d=new Date(2026,6,2);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
+// ============ REAL DATA — captured 2 Aug 2026 via Chrome (FB + IG read live via Meta Business Suite; YT + LI retained from 31 Jul read — no access this run) ============
+const PERIOD_EN="Last 28 days: 4 – 31 Jul 2026", PERIOD_VI="28 ngày qua: 4/7 – 31/7/2026";
+const dlabels=(()=>{const a=[];const d=new Date(2026,6,4);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
 
 const FB={ followers:115,
-kpis:[{en:"Views",vi:"Lượt xem",v:3635,c:186.7},{en:"Reach (viewers)",vi:"Người tiếp cận",v:350,c:51.5},{en:"Facebook visits",vi:"Lượt truy cập",v:171,c:249},{en:"Content interactions",vi:"Tương tác ND",v:130,c:154.9},{en:"Video 3s views",vi:"Video 3s views",v:111,c:79},{en:"Net new followers",vi:"Follower ròng",v:2,c:100}],
-viewsDaily:[234,94,25,40,61,11,150,79,50,41,13,200,100,370,177,224,87,204,101,165,189,202,55,63,73,74,329,224],
-interactionsDaily:[9,4,0,2,2,0,7,5,2,0,0,6,1,21,6,11,2,5,4,8,1,9,2,1,2,0,15,5],
-visitsDaily:[8,4,0,1,0,1,1,0,0,3,1,7,7,17,3,9,0,23,10,15,10,3,0,2,0,0,33,13],
-video3sDaily:[3,2,3,0,1,0,1,1,1,1,1,7,0,0,0,0,1,4,3,34,12,3,5,0,0,14,3,11],
-viewsSrc:[49.2,50.8], intSrc:[94,36], watch:{en:"48m 31s",vi:"48 phút 31 giây"}, watchC:173.7,
-posts:[{d:"28 Jul",t:"Project 251 | Millboard west-facing façade engineering",reach:213,react:8,com:0,sh:3},{d:"23 Jul",t:"Circadian lighting — modelled in the digital twin",reach:118,react:3,com:0,sh:1},{d:"22 Jul",t:"Project 2238 | Mosman, NSW — 4D Digital Twin",reach:98,react:7,com:0,sh:0},{d:"20 Jul",t:"Every exceptional home is built twice — Project 2238",reach:95,react:2,com:0,sh:0},{d:"21 Jul",t:"Why Some Homes Simply Feel Better?",reach:75,react:3,com:0,sh:0},{d:"27 Jul",t:"What Makes a Home Feel Intuitive?",reach:61,react:2,com:0,sh:0}],
-insights:{en:["Views ▲186.7% to 3,635 and visits ▲249% — the Project 2238 / Project 251 series keeps compounding, peaking at 370 views in a single day. Do more of what you did this month.","Interactions from non-followers ▲500% and 50.8% of views are now from non-followers — content is breaking out of the bubble. Keep the 'built twice / before it's built' hooks.","Project 251 Millboard façade (reach 213), circadian lighting (118) and Project 2238 Mosman (98) lead — specific project detail out-reaches generic brand posts.","Only +2 net followers despite the reach spike — still no strong follow trigger. Add 'Follow to watch Project 2238 get built' to every post."],
-vi:["Views ▲186,7% lên 3.635 và visits ▲249% — series Project 2238 / Project 251 tiếp tục cộng dồn, đỉnh 370 views/ngày. Tháng qua làm gì thì làm thêm cái đó.","Tương tác từ người chưa follow ▲500% và 50,8% lượt xem đến từ người chưa follow — nội dung thoát khỏi vòng follower. Giữ hook 'xây hai lần / trước khi xây'.","Bài façade Millboard Project 251 (reach 213), circadian lighting (118) và Project 2238 Mosman (98) dẫn đầu — chi tiết dự án cụ thể vượt bài thương hiệu chung chung.","Chỉ +2 follower ròng dù reach tăng vọt — vẫn thiếu 'mồi' theo dõi mạnh. Thêm 'Follow để xem Project 2238 được xây' vào mỗi bài."]},
+kpis:[{en:"Views",vi:"Lượt xem",v:3604,c:140.7},{en:"Reach (viewers)",vi:"Người tiếp cận",v:328,c:18.4},{en:"Facebook visits",vi:"Lượt truy cập",v:189,c:225.9},{en:"Content interactions",vi:"Tương tác ND",v:125,c:101.6},{en:"Video 3s views",vi:"Video 3s views",v:109,c:78.7},{en:"Net new followers",vi:"Follower ròng",v:3,c:100}],
+viewsDaily:[25,40,61,11,150,79,50,41,13,200,100,370,177,224,87,204,101,165,189,202,55,63,73,74,329,224,174,123],
+interactionsDaily:[0,2,2,0,7,5,2,0,0,6,1,21,6,11,2,5,4,8,1,9,2,1,2,0,15,5,7,1],
+visitsDaily:[0,1,0,1,1,0,0,3,1,7,7,17,3,9,0,23,10,15,10,3,0,2,0,0,33,13,17,13],
+video3sDaily:[3,0,1,0,1,1,1,1,1,7,0,0,0,0,1,4,3,34,12,3,5,0,0,14,3,11,1,2],
+viewsSrc:[50,50], intSrc:[92,33], watch:{en:"47m 30s",vi:"47 phút 30 giây"}, watchC:159.7,
+posts:[{d:"28 Jul",t:"Project 251 | Millboard west-facing façade — resilient by design",reach:265,react:9,com:1,sh:3},{d:"29 Jul",t:"The Invisible Layer — what DX Living builds first",reach:71,react:2,com:0,sh:0},{d:"31 Jul",t:"Construction delays rarely start on site — programs reduce risk",reach:46,react:3,com:0,sh:1},{d:"27 Jul",t:"What Makes a Home Feel Intuitive?",reach:68,react:2,com:0,sh:0},{d:"24 Jul",t:"Luxury homes defined by what happens before construction begins",reach:64,react:4,com:0,sh:0},{d:"1 Aug",t:"The best time to change your mind is before it's built",reach:24,react:0,com:0,sh:0}],
+insights:{en:["Views ▲140.7% to 3,604 and visits ▲225.9% — the Project 251 series stays strong, peaking at 370 views on 15 Jul. The west-facing façade post is now the #1 post at reach 265.","Interactions from non-followers ▲266.7% and 50% of views from non-followers — content keeps breaking out. Sustain 'built before it's built' hooks.","Project 251 Millboard façade (reach 265, 9 reactions) clearly dominates. Specific project + supplier detail is the winning formula.","Only +3 net followers despite reach growth — still no follow trigger. Add 'Follow to watch Project 251 get built' to every post."],
+vi:["Views ▲140,7% lên 3.604 và visits ▲225,9% — series Project 251 vẫn mạnh, đỉnh 370 views ngày 15/7. Bài façade hướng tây giờ là #1 với reach 265.","Tương tác từ người chưa follow ▲266,7% và 50% lượt xem đến từ người chưa follow — nội dung tiếp tục thoát vòng. Giữ hook 'xây trước khi xây'.","Bài façade Millboard Project 251 (reach 265, 9 reactions) dẫn đầu rõ rệt. Chi tiết dự án + nhà cung cấp cụ thể là công thức thắng.","Chỉ +3 follower ròng dù reach tăng — vẫn thiếu 'mồi' theo dõi. Thêm 'Follow để xem Project 251 được xây' vào mỗi bài."]},
 next:{en:["Ride the Project 2238 series — post each build stage","Add a follow CTA + a question to every caption","Reply to comments <2h; the 16 Jul post got a comment — engage it","Turn the CEO quote & Project 2238 into Reels + Shorts"],
 vi:["Khai thác series Project 2238 — đăng từng giai đoạn thi công","Thêm CTA theo dõi + 1 câu hỏi vào mỗi caption","Trả lời bình luận <2h; bài 16/7 có comment — tương tác ngay","Chuyển trích dẫn CEO & Project 2238 thành Reels + Shorts"]} };
 
 const IG={ followers:33, posts:93,
-kpis:[{en:"Views",vi:"Lượt xem",v:855,c:91.7},{en:"Reach",vi:"Người tiếp cận",v:192,c:60},{en:"Content interactions",vi:"Tương tác ND",v:49,c:113},{en:"Followers",vi:"Người theo dõi",v:33,c:null},{en:"Posts",vi:"Bài đăng",v:93,c:null},{en:"New follows",vi:"Follow mới",v:0,c:0}],
-viewsDaily:[5,3,1,0,3,0,68,12,7,4,3,11,8,53,61,26,10,18,9,172,49,91,55,5,20,14,98,49],
-reachDaily:[2,2,0,0,0,0,2,1,2,1,1,0,2,9,26,9,2,6,4,73,22,24,38,1,3,3,27,11],
-interactionsDaily:[0,0,0,0,0,0,0,0,0,0,0,0,0,10,6,2,0,3,2,3,3,10,0,0,2,0,7,1],
-viewsSrc:[49.8,50.2], reachSrc:[20,173],
+kpis:[{en:"Views",vi:"Lượt xem",v:870,c:95.1},{en:"Reach",vi:"Người tiếp cận",v:192,c:61.3},{en:"Content interactions",vi:"Tương tác ND",v:51,c:121.7},{en:"Followers",vi:"Người theo dõi",v:33,c:null},{en:"Posts",vi:"Bài đăng",v:93,c:null},{en:"New follows",vi:"Follow mới",v:"—",c:null}],
+viewsDaily:[1,0,3,0,68,12,7,4,3,11,8,53,61,26,10,18,9,172,49,91,55,5,20,14,98,49,11,12],
+reachDaily:[0,0,0,0,2,1,2,1,1,0,2,9,26,9,2,6,4,73,22,24,38,1,3,3,27,11,4,4],
+interactionsDaily:[0,0,0,0,0,0,0,0,0,0,0,10,6,2,0,3,2,3,3,10,0,0,2,0,7,1,2,0],
+viewsSrc:[50.9,49.1], reachSrc:[20,173],
 posts:[{d:"22 Jul",t:"Project 2238 | Mosman, NSW — 4D Digital Twin",reach:98,react:4,com:0,sh:0},{d:"28 Jul",t:"Project 251 | Millboard west-facing façade",reach:35,react:5,com:2,sh:1},{d:"17 Jul",t:"Luxury is rarely defined — CEO",reach:15,react:4,com:0,sh:0},{d:"20 Jul",t:"Every exceptional home is built twice — Project 2238",reach:11,react:4,com:0,sh:0},{d:"23 Jul",t:"Circadian lighting",reach:10,react:2,com:0,sh:0},{d:"21 Jul",t:"Why Some Homes Simply Feel Better?",reach:10,react:2,com:0,sh:0}],
-insights:{en:["Views ▲91.7% to 855 with strong recent spikes (172, then 98) — recent posts are taking off; make more of that format.","Reach 192 (▲60%), ~90% from non-followers — Instagram is pure discovery right now, but interactions stay modest (49). Reach isn't fully converting to saves/comments.","Interactions ▲113% — engagement is improving faster than reach; your existing audience is warming up. Post consistently to keep them.","Still ~33 followers — reach without follows means the 'follow me' ask is missing. Put it on-screen in the first & last frame of every Reel."],
-vi:["Views ▲91,7% lên 855 với các cú nhảy gần đây (172, rồi 98) — bài gần đây đang ăn; làm thêm định dạng đó.","Reach 192 (▲60%), ~90% từ người chưa follow — Instagram thuần khám phá lúc này, nhưng tương tác vẫn khiêm tốn (49). Reach chưa chuyển hẳn thành save/comment.","Tương tác ▲113% — engagement tăng nhanh hơn reach; đối tượng hiện có đang ấm lên. Đăng đều để giữ nhiệt.","Vẫn ~33 follower — reach mà không có follow nghĩa là thiếu lời mời 'theo dõi'. Đưa lên màn hình ở khung đầu & cuối mỗi Reel."]},
+insights:{en:["Views ▲95.1% to 870 — up from 855 last period, with the 28 Jul Project 251 façade post driving a spike. Format is working; make more project-specific content.","Reach 192 (▲61.3%), 90% from non-followers — pure discovery. Interactions improved to 51 (▲121.7%) with 85% from followers. The audience is warming up.","Interactions growing faster than reach: 51 (▲121.7%) vs reach at 192 (▲61.3%). Existing followers are engaging more — reward them with consistent posting.","Still 33 followers — no growth data available this period. Follow CTA in every Reel's first and last frame is still the key lever."],
+vi:["Views ▲95,1% lên 870 — tăng từ 855 kỳ trước, bài façade Project 251 (28/7) tạo cú nhảy. Định dạng đang ăn; làm thêm nội dung chi tiết dự án.","Reach 192 (▲61,3%), 90% từ người chưa follow — thuần khám phá. Tương tác cải thiện lên 51 (▲121,7%) với 85% từ follower. Đối tượng đang ấm lên.","Tương tác tăng nhanh hơn reach: 51 (▲121,7%) vs reach 192 (▲61,3%). Follower hiện có tương tác nhiều hơn — thưởng họ bằng cách đăng đều đặn.","Vẫn 33 follower — không có dữ liệu tăng trưởng kỳ này. CTA theo dõi ở khung đầu & cuối mỗi Reel vẫn là đòn bẩy chính."]},
 next:{en:["Make Reels the primary format (3–5/week)","Put a follow CTA on-screen in every Reel","Post 1–2 Stories/day with a poll or link sticker","Reply to every comment & DM within 2h"],
 vi:["Ưu tiên Reels làm định dạng chính (3–5/tuần)","Đưa CTA theo dõi lên màn hình mỗi Reel","Đăng 1–2 Story/ngày kèm poll hoặc link sticker","Trả lời mọi bình luận & tin nhắn trong 2h"]} };
 
@@ -250,10 +160,10 @@ channel:{en:"Channel",vi:"Kênh"},followers2:{en:"Followers",vi:"Người theo d
 loginNeeded:{en:"login needed",vi:"cần đăng nhập"}, subs:{en:"subscribers",vi:"người đăng ký"},
 deepNote:{en:"Deeper metrics for this channel are read live via Chrome. Ask me to refresh anytime.",vi:"Số liệu sâu của kênh này được đọc trực tiếp qua Chrome. Nhờ tôi làm mới bất cứ lúc nào."},
 vsPrior:{en:"vs prior",vi:"vs kỳ trước"}, snapshotTag:{en:"snapshot",vi:"ảnh chụp"},
-footer:{en:"DX Living / FeelDX · All channels read live via Chrome on 31 Jul 2026 · 28-day window to 29 Jul 2026 · point-in-time snapshot · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · Tất cả kênh đọc trực tiếp qua Chrome ngày 31/7/2026 · cửa sổ 28 ngày đến 29/7/2026 · ảnh chụp tại thời điểm · lịch tự làm mới mỗi ngày."}
+footer:{en:"DX Living / FeelDX · FB+IG read live via Chrome on 2 Aug 2026 · 28-day window 4–31 Jul 2026 · YT+LI retained from prior read (no access) · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · FB+IG đọc trực tiếp qua Chrome ngày 2/8/2026 · cửa sổ 28 ngày 4–31/7/2026 · YT+LI giữ số cũ (không có quyền) · lịch tự làm mới mỗi ngày."}
 };
-const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 31 Jul 2026. The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
-vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 31/7/2026. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
+const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 2 Aug 2026 (FB+IG live; YT+LI prior read). The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
+vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 2/8/2026 (FB+IG trực tiếp; YT+LI số cũ). Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
 
 // ============ render ============
 let lang="en", current="facebook", charts=[];
@@ -293,13 +203,13 @@ function head(k,badge,color,per,chip){$("hdBadge").style.background=color;$("hdB
 function renderFacebook(){
 head("facebook","f","#1877f2",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · DX Living · "+FB.followers+" "+tt(T.foll),tt(T.live));
 const b=bestOf(FB.viewsDaily);
-const stats=[{l:tt(T.engRate),v:(130/3635*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"50.8%",s:"▲ 25%"},{l:tt(T.avgPerDay),v:Math.round(3635/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
+const stats=[{l:tt(T.engRate),v:(125/3604*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"50%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(3604/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
 const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
 $("view").innerHTML=kpis(FB.kpis)+`
 <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
 <div class="grid g3"><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.visitsByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.videoByDay)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
 <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
-<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">Watch time: <b>${tt(FB.watch)}</b> (▲ ${FB.watchC}%). Non-follower interactions ▲ 500%.</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">Watch time: <b>${tt(FB.watch)}</b> (▲ ${FB.watchC}%). Non-follower interactions ▲ 266.7%.</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
 <div class="grid g3"><div class="panel"><h3>${tt(T.intBySrc)}</h3><div class="chart sm"><canvas id="c6"></canvas></div></div><div class="panel" style="grid-column:span 2"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div></div>
 <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(FB.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(FB.next))}</div></div>`;
 clearCharts();
@@ -311,7 +221,7 @@ dough("c6",[fl,nf],FB.intSrc);
 function renderInstagram(){
 head("instagram","ig","#e1306c",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @dxliving.au · 33 "+tt(T.foll),tt(T.live));
 const b=bestOf(IG.viewsDaily);
-const stats=[{l:tt(T.engRate),v:(49/192*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"90.1%",s:"▲ 61.7%"},{l:tt(T.avgPerDay),v:Math.round(855/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Peak day views",vi:"Views ngày đỉnh"}),v:"172",s:tt({en:"peak",vi:"đỉnh"})}];
+const stats=[{l:tt(T.engRate),v:(51/192*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"89.6%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(870/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Peak day views",vi:"Views ngày đỉnh"}),v:"172",s:tt({en:"peak",vi:"đỉnh"})}];
 const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
 $("view").innerHTML=kpis(IG.kpis)+`
 <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.reachBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
@@ -348,13 +258,13 @@ hbar("c1",locLbl,LI.locData,"#0a66c2");
 bar("c2",[tt({en:"Prior",vi:"Kỳ trước"}),tt({en:"Now",vi:"Hiện tại"})],[LI.imprPrior,LI.imprNow],["#c7ccd6","#0a66c2"]);
 }
 function renderAll(){
-head("all","◆","#5b6bf5",tt({en:"Snapshot · 31 Jul 2026 · all channels live via Chrome",vi:"Ảnh chụp · 31/7/2026 · tất cả kênh trực tiếp qua Chrome"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không Supermetrics)"}));
-const kp=[{en:"FB Views",vi:"FB Lượt xem",v:3635,c:186.7},{en:"IG Reach",vi:"IG Reach",v:192,c:60},{en:"LI Impressions",vi:"LI Impressions",v:1351,c:30.7},{en:"LI Reactions",vi:"LI Reactions",v:56,c:16.4},{en:"YT Views",vi:"YT Lượt xem",v:28,c:0},{en:"FB Followers",vi:"FB Follower",v:115,c:null},{en:"LI Followers",vi:"LI Follower",v:55,c:null},{en:"IG Followers",vi:"IG Follower",v:33,c:null}];
+head("all","◆","#5b6bf5",tt({en:"Snapshot · 2 Aug 2026 · FB+IG live · YT+LI prior",vi:"Ảnh chụp · 2/8/2026 · FB+IG trực tiếp · YT+LI số cũ"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không Supermetrics)"}));
+const kp=[{en:"FB Views",vi:"FB Lượt xem",v:3604,c:140.7},{en:"IG Reach",vi:"IG Reach",v:192,c:61.3},{en:"LI Impressions",vi:"LI Impressions",v:1351,c:30.7},{en:"LI Reactions",vi:"LI Reactions",v:56,c:16.4},{en:"YT Views",vi:"YT Lượt xem",v:28,c:0},{en:"FB Followers",vi:"FB Follower",v:115,c:null},{en:"LI Followers",vi:"LI Follower",v:55,c:null},{en:"IG Followers",vi:"IG Follower",v:33,c:null}];
 $("view").innerHTML=kpis(kp)+`
 <div class="grid g2"><div class="panel"><h3>${tt(T.followersBy)}</h3><div class="chart"><canvas id="a1"></canvas></div></div>
 <div class="panel"><h3>${tt(T.chStatus)}</h3><table><thead><tr><th>${tt(T.channel)}</th><th>${tt(T.followers2)}</th><th>${tt(T.status)}</th></tr></thead><tbody>
 <tr><td>Facebook</td><td>115</td><td><span class="pill on">live</span></td></tr><tr><td>Instagram</td><td>33</td><td><span class="pill on">live</span></td></tr><tr><td>LinkedIn</td><td>55</td><td><span class="pill on">live</span></td></tr><tr><td>YouTube</td><td>4</td><td><span class="pill on">live</span></td></tr><tr><td>TikTok / X</td><td>—</td><td><span class="pill none">no account</span></td></tr></tbody></table></div></div>
-<div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["LinkedIn is your best B2B channel: ~4.1% engagement (56 reactions / 1,351 impressions, ▲30.7% impressions) and your true target audience. Prioritise it.","Facebook exploded: views ▲186.7% (3,635) and visits ▲249% off the Project 2238 / Project 251 series. Sustain that content mix.","Instagram reach ▲60% (192) but interactions stay modest (49) — discovery works, engagement lags. A follow CTA on every Reel is the fix.","YouTube held steady: watch time ▲>999% (2.4 hrs) on the Project 2238 video — keep a weekly Shorts cadence."],vi:["LinkedIn là kênh B2B tốt nhất: engagement ~4,1% (56 reactions / 1.351 impressions, ▲30,7% impressions) và đúng đối tượng mục tiêu. Ưu tiên kênh này.","Facebook bùng nổ: views ▲186,7% (3.635) và visits ▲249% nhờ series Project 2238 / Project 251. Duy trì mix nội dung đó.","Instagram reach ▲60% (192) nhưng tương tác vẫn khiêm tốn (49) — khám phá tốt, engagement chưa theo kịp. CTA theo dõi trên mỗi Reel là cách chữa.","YouTube giữ nhịp: watch time ▲>999% (2,4 giờ) nhờ video Project 2238 — giữ nhịp Shorts hằng tuần."]}))}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["LinkedIn (prior read): 56 reactions / 1,351 impressions ≈ 4.1% engagement. Still the best B2B channel — log in to LinkedIn admin to refresh.","Facebook continues strong: views ▲140.7% to 3,604 and visits ▲225.9% — the Project 251 façade is now the #1 post (reach 265, 9 reactions).","Instagram views ▲95.1% to 870 and interactions ▲121.7% to 51 — both improving. Reach stable at 192 (▲61.3%), 90% from non-followers.","YouTube (prior read): 28 views / 2.4 hrs watch time. No Studio access this run — log in to refresh subscriber and video analytics."],vi:["LinkedIn (số cũ): 56 reactions / 1.351 impressions ≈ 4,1% engagement. Vẫn là kênh B2B tốt nhất — đăng nhập LinkedIn admin để làm mới.","Facebook tiếp tục mạnh: views ▲140,7% lên 3.604 và visits ▲225,9% — bài façade Project 251 giờ là #1 (reach 265, 9 reactions).","Instagram views ▲95,1% lên 870 và tương tác ▲121,7% lên 51 — cả hai đang cải thiện. Reach giữ 192 (▲61,3%) với 90% từ người chưa follow.","YouTube (số cũ): 28 views / 2,4 giờ xem. Không có quyền truy cập Studio lần này — đăng nhập để làm mới số liệu."]}))}</div>
 <div class="panel"><h3>${tt(T.routine)}</h3>${list(tt(DAILY))}</div></div>`;
 clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,55,33,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
 }
@@ -362,248 +272,11 @@ clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,55,33,
 function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);}
 function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
 document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
-$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";document.body.classList.toggle("lang-en",lang==="en");render();if(window.__redraw)window.__redraw();});
+$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
 select("facebook");
-</script>
-
-<script>
-/* ---- date picker: navigates to the stored snapshot of the chosen day ---- */
-function pkLang(){ return document.body.classList.contains("lang-en") ? "en" : "vi"; }
-function t(vi, en){ return pkLang() === "en" ? en : vi; }
-
-/* =====================================================================
-   DATE PICKER — same control as history.html, but here it NAVIGATES.
-   This page is the report of the newest scan; picking an older day opens
-   that day's frozen report instead of re-rendering this one, so the
-   numbers on screen are always the numbers that were actually measured
-   on the chosen date. Nothing is interpolated.
-   ===================================================================== */
-(function(){
-  /* A frozen archive copy of this page has the picker section stripped out (it
-     lives one folder down, where data/index.json 404s and every relative target
-     would be wrong). Bail out before anything here touches a missing node. */
-  if (!document.getElementById('sec-filter')) return;
-
-  let ALL = [];                 /* [{date, report, label_vi, label_en}] ascending */
-  let LATEST = null;            /* the day this page reports on */
-  let DATASET = new Set();      /* stored days, for O(1) calendar lookups */
-  let SEL = {from: null, to: null, preset: 'custom'};
-  let DRAFT = {from: null, to: null, preset: 'custom'};
-  let calM = null;
-
-  const MN_VI = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6','Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
-  const MN_EN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-  const DOW_VI = ['CN','T2','T3','T4','T5','T6','T7'];
-  const DOW_EN = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-
-  function iso(y, m, d){ return y + '-' + String(m + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'); }
-  function todayISO(){ const n = new Date(); return iso(n.getFullYear(), n.getMonth(), n.getDate()); }
-  function shiftISO(s, days){ const d = new Date(s + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); }
-  function monthAdd(o, n){ const d = new Date(Date.UTC(o.y, o.m + n, 1)); return {y: d.getUTCFullYear(), m: d.getUTCMonth()}; }
-  function monthKey(o){ return o.y * 12 + o.m; }
-  function monthOf(s){ return {y: Number(s.slice(0, 4)), m: Number(s.slice(5, 7)) - 1}; }
-  function dmy(s){ const p = s.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
-  function el(id){ return document.getElementById(id); }
-
-  /* presets resolve against the client clock; `all` spans the whole archive */
-  const PRESETS = [
-    {id:'yesterday', vi:'Hôm qua', en:'Yesterday', calc:td => ({from: shiftISO(td, -1), to: shiftISO(td, -1)})},
-    {id:'d7',  vi:'7 ngày qua',  en:'Last 7 days',  calc:td => ({from: shiftISO(td, -6),  to: td})},
-    {id:'d28', vi:'28 ngày qua', en:'Last 28 days', calc:td => ({from: shiftISO(td, -27), to: td})},
-    {id:'d90', vi:'90 ngày qua', en:'Last 90 days', calc:td => ({from: shiftISO(td, -89), to: td})},
-    {id:'wk',  vi:'Tuần này',    en:'This week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); return {from: shiftISO(td, -d.getUTCDay()), to: td}; }},
-    {id:'mo',  vi:'Tháng này',   en:'This month',   calc:td => ({from: td.slice(0, 8) + '01', to: td})},
-    {id:'yr',  vi:'Năm nay',     en:'This year',    calc:td => ({from: td.slice(0, 4) + '-01-01', to: td})},
-    {id:'lwk', vi:'Tuần trước',  en:'Last week',    calc:function(td){ const d = new Date(td + 'T00:00:00Z'); const s = shiftISO(td, -d.getUTCDay() - 7); return {from: s, to: shiftISO(s, 6)}; }},
-    {id:'lmo', vi:'Tháng trước', en:'Last month',   calc:function(td){ const mo = monthAdd(monthOf(td), -1); const last = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate(); return {from: iso(mo.y, mo.m, 1), to: iso(mo.y, mo.m, last)}; }},
-    {id:'all', vi:'Toàn bộ dữ liệu đã lưu', en:'All stored data', calc:function(){ return {from: ALL[0].date, to: ALL[ALL.length - 1].date}; }}
-  ];
-  function presetById(id){ return PRESETS.filter(p => p.id === id)[0] || null; }
-  function inRange(dt, from, to){ return (!from || dt >= from) && (!to || dt <= to); }
-  function daysIn(from, to){ return ALL.filter(r => inRange(r.date, from, to)); }
-  function countIn(from, to){ return daysIn(from, to).length; }
-  function rowFor(d){ return ALL.filter(r => r.date === d)[0] || null; }
-
-  function rangeText(r){
-    if (!r.from) return t('Chưa chọn ngày', 'No day picked yet');
-    if (!r.to || r.from === r.to) return dmy(r.from);
-    return dmy(r.from) + ' – ' + dmy(r.to);
-  }
-  function labelFor(r){
-    const p = r.preset && r.preset !== 'custom' ? presetById(r.preset) : null;
-    if (p) return '<span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span>';
-    if (!r.from) return '<span class="vi">Chọn ngày</span><span class="en">Pick a date</span>';
-    if (!r.to || r.from === r.to) return '<span class="vi">Ngày ' + dmy(r.from) + '</span><span class="en">' + dmy(r.from) + '</span>';
-    return dmy(r.from) + ' – ' + dmy(r.to);
-  }
-
-  function renderPresets(){
-    const td = todayISO();
-    el('dppresets').innerHTML = PRESETS.map(function(p){
-      const rg = p.calc(td);
-      const n = countIn(rg.from, rg.to);
-      return '<button class="dp-preset' + (DRAFT.preset === p.id ? ' sel' : '') + '" type="button" data-p="' + p.id + '"' + (n === 0 ? ' disabled' : '') + '>'
-        + '<span class="rad"></span>'
-        + '<span><span class="vi">' + p.vi + '</span><span class="en">' + p.en + '</span></span>'
-        + '<span class="pc">' + n + '</span>'
-        + '</button>';
-    }).join('');
-  }
-
-  function renderCals(){
-    const minM = monthKey(monthOf(ALL[0].date));
-    const maxM = monthKey(monthOf(todayISO()));
-    /* keep the two visible months inside [earliest stored month … current month] */
-    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
-    if (monthKey(monthAdd(calM, 1)) > maxM) calM = monthAdd({y: Math.floor(maxM / 12), m: maxM % 12}, -1);
-    if (monthKey(calM) < minM) calM = {y: Math.floor(minM / 12), m: minM % 12};
-
-    const months = [calM, monthAdd(calM, 1)];
-    el('dpcals').innerHTML = months.map(function(mo, side){
-      const first = new Date(Date.UTC(mo.y, mo.m, 1)).getUTCDay();
-      const days = new Date(Date.UTC(mo.y, mo.m + 1, 0)).getUTCDate();
-      const canPrev = side === 0 && monthKey(mo) > minM;
-      const canNext = side === 1 && monthKey(mo) < maxM;
-      let head = '<div class="dp-mhead">'
-        + (side === 0 ? '<button class="dp-nav" type="button" data-nav="-1"' + (canPrev ? '' : ' disabled') + ' aria-label="Previous month">‹</button>' : '<span></span>')
-        + '<span class="dp-mname"><span class="vi">' + MN_VI[mo.m] + ' ' + mo.y + '</span><span class="en">' + MN_EN[mo.m] + ' ' + mo.y + '</span></span>'
-        + (side === 1 ? '<button class="dp-nav" type="button" data-nav="1"' + (canNext ? '' : ' disabled') + ' aria-label="Next month">›</button>' : '<span></span>')
-        + '</div>';
-      let cells = DOW_VI.map((v, i) => '<div class="dp-dow"><span class="vi">' + v + '</span><span class="en">' + DOW_EN[i] + '</span></div>').join('');
-      for (let i = 0; i < first; i++) cells += '<button class="dp-day blank" type="button" disabled tabindex="-1"></button>';
-      for (let d = 1; d <= days; d++){
-        const s = iso(mo.y, mo.m, d);
-        const stored = DATASET.has(s);
-        const edge = DRAFT.from && (s === DRAFT.from || s === DRAFT.to);
-        const inr = !edge && DRAFT.from && DRAFT.to && s > DRAFT.from && s < DRAFT.to;
-        const cls = ['dp-day', stored ? 'has' : 'off', edge ? 'edge' : '', inr ? 'inr' : ''].filter(Boolean).join(' ');
-        cells += '<button class="' + cls + '" type="button" data-d="' + s + '"'
-          + ' title="' + (stored ? dmy(s) : dmy(s) + ' — ' + t('chưa quét, chỉ dùng làm đầu/cuối khoảng', 'never scanned; usable only as a range edge')) + '">'
-          + d + (stored ? '<span class="dot"></span>' : '') + '</button>';
-      }
-      return '<div>' + head + '<div class="dp-grid">' + cells + '</div></div>';
-    }).join('');
-  }
-
-  function renderPanel(){
-    renderPresets(); renderCals();
-    el('dprng').textContent = rangeText(DRAFT);
-    const n = DRAFT.from ? countIn(DRAFT.from, DRAFT.to || DRAFT.from) : 0;
-    /* when the draft holds no stored day, say why Update is dead instead of
-       leaving the reader to guess at a greyed-out button */
-    el('dphint').innerHTML = (DRAFT.from && n === 0)
-      ? '<span class="vi">Khoảng này chưa có ngày nào được quét — không có bản lưu để mở. Chọn ngày có dấu chấm.</span>'
-      + '<span class="en">No day in this range was ever scanned — there is no snapshot to open. Pick a day with a dot.</span>'
-      : '<span class="vi">' + n + ' ngày đã lưu trong khoảng này · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét</span>'
-      + '<span class="en">' + n + ' stored day(s) in this range · dates are in Vietnam time (Asia/Ho_Chi_Minh), the scan timezone</span>';
-    el('dpupdate').disabled = !DRAFT.from || n === 0;
-  }
-
-  function renderBar(){
-    el('dplabel').innerHTML = labelFor(SEL);
-    el('dpchip').innerHTML = (SEL.from === LATEST && SEL.to === LATEST)
-      ? '<span class="chip"><span class="vi">Đang xem dashboard ngày ' + dmy(LATEST) + ' (mới nhất)</span><span class="en">Now showing the ' + dmy(LATEST) + ' dashboard (latest)</span></span>'
-      : '';
-    el('daylinks').innerHTML = '<span class="daylinks-lb"><span class="vi">Mở nhanh</span><span class="en">Jump to</span></span>'
-      + ALL.slice().reverse().map(function(r){
-          const cur = r.date === LATEST;
-          const label = '<span class="vi">' + dmy(r.date) + '</span><span class="en">' + dmy(r.date) + '</span>'
-            + ' <small><span class="vi">' + r.label_vi + '</span><span class="en">' + r.label_en + '</span></small>';
-          if (cur) return '<span class="daylink cur">' + label + '</span>';
-          return '<a class="daylink" href="' + targetFor(r.date, r.date) + '">' + label + '</a>';
-        }).join('');
-  }
-
-  /* Where a chosen range should take the reader.
-     - the newest day  -> this page, which already is that report
-     - a day with a frozen HTML report -> that exact archived report
-     - a stored day with no frozen HTML (the June baseline) -> the history browser, focused on it
-     - a real range -> the history browser, filtered to the range (that page draws trends) */
-  function targetFor(from, to){
-    const rows = daysIn(from, to);
-    if (rows.length === 1){
-      const r = rows[0];
-      if (r.date === LATEST) return 'index.html';
-      if (r.report) return r.report;
-      return 'history.html?day=' + r.date;
-    }
-    return 'history.html?from=' + from + '&to=' + to;
-  }
-
-  function openPanel(open){
-    if (open){
-      DRAFT = {from: SEL.from, to: SEL.to, preset: SEL.preset};
-      calM = monthAdd(monthOf(DRAFT.to || ALL[ALL.length - 1].date), -1);
-      renderPanel();
-    }
-    el('dppanel').hidden = !open;
-    el('dpbtn').setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-
-  function wire(){
-    el('dpbtn').addEventListener('click', function(e){
-      e.stopPropagation();
-      openPanel(el('dppanel').hidden);
-    });
-    el('dppanel').addEventListener('click', function(e){
-      e.stopPropagation();
-      const pb = e.target.closest('.dp-preset');
-      if (pb && !pb.disabled){
-        const p = presetById(pb.dataset.p), rg = p.calc(todayISO());
-        DRAFT = {from: rg.from, to: rg.to, preset: p.id};
-        renderPanel(); return;
-      }
-      const nav = e.target.closest('.dp-nav');
-      if (nav && !nav.disabled){ calM = monthAdd(calM, Number(nav.dataset.nav)); renderCals(); return; }
-      const day = e.target.closest('.dp-day');
-      if (day && !day.disabled){
-        const s = day.dataset.d;
-        if (!DRAFT.from || DRAFT.to) DRAFT = {from: s, to: null, preset: 'custom'};
-        else if (s >= DRAFT.from) DRAFT = {from: DRAFT.from, to: s, preset: 'custom'};
-        else DRAFT = {from: s, to: DRAFT.from, preset: 'custom'};
-        renderPanel();
-      }
-    });
-    el('dpcancel').addEventListener('click', function(){ openPanel(false); });
-    el('dpupdate').addEventListener('click', function(){
-      if (!DRAFT.from) return;
-      const from = DRAFT.from, to = DRAFT.to || DRAFT.from;
-      if (!countIn(from, to)) return;
-      const url = targetFor(from, to);
-      if (url === 'index.html'){
-        /* already here — say so instead of reloading the same page */
-        SEL = {from: LATEST, to: LATEST, preset: 'custom'};
-        renderBar(); openPanel(false); return;
-      }
-      window.location.href = url;
-    });
-    document.addEventListener('click', function(){ if (!el('dppanel').hidden) openPanel(false); });
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !el('dppanel').hidden) openPanel(false); });
-  }
-
-  fetch('data/index.json', {cache: 'no-store'})
-    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-    .then(function(ix){
-      ALL = (ix.snapshots || []).slice().sort((a, b) => a.date < b.date ? -1 : 1);
-      if (!ALL.length) throw new Error('no snapshots');
-      LATEST = ix.latest || ALL[ALL.length - 1].date;
-      DATASET = new Set(ALL.map(r => r.date));
-      SEL = {from: LATEST, to: LATEST, preset: 'custom'};
-      el('sec-filter').style.display = '';
-      renderBar();
-      wire();
-      window.__redraw = renderBar;
-    })
-    .catch(function(){
-      /* no manifest -> no honest way to offer dates; leave the control hidden
-         rather than showing a picker that cannot open anything */
-      el('sec-filter').style.display = 'none';
-    });
-})();
-
 </script>
 </body>
 </html>
