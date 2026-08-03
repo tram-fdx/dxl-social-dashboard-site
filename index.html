@@ -63,109 +63,110 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 </head>
 <body>
 <div class="app">
-  <nav class="rail">
-    <div class="logo">DX</div>
-    <button class="rbtn" data-k="all" style="background:#5b6bf5">All</button><div class="rlabel">All</div>
-    <button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
-    <button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
-    <button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
-    <button class="rbtn" data-k="linkedin" style="background:#0a66c2">in</button><div class="rlabel">LI</div>
-  </nav>
-  <main class="main">
-    <div class="hd">
-      <div class="ttl"><div class="badge" id="hdBadge">f</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
-      <div class="right">
-        <select id="dateSel" class="tbtn" title="Chọn ngày báo cáo"></select>
-        <span class="chip" id="hdChip"></span>
-        <button class="tbtn" id="shareBtn"></button>
-        <button class="tbtn p" id="langBtn">VI</button>
-      </div>
-    </div>
-    <div id="view"></div>
-    <div class="foot" id="foot"></div>
-  </main>
+<nav class="rail">
+<div class="logo">DX</div>
+<button class="rbtn" data-k="all" style="background:#5b6bf5">All</button><div class="rlabel">All</div>
+<button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
+<button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
+<button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
+<button class="rbtn" data-k="linkedin" style="background:#0a66c2">in</button><div class="rlabel">LI</div>
+</nav>
+<main class="main">
+<div class="hd">
+<div class="ttl"><div class="badge" id="hdBadge">f</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
+<div class="right">
+<span class="chip" id="hdChip"></span>
+<button class="tbtn" id="shareBtn"></button>
+<button class="tbtn p" id="langBtn">VI</button>
+</div>
+</div>
+<div id="view"></div>
+<div class="foot" id="foot"></div>
+</main>
 </div>
 
 <div class="modal" id="shareModal"><div class="box"><button class="x" onclick="closeShare()">×</button><div id="shareContent"></div></div></div>
 
 <script>
-// ============ REAL DATA — captured 16 Jul 2026 via Chrome (Meta Business Suite + YouTube Studio) ============
-const PAGE_DATE="2026-07-21"; // ngày của bản snapshot này (tác vụ hằng ngày cập nhật)
-const PERIOD_EN="Last 28 days: 24 Jun – 21 Jul 2026", PERIOD_VI="28 ngày qua: 24/6 – 21/7/2026";
-const dlabels=(()=>{const a=[];const d=new Date(2026,5,24);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
+// ============ REAL DATA — captured 3 Aug 2026 via Chrome (FB, IG, YouTube Studio + LinkedIn admin all read live) ============
+const PERIOD_EN="Last 28 days: 5 Jul – 1 Aug 2026", PERIOD_VI="28 ngày qua: 5/7 – 1/8/2026";
+const dlabels=(()=>{const a=[];const d=new Date(2026,6,5);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
 
-const FB={ followers:113,
-  kpis:[{en:"Views",vi:"Lượt xem",v:2900,c:101.7},{en:"Reach (viewers)",vi:"Người tiếp cận",v:348,c:24.3},{en:"Facebook visits",vi:"Lượt truy cập",v:130,c:319.4},{en:"Content interactions",vi:"Tương tác ND",v:116,c:127.5},{en:"Video 3s views",vi:"Video 3s views",v:70,c:-46.6},{en:"Net new followers",vi:"Follower ròng",v:2,c:100}],
-  viewsDaily:[95,127,56,35,20,77,50,29,234,94,25,40,61,11,150,79,50,41,13,200,100,370,177,224,87,204,101,165],
-  interactionsDaily:[7,3,2,2,0,4,1,2,9,4,0,2,2,0,7,5,2,0,0,6,1,21,6,11,2,5,4,8],
-  visitsDaily:[0,2,0,1,0,5,10,2,8,4,0,1,0,1,1,0,0,3,1,7,7,17,3,9,0,23,10,15],
-  video3sDaily:[0,4,0,0,1,1,0,1,3,2,3,0,1,0,1,1,1,1,1,7,0,0,0,0,1,4,3,34],
-  viewsSrc:[48.4,51.6], intSrc:[87,29], watch:{en:"31m 17s",vi:"31 phút 17 giây"}, watchC:32.8,
-  posts:[{d:"16 Jul",t:"Most people see a finished deck — Project 251",reach:367,react:9,com:1,sh:3},{d:"17 Jul",t:"Luxury is rarely defined — Aman Dalmond, CEO",reach:274,react:9,com:0,sh:1},{d:"15 Jul",t:"Luxury isn't just about spaces — Millboard",reach:113,react:7,com:0,sh:0},{d:"22 Jul",t:"Project 2238 | Mosman, NSW — 4D Digital Twin",reach:66,react:5,com:0,sh:0},{d:"20 Jul",t:"Every exceptional home is built twice — Project 2238",reach:62,react:1,com:0,sh:0},{d:"13 Jul",t:"Is your builder protecting asset value?",reach:59,react:2,com:0,sh:0}],
-  insights:{en:["Views doubled (▲101.7% to 2,900) and visits jumped ▲319% — the Project 2238 launch + CEO post drove a real spike. Do more of what you did this week.","Interactions from non-followers ▲625% and 51.6% of views are now from non-followers — content is breaking out of the bubble. Keep the 'built twice / before it's built' hooks.","The 16 Jul Project 251 deck (reach 367) and 17 Jul CEO quote (274) lead — founder voice + specific project detail beat generic brand posts.","Only +2 net followers despite the reach spike — still no strong follow trigger. Add 'Follow to watch Project 2238 get built' to every post."],
-    vi:["Views gấp đôi (▲101,7% lên 2.900) và visits nhảy ▲319% — ra mắt Project 2238 + bài CEO tạo cú hích thật. Tuần qua làm gì thì làm thêm cái đó.","Tương tác từ người chưa follow ▲625% và 51,6% lượt xem đến từ người chưa follow — nội dung thoát khỏi vòng follower. Giữ hook 'xây hai lần / trước khi xây'.","Bài deck Project 251 (16/7, reach 367) và trích dẫn CEO (17/7, 274) dẫn đầu — tiếng nói founder + chi tiết dự án cụ thể thắng bài thương hiệu chung chung.","Chỉ +2 follower ròng dù reach tăng vọt — vẫn thiếu 'mồi' theo dõi mạnh. Thêm 'Follow để xem Project 2238 được xây' vào mỗi bài."]},
-  next:{en:["Ride the Project 2238 series — post each build stage","Add a follow CTA + a question to every caption","Reply to comments <2h; the 16 Jul post got a comment — engage it","Turn the CEO quote & Project 2238 into Reels + Shorts"],
-    vi:["Khai thác series Project 2238 — đăng từng giai đoạn thi công","Thêm CTA theo dõi + 1 câu hỏi vào mỗi caption","Trả lời bình luận <2h; bài 16/7 có comment — tương tác ngay","Chuyển trích dẫn CEO & Project 2238 thành Reels + Shorts"]} };
+const FB={ followers:115,
+kpis:[{en:"Views",vi:"Lượt xem",v:3628,c:141.7},{en:"Reach (viewers)",vi:"Người tiếp cận",v:329,c:17.9},{en:"Facebook visits",vi:"Lượt truy cập",v:192,c:255.6},{en:"Content interactions",vi:"Tương tác ND",v:125,c:101.6},{en:"Video 3s views",vi:"Video 3s views",v:106,c:68.3},{en:"Net new followers",vi:"Follower ròng",v:3,c:100}],
+viewsDaily:[40,61,11,150,79,50,41,13,200,100,370,177,224,87,204,101,165,189,202,55,63,73,74,329,224,174,123,49],
+interactionsDaily:[2,2,0,7,5,2,0,0,6,1,21,6,11,2,5,4,8,1,9,2,1,2,0,15,5,7,1,0],
+visitsDaily:[1,0,1,1,0,0,3,1,7,7,17,3,9,0,23,10,15,10,3,0,2,0,0,33,13,17,13,3],
+video3sDaily:[0,1,0,1,1,1,1,1,7,0,0,0,0,1,4,3,34,12,3,5,0,0,14,3,11,1,2,0],
+viewsSrc:[50.4,49.6], intSrc:[92,33], watch:{en:"47m 8s",vi:"47 phút 8 giây"}, watchC:154.4,
+posts:[{d:"28 Jul",t:"Project 251 | Millboard west-facing façade — resilient by design",reach:269,react:9,com:1,sh:3},{d:"29 Jul",t:"The Invisible Layer — what DX Living builds first",reach:71,react:2,com:0,sh:0},{d:"27 Jul",t:"What Makes a Home Feel Intuitive?",reach:68,react:2,com:0,sh:0},{d:"24 Jul",t:"Luxury homes defined by what happens before construction begins",reach:64,react:4,com:0,sh:0},{d:"31 Jul",t:"Construction delays rarely start on site — programs reduce risk",reach:52,react:3,com:0,sh:1},{d:"1 Aug",t:"The best time to change your mind is before it's built",reach:31,react:0,com:0,sh:0}],
+insights:{en:["Views ▲141.7% to 3,628 and visits ▲255.6% (192) — the Project 251 series keeps compounding, peaking at 370 views on 15 Jul with a second surge to 329 on 28 Jul.","Interactions from non-followers ▲266.7% and 49.6% of views come from non-followers — content is still breaking out of the follower base. Sustain 'built before it's built' hooks.","Project 251 Millboard façade (reach 269, 9 reactions, 3 shares) dominates by a factor of 4. Specific project + named supplier detail is the winning formula.","Only +3 net followers despite the reach growth — the follow trigger is still missing. Add 'Follow to watch Project 251 get built' to every post."],
+vi:["Views ▲141,7% lên 3.628 và visits ▲255,6% (192) — series Project 251 tiếp tục cộng dồn, đỉnh 370 views ngày 15/7 và đợt thứ hai 329 ngày 28/7.","Tương tác từ người chưa follow ▲266,7% và 49,6% lượt xem đến từ người chưa follow — nội dung vẫn thoát khỏi vòng follower. Giữ hook 'xây trước khi xây'.","Bài façade Millboard Project 251 (reach 269, 9 reactions, 3 shares) dẫn đầu gấp 4 lần. Chi tiết dự án + tên nhà cung cấp cụ thể là công thức thắng.","Chỉ +3 follower ròng dù reach tăng mạnh — vẫn thiếu 'mồi' theo dõi. Thêm 'Follow để xem Project 251 được xây' vào mỗi bài."]},
+next:{en:["Ride the Project 2238 series — post each build stage","Add a follow CTA + a question to every caption","Reply to comments <2h; the 16 Jul post got a comment — engage it","Turn the CEO quote & Project 2238 into Reels + Shorts"],
+vi:["Khai thác series Project 2238 — đăng từng giai đoạn thi công","Thêm CTA theo dõi + 1 câu hỏi vào mỗi caption","Trả lời bình luận <2h; bài 16/7 có comment — tương tác ngay","Chuyển trích dẫn CEO & Project 2238 thành Reels + Shorts"]} };
 
-const IG={ followers:33, posts:93,
-  kpis:[{en:"Views",vi:"Lượt xem",v:665,c:20.9},{en:"Reach",vi:"Người tiếp cận",v:111,c:70.3},{en:"Content interactions",vi:"Tương tác ND",v:27,c:17.4},{en:"Followers",vi:"Người theo dõi",v:33,c:null},{en:"Posts",vi:"Bài đăng",v:93,c:null},{en:"New follows",vi:"Follow mới",v:0,c:0}],
-  viewsDaily:[91,41,15,17,1,14,8,4,5,3,1,0,3,0,68,12,7,4,3,11,8,53,61,26,10,18,9,172],
-  reachDaily:[2,0,0,0,0,5,0,2,2,2,0,0,0,0,2,1,2,1,1,0,2,9,26,9,2,6,4,73],
-  interactionsDaily:[0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,6,2,0,3,2,3],
-  viewsSrc:[51.9,48.1], reachSrc:[15,97],
-  posts:[{d:"18 Jun",t:"Architecture isn't static (Reel)",reach:108,react:2,com:0,sh:0},{d:"8 Jul",t:"Why Do Some Homes Feel Better",reach:3,react:5,com:0,sh:2},{d:"24 Jun",t:"Aether atrium — pond & waterfall",reach:3,react:3,com:0,sh:2},{d:"29 Jun",t:"Medical-grade Star Ceiling cinema",reach:4,react:1,com:0,sh:0},{d:"2 Jul",t:"The Fire Pit Before It Existed",reach:6,react:1,com:0,sh:0},{d:"15 Jul",t:"Luxury isn't just about spaces",reach:5,react:0,com:0,sh:0}],
-  insights:{en:["Views ▲20.9% to 665 with a big spike on the final day (172) — a recent post is taking off; make more of that format.","Reach 111 (▲70.3%), 73.3% from non-followers — Instagram is pure discovery right now, but interactions stay low (27). Reach isn't converting to saves/comments.","Views from followers ▲76.5% — your existing audience is finally engaging more; post consistently to keep them warm.","Still ~33 followers — reach without follows means the 'follow me' ask is missing. Put it on-screen in the first & last frame of every Reel."],
-    vi:["Views ▲20,9% lên 665 với cú nhảy ngày cuối (172) — một bài gần đây đang ăn; làm thêm định dạng đó.","Reach 111 (▲70,3%), 73,3% từ người chưa follow — Instagram thuần khám phá lúc này, nhưng tương tác vẫn thấp (27). Reach chưa chuyển thành save/comment.","Views từ follower ▲76,5% — đối tượng hiện có cuối cùng cũng tương tác nhiều hơn; đăng đều để giữ nhiệt.","Vẫn ~33 follower — reach mà không có follow nghĩa là thiếu lời mời 'theo dõi'. Đưa lên màn hình ở khung đầu & cuối mỗi Reel."]},
-  next:{en:["Make Reels the primary format (3–5/week)","Put a follow CTA on-screen in every Reel","Post 1–2 Stories/day with a poll or link sticker","Reply to every comment & DM within 2h"],
-    vi:["Ưu tiên Reels làm định dạng chính (3–5/tuần)","Đưa CTA theo dõi lên màn hình mỗi Reel","Đăng 1–2 Story/ngày kèm poll hoặc link sticker","Trả lời mọi bình luận & tin nhắn trong 2h"]} };
+const IG={ followers:44, posts:100,
+kpis:[{en:"Views",vi:"Lượt xem",v:872,c:100},{en:"Reach",vi:"Người tiếp cận",v:192,c:61.3},{en:"Content interactions",vi:"Tương tác ND",v:52,c:126.1},{en:"Followers",vi:"Người theo dõi",v:44,c:null},{en:"Posts",vi:"Bài đăng",v:100,c:null},{en:"Following",vi:"Đang theo dõi",v:35,c:null}],
+viewsDaily:[0,3,0,68,12,7,4,3,11,8,53,61,26,10,18,9,172,49,91,55,5,20,14,98,49,11,12,3],
+reachDaily:[0,0,0,2,1,2,1,1,0,2,9,26,9,2,6,4,73,22,24,38,1,3,3,27,11,4,4,2],
+interactionsDaily:[0,0,0,0,0,0,0,0,0,0,10,6,2,0,3,2,3,3,10,0,0,2,0,7,1,2,0,1],
+viewsSrc:[50.9,49.1], reachSrc:[20,173],
+posts:[{d:"22 Jul",t:"Project 2238 | Mosman, NSW — 4D Digital Twin",reach:98,react:4,com:0,sh:0},{d:"28 Jul",t:"Project 251 | Millboard west-facing façade",reach:37,react:5,com:2,sh:1},{d:"20 Jul",t:"Every exceptional home is built twice — Project 2238",reach:11,react:4,com:0,sh:0},{d:"21 Jul",t:"Why Some Homes Simply Feel Better?",reach:10,react:2,com:0,sh:0},{d:"23 Jul",t:"Circadian lighting",reach:10,react:2,com:0,sh:0},{d:"27 Jul",t:"What Makes a Home Feel Intuitive?",reach:9,react:2,com:0,sh:0}],
+insights:{en:["Views ▲100% to 872 — an exact doubling on the prior 28 days, with the 28 Jul Project 251 façade post driving the spike. The format is working; make more project-specific content.","Reach 192 (▲61.3%), 90% from non-followers — pure discovery. Interactions rose to 52 (▲126.1%) with 86% coming from followers. The audience is warming up.","Interactions are growing faster than reach: 52 (▲126.1%) vs reach at 192 (▲61.3%). Existing followers are engaging more — reward them with consistent posting.","Followers are now 44 on 100 posts — up 11 from the 33 recorded at the last snapshot. Meta still reports no daily follow data for this window, so keep the follow CTA in the first and last frame of every Reel."],
+vi:["Views ▲100% lên 872 — gấp đôi chính xác so với 28 ngày trước, bài façade Project 251 (28/7) tạo cú nhảy. Định dạng đang ăn; làm thêm nội dung chi tiết dự án.","Reach 192 (▲61,3%), 90% từ người chưa follow — thuần khám phá. Tương tác tăng lên 52 (▲126,1%) với 86% đến từ follower. Đối tượng đang ấm lên.","Tương tác tăng nhanh hơn reach: 52 (▲126,1%) vs reach 192 (▲61,3%). Follower hiện có tương tác nhiều hơn — thưởng họ bằng cách đăng đều đặn.","Follower hiện là 44 trên 100 bài — tăng 11 so với mức 33 ghi nhận ở lần chụp trước. Meta vẫn chưa trả dữ liệu follow theo ngày cho cửa sổ này, nên giữ CTA theo dõi ở khung đầu & cuối mỗi Reel."]},
+next:{en:["Make Reels the primary format (3–5/week)","Put a follow CTA on-screen in every Reel","Post 1–2 Stories/day with a poll or link sticker","Reply to every comment & DM within 2h"],
+vi:["Ưu tiên Reels làm định dạng chính (3–5/tuần)","Đưa CTA theo dõi lên màn hình mỗi Reel","Đăng 1–2 Story/ngày kèm poll hoặc link sticker","Trả lời mọi bình luận & tin nhắn trong 2h"]} };
 
 const YT={ subs:4, videos:25,
-  kpis:[{en:"Views (28d)",vi:"Lượt xem (28n)",v:25,c:0},{en:"Watch time (hrs)",vi:"Giờ xem",v:2.4,c:579},{en:"Subscribers",vi:"Người đăng ký",v:4,c:null},{en:"Videos",vi:"Số video",v:25,c:null},{en:"Latest Short views",vi:"Views Short mới",v:16,c:null}],
-  viewsNow:25, viewsPrior:24,
-  topVideos:[{t:"DX Living | Project 2238 Mosman, NSW (Short)",v:16,dur:"—",ctr:"—"},{t:"Architecture Isn't Static: Sunrise to Nightfall",v:3,dur:"0:17",ctr:"4.9%"}],
-  insights:{en:["Watch time surged ▲579% (2.4 hrs) — the new Project 2238 Short is landing. Momentum is back; keep a weekly Shorts cadence.","Views are flat (25) but watch time jumped — people are watching longer, so the hook/quality improved. Lean into it.","The Project 2238 Mosman Short pulled 16 views in ~24h — 'before it's built' project reveals travel best. Make one per project.","Still only 4 subs on 25 videos — add a subscribe CTA in the first & last 3 seconds of every Short."],
-    vi:["Watch time tăng vọt ▲579% (2,4 giờ) — Short Project 2238 mới đang ăn. Đà trở lại; giữ nhịp Shorts hằng tuần.","Views đi ngang (25) nhưng watch time nhảy vọt — người xem lâu hơn, tức hook/chất lượng đã tốt lên. Khai thác tiếp.","Short Project 2238 Mosman đạt 16 views trong ~24h — reveal dự án 'trước khi xây' lan tốt nhất. Làm mỗi dự án một cái.","Vẫn chỉ 4 subs/25 video — thêm CTA đăng ký ở 3 giây đầu & cuối mỗi Short."]},
-  next:{en:["Post 1 project Short per week (Project 2238 stages)","Hook with the finished render in the first 3s","Add a subscribe CTA at the start & end of each Short","Repurpose FB/IG top posts as Shorts"],
-    vi:["Đăng 1 Short dự án mỗi tuần (các giai đoạn Project 2238)","Hook bằng render hoàn thiện trong 3 giây đầu","Thêm CTA đăng ký ở đầu & cuối mỗi Short","Tái dùng bài top FB/IG thành Shorts"]} };
+kpis:[{en:"Views (28d)",vi:"Lượt xem (28n)",v:28,c:0},{en:"Watch time (hrs)",vi:"Giờ xem",v:2.4,c:999},{en:"Subscribers",vi:"Người đăng ký",v:4,c:null},{en:"Videos",vi:"Số video",v:25,c:null},{en:"Latest video views",vi:"Views video mới",v:19,c:null}],
+viewsNow:28, viewsPrior:27,
+topVideos:[{t:"DX Living | Project 2238 Mosman, NSW",v:19,dur:"28:13",ctr:"—"},{t:"251 PROJECT — Structural data becomes physical reality",v:2,dur:"—",ctr:"—"},{t:"251 PROJECT — PROGRESS UPDATE",v:2,dur:"—",ctr:"—"}],
+insights:{en:["Watch time is up ▲>999% (2.4 hrs) — the Project 2238 Short keeps landing. Momentum is holding; keep a weekly Shorts cadence.","Views sit flat at 28 while watch time jumped — people are watching much longer, so the hook and quality have improved. Lean into it.","The Project 2238 Mosman Short pulled 19 views over its first 12 days with a 28:13 avg view duration — 'before it's built' project reveals travel best. Make one per project.","Still only 4 subscribers — add a subscribe CTA in the first and last 3 seconds of every Short."],
+vi:["Watch time tăng ▲>999% (2,4 giờ) — Short Project 2238 vẫn đang ăn. Đà được giữ; duy trì nhịp Shorts hằng tuần.","Views đi ngang ở 28 nhưng watch time nhảy vọt — người xem lâu hơn hẳn, tức hook và chất lượng đã tốt lên. Khai thác tiếp.","Short Project 2238 Mosman đạt 19 views trong 12 ngày đầu với thời lượng xem TB 28:13 — reveal dự án 'trước khi xây' lan tốt nhất. Làm mỗi dự án một cái.","Vẫn chỉ 4 người đăng ký — thêm CTA đăng ký ở 3 giây đầu & cuối mỗi Short."]},
+next:{en:["Post 1 project Short per week (Project 2238 stages)","Hook with the finished render in the first 3s","Add a subscribe CTA at the start & end of each Short","Repurpose FB/IG top posts as Shorts"],
+vi:["Đăng 1 Short dự án mỗi tuần (các giai đoạn Project 2238)","Hook bằng render hoàn thiện trong 3 giây đầu","Thêm CTA đăng ký ở đầu & cuối mỗi Short","Tái dùng bài top FB/IG thành Shorts"]} };
 
-const LI={ url:"https://www.linkedin.com/company/108389291/", followers:53,
-  kpis:[{en:"Followers",vi:"Người theo dõi",v:53,c:null},{en:"New followers (30d)",vi:"Follower mới (30n)",v:4,c:100},{en:"Impressions",vi:"Impressions",v:1526,c:96.4},{en:"Reactions",vi:"Cảm xúc",v:88,c:214.3},{en:"Page views",vi:"Lượt xem trang",v:37,c:85},{en:"Unique visitors",vi:"Khách duy nhất",v:19,c:111.1}],
-  locLabels:["Melbourne","Ho Chi Minh City","Brisbane","Metro Manila",{en:"Other",vi:"Khác"}], locData:[39.6,7.5,5.7,5.7,41.5],
-  imprPrior:777, imprNow:1526,
-  insights:{en:["LinkedIn keeps compounding: 88 reactions on 1,526 impressions ≈ 5.8% engagement rate — still your best channel by far, and your true B2B audience.","Impressions ▲96.4% and reactions ▲214.3% — accelerating fast. Unique visitors ▲111% (19) and +4 followers mean the audience is actively growing, not just impressions.","39.6% of followers are in Greater Melbourne — dead-on your target market. Project 2238 (Mosman) is perfect local-story fuel; post its stages here.","Still 0 comments & 0 reposts — reactions are easy, conversation isn't. End posts with a direct question and tag project partners."],
-    vi:["LinkedIn tiếp tục cộng dồn: 88 reactions trên 1.526 impressions ≈ 5,8% engagement rate — vẫn là kênh tốt nhất và đúng đối tượng B2B.","Impressions ▲96,4% và reactions ▲214,3% — tăng tốc nhanh. Khách duy nhất ▲111% (19) và +4 follower cho thấy đối tượng đang tăng thật, không chỉ impressions.","39,6% follower ở Greater Melbourne — trúng thị trường mục tiêu. Project 2238 (Mosman) là 'mồi' câu chuyện địa phương hoàn hảo; đăng các giai đoạn ở đây.","Vẫn 0 comment & 0 repost — reactions dễ, hội thoại thì chưa. Kết bài bằng câu hỏi trực tiếp + tag đối tác dự án."]},
-  next:{en:["Post 3–4 times/week — consistency compounds fastest here","Ask a question + tag partners to spark comments","Founder reshares every company post","Push Melbourne project stories (Project 2238 Mosman)"],
-    vi:["Đăng 3–4 lần/tuần — đều đặn cộng dồn nhanh nhất ở đây","Đặt câu hỏi + tag đối tác để kích comment","Founder reshare mỗi bài của trang","Đẩy câu chuyện dự án Melbourne (Project 2238 Mosman)"]} };
+const LI={ url:"https://www.linkedin.com/company/108389291/", followers:55,
+kpis:[{en:"Followers",vi:"Người theo dõi",v:55,c:null},{en:"New followers (30d)",vi:"Follower mới (30n)",v:5,c:150},{en:"Impressions",vi:"Impressions",v:1437,c:39.1},{en:"Reactions",vi:"Cảm xúc",v:52,c:25.7},{en:"Page views",vi:"Lượt xem trang",v:44,c:63},{en:"Unique visitors",vi:"Khách duy nhất",v:21,c:61.5}],
+locLabels:["Melbourne","Ho Chi Minh City","Brisbane","Metro Manila",{en:"Other",vi:"Khác"}], locData:[38.2,7.3,5.5,5.5,43.5],
+jobLabels:[{en:"Accounting",vi:"Kế toán"},{en:"Business Development",vi:"Phát triển KD"},{en:"Engineering",vi:"Kỹ thuật"},{en:"Sales",vi:"Kinh doanh"},{en:"Arts & Design",vi:"Nghệ thuật & Thiết kế"},{en:"Operations",vi:"Vận hành"},{en:"Human Resources",vi:"Nhân sự"},{en:"Quality Assurance",vi:"Đảm bảo chất lượng"},{en:"Research",vi:"Nghiên cứu"},{en:"IT",vi:"CNTT"}],
+jobData:[10,9,9,6,5,4,2,1,1,1],
+deviceLabels:[{en:"Desktop",vi:"Máy tính"},{en:"Mobile",vi:"Điện thoại"}], deviceData:[36,8],
+imprPrior:1033, imprNow:1437,
+insights:{en:["LinkedIn keeps compounding: 52 reactions on 1,437 impressions ≈ 3.6% engagement rate — still your best channel and your true B2B audience.","Impressions ▲39.1% and reactions ▲25.7%. Page views ▲63% (44), unique visitors ▲61.5% (21) and +5 followers (▲150%) mean the audience is genuinely growing, not just the impression count.","38.2% of followers are in Greater Melbourne — dead-on your target market. Project 2238 (Mosman) is perfect local-story fuel; post its stages here.","Still 0 comments — reactions are easy, conversation isn't. The 28 Jul Project 251 document post hit a 59.4% engagement rate on 101 impressions: carousels drive clicks. End posts with a direct question and tag project partners."],
+vi:["LinkedIn tiếp tục cộng dồn: 52 reactions trên 1.437 impressions ≈ 3,6% engagement rate — vẫn là kênh tốt nhất và đúng đối tượng B2B.","Impressions ▲39,1% và reactions ▲25,7%. Lượt xem trang ▲63% (44), khách duy nhất ▲61,5% (21) và +5 follower (▲150%) cho thấy đối tượng đang tăng thật, không chỉ impressions.","38,2% follower ở Greater Melbourne — trúng thị trường mục tiêu. Project 2238 (Mosman) là 'mồi' câu chuyện địa phương hoàn hảo; đăng các giai đoạn ở đây.","Vẫn 0 comment — reactions dễ, hội thoại thì chưa. Bài document Project 251 (28/7) đạt engagement rate 59,4% trên 101 impressions: carousel kéo click rất tốt. Kết bài bằng câu hỏi trực tiếp + tag đối tác dự án."]},
+next:{en:["Post 3–4 times/week — consistency compounds fastest here","Ask a question + tag partners to spark comments","Founder reshares every company post","Push Melbourne project stories (Project 2238 Mosman)"],
+vi:["Đăng 3–4 lần/tuần — đều đặn cộng dồn nhanh nhất ở đây","Đặt câu hỏi + tag đối tác để kích comment","Founder reshare mỗi bài của trang","Đẩy câu chuyện dự án Melbourne (Project 2238 Mosman)"]} };
 
 const DAILY={en:["Reply every comment & DM within 2h across channels","Publish/verify today's scheduled post per active channel","Add 1 Story (FB/IG) with a poll or link sticker","Engage 10 target AEC / home accounts (comment, not just like)","Log each post's early numbers; note the winning format"],
-  vi:["Trả lời mọi bình luận & tin nhắn trong 2h ở tất cả kênh","Đăng/kiểm tra bài đã lên lịch hôm nay của mỗi kênh","Thêm 1 Story (FB/IG) kèm poll hoặc link sticker","Tương tác 10 tài khoản AEC/nhà ở mục tiêu (bình luận, không chỉ like)","Ghi lại số liệu sớm mỗi bài; note định dạng thắng"]};
+vi:["Trả lời mọi bình luận & tin nhắn trong 2h ở tất cả kênh","Đăng/kiểm tra bài đã lên lịch hôm nay của mỗi kênh","Thêm 1 Story (FB/IG) kèm poll hoặc link sticker","Tương tác 10 tài khoản AEC/nhà ở mục tiêu (bình luận, không chỉ like)","Ghi lại số liệu sớm mỗi bài; note định dạng thắng"]};
 
 const T={
-  title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
-  live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
-  dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
-  viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
-  reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
-  intByDay:{en:"Content interactions by day",vi:"Tương tác nội dung theo ngày"},
-  visitsByDay:{en:"Facebook visits by day",vi:"Lượt truy cập theo ngày"},
-  videoByDay:{en:"Video 3s views by day",vi:"Video 3s views theo ngày"},
-  reachByDay:{en:"Reach by day",vi:"Reach theo ngày"},
-  intBySrc:{en:"Interactions: followers vs non-followers",vi:"Tương tác: follower vs chưa follow"},
-  topPosts:{en:"Top posts (recent)",vi:"Top bài (gần đây)"},
-  insights:{en:"Insights",vi:"Nhận định"}, next:{en:"Next steps to improve",vi:"Bước cải thiện"},
-  snapshot:{en:"Snapshot",vi:"Ảnh chụp"}, viewsDrop:{en:"Views: this 28d vs prior 28d",vi:"Lượt xem: 28n này vs 28n trước"},
-  topVideos:{en:"Recent videos",vi:"Video gần đây"}, foll:{en:"followers",vi:"người theo dõi"},
-  followersBy:{en:"Followers by channel",vi:"Người theo dõi theo kênh"}, chStatus:{en:"Channel status",vi:"Trạng thái kênh"},
-  crossInsights:{en:"Cross-channel insights",vi:"Nhận định chéo kênh"}, routine:{en:"Daily routine (all channels · ~35 min)",vi:"Việc hằng ngày (mọi kênh · ~35 phút)"},
-  post:{en:"Post",vi:"Bài"},date:{en:"Date",vi:"Ngày"},reach:{en:"Reach",vi:"Reach"},react:{en:"React",vi:"Cảm xúc"},likes:{en:"Likes",vi:"Likes"},cmts:{en:"Cmts",vi:"BL"},shares:{en:"Shares",vi:"Chia sẻ"},
-  channel:{en:"Channel",vi:"Kênh"},followers2:{en:"Followers",vi:"Người theo dõi"},status:{en:"Status",vi:"Trạng thái"},
-  loginNeeded:{en:"login needed",vi:"cần đăng nhập"}, subs:{en:"subscribers",vi:"người đăng ký"},
-  deepNote:{en:"Deeper metrics for this channel are read live via Chrome. Ask me to refresh anytime.",vi:"Số liệu sâu của kênh này được đọc trực tiếp qua Chrome. Nhờ tôi làm mới bất cứ lúc nào."},
-  vsPrior:{en:"vs prior",vi:"vs kỳ trước"}, snapshotTag:{en:"snapshot",vi:"ảnh chụp"},
-  footer:{en:"DX Living / FeelDX · data read live from Meta Business Suite, YouTube Studio & LinkedIn via Chrome on 23 Jul 2026 · point-in-time snapshot · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · số liệu đọc trực tiếp từ Meta Business Suite, YouTube Studio & LinkedIn qua Chrome ngày 23/7/2026 · ảnh chụp tại thời điểm · lịch tự làm mới mỗi ngày."}
+title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
+live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
+dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
+viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
+reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
+intByDay:{en:"Content interactions by day",vi:"Tương tác nội dung theo ngày"},
+visitsByDay:{en:"Facebook visits by day",vi:"Lượt truy cập theo ngày"},
+videoByDay:{en:"Video 3s views by day",vi:"Video 3s views theo ngày"},
+reachByDay:{en:"Reach by day",vi:"Reach theo ngày"},
+intBySrc:{en:"Interactions: followers vs non-followers",vi:"Tương tác: follower vs chưa follow"},
+topPosts:{en:"Top posts (recent)",vi:"Top bài (gần đây)"},
+insights:{en:"Insights",vi:"Nhận định"}, next:{en:"Next steps to improve",vi:"Bước cải thiện"},
+snapshot:{en:"Snapshot",vi:"Ảnh chụp"}, viewsDrop:{en:"Views: this 28d vs prior 28d",vi:"Lượt xem: 28n này vs 28n trước"},
+topVideos:{en:"Recent videos",vi:"Video gần đây"}, foll:{en:"followers",vi:"người theo dõi"},
+followersBy:{en:"Followers by channel",vi:"Người theo dõi theo kênh"}, chStatus:{en:"Channel status",vi:"Trạng thái kênh"},
+crossInsights:{en:"Cross-channel insights",vi:"Nhận định chéo kênh"}, routine:{en:"Daily routine (all channels · ~35 min)",vi:"Việc hằng ngày (mọi kênh · ~35 phút)"},
+post:{en:"Post",vi:"Bài"},date:{en:"Date",vi:"Ngày"},reach:{en:"Reach",vi:"Reach"},react:{en:"React",vi:"Cảm xúc"},likes:{en:"Likes",vi:"Likes"},cmts:{en:"Cmts",vi:"BL"},shares:{en:"Shares",vi:"Chia sẻ"},
+channel:{en:"Channel",vi:"Kênh"},followers2:{en:"Followers",vi:"Người theo dõi"},status:{en:"Status",vi:"Trạng thái"},
+loginNeeded:{en:"login needed",vi:"cần đăng nhập"}, subs:{en:"subscribers",vi:"người đăng ký"},
+deepNote:{en:"Deeper metrics for this channel are read live via Chrome. Ask me to refresh anytime.",vi:"Số liệu sâu của kênh này được đọc trực tiếp qua Chrome. Nhờ tôi làm mới bất cứ lúc nào."},
+vsPrior:{en:"vs prior",vi:"vs kỳ trước"}, snapshotTag:{en:"snapshot",vi:"ảnh chụp"},
+footer:{en:"DX Living / FeelDX · FB, IG, YouTube and LinkedIn all read live via Chrome on 3 Aug 2026 · 28-day window 5 Jul – 1 Aug 2026 (LinkedIn 3 Jul – 1 Aug) · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · FB, IG, YouTube và LinkedIn đều đọc trực tiếp qua Chrome ngày 3/8/2026 · cửa sổ 28 ngày 5/7 – 1/8/2026 (LinkedIn 3/7 – 1/8) · lịch tự làm mới mỗi ngày."}
 };
-const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 16 Jul 2026. The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
-vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 16/7/2026. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
+const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 3 Aug 2026, with all four channels read live. The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
+vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 3/8/2026, cả bốn kênh đều đọc trực tiếp. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
 
 // ============ render ============
 let lang="en", current="facebook", charts=[];
@@ -181,17 +182,17 @@ function bar(id,labels,data,colors){charts.push(new Chart($(id),{type:"bar",data
 function dough(id,labels,data){charts.push(new Chart($(id),{type:"doughnut",data:{labels,datasets:[{data,backgroundColor:COLORS,borderColor:"#fff",borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:"60%",plugins:{legend:{position:"bottom",labels:{boxWidth:12,font:{size:11}}}}}}));}
 function list(arr){return `<ul class="clean">`+arr.map(t=>`<li>${t}</li>`).join("")+`</ul>`;}
 Object.assign(T,{
-  deepDive:{en:"Deep dive — computed metrics",vi:"Phân tích sâu — chỉ số tính toán"},
-  topByReach:{en:"Top posts by reach",vi:"Top bài theo reach"},
-  audience:{en:"Audience",vi:"Đối tượng"},
-  audNote:{en:"Detailed age, gender & city breakdowns aren't available — Meta hides demographics for audiences under ~100 per segment (FB 111 / IG 33 followers). They unlock as the audience grows. Follower vs non-follower reach below is the available proxy.",vi:"Phân tích tuổi/giới tính/thành phố chưa có — Meta ẩn nhân khẩu học khi đối tượng dưới ~100/nhóm (FB 111 / IG 33 follower). Sẽ mở khi đối tượng lớn hơn. Tỷ lệ reach follower vs chưa follow bên dưới là chỉ số thay thế."},
-  engRate:{en:"Engagement rate",vi:"Tỷ lệ tương tác"},
-  avgReachPost:{en:"Avg reach / post",vi:"Reach TB/bài"},
-  nonFollReach:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},
-  avgPerDay:{en:"Avg / day",vi:"Trung bình/ngày"},
-  bestDay:{en:"Best day",vi:"Ngày tốt nhất"},
-  postsSampled:{en:"Posts sampled",vi:"Số bài mẫu"},
-  keyInsight:{en:"Key insight",vi:"Nhận định then chốt"}
+deepDive:{en:"Deep dive — computed metrics",vi:"Phân tích sâu — chỉ số tính toán"},
+topByReach:{en:"Top posts by reach",vi:"Top bài theo reach"},
+audience:{en:"Audience",vi:"Đối tượng"},
+audNote:{en:"Detailed age, gender & city breakdowns aren't available — Meta hides demographics for audiences under ~100 per segment (FB 115 / IG 44 followers). They unlock as the audience grows. Follower vs non-follower reach below is the available proxy; LinkedIn already exposes full visitor demographics.",vi:"Phân tích tuổi/giới tính/thành phố chưa có — Meta ẩn nhân khẩu học khi đối tượng dưới ~100/nhóm (FB 115 / IG 44 follower). Sẽ mở khi đối tượng lớn hơn. Tỷ lệ reach follower vs chưa follow bên dưới là chỉ số thay thế; LinkedIn đã có nhân khẩu học khách truy cập đầy đủ."},
+engRate:{en:"Engagement rate",vi:"Tỷ lệ tương tác"},
+avgReachPost:{en:"Avg reach / post",vi:"Reach TB/bài"},
+nonFollReach:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},
+avgPerDay:{en:"Avg / day",vi:"Trung bình/ngày"},
+bestDay:{en:"Best day",vi:"Ngày tốt nhất"},
+postsSampled:{en:"Posts sampled",vi:"Số bài mẫu"},
+keyInsight:{en:"Key insight",vi:"Nhận định then chốt"}
 });
 function deepCards(items){return `<div class="kpirow">`+items.map(i=>`<div class="kpi" style="border-top-color:#22c55e"><div class="l">${i.l}</div><div class="v" style="font-size:20px">${i.v}</div>${i.s?`<div class="c flat">${i.s}</div>`:""}</div>`).join("")+`</div>`;}
 function hbar(id,labels,data,color){charts.push(new Chart($(id),{type:"bar",data:{labels,datasets:[{data,backgroundColor:color,borderRadius:5}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}}));}
@@ -203,72 +204,76 @@ function postsTable(posts,firstColReactLabel){return `<table><thead><tr><th>${tt
 function head(k,badge,color,per,chip){$("hdBadge").style.background=color;$("hdBadge").textContent=badge;$("hdTitle").textContent=tt(T.title[k]);$("hdPer").textContent=per;$("hdChip").textContent=chip;}
 
 function renderFacebook(){
-  head("facebook","f","#1877f2",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · DX Living · "+FB.followers+" "+tt(T.foll),tt(T.live));
-  const b=bestOf(FB.viewsDaily);
-  const stats=[{l:tt(T.engRate),v:(116/2900*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"51.6%",s:"▲ 42.6%"},{l:tt(T.avgPerDay),v:Math.round(2900/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
-  const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
-  $("view").innerHTML=kpis(FB.kpis)+`
-   <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
-   <div class="grid g3"><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.visitsByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.videoByDay)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
-   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">Watch time: <b>${tt(FB.watch)}</b> (▲ ${FB.watchC}%). Non-follower interactions ▲ 300%.</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
-   <div class="grid g3"><div class="panel"><h3>${tt(T.intBySrc)}</h3><div class="chart sm"><canvas id="c6"></canvas></div></div><div class="panel" style="grid-column:span 2"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div></div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(FB.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(FB.next))}</div></div>`;
-  clearCharts();
-  line("c1",dlabels,FB.viewsDaily,"#1877f2");dough("c2",[fl,nf],FB.viewsSrc);
-  line("c3",dlabels,FB.interactionsDaily,"#5b6bf5");line("c4",dlabels,FB.visitsDaily,"#22c55e");line("c5",dlabels,FB.video3sDaily,"#f59e0b");
-  hbar("cb1",FB.posts.map(p=>p.d),FB.posts.map(p=>p.reach),"#1877f2");
-  dough("c6",[fl,nf],FB.intSrc);
+head("facebook","f","#1877f2",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · DX Living · "+FB.followers+" "+tt(T.foll),tt(T.live));
+const b=bestOf(FB.viewsDaily);
+const stats=[{l:tt(T.engRate),v:(125/3628*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"49.6%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(3628/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
+const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+$("view").innerHTML=kpis(FB.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.visitsByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.videoByDay)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">Watch time: <b>${tt(FB.watch)}</b> (▲ ${FB.watchC}%). Non-follower interactions ▲ 266.7%.</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.intBySrc)}</h3><div class="chart sm"><canvas id="c6"></canvas></div></div><div class="panel" style="grid-column:span 2"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(FB.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(FB.next))}</div></div>`;
+clearCharts();
+line("c1",dlabels,FB.viewsDaily,"#1877f2");dough("c2",[fl,nf],FB.viewsSrc);
+line("c3",dlabels,FB.interactionsDaily,"#5b6bf5");line("c4",dlabels,FB.visitsDaily,"#22c55e");line("c5",dlabels,FB.video3sDaily,"#f59e0b");
+hbar("cb1",FB.posts.map(p=>p.d),FB.posts.map(p=>p.reach),"#1877f2");
+dough("c6",[fl,nf],FB.intSrc);
 }
 function renderInstagram(){
-  head("instagram","ig","#e1306c",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @dxliving.au · 33 "+tt(T.foll),tt(T.live));
-  const b=bestOf(IG.viewsDaily);
-  const stats=[{l:tt(T.engRate),v:(27/111*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"73.3%",s:"▲ 70.3%"},{l:tt(T.avgPerDay),v:Math.round(665/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Peak day views",vi:"Views ngày đỉnh"}),v:"172",s:tt({en:"last day",vi:"ngày cuối"})}];
-  const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
-  $("view").innerHTML=kpis(IG.kpis)+`
-   <div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.reachBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
-   <div class="grid g3"><div class="panel"><h3>${tt(T.reachByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
-   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(IG.posts,tt(T.likes))}<div class="note">${tt({en:"The 18 Jun Reel reached 108 — ~20× any static post. Reels are the growth lever.",vi:"Reel 18/6 đạt reach 108 — gấp ~20 lần bài ảnh. Reels là đòn bẩy tăng trưởng."})}</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
-   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(IG.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(IG.next))}</div></div>`;
-  clearCharts();
-  line("c1",dlabels,IG.viewsDaily,"#e1306c");dough("c2",[fl,nf],IG.reachSrc);
-  line("c3",dlabels,IG.reachDaily,"#8b5cf6");line("c4",dlabels,IG.interactionsDaily,"#f59e0b");dough("c5",[fl,nf],IG.viewsSrc);
-  hbar("cb1",IG.posts.map(p=>p.d),IG.posts.map(p=>p.reach),"#e1306c");
+head("instagram","ig","#e1306c",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @dxliving.au · "+IG.followers+" "+tt(T.foll),tt(T.live));
+const b=bestOf(IG.viewsDaily);
+const stats=[{l:tt(T.engRate),v:(52/192*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"89.6%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(872/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Peak day views",vi:"Views ngày đỉnh"}),v:"172",s:tt({en:"peak",vi:"đỉnh"})}];
+const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+$("view").innerHTML=kpis(IG.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.reachBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.reachByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(IG.posts,tt(T.likes))}<div class="note">${tt({en:"The 22 Jul Project 2238 post reached 98 and the 28 Jul Project 251 façade 37 (with 2 comments) — video + specific project detail out-reach static brand posts. Reels are the growth lever.",vi:"Bài Project 2238 (22/7) đạt 98 và bài façade Project 251 (28/7) đạt 37 (kèm 2 bình luận) — video + chi tiết dự án cụ thể vượt bài ảnh thương hiệu. Reels là đòn bẩy tăng trưởng."})}</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(IG.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(IG.next))}</div></div>`;
+clearCharts();
+line("c1",dlabels,IG.viewsDaily,"#e1306c");dough("c2",[fl,nf],IG.reachSrc);
+line("c3",dlabels,IG.reachDaily,"#8b5cf6");line("c4",dlabels,IG.interactionsDaily,"#f59e0b");dough("c5",[fl,nf],IG.viewsSrc);
+hbar("cb1",IG.posts.map(p=>p.d),IG.posts.map(p=>p.reach),"#e1306c");
 }
 function renderYoutube(){
-  head("youtube","yt","#ff0000",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @DXLVNG · 4 "+tt(T.subs),tt(T.live));
-  $("view").innerHTML=kpis(YT.kpis)+`
-   <div class="grid g2"><div class="panel"><h3>${tt(T.viewsDrop)}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note">${tt({en:"Views flat but watch time ▲579% (2.4 hrs) — people are watching longer. The new Project 2238 Short is working.",vi:"Views đi ngang nhưng watch time ▲579% (2,4 giờ) — người xem lâu hơn. Short Project 2238 mới đang hiệu quả."})}</div></div>
-     <div class="panel"><h3>${tt(T.topVideos)}</h3><table><thead><tr><th>${tt(T.post)}</th><th class="num">${tt(T.reach)}</th><th class="num">Dur</th><th class="num">CTR</th></tr></thead><tbody>${YT.topVideos.map(v=>`<tr><td class="post">${v.t}</td><td class="num">${v.v}</td><td class="num">${v.dur}</td><td class="num">${v.ctr}</td></tr>`).join("")}</tbody></table><div class="note">${tt({en:"Project 2238 Mosman Short: 16 views in ~24h — 'before it's built' reveals travel best.",vi:"Short Project 2238 Mosman: 16 views trong ~24h — reveal 'trước khi xây' lan tốt nhất."})}</div></div></div>
-   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards([{l:tt(T.avgPerDay),v:(25/28).toFixed(1)+" views"},{l:tt({en:"Watch time",vi:"Giờ xem"}),v:"2.4 hrs",s:"▲579%"},{l:tt({en:"Latest Short views",vi:"Views Short mới"}),v:"16",s:tt({en:"~24h",vi:"~24h"})},{l:tt({en:"Views vs prior 28d",vi:"Views vs 28n trước"}),v:tt({en:"~flat",vi:"~đi ngang"})},{l:tt({en:"Subscribers",vi:"Người đăng ký"}),v:"4"},{l:tt({en:"Videos",vi:"Số video"}),v:"25"}])}</div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(YT.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(YT.next))}</div></div>`;
-  clearCharts();bar("c1",[tt({en:"Prior 28d",vi:"28n trước"}),tt({en:"This 28d",vi:"28n này"})],[YT.viewsPrior,YT.viewsNow],["#c7ccd6","#ff0000"]);
+head("youtube","yt","#ff0000",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @DXLVNG · 4 "+tt(T.subs),tt(T.live));
+$("view").innerHTML=kpis(YT.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.viewsDrop)}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note">${tt({en:"Views flat at 28 but watch time ▲>999% (2.4 hrs) — people are watching longer. The Project 2238 Short is working.",vi:"Views đi ngang ở 28 nhưng watch time ▲>999% (2,4 giờ) — người xem lâu hơn. Short Project 2238 đang hiệu quả."})}</div></div>
+<div class="panel"><h3>${tt(T.topVideos)}</h3><table><thead><tr><th>${tt(T.post)}</th><th class="num">${tt(T.reach)}</th><th class="num">Dur</th><th class="num">CTR</th></tr></thead><tbody>${YT.topVideos.map(v=>`<tr><td class="post">${v.t}</td><td class="num">${v.v}</td><td class="num">${v.dur}</td><td class="num">${v.ctr}</td></tr>`).join("")}</tbody></table><div class="note">${tt({en:"Project 2238 Mosman Short: 19 views, 28:13 avg view duration — 'before it's built' reveals travel best.",vi:"Short Project 2238 Mosman: 19 views, xem TB 28:13 — reveal 'trước khi xây' lan tốt nhất."})}</div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards([{l:tt(T.avgPerDay),v:(28/28).toFixed(1)+" views"},{l:tt({en:"Watch time",vi:"Giờ xem"}),v:"2.4 hrs",s:"▲ >999%"},{l:tt({en:"Latest video views",vi:"Views video mới"}),v:"19",s:tt({en:"first 12d",vi:"12 ngày đầu"})},{l:tt({en:"Views vs prior 28d",vi:"Views vs 28n trước"}),v:tt({en:"~flat",vi:"~đi ngang"})},{l:tt({en:"Subscribers",vi:"Người đăng ký"}),v:"4"},{l:tt({en:"Videos",vi:"Số video"}),v:"25"}])}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(YT.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(YT.next))}</div></div>`;
+clearCharts();bar("c1",[tt({en:"Prior 28d",vi:"28n trước"}),tt({en:"This 28d",vi:"28n này"})],[YT.viewsPrior,YT.viewsNow],["#c7ccd6","#ff0000"]);
 }
 function renderLinkedin(){
-  head("linkedin","in","#0a66c2",tt({en:"Content 22 Jun – 21 Jul 2026 · 53 followers",vi:"Nội dung 22/6 – 21/7/2026 · 53 follower"}),tt(T.live));
-  const stats=[{l:tt(T.engRate),v:(88/1526*100).toFixed(1)+"%",s:tt({en:"reactions / impressions",vi:"reactions / impressions"})},{l:tt({en:"Impressions / follower",vi:"Impressions/follower"}),v:Math.round(1526/53)},{l:tt({en:"Melbourne share",vi:"Tỷ lệ Melbourne"}),v:"39.6%"},{l:tt({en:"New follower rate",vi:"Tăng follower"}),v:"▲100%",s:"30d"},{l:tt({en:"Unique visitors",vi:"Khách duy nhất"}),v:"19",s:"▲111.1%"},{l:tt({en:"Comments",vi:"Bình luận"}),v:"0",s:tt({en:"conversation gap",vi:"thiếu hội thoại"})}];
-  const locLbl=LI.locLabels.map(l=>typeof l==="string"?l:tt(l));
-  $("view").innerHTML=kpis(LI.kpis)+`
-   <div class="grid g2"><div class="panel"><h3>${tt({en:"Followers by location",vi:"Follower theo vị trí"})}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"39.6% in Greater Melbourne — bullseye on your target market.",vi:"39,6% ở Greater Melbourne — trúng thị trường mục tiêu."})}</div></div>
-     <div class="panel"><h3>${tt({en:"Impressions vs prior 28d",vi:"Impressions vs 28n trước"})}</h3><div class="chart"><canvas id="c2"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"Reactions ▲214.3% — the audience is warming up fast.",vi:"Reactions ▲214,3% — đối tượng đang ấm lên nhanh."})}</div></div></div>
-   <div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(LI.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(LI.next))}</div></div>`;
-  clearCharts();
-  hbar("c1",locLbl,LI.locData,"#0a66c2");
-  bar("c2",[tt({en:"Prior",vi:"Kỳ trước"}),tt({en:"Now",vi:"Hiện tại"})],[LI.imprPrior,LI.imprNow],["#c7ccd6","#0a66c2"]);
+head("linkedin","in","#0a66c2",tt({en:"Content 3 Jul – 1 Aug 2026 · 55 followers",vi:"Nội dung 3/7 – 1/8/2026 · 55 follower"}),tt(T.live));
+const stats=[{l:tt(T.engRate),v:(52/1437*100).toFixed(1)+"%",s:tt({en:"reactions / impressions",vi:"reactions / impressions"})},{l:tt({en:"Impressions / follower",vi:"Impressions/follower"}),v:Math.round(1437/55)},{l:tt({en:"Melbourne share",vi:"Tỷ lệ Melbourne"}),v:"38.2%"},{l:tt({en:"New follower rate",vi:"Tăng follower"}),v:"▲150%",s:"30d"},{l:tt({en:"Unique visitors",vi:"Khách duy nhất"}),v:"21",s:"▲61.5%"},{l:tt({en:"Comments",vi:"Bình luận"}),v:"0",s:tt({en:"conversation gap",vi:"thiếu hội thoại"})}];
+const locLbl=LI.locLabels.map(l=>typeof l==="string"?l:tt(l));
+$("view").innerHTML=kpis(LI.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt({en:"Followers by location",vi:"Follower theo vị trí"})}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"38.2% in Greater Melbourne — bullseye on your target market.",vi:"38,2% ở Greater Melbourne — trúng thị trường mục tiêu."})}</div></div>
+<div class="panel"><h3>${tt({en:"Impressions vs prior 28d",vi:"Impressions vs 28n trước"})}</h3><div class="chart"><canvas id="c2"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"Reactions ▲25.7%, impressions ▲39.1% — the audience keeps warming up.",vi:"Reactions ▲25,7%, impressions ▲39,1% — đối tượng tiếp tục ấm lên."})}</div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2"><div class="panel"><h3>${tt({en:"Page visitors by job function",vi:"Khách truy cập theo chức năng"})}</h3><div class="chart"><canvas id="c3"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"Accounting, Business Development and Engineering account for 63.7% of page views — budget holders and decision-makers, not just designers. Write for the people who sign off on cost and risk. (LinkedIn assigns visitors to more than one function, so the counts don't sum to 44.)",vi:"Kế toán, Phát triển kinh doanh và Kỹ thuật chiếm 63,7% lượt xem trang — người giữ ngân sách và ra quyết định, không chỉ nhà thiết kế. Hãy viết cho người duyệt chi phí và rủi ro. (LinkedIn gán một khách vào nhiều chức năng nên tổng không bằng 44.)"})}</div></div>
+<div class="panel"><h3>${tt({en:"Page views by device",vi:"Lượt xem trang theo thiết bị"})}</h3><div class="chart"><canvas id="c4"></canvas></div><div class="note" style="margin-top:6px">${tt({en:"82% of page views are desktop — people are researching you at work. Long-form carousels and articles suit this audience better than short mobile-first clips.",vi:"82% lượt xem trang đến từ máy tính — họ tìm hiểu bạn khi đang làm việc. Carousel dài và bài viết hợp đối tượng này hơn clip ngắn kiểu mobile."})}</div></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(LI.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(LI.next))}</div></div>`;
+clearCharts();
+hbar("c1",locLbl,LI.locData,"#0a66c2");
+bar("c2",[tt({en:"Prior",vi:"Kỳ trước"}),tt({en:"Now",vi:"Hiện tại"})],[LI.imprPrior,LI.imprNow],["#c7ccd6","#0a66c2"]);
+hbar("c3",LI.jobLabels.map(l=>tt(l)),LI.jobData,"#5b6bf5");
+dough("c4",LI.deviceLabels.map(l=>tt(l)),LI.deviceData);
 }
 function renderAll(){
-  head("all","◆","#5b6bf5",tt({en:"Snapshot · 16 Jul 2026 · FB/IG/YT 28-day insights live",vi:"Ảnh chụp · 16/7/2026 · FB/IG/YT insights 28 ngày trực tiếp"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không Supermetrics)"}));
-  const kp=[{en:"FB Views",vi:"FB Lượt xem",v:2900,c:101.7},{en:"IG Reach",vi:"IG Reach",v:111,c:70.3},{en:"LI Impressions",vi:"LI Impressions",v:1526,c:96.4},{en:"LI Reactions",vi:"LI Reactions",v:88,c:214.3},{en:"YT Views",vi:"YT Lượt xem",v:25,c:0},{en:"FB Followers",vi:"FB Follower",v:113,c:null},{en:"LI Followers",vi:"LI Follower",v:53,c:null},{en:"IG Followers",vi:"IG Follower",v:33,c:null}];
-  $("view").innerHTML=kpis(kp)+`
-   <div class="grid g2"><div class="panel"><h3>${tt(T.followersBy)}</h3><div class="chart"><canvas id="a1"></canvas></div></div>
-     <div class="panel"><h3>${tt(T.chStatus)}</h3><table><thead><tr><th>${tt(T.channel)}</th><th>${tt(T.followers2)}</th><th>${tt(T.status)}</th></tr></thead><tbody>
-       <tr><td>Facebook</td><td>113</td><td><span class="pill on">live</span></td></tr><tr><td>Instagram</td><td>33</td><td><span class="pill on">live</span></td></tr><tr><td>LinkedIn</td><td>53</td><td><span class="pill on">live</span></td></tr><tr><td>YouTube</td><td>4</td><td><span class="pill on">live</span></td></tr><tr><td>TikTok / X</td><td>—</td><td><span class="pill none">no account</span></td></tr></tbody></table></div></div>
-   <div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["LinkedIn is the standout: ~5.8% engagement rate (88 reactions / 1,526 impressions, ▲96% impressions) — your best-performing channel and your true B2B audience. Prioritise it.","Facebook exploded: views ▲101.7% (2,900) and visits ▲319% off the Project 2238 launch + CEO post. Sustain that content mix.","Instagram reach ▲70.3% but interactions stay low (27) — discovery works, engagement doesn't. A follow CTA on every Reel is the fix.","YouTube recovered: watch time ▲579% (2.4 hrs) on the new Project 2238 Short — keep a weekly Shorts cadence."],vi:["LinkedIn là điểm sáng: engagement ~5,8% (88 reactions / 1.526 impressions, ▲96% impressions) — kênh hiệu quả nhất và đúng đối tượng B2B. Ưu tiên kênh này.","Facebook bùng nổ: views ▲101,7% (2.900) và visits ▲319% nhờ ra mắt Project 2238 + bài CEO. Duy trì mix nội dung đó.","Instagram reach ▲70,3% nhưng tương tác vẫn thấp (27) — khám phá tốt, engagement chưa. CTA theo dõi trên mỗi Reel là cách chữa.","YouTube hồi phục: watch time ▲579% (2,4 giờ) nhờ Short Project 2238 mới — giữ nhịp Shorts hằng tuần."]}))}</div>
-     <div class="panel"><h3>${tt(T.routine)}</h3>${list(tt(DAILY))}</div></div>`;
-  clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[113,53,33,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
+head("all","◆","#5b6bf5",tt({en:"Snapshot · 3 Aug 2026 · all 4 channels read live",vi:"Ảnh chụp · 3/8/2026 · cả 4 kênh đọc trực tiếp"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không Supermetrics)"}));
+const kp=[{en:"FB Views",vi:"FB Lượt xem",v:3628,c:141.7},{en:"IG Reach",vi:"IG Reach",v:192,c:61.3},{en:"LI Impressions",vi:"LI Impressions",v:1437,c:39.1},{en:"LI Reactions",vi:"LI Reactions",v:52,c:25.7},{en:"YT Views",vi:"YT Lượt xem",v:28,c:0},{en:"FB Followers",vi:"FB Follower",v:115,c:null},{en:"LI Followers",vi:"LI Follower",v:55,c:null},{en:"IG Followers",vi:"IG Follower",v:44,c:null}];
+$("view").innerHTML=kpis(kp)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.followersBy)}</h3><div class="chart"><canvas id="a1"></canvas></div></div>
+<div class="panel"><h3>${tt(T.chStatus)}</h3><table><thead><tr><th>${tt(T.channel)}</th><th>${tt(T.followers2)}</th><th>${tt(T.status)}</th></tr></thead><tbody>
+<tr><td>Facebook</td><td>115</td><td><span class="pill on">live</span></td></tr><tr><td>Instagram</td><td>44</td><td><span class="pill on">live</span></td></tr><tr><td>LinkedIn</td><td>55</td><td><span class="pill on">live</span></td></tr><tr><td>YouTube</td><td>4</td><td><span class="pill on">live</span></td></tr><tr><td>TikTok / X</td><td>—</td><td><span class="pill none">no account</span></td></tr></tbody></table></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["Every channel grew this period. Facebook leads on scale (views ▲141.7% to 3,628, visits ▲255.6%), LinkedIn on quality (1,437 impressions, 3.6% engagement, +5 followers).","The single post driving all four channels is the 28 Jul Project 251 Millboard façade: FB reach 269 / 9 reactions, IG reach 37 / 2 comments, LI 101 impressions at 59.4% engagement. Named-supplier project detail is the repeatable formula.","Instagram views doubled exactly (▲100% to 872) with 90% of reach from non-followers, and followers have climbed to 44 on 100 posts (up 11 since the last snapshot). Discovery and conversion are both moving now.","YouTube views are flat at 28 but watch time is ▲>999% (2.4 hrs): the Project 2238 Short holds attention. Weekly Shorts plus a subscribe CTA is the obvious next move on 4 subscribers."],vi:["Mọi kênh đều tăng kỳ này. Facebook dẫn đầu về quy mô (views ▲141,7% lên 3.628, visits ▲255,6%), LinkedIn dẫn đầu về chất lượng (1.437 impressions, 3,6% engagement, +5 follower).","Bài kéo cả bốn kênh là façade Millboard Project 251 (28/7): FB reach 269 / 9 reactions, IG reach 37 / 2 bình luận, LI 101 impressions với engagement 59,4%. Chi tiết dự án kèm tên nhà cung cấp là công thức lặp lại được.","Instagram views gấp đúng đôi (▲100% lên 872) với 90% reach từ người chưa follow, và follower đã lên 44 trên 100 bài (tăng 11 so với lần chụp trước). Cả khám phá lẫn chuyển đổi đều đang chạy.","YouTube views đi ngang ở 28 nhưng watch time ▲>999% (2,4 giờ): Short Project 2238 giữ chân người xem. Shorts hằng tuần kèm CTA đăng ký là bước hiển nhiên khi mới có 4 subs."]}))}</div>
+<div class="panel"><h3>${tt(T.routine)}</h3>${list(tt(DAILY))}</div></div>`;
+clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,55,44,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
 }
 
 function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);}
@@ -278,17 +283,6 @@ $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
-// ---- Date history picker ----
-(function loadDates(){
-  fetch('dates.json',{cache:'no-store'}).then(r=>r.json()).then(list=>{
-    if(!Array.isArray(list)||!list.length)throw 0;
-    const latest=list[0].date;
-    const sel=$("dateSel");
-    sel.innerHTML=list.map(d=>`<option value="${d.date}">${d.date}${d.date===latest?" ("+(lang==="vi"?"mới nhất":"latest")+")":""}</option>`).join("");
-    sel.value=PAGE_DATE;
-    sel.onchange=()=>{const d=sel.value; location.href=(d===latest?"index.html":d+".html");};
-  }).catch(()=>{ const sel=$("dateSel"); sel.innerHTML=`<option>${PAGE_DATE}</option>`; });
-})();
 select("facebook");
 </script>
 </body>
