@@ -1,7 +1,7 @@
 {
   "date": "2026-08-04",
   "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
-  "source_commit": "pending",
+  "source_commit": "5f32981",
   "provenance": "Read directly from Chrome (Meta Business Suite FB + IG, YouTube Studio, LinkedIn Page admin) on 2026-08-04, macOS Chrome profile. All four channels read live. No Supermetrics. No estimated values. Facebook total followers read at business.facebook.com/latest/; Instagram followers and post count read at instagram.com/dxliving.au; YouTube video count = 14 long-form + 11 Shorts counted in Studio (1-14 of 14 / 1-11 of 11). YouTube shows views as 'about the same as usual' with no numeric prior, so views_prior is set equal to views_now (0% change).",
   "window": {
     "en": "Last 28 days: 6 Jul – 2 Aug 2026",
