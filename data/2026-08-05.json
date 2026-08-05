@@ -1,0 +1,501 @@
+{
+  "date": "2026-08-05",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "",
+  "provenance": "Read directly from Chrome on 2026-08-05 (macOS). Facebook + Instagram read live from Meta Business Suite (Browser 2 profile); total FB followers read at business.facebook.com/latest/; Instagram followers/posts read at instagram.com/dxliving.au. LinkedIn read live from Page admin analytics (Browser 3 profile). YouTube Studio analytics could NOT be read today — none of the three connected Chrome profiles has access to the DXLVNG channel in Studio ('you do not have permission to view this page'), so all YouTube 28-day figures (views, watch time, top videos) are carried forward unchanged from 2026-08-04 and must be treated as stale. Subscribers (4) and video count (25) WERE confirmed live on the public channel page youtube.com/channel/UCuxr30df_qmARRgETsruEyw. No estimated values. No Supermetrics.",
+  "window": {
+    "en": "Last 28 days: 7 Jul – 3 Aug 2026",
+    "vi": "28 ngày qua: 7/7 – 3/8/2026"
+  },
+  "windows": {
+    "meta": "2026-07-07 → 2026-08-03",
+    "youtube": "2026-07-06 → 2026-08-02 (stale, carried forward from 2026-08-04)",
+    "linkedin": "2026-07-05 → 2026-08-03"
+  },
+  "facebook": {
+    "followers": 115,
+    "views": {
+      "v": 4189,
+      "change_pct": 166.6
+    },
+    "viewers": {
+      "v": 386,
+      "change_pct": 35.4
+    },
+    "visits": {
+      "v": 253,
+      "change_pct": 386.5
+    },
+    "interactions": {
+      "v": 147,
+      "change_pct": 122.7
+    },
+    "video_3s": {
+      "v": 109,
+      "change_pct": 73.0
+    },
+    "net_new_followers": {
+      "v": 4,
+      "change_pct": 100
+    },
+    "views_from_followers_pct": 50.3,
+    "views_from_non_followers_pct": 49.7,
+    "interactions_from_followers": 107,
+    "interactions_from_non_followers": 40,
+    "watch_time": "48m 59s",
+    "watch_time_change_pct": 166.7,
+    "daily": {
+      "views": [
+        11,
+        150,
+        79,
+        50,
+        41,
+        13,
+        200,
+        100,
+        370,
+        177,
+        224,
+        87,
+        204,
+        101,
+        165,
+        189,
+        202,
+        55,
+        63,
+        73,
+        74,
+        329,
+        224,
+        174,
+        123,
+        49,
+        87,
+        575
+      ],
+      "interactions": [
+        0,
+        7,
+        5,
+        2,
+        0,
+        0,
+        6,
+        1,
+        21,
+        6,
+        11,
+        2,
+        5,
+        4,
+        8,
+        1,
+        9,
+        2,
+        1,
+        2,
+        0,
+        15,
+        5,
+        7,
+        1,
+        0,
+        0,
+        26
+      ],
+      "visits": [
+        1,
+        1,
+        0,
+        0,
+        3,
+        1,
+        7,
+        7,
+        17,
+        3,
+        9,
+        0,
+        23,
+        10,
+        15,
+        10,
+        3,
+        0,
+        2,
+        0,
+        0,
+        33,
+        13,
+        17,
+        13,
+        3,
+        23,
+        39
+      ],
+      "video_3s": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        34,
+        12,
+        3,
+        5,
+        0,
+        0,
+        14,
+        3,
+        11,
+        1,
+        2,
+        0,
+        0,
+        4
+      ]
+    },
+    "top_posts": [
+      {
+        "d": "3 Aug",
+        "t": "Every calm handover began with uncomfortable questions asked in a digital model",
+        "reach": 514,
+        "react": 8,
+        "com": 0,
+        "sh": 2
+      },
+      {
+        "d": "28 Jul",
+        "t": "Project 251 | Millboard west-facing façade — resilient by design",
+        "reach": 297,
+        "react": 9,
+        "com": 1,
+        "sh": 3
+      },
+      {
+        "d": "29 Jul",
+        "t": "The Invisible Layer — what DX Living builds first",
+        "reach": 83,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "27 Jul",
+        "t": "What Makes a Home Feel Intuitive?",
+        "reach": 78,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "31 Jul",
+        "t": "Construction delays rarely start on site — programs reduce risk",
+        "reach": 77,
+        "react": 3,
+        "com": 0,
+        "sh": 1
+      },
+      {
+        "d": "1 Aug",
+        "t": "The best time to change your mind is before it's built",
+        "reach": 57,
+        "react": 0,
+        "com": 0,
+        "sh": 0
+      }
+    ]
+  },
+  "instagram": {
+    "followers": 44,
+    "posts_total": 101,
+    "following": 35,
+    "views": {
+      "v": 937,
+      "change_pct": 113.4
+    },
+    "reach": {
+      "v": 194,
+      "change_pct": 63.0
+    },
+    "interactions": {
+      "v": 55,
+      "change_pct": 139.1
+    },
+    "views_from_followers_pct": 51.2,
+    "views_from_non_followers_pct": 48.8,
+    "reach_from_followers": 21,
+    "reach_from_non_followers": 174,
+    "interactions_from_followers_pct": 87,
+    "interactions_from_non_followers_pct": 13,
+    "daily": {
+      "views": [
+        0,
+        68,
+        12,
+        7,
+        4,
+        3,
+        11,
+        8,
+        53,
+        61,
+        26,
+        10,
+        18,
+        9,
+        172,
+        49,
+        91,
+        55,
+        5,
+        20,
+        14,
+        98,
+        49,
+        11,
+        12,
+        3,
+        8,
+        60
+      ],
+      "reach": [
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        2,
+        9,
+        26,
+        9,
+        2,
+        6,
+        4,
+        73,
+        22,
+        24,
+        38,
+        1,
+        3,
+        3,
+        27,
+        11,
+        4,
+        4,
+        2,
+        2,
+        9
+      ],
+      "interactions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        6,
+        2,
+        0,
+        3,
+        2,
+        3,
+        3,
+        10,
+        0,
+        0,
+        2,
+        0,
+        7,
+        1,
+        2,
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    "top_posts": [
+      {
+        "d": "22 Jul",
+        "t": "Project 2238 | Mosman, NSW — 4D Digital Twin",
+        "reach": 98,
+        "react": 4,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "28 Jul",
+        "t": "Project 251 | Millboard west-facing façade",
+        "reach": 37,
+        "react": 5,
+        "com": 2,
+        "sh": 1
+      },
+      {
+        "d": "21 Jul",
+        "t": "Why Some Homes Simply Feel Better?",
+        "reach": 10,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "23 Jul",
+        "t": "Circadian lighting",
+        "reach": 10,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "3 Aug",
+        "t": "Every calm handover began with uncomfortable questions",
+        "reach": 9,
+        "react": 3,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "27 Jul",
+        "t": "What Makes a Home Feel Intuitive?",
+        "reach": 9,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 25,
+    "videos_long_form": 14,
+    "videos_shorts": 11,
+    "views_28d": {
+      "v": 28,
+      "change_pct": 0
+    },
+    "watch_time_hours": {
+      "v": 2.4,
+      "change_pct": 999
+    },
+    "latest_video_views": {
+      "v": 19,
+      "change_pct": null
+    },
+    "views_now": 28,
+    "views_prior": 28,
+    "stale": true,
+    "stale_note": "YouTube Studio analytics were NOT readable on 2026-08-05 (no connected Chrome profile has channel permission). Views, watch time and top videos are carried forward from 2026-08-04. Subscribers and video count were confirmed live on the public channel page.",
+    "top_videos": [
+      {
+        "t": "DX Living | Project 2238 Mosman, NSW",
+        "v": 19,
+        "dur": "28:13",
+        "ctr": null
+      },
+      {
+        "t": "251 PROJECT — Structural data becomes physical reality",
+        "v": 2,
+        "dur": null,
+        "ctr": null
+      },
+      {
+        "t": "251 PROJECT — PROGRESS UPDATE",
+        "v": 2,
+        "dur": null,
+        "ctr": null
+      }
+    ]
+  },
+  "linkedin": {
+    "followers": 57,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": {
+      "v": 5,
+      "change_pct": 150
+    },
+    "impressions": {
+      "v": 1509,
+      "change_pct": 48.4
+    },
+    "reactions": {
+      "v": 54,
+      "change_pct": 18.2
+    },
+    "comments": {
+      "v": 0,
+      "change_pct": 0
+    },
+    "reposts": {
+      "v": 0,
+      "change_pct": 0
+    },
+    "page_views": {
+      "v": 40,
+      "change_pct": 42.9
+    },
+    "unique_visitors": {
+      "v": 19,
+      "change_pct": 46.2
+    },
+    "impressions_prior": 1017,
+    "impressions_now": 1509,
+    "followers_by_location_pct": {
+      "Melbourne": 36.8,
+      "Ho Chi Minh City": 7.0,
+      "Brisbane": 5.3,
+      "Metro Manila": 5.3,
+      "Other": 45.6
+    },
+    "visitors_by_job_function": {
+      "Business Development": 11,
+      "Accounting": 8,
+      "Engineering": 6,
+      "Sales": 4,
+      "Information Technology": 3,
+      "Research": 3,
+      "Operations": 3,
+      "Human Resources": 2,
+      "Real Estate": 1,
+      "Media and Communication": 1
+    },
+    "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 40 page views. / LinkedIn gán một khách vào nhiều chức năng nên tổng không bằng 40 lượt xem trang.",
+    "page_views_by_device": {
+      "Desktop": 36,
+      "Mobile": 4
+    }
+  },
+  "notes": {
+    "vi": [
+      "Facebook, Instagram và LinkedIn đọc trực tiếp. YouTube Studio KHÔNG đọc được hôm nay (không profile Chrome nào có quyền vào kênh) nên toàn bộ số 28 ngày của YouTube là số cũ ngày 4/8 giữ nguyên; chỉ subscriber (4) và số video (25) được xác nhận trên trang kênh công khai.",
+      "Facebook bật mạnh khi cửa sổ trượt sang 7/7 – 3/8: views 3.675 → 4.189 (▲166,6%), visits 214 → 253 (▲386,5%), tương tác 123 → 147 (▲122,7%). Ngày 3/8 một mình đóng góp 575 views và 39 lượt truy cập.",
+      "Bài 3/8 'Every calm handover' đã lên reach 514 (từ 357 hôm qua) — bỏ xa bài façade Millboard Project 251 (297). Bài thuần thông điệp, không ảnh dự án, đang là bài mạnh nhất cửa sổ.",
+      "Instagram views 880 → 937 (▲113,4%), reach 192 → 194, tương tác 53 → 55 (▲139,1%). Follower vẫn đứng ở 44 với 101 bài — 90% reach từ người chưa follow, khám phá tốt nhưng chuyển đổi follower vẫn là điểm nghẽn.",
+      "LinkedIn tăng đều: follower 55 → 57, impressions 1.456 → 1.509 (▲48,4%), reactions 52 → 54. Lượt xem trang giảm 44 → 40 và khách duy nhất 21 → 19 do kỳ so sánh trượt; Phát triển kinh doanh (11) tiếp tục dẫn đầu nhóm chức năng, 90% lượt xem từ máy tính. Vẫn 0 comment."
+    ],
+    "en": [
+      "Facebook, Instagram and LinkedIn were read live. YouTube Studio could NOT be read today (no connected Chrome profile has channel permission), so every 28-day YouTube figure is yesterday's number carried forward; only subscribers (4) and video count (25) were confirmed on the public channel page.",
+      "Facebook jumped as the window slid to 7 Jul – 3 Aug: views 3,675 → 4,189 (▲166.6%), visits 214 → 253 (▲386.5%), interactions 123 → 147 (▲122.7%). 3 Aug alone contributed 575 views and 39 visits.",
+      "The 3 Aug post 'Every calm handover' climbed to 514 reach (from 357 yesterday) — well clear of the Project 251 Millboard façade (297). A pure-message post with no project imagery is now the strongest post in the window.",
+      "Instagram views 880 → 937 (▲113.4%), reach 192 → 194, interactions 53 → 55 (▲139.1%). Followers still sit at 44 across 101 posts — 90% of reach is from non-followers, so discovery works but follower conversion remains the bottleneck.",
+      "LinkedIn kept compounding: followers 55 → 57, impressions 1,456 → 1,509 (▲48.4%), reactions 52 → 54. Page views fell 44 → 40 and unique visitors 21 → 19 as the comparison window slid; Business Development (11) still leads job functions and 90% of page views are desktop. Still 0 comments."
+    ]
+  }
+}

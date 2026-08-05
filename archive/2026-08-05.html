@@ -108,7 +108,7 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 .dp-legend .d{color:#e8543a;font-weight:800}
 </style>
 </head>
-<body>
+<body><div id="archive-banner" style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font-size:12.5px;padding:9px 18px;text-align:center;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">🗃 Bản lưu ngày 05/08/2026 — dashboard này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b4451f">Xem bản mới nhất</a> · <a href="../history.html" style="color:#b4451f">Lịch sử dữ liệu theo ngày</a><span style="opacity:.6"> · </span>Archived copy of 2026-08-05 — frozen, no longer updated.</div>
 <div class="app">
 <nav class="rail">
 <div class="logo">DX</div>
@@ -127,30 +127,6 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 <button class="tbtn p" id="langBtn">VI</button>
 </div>
 </div>
-<div class="metastrip" id="metastrip"></div>
-
-<section class="card" id="sec-filter">
-  <div class="dp-lab"><span class="bar"></span> <span id="dpTitle"></span></div>
-  <p class="dp-help" id="dpHelp"></p>
-  <div class="dp-row">
-    <button class="dp-btn" id="dpBtn"></button>
-    <span class="dp-state" id="dpState"></span>
-    <div class="dp-pop" id="dpPop">
-      <div class="dp-cal">
-        <div class="dp-m"><div class="dp-mh"><button class="dp-nav" id="dpPrev">&lsaquo;</button><span id="dpM0"></span></div><div class="dp-grid" id="dpG0"></div></div>
-        <div class="dp-m"><div class="dp-mh"><span id="dpM1"></span><button class="dp-nav" id="dpNext">&rsaquo;</button></div><div class="dp-grid" id="dpG1"></div></div>
-      </div>
-      <div class="dp-foot">
-        <div class="dp-sum" id="dpSum"></div>
-        <div class="dp-sub" id="dpSub"></div>
-        <div class="dp-acts"><button class="dp-cancel" id="dpCancel"></button><button class="dp-ok" id="dpOk"></button></div>
-        <div class="dp-legend" id="dpLegend"></div>
-      </div>
-    </div>
-  </div>
-  <div class="dp-quick" id="dpQuick"></div>
-</section>
-
 <div id="view"></div>
 <div class="foot" id="foot"></div>
 </main>
@@ -392,7 +368,7 @@ function dpRenderMeta(){
     '<span class="mtag on">✓ Facebook</span><span class="mtag on">✓ Instagram</span>'+
     '<span class="mtag on">✓ YouTube</span><span class="mtag on">✓ LinkedIn</span>'+
     '<span class="mtag">'+DPT.updated[lang](dpFmt(cur))+'</span>'+
-    '<a class="mtag hist" href="history.html">'+DPT.histLink[lang]+'</a>';
+    '<a class="mtag hist" href="../history.html">'+DPT.histLink[lang]+'</a>';
 }
 function dpRenderQuick(){
   if(!DPI)return;
