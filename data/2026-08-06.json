@@ -1,0 +1,143 @@
+{
+  "date": "2026-08-06",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "",
+  "provenance": "Read directly from Chrome on 2026-08-06 (macOS, Browser 2 profile). All four channels read live. Facebook + Instagram from Meta Business Suite Insights (Overview + Results tabs); total FB followers read at business.facebook.com/latest/; Instagram followers/posts read at instagram.com/dxliving.au. YouTube Studio channel analytics WERE readable today (access restored after the 2026-08-05 outage) plus subscribers/video count on the public channel page. LinkedIn read live from Page admin analytics (Content, Followers, Visitors). No estimated values. No Supermetrics.",
+  "window": {
+    "en": "Last 28 days: 8 Jul – 4 Aug 2026",
+    "vi": "28 ngày qua: 8/7 – 4/8/2026"
+  },
+  "windows": {
+    "meta": "2026-07-08 → 2026-08-04",
+    "youtube": "2026-07-08 → 2026-08-04",
+    "linkedin": "2026-07-06 → 2026-08-04"
+  },
+  "facebook": {
+    "followers": 115,
+    "views": { "v": 4438, "change_pct": 185.0 },
+    "viewers": { "v": 413, "change_pct": 44.9 },
+    "visits": { "v": 257, "change_pct": 384.9 },
+    "interactions": { "v": 157, "change_pct": 145.3 },
+    "video_3s": { "v": 113, "change_pct": 82.3 },
+    "net_new_followers": { "v": 4, "change_pct": 100 },
+    "views_from_followers_pct": 48.4,
+    "views_from_non_followers_pct": 51.6,
+    "interactions_from_followers": 112,
+    "interactions_from_non_followers": 45,
+    "watch_time": "50m 47s",
+    "watch_time_change_pct": 177.5,
+    "daily": {
+      "views": [150, 79, 50, 41, 13, 200, 100, 370, 177, 224, 87, 204, 101, 165, 189, 202, 55, 63, 73, 74, 329, 224, 174, 123, 49, 87, 575, 260],
+      "interactions": [7, 5, 2, 0, 0, 6, 1, 21, 6, 11, 2, 5, 4, 8, 1, 9, 2, 1, 2, 0, 15, 5, 7, 1, 0, 0, 26, 10],
+      "visits": [1, 0, 0, 3, 1, 7, 7, 17, 3, 9, 0, 23, 10, 15, 10, 3, 0, 2, 0, 0, 33, 13, 17, 13, 3, 23, 39, 5],
+      "video_3s": [1, 1, 1, 1, 1, 7, 0, 0, 0, 0, 1, 4, 3, 34, 12, 3, 5, 0, 0, 14, 3, 11, 1, 2, 0, 0, 4, 4]
+    },
+    "top_posts": [
+      { "d": "3 Aug", "t": "Every calm handover began with uncomfortable questions asked in a digital model", "reach": 596, "react": 9, "com": 0, "sh": 2 },
+      { "d": "28 Jul", "t": "Project 251 | Millboard west-facing façade — resilient by design", "reach": 302, "react": 9, "com": 1, "sh": 3 },
+      { "d": "29 Jul", "t": "The Invisible Layer — what DX Living builds first", "reach": 84, "react": 2, "com": 0, "sh": 0 },
+      { "d": "31 Jul", "t": "Construction delays rarely start on site — programs reduce risk", "reach": 81, "react": 3, "com": 0, "sh": 1 },
+      { "d": "27 Jul", "t": "What Makes a Home Feel Intuitive?", "reach": 79, "react": 2, "com": 0, "sh": 0 },
+      { "d": "1 Aug", "t": "The best time to change your mind is before it's built", "reach": 57, "react": 0, "com": 0, "sh": 0 }
+    ]
+  },
+  "instagram": {
+    "followers": 44,
+    "posts_total": 101,
+    "following": 35,
+    "views": { "v": 944, "change_pct": 117.5 },
+    "reach": { "v": 194, "change_pct": 63.0 },
+    "interactions": { "v": 56, "change_pct": 409.1 },
+    "views_from_followers_pct": 51.3,
+    "views_from_non_followers_pct": 48.7,
+    "reach_from_followers": 21,
+    "reach_from_non_followers": 174,
+    "interactions_from_followers_pct": 87,
+    "interactions_from_non_followers_pct": 13,
+    "daily": {
+      "views": [68, 12, 7, 4, 3, 11, 8, 53, 61, 26, 10, 18, 9, 172, 49, 91, 55, 5, 20, 14, 98, 49, 11, 12, 3, 8, 60, 7],
+      "reach": [2, 1, 2, 1, 1, 0, 2, 9, 26, 9, 2, 6, 4, 73, 22, 24, 38, 1, 3, 3, 27, 11, 4, 4, 2, 2, 9, 1],
+      "interactions": [0, 0, 0, 0, 0, 0, 0, 10, 6, 2, 0, 3, 2, 3, 3, 10, 0, 0, 2, 0, 7, 1, 2, 0, 1, 1, 2, 1]
+    },
+    "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series does not sum to the 194 KPI. Views, interactions (and all Facebook series) do sum to their KPI. / Reach Instagram khu trung lap theo nguoi trong cua so 28 ngay nen chuoi reach theo ngay khong cong bang KPI 194.",
+    "top_posts": [
+      { "d": "22 Jul", "t": "Project 2238 | Mosman, NSW — 4D Digital Twin", "reach": 98, "react": 4, "com": 0, "sh": 0 },
+      { "d": "28 Jul", "t": "Project 251 | Millboard west-facing façade", "reach": 37, "react": 5, "com": 2, "sh": 1 },
+      { "d": "3 Aug", "t": "Every calm handover began with uncomfortable questions", "reach": 10, "react": 4, "com": 0, "sh": 0 },
+      { "d": "23 Jul", "t": "Circadian lighting", "reach": 10, "react": 2, "com": 0, "sh": 0 },
+      { "d": "21 Jul", "t": "Why Some Homes Simply Feel Better?", "reach": 10, "react": 2, "com": 0, "sh": 0 },
+      { "d": "27 Jul", "t": "What Makes a Home Feel Intuitive?", "reach": 9, "react": 2, "com": 0, "sh": 0 }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 25,
+    "videos_long_form": 14,
+    "videos_shorts": 11,
+    "views_28d": { "v": 28, "change_pct": 0 },
+    "watch_time_hours": { "v": 2.4, "change_pct": 999 },
+    "latest_video_views": { "v": 19, "change_pct": null },
+    "views_now": 28,
+    "views_prior": 28,
+    "stale": false,
+    "stale_note": "YouTube Studio analytics were readable again on 2026-08-06 (channel permission restored after the 2026-08-05 outage). Views, watch time and top videos are live reads for Jul 8 - Aug 4, 2026.",
+    "top_videos": [
+      { "t": "DX Living | Project 2238 Mosman, NSW", "v": 19, "dur": "28:13", "ctr": null },
+      { "t": "251 PROJECT — PROGRESS UPDATE", "v": 2, "dur": null, "ctr": null },
+      { "t": "251 PROJECT — Structural data becomes physical reality", "v": 2, "dur": null, "ctr": null }
+    ]
+  },
+  "linkedin": {
+    "followers": 58,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": { "v": 7, "change_pct": 250 },
+    "impressions": { "v": 1692, "change_pct": 62.5 },
+    "reactions": { "v": 58, "change_pct": 13.4 },
+    "comments": { "v": 0, "change_pct": 0 },
+    "reposts": { "v": 0, "change_pct": 0 },
+    "page_views": { "v": 46, "change_pct": 142.1 },
+    "unique_visitors": { "v": 22, "change_pct": 100 },
+    "impressions_prior": 1041,
+    "impressions_now": 1692,
+    "followers_by_location_pct": {
+      "Melbourne": 36.2,
+      "Ho Chi Minh City": 6.9,
+      "Brisbane": 5.2,
+      "Metro Manila": 5.2,
+      "Other": 46.5
+    },
+    "visitors_by_job_function": {
+      "Business Development": 13,
+      "Accounting": 10,
+      "Engineering": 8,
+      "Operations": 4,
+      "Information Technology": 3,
+      "Human Resources": 2,
+      "Real Estate": 2,
+      "Sales": 2,
+      "Marketing": 2,
+      "Purchasing": 2
+    },
+    "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 46 page views. / LinkedIn gan mot khach vao nhieu chuc nang nen tong khong bang 46 luot xem trang.",
+    "page_views_by_device": {
+      "Desktop": 39,
+      "Mobile": 7
+    }
+  },
+  "notes": {
+    "vi": [
+      "Cả bốn kênh đọc trực tiếp hôm nay — YouTube Studio đã vào lại được sau sự cố mất quyền ngày 5/8, nên không còn số nào phải giữ nguyên từ ngày cũ.",
+      "Facebook phá đỉnh khi cửa sổ trượt sang 8/7 – 4/8: views 4.189 → 4.438 (▲185%), tương tác 147 → 157 (▲145,3%), visits 253 → 257 (▲384,9%). Ngày 3/8 vẫn là ngày mạnh nhất với 575 views, ngày 4/8 tiếp nối với 260.",
+      "Bài 3/8 'Every calm handover' lên reach 596 (từ 514) — gấp đôi bài façade Millboard Project 251 (302). Bài thuần thông điệp, không ảnh dự án, đã ba ngày liền là bài mạnh nhất cửa sổ.",
+      "Instagram views 937 → 944 (▲117,5%) và tương tác 55 → 56 (▲409,1%), nhưng follower vẫn đứng ở 44 với 101 bài suốt năm ngày — 90% reach từ người chưa follow, khám phá tốt mà chuyển đổi follower vẫn tắc.",
+      "LinkedIn bứt tốc mạnh nhất: follower 57 → 58, impressions 1.509 → 1.692 (▲62,5%), reactions 54 → 58, lượt xem trang 40 → 46 (▲142,1%) và khách duy nhất 19 → 22 (▲100%). Phát triển kinh doanh (13) và Kế toán (10) dẫn đầu nhóm chức năng, 85% lượt xem từ máy tính. Vẫn 0 comment sau nhiều tuần."
+    ],
+    "en": [
+      "All four channels were read live today — YouTube Studio access was restored after the 5 Aug permission outage, so nothing is carried forward from an earlier day.",
+      "Facebook set a new high as the window slid to 8 Jul – 4 Aug: views 4,189 → 4,438 (▲185%), interactions 147 → 157 (▲145.3%), visits 253 → 257 (▲384.9%). 3 Aug is still the strongest day at 575 views, with 4 Aug following at 260.",
+      "The 3 Aug post 'Every calm handover' climbed to 596 reach (from 514) — nearly double the Project 251 Millboard façade (302). A pure-message post with no project imagery has led the window for three days straight.",
+      "Instagram views 937 → 944 (▲117.5%) and interactions 55 → 56 (▲409.1%), but followers have sat at 44 across 101 posts for five days — 90% of reach is from non-followers, so discovery works and follower conversion still does not.",
+      "LinkedIn accelerated hardest: followers 57 → 58, impressions 1,509 → 1,692 (▲62.5%), reactions 54 → 58, page views 40 → 46 (▲142.1%) and unique visitors 19 → 22 (▲100%). Business Development (13) and Accounting (10) lead job functions and 85% of page views are desktop. Still 0 comments after several weeks."
+    ]
+  }
+}
