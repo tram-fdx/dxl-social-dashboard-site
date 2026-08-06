@@ -1,0 +1,144 @@
+{
+  "date": "2026-08-07",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "",
+  "provenance": "Read directly from Chrome on 2026-08-07 (macOS, Browser 2 profile). All four channels read live. Facebook + Instagram from Meta Business Suite Insights (Overview + Results tabs); total FB followers read at business.facebook.com/latest/; Instagram followers/posts read at instagram.com/dxliving.au. YouTube Studio channel analytics read live plus subscribers/video count on the public channel page. LinkedIn read live from Page admin analytics (Content, Followers, Visitors) - LinkedIn's own reporting window had not advanced past 4 Aug at read time, so the LinkedIn period is unchanged from the 6 Aug snapshot. No estimated values. No Supermetrics.",
+  "window": {
+    "en": "Last 28 days: 9 Jul – 5 Aug 2026",
+    "vi": "28 ngày qua: 9/7 – 5/8/2026"
+  },
+  "windows": {
+    "meta": "2026-07-09 → 2026-08-05",
+    "youtube": "2026-07-09 → 2026-08-05",
+    "linkedin": "2026-07-06 → 2026-08-04"
+  },
+  "facebook": {
+    "followers": 115,
+    "views": { "v": 4503, "change_pct": 171.9 },
+    "viewers": { "v": 435, "change_pct": 51.0 },
+    "visits": { "v": 264, "change_pct": 388.9 },
+    "interactions": { "v": 155, "change_pct": 131.3 },
+    "video_3s": { "v": 115, "change_pct": 85.5 },
+    "link_clicks": { "v": 17, "change_pct": 88.9 },
+    "net_new_followers": { "v": 4, "change_pct": 100 },
+    "views_from_followers_pct": 47.4,
+    "views_from_non_followers_pct": 52.6,
+    "interactions_from_followers": 110,
+    "interactions_from_non_followers": 45,
+    "watch_time": "51m 34s",
+    "watch_time_change_pct": 183.3,
+    "daily": {
+      "views": [79, 50, 41, 13, 200, 100, 370, 177, 224, 87, 204, 101, 165, 189, 202, 55, 63, 73, 74, 329, 224, 174, 123, 49, 87, 575, 260, 215],
+      "interactions": [5, 2, 0, 0, 6, 1, 21, 6, 11, 2, 5, 4, 8, 1, 9, 2, 1, 2, 0, 15, 5, 7, 1, 0, 0, 26, 10, 5],
+      "visits": [0, 0, 3, 1, 7, 7, 17, 3, 9, 0, 23, 10, 15, 10, 3, 0, 2, 0, 0, 33, 13, 17, 13, 3, 23, 39, 5, 8],
+      "video_3s": [1, 1, 1, 1, 7, 0, 0, 0, 0, 1, 4, 3, 34, 12, 3, 5, 0, 0, 14, 3, 11, 1, 2, 0, 0, 4, 4, 3]
+    },
+    "top_posts": [
+      { "d": "3 Aug", "t": "Every calm handover began with uncomfortable questions asked in a digital model", "reach": 632, "react": 10, "com": 0, "sh": 2 },
+      { "d": "28 Jul", "t": "Project 251 | Millboard west-facing façade — resilient by design", "reach": 305, "react": 9, "com": 1, "sh": 3 },
+      { "d": "6 Aug", "t": "Most people experience the landscape — we think about it first", "reach": 121, "react": 4, "com": 0, "sh": 2 },
+      { "d": "31 Jul", "t": "Construction delays rarely start on site — programs reduce risk", "reach": 86, "react": 3, "com": 0, "sh": 1 },
+      { "d": "29 Jul", "t": "The Invisible Layer — what DX Living builds first", "reach": 85, "react": 2, "com": 0, "sh": 0 },
+      { "d": "1 Aug", "t": "The best time to change your mind is before it's built", "reach": 59, "react": 0, "com": 0, "sh": 0 }
+    ]
+  },
+  "instagram": {
+    "followers": 44,
+    "posts_total": 102,
+    "following": 35,
+    "views": { "v": 897, "change_pct": 84.9 },
+    "reach": { "v": 194, "change_pct": 70.2 },
+    "interactions": { "v": 60, "change_pct": 566.7 },
+    "views_from_followers_pct": 52.0,
+    "views_from_non_followers_pct": 48.0,
+    "reach_from_followers": 21,
+    "reach_from_non_followers": 174,
+    "interactions_from_followers_pct": 88,
+    "interactions_from_non_followers_pct": 12,
+    "daily": {
+      "views": [12, 7, 4, 3, 11, 8, 53, 61, 26, 10, 18, 9, 172, 49, 91, 55, 5, 20, 14, 98, 49, 11, 12, 3, 8, 60, 7, 21],
+      "reach": [1, 2, 1, 1, 0, 2, 9, 26, 9, 2, 6, 4, 73, 22, 24, 38, 1, 3, 3, 27, 11, 4, 4, 2, 2, 9, 1, 5],
+      "interactions": [0, 0, 0, 0, 0, 0, 10, 6, 2, 0, 3, 2, 3, 3, 10, 0, 0, 2, 0, 7, 1, 2, 0, 1, 1, 2, 1, 4]
+    },
+    "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series does not sum to the 194 KPI. Views, interactions (and all Facebook series) do sum to their KPI.",
+    "top_posts": [
+      { "d": "22 Jul", "t": "Project 2238 | Mosman, NSW — 4D Digital Twin", "reach": 98, "react": 4, "com": 0, "sh": 0 },
+      { "d": "28 Jul", "t": "Project 251 | Millboard west-facing façade", "reach": 37, "react": 5, "com": 2, "sh": 1 },
+      { "d": "3 Aug", "t": "Every calm handover began with uncomfortable questions", "reach": 10, "react": 5, "com": 0, "sh": 0 },
+      { "d": "23 Jul", "t": "Circadian lighting", "reach": 10, "react": 2, "com": 0, "sh": 0 },
+      { "d": "27 Jul", "t": "What Makes a Home Feel Intuitive?", "reach": 9, "react": 2, "com": 0, "sh": 0 },
+      { "d": "1 Aug", "t": "The best time to change your mind is before it's built", "reach": 8, "react": 1, "com": 0, "sh": 0 }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 25,
+    "videos_long_form": 14,
+    "videos_shorts": 11,
+    "views_28d": { "v": 28, "change_pct": 0 },
+    "watch_time_hours": { "v": 2.4, "change_pct": 999 },
+    "latest_video_views": { "v": 19, "change_pct": null },
+    "views_now": 28,
+    "views_prior": 28,
+    "stale": false,
+    "stale_note": "YouTube Studio analytics read live on 2026-08-07 for Jul 9 - Aug 5, 2026. Views flat at 28 ('about the same as usual'), watch time 2.4 hrs.",
+    "top_videos": [
+      { "t": "DX Living | Project 2238 Mosman, NSW", "v": 19, "dur": "28:13", "ctr": null },
+      { "t": "251 PROJECT — Structural data becomes physical reality", "v": 2, "dur": null, "ctr": null },
+      { "t": "251 PROJECT — PROGRESS UPDATE", "v": 2, "dur": null, "ctr": null }
+    ]
+  },
+  "linkedin": {
+    "followers": 58,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": { "v": 7, "change_pct": 250 },
+    "impressions": { "v": 1692, "change_pct": 62.5 },
+    "reactions": { "v": 60, "change_pct": 10.4 },
+    "comments": { "v": 0, "change_pct": 0 },
+    "reposts": { "v": 2, "change_pct": 0 },
+    "page_views": { "v": 46, "change_pct": 142.1 },
+    "unique_visitors": { "v": 22, "change_pct": 100 },
+    "impressions_prior": 1041,
+    "impressions_now": 1692,
+    "followers_by_location_pct": {
+      "Melbourne": 36.2,
+      "Ho Chi Minh City": 8.6,
+      "Brisbane": 5.2,
+      "Metro Manila": 5.2,
+      "Other": 44.8
+    },
+    "visitors_by_job_function": {
+      "Business Development": 13,
+      "Engineering": 9,
+      "Accounting": 7,
+      "Research": 4,
+      "Sales": 3,
+      "Operations": 3,
+      "Purchasing": 3,
+      "Quality Assurance": 2,
+      "Human Resources": 2,
+      "Information Technology": 2
+    },
+    "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 46 page views.",
+    "page_views_by_device": {
+      "Desktop": 39,
+      "Mobile": 7
+    }
+  },
+  "notes": {
+    "vi": [
+      "Cả bốn kênh đọc trực tiếp. Cửa sổ Meta và YouTube trượt sang 9/7 – 5/8; riêng LinkedIn vẫn báo cáo tới 4/8 nên kỳ LinkedIn giữ nguyên như bản 6/8.",
+      "Facebook có bài mới ngày 6/8 ('Most people experience the landscape') đạt reach 121, 4 reactions, 2 chia sẻ ngay ngày đầu — mở hàng tốt hơn hầu hết bài trong cửa sổ. Views 4.438 → 4.503, visits 257 → 264.",
+      "Bài 3/8 'Every calm handover' tiếp tục leo lên reach 632 (từ 596) với 10 reactions — vẫn gấp đôi bài façade Millboard Project 251 (305). Bốn ngày liền dẫn đầu.",
+      "Instagram: đã đăng bài thứ 102 (6/8, reach 7). Tương tác nhảy lên 60 (▲566,7%) và 88% đến từ follower, nhưng views giảm nhẹ 944 → 897 do ngày 8/7 rơi khỏi cửa sổ. Follower vẫn 44 — ngày thứ sáu đứng yên.",
+      "LinkedIn: reactions 58 → 60 và lần đầu có 2 lượt repost sau nhiều tuần chỉ toàn reactions. Vẫn 0 comment. Nhóm Kỹ thuật vượt Kế toán lên vị trí thứ 2 (9 vs 7); Melbourne vẫn 36,2%, HCM tăng 4 → 5 follower."
+    ],
+    "en": [
+      "All four channels read live. The Meta and YouTube windows slid to 9 Jul – 5 Aug; LinkedIn's own reporting still ends 4 Aug, so the LinkedIn period is unchanged from the 6 Aug snapshot.",
+      "Facebook published a new post on 6 Aug ('Most people experience the landscape') that took 121 reach, 4 reactions and 2 shares on day one — a stronger opening than most posts in the window. Views 4,438 → 4,503, visits 257 → 264.",
+      "The 3 Aug post 'Every calm handover' kept climbing to 632 reach (from 596) with 10 reactions — still double the Project 251 Millboard façade (305). Four days in the lead.",
+      "Instagram: post 102 went up on 6 Aug (reach 7). Interactions jumped to 60 (▲566.7%) with 88% from followers, but views eased 944 → 897 as 8 Jul dropped out of the window. Followers still 44 — a sixth flat day.",
+      "LinkedIn: reactions 58 → 60 and the page picked up its first 2 reposts after weeks of reactions only. Still 0 comments. Engineering overtook Accounting for second place among visiting job functions (9 vs 7); Melbourne holds 36.2% and Ho Chi Minh City rose from 4 to 5 followers."
+    ]
+  }
+}
