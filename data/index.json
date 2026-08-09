@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-07",
+  "latest": "2026-08-10",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -79,6 +79,13 @@
       "report": "archive/2026-08-07.html",
       "label_vi": "Bài landscape 6/8 mở hàng reach 121; bài 3/8 lên 632; LI reactions 58→60 + 2 repost đầu tiên",
       "label_en": "6 Aug landscape post opens at 121 reach; 3 Aug post hits 632; LI reactions 58→60 + first 2 reposts"
+    },
+    {
+      "date": "2026-08-10",
+      "data": "data/2026-08-10.json",
+      "report": "archive/2026-08-10.html",
+      "label_vi": "FB views 4.503→4.777, bài 7/8 mở hàng 103; IG bài 103, tương tác 60→66; LinkedIn trượt cửa sổ sang 9/7–7/8 (reactions 65)",
+      "label_en": "FB views 4,503→4,777, 7 Aug post opens at 103; IG post 103, interactions 60→66; LinkedIn window rolls to 9 Jul–7 Aug (65 reactions)"
     }
   ]
 }
