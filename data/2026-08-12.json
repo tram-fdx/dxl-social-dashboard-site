@@ -1,0 +1,511 @@
+{
+  "date": "2026-08-12",
+  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+  "source_commit": "",
+  "provenance": "Read directly from Chrome on 2026-08-12 (macOS, local browser). All four channels read live. Facebook + Instagram from Meta Business Suite Insights (Overview + Recent content); total FB followers (115) and IG followers (44) read at business.facebook.com/latest/; Instagram post count (105) read at instagram.com/dxliving.au. YouTube Studio channel analytics read live for 14 Jul - 10 Aug; subscribers (4) and video count (26) read on the public channel page. LinkedIn read live from Page admin analytics (Content, Followers, Visitors), window 12 Jul - 10 Aug. Facebook link_clicks was not re-read this cycle and is carried from the 2026-08-07 snapshot. IMPORTANT METRIC CHANGE: the Instagram recent-content table returned reach this cycle (the 28 Jul Millboard post shows 37 where it showed 84 as views last cycle), so Instagram post-level figures in this snapshot are reach, not views. The Instagram content table only returned the 8 most recent posts, so posts published before 28 Jul (including the 22 Jul Project 2238 reveal) did not load and are not represented. No estimated values. No Supermetrics.",
+  "window": {
+    "en": "Last 28 days: 14 Jul – 10 Aug 2026",
+    "vi": "28 ngày qua: 14/7 – 10/8/2026"
+  },
+  "windows": {
+    "meta": "2026-07-14 → 2026-08-10",
+    "youtube": "2026-07-14 → 2026-08-10",
+    "linkedin": "2026-07-12 → 2026-08-10"
+  },
+  "facebook": {
+    "followers": 115,
+    "views": {
+      "v": 4998,
+      "change_pct": 156.7
+    },
+    "viewers": {
+      "v": 455,
+      "change_pct": 52.7
+    },
+    "visits": {
+      "v": 299,
+      "change_pct": 398.3
+    },
+    "interactions": {
+      "v": 172,
+      "change_pct": 132.4
+    },
+    "video_3s": {
+      "v": 117,
+      "change_pct": 62.5
+    },
+    "link_clicks": {
+      "v": 17,
+      "change_pct": 88.9
+    },
+    "net_new_followers": {
+      "v": 4,
+      "change_pct": 100
+    },
+    "views_from_followers_pct": 50.4,
+    "views_from_non_followers_pct": 49.6,
+    "interactions_from_followers": 124,
+    "interactions_from_non_followers": 48,
+    "watch_time": "54m 48s",
+    "watch_time_change_pct": 176.1,
+    "daily": {
+      "views": [
+        100,
+        370,
+        177,
+        224,
+        87,
+        204,
+        101,
+        165,
+        189,
+        202,
+        55,
+        63,
+        73,
+        74,
+        329,
+        224,
+        174,
+        123,
+        49,
+        87,
+        575,
+        260,
+        215,
+        212,
+        154,
+        78,
+        63,
+        371
+      ],
+      "interactions": [
+        1,
+        21,
+        6,
+        11,
+        2,
+        5,
+        4,
+        8,
+        1,
+        9,
+        2,
+        1,
+        2,
+        0,
+        15,
+        5,
+        7,
+        1,
+        0,
+        0,
+        26,
+        10,
+        5,
+        7,
+        11,
+        2,
+        2,
+        8
+      ],
+      "visits": [
+        7,
+        17,
+        3,
+        9,
+        0,
+        23,
+        10,
+        15,
+        10,
+        3,
+        0,
+        2,
+        0,
+        0,
+        33,
+        13,
+        17,
+        13,
+        3,
+        23,
+        39,
+        5,
+        8,
+        3,
+        7,
+        0,
+        4,
+        32
+      ],
+      "video_3s": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        3,
+        34,
+        12,
+        3,
+        5,
+        0,
+        0,
+        14,
+        3,
+        11,
+        1,
+        2,
+        0,
+        0,
+        4,
+        4,
+        3,
+        0,
+        1,
+        0,
+        0,
+        12
+      ]
+    },
+    "top_posts": [
+      {
+        "d": "3 Aug",
+        "t": "Every calm handover began with uncomfortable questions asked in a digital model",
+        "reach": 691,
+        "react": 10,
+        "com": 0,
+        "sh": 2
+      },
+      {
+        "d": "6 Aug",
+        "t": "Most people experience the landscape — we think about it first",
+        "reach": 214,
+        "react": 4,
+        "com": 0,
+        "sh": 2
+      },
+      {
+        "d": "7 Aug",
+        "t": "Architectural drawings inform — the digital twin creates confidence",
+        "reach": 150,
+        "react": 4,
+        "com": 0,
+        "sh": 2
+      },
+      {
+        "d": "10 Aug",
+        "t": "Changing a finish after procurement rarely improves a project",
+        "reach": 132,
+        "react": 5,
+        "com": 0,
+        "sh": 2
+      },
+      {
+        "d": "31 Jul",
+        "t": "Construction delays rarely start on site — programs reduce risk",
+        "reach": 125,
+        "react": 4,
+        "com": 0,
+        "sh": 1
+      },
+      {
+        "d": "11 Aug",
+        "t": "Project 251 | LightEFX StarEFX fibre optic ceiling resolved before installation",
+        "reach": 118,
+        "react": 4,
+        "com": 0,
+        "sh": 2
+      }
+    ]
+  },
+  "instagram": {
+    "followers": 44,
+    "posts_total": 105,
+    "following": 35,
+    "views": {
+      "v": 913,
+      "change_pct": 76.6
+    },
+    "reach": {
+      "v": 196,
+      "change_pct": 70.4
+    },
+    "interactions": {
+      "v": 68,
+      "change_pct": 871.4
+    },
+    "views_from_followers_pct": 53.4,
+    "views_from_non_followers_pct": 46.6,
+    "reach_from_followers": 21,
+    "reach_from_non_followers": 176,
+    "interactions_from_followers_pct": 88,
+    "interactions_from_non_followers_pct": 12,
+    "daily": {
+      "views": [
+        8,
+        53,
+        61,
+        26,
+        10,
+        18,
+        9,
+        172,
+        49,
+        91,
+        55,
+        5,
+        20,
+        14,
+        98,
+        49,
+        11,
+        12,
+        3,
+        8,
+        60,
+        7,
+        21,
+        13,
+        16,
+        6,
+        1,
+        17
+      ],
+      "reach": [
+        2,
+        9,
+        26,
+        9,
+        2,
+        6,
+        4,
+        73,
+        22,
+        24,
+        38,
+        1,
+        3,
+        3,
+        27,
+        11,
+        4,
+        4,
+        2,
+        2,
+        9,
+        1,
+        5,
+        5,
+        8,
+        4,
+        1,
+        4
+      ],
+      "interactions": [
+        0,
+        10,
+        6,
+        2,
+        0,
+        3,
+        2,
+        3,
+        3,
+        10,
+        0,
+        0,
+        2,
+        0,
+        7,
+        1,
+        2,
+        0,
+        1,
+        1,
+        2,
+        1,
+        4,
+        3,
+        3,
+        0,
+        0,
+        2
+      ]
+    },
+    "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series (304) does not sum to the 196 KPI. Views, interactions (and all Facebook series) do sum to their KPI.",
+    "top_posts_metric": "reach",
+    "top_posts": [
+      {
+        "d": "11 Aug",
+        "t": "Project 251 | LightEFX StarEFX fibre optic ceiling",
+        "reach": 52,
+        "react": 2,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "28 Jul",
+        "t": "Project 251 | Millboard west-facing façade",
+        "reach": 37,
+        "react": 5,
+        "com": 2,
+        "sh": 1
+      },
+      {
+        "d": "6 Aug",
+        "t": "Most people experience the landscape — we think about it first",
+        "reach": 11,
+        "react": 3,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "3 Aug",
+        "t": "Every calm handover began with uncomfortable questions in a digital model",
+        "reach": 11,
+        "react": 5,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "7 Aug",
+        "t": "Architectural drawings inform — the digital twin creates confidence",
+        "reach": 9,
+        "react": 1,
+        "com": 0,
+        "sh": 0
+      },
+      {
+        "d": "1 Aug",
+        "t": "The best time to change your mind is before it's built",
+        "reach": 8,
+        "react": 3,
+        "com": 0,
+        "sh": 0
+      }
+    ]
+  },
+  "youtube": {
+    "subscribers": 4,
+    "videos": 26,
+    "videos_long_form": 14,
+    "videos_shorts": 12,
+    "views_28d": {
+      "v": 27,
+      "change_pct": 125
+    },
+    "watch_time_hours": {
+      "v": 2.4,
+      "change_pct": 999
+    },
+    "latest_video_views": {
+      "v": 45,
+      "change_pct": null
+    },
+    "views_now": 27,
+    "views_prior": 12,
+    "stale": false,
+    "stale_note": "YouTube Studio analytics read live on 2026-08-12 for Jul 14 - Aug 10, 2026. Views 27 (+125% on 12 in the prior 28 days), watch time 2.4 hrs. A new Short, 'Project 251 | LightEFX's StarEFX fibre optic ceiling', went live after the window closed and already has 45 views; the channel video count moved 25 to 26.",
+    "top_videos": [
+      {
+        "t": "DX Living | Project 2238 Mosman, NSW",
+        "v": 19,
+        "dur": "28:13",
+        "ctr": null
+      },
+      {
+        "t": "251 PROJECT — Structural data becomes physical reality",
+        "v": 2,
+        "dur": null,
+        "ctr": null
+      },
+      {
+        "t": "251 PROJECT — PROGRESS UPDATE",
+        "v": 2,
+        "dur": null,
+        "ctr": null
+      }
+    ]
+  },
+  "linkedin": {
+    "followers": 58,
+    "url": "https://www.linkedin.com/company/108389291/",
+    "new_followers_30d": {
+      "v": 8,
+      "change_pct": 300
+    },
+    "impressions": {
+      "v": 1715,
+      "change_pct": 44.0
+    },
+    "reactions": {
+      "v": 64,
+      "change_pct": 7.2
+    },
+    "comments": {
+      "v": 0,
+      "change_pct": 0
+    },
+    "reposts": {
+      "v": 2,
+      "change_pct": 0
+    },
+    "page_views": {
+      "v": 47,
+      "change_pct": 123.8
+    },
+    "unique_visitors": {
+      "v": 22,
+      "change_pct": 69.2
+    },
+    "impressions_prior": 1191,
+    "impressions_now": 1715,
+    "followers_by_location_pct": {
+      "Melbourne": 36.2,
+      "Ho Chi Minh City": 10.3,
+      "Brisbane": 5.2,
+      "Metro Manila": 5.2,
+      "Other": 43.1
+    },
+    "visitors_by_job_function": {
+      "Business Development": 13,
+      "Engineering": 9,
+      "Accounting": 6,
+      "Information Technology": 3,
+      "Arts and Design": 3,
+      "Human Resources": 2,
+      "Sales": 2,
+      "Military and Protective Services": 2,
+      "Operations": 2,
+      "Administrative": 2
+    },
+    "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 47 page views.",
+    "page_views_by_device": {
+      "Desktop": 40,
+      "Mobile": 7
+    }
+  },
+  "notes": {
+    "vi": [
+      "Cả bốn kênh đọc trực tiếp. Cửa sổ Meta và YouTube trượt sang 14/7 – 10/8; LinkedIn sang 12/7 – 10/8.",
+      "Facebook có bài mới ngày 11/8 (trần sợi quang StarEFX của LightEFX cho Project 251) mở hàng reach 118, 4 reactions, 2 chia sẻ — ngày đầu mạnh nhất từ trước tới nay. Views 4.827 → 4.998, visits 274 → 299, tương tác 170 → 172.",
+      "Bài 3/8 'Every calm handover' lên reach 691 với 10 reactions — tám ngày liền dẫn đầu và gấp hơn ba lần bài kế tiếp. Bài 6/8 lên 214, bài 7/8 lên 150, bài 10/8 lên 132. Tương tác từ người chưa follow giảm nhẹ còn 48.",
+      "Instagram: đã đăng bài thứ 105. Views 907 → 913 (▲76,6%), reach giữ 196 (▲70,4%), tương tác 66 → 68 (▲871,4%) với 88% từ follower. Follower vẫn 44 — ngày thứ mười một đứng yên.",
+      "LinkedIn: kỳ báo cáo trượt sang 12/7 – 10/8. Impressions 1.678 → 1.715 (▲44%), reactions giữ 64 (▲7,2%), page views giữ 47 (▲123,8%), khách duy nhất 22 (▲69,2%), follower mới 30 ngày vẫn 8 (▲300%). Vẫn 0 comment. Bảng chức năng công việc đổi nhóm: Phát triển kinh doanh 13, Kỹ thuật 9, Kế toán 6.",
+      "YouTube: views 28 → 27 do cửa sổ trượt (▲125% so với 12 kỳ trước), watch time 2,4 giờ (▲>999%). Short mới 'Project 251 | StarEFX' lên sau khi cửa sổ đóng và đã đạt 45 views; số video 25 → 26.",
+      "Lưu ý dữ liệu: bảng nội dung Instagram lần này trả về reach thay vì views (bài Millboard 28/7 hiện 37 thay vì 84), và chỉ tải được 8 bài gần nhất nên bài Project 2238 ngày 22/7 không xuất hiện."
+    ],
+    "en": [
+      "All four channels read live. The Meta and YouTube windows slid to 14 Jul – 10 Aug; LinkedIn rolled to 12 Jul – 10 Aug.",
+      "Facebook published a new post on 11 Aug (LightEFX's StarEFX fibre optic ceiling for Project 251) that opened at 118 reach, 4 reactions and 2 shares — the strongest day one yet. Views 4,827 → 4,998, visits 274 → 299, interactions 170 → 172.",
+      "The 3 Aug post 'Every calm handover' climbed to 691 reach with 10 reactions — eight days in the lead and more than three times the next post. The 6 Aug post rose to 214, the 7 Aug post to 150 and the 10 Aug post to 132. Non-follower interactions eased to 48.",
+      "Instagram: post 105 is up. Views 907 → 913 (▲76.6%), reach held at 196 (▲70.4%), interactions 66 → 68 (▲871.4%) with 88% from followers. Followers still 44 — an eleventh flat day.",
+      "LinkedIn: the reporting window rolled to 12 Jul – 10 Aug. Impressions 1,678 → 1,715 (▲44%), reactions held at 64 (▲7.2%), page views held at 47 (▲123.8%), unique visitors 22 (▲69.2%), new 30-day followers still 8 (▲300%). Still 0 comments. The job-function table reshuffled: Business Development 13, Engineering 9, Accounting 6.",
+      "YouTube: views 28 → 27 as the window slid (▲125% on 12 in the prior period) with watch time 2.4 hrs (▲>999%). A new Short, 'Project 251 | StarEFX', went live after the window closed and already has 45 views; video count moved 25 → 26.",
+      "Data note: the Instagram content table returned reach rather than views this cycle (the 28 Jul Millboard post now shows 37 instead of 84), and only the 8 most recent posts loaded, so the 22 Jul Project 2238 reveal does not appear."
+    ]
+  }
+}
