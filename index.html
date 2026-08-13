@@ -386,8 +386,6 @@ $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
-select("facebook");
-
 // ============ trend section (reads every data/*.json snapshot; charts change over time) ============
 const TRT={
  title:{vi:"Thay đổi chỉ số theo ngày",en:"How the numbers are changing"},
@@ -505,6 +503,8 @@ if(document.getElementById("sec-trend")){
     const sec=$("sec-trend"); if(sec)sec.style.display="none";
   });
 }
+
+select("facebook");
 
 // ============ date picker (reads data/index.json; navigates, never recomputes) ============
 const DPT={
