@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-12",
+  "latest": "2026-08-13",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -100,6 +100,13 @@
       "report": "archive/2026-08-12.html",
       "label_vi": "Bài trần StarEFX 11/8 mở hàng mạnh nhất (FB 118 / IG 52); FB views 4.827→4.998; LI impressions 1.678→1.715; YouTube có video thứ 26",
       "label_en": "11 Aug StarEFX ceiling post is the strongest launch yet (FB 118 / IG 52); FB views 4,827→4,998; LI impressions 1,678→1,715; YouTube video 26 live"
+    },
+    {
+      "date": "2026-08-13",
+      "data": "data/2026-08-13.json",
+      "report": "archive/2026-08-13.html",
+      "label_vi": "StarEFX kéo cả bốn kênh; FB 5.320 views, IG 1.012, YT nhảy lên 73",
+      "label_en": "StarEFX story lifts all four channels; FB 5,320 views, IG 1,012, YT jumps to 73"
     }
   ]
 }
