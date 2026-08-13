@@ -47,11 +47,15 @@ def main():
     html = io.open(src, encoding='utf-8').read()
     n0 = len(html)
 
-    # 1. strip the picker section and the metastrip -- both depend on data/index.json
+    # 1. strip the picker section, the metastrip and the live trend section --
+    #    all three depend on data/index.json, which does not resolve from archive/
     html, nsec = re.subn(r'<section class="card" id="sec-filter">.*?</section>\s*', '', html, flags=re.S)
     html, nms = re.subn(r'<div class="metastrip" id="metastrip"></div>\s*', '', html)
+    html, ntr = re.subn(r'<section class="card" id="sec-trend">.*?</section>\s*', '', html, flags=re.S)
     if nsec != 1:
         sys.exit('expected exactly 1 #sec-filter section, found %d' % nsec)
+    if ntr > 1:
+        sys.exit('expected at most 1 #sec-trend section, found %d' % ntr)
 
     # 2. rewrite links for a page that now lives one directory down
     links = 0
@@ -84,7 +88,7 @@ def main():
     print('freeze %s  (%s)' % (a.date, 'dry run' if a.dry_run else 'writing'))
     print('  source        index.html  %d bytes' % n0)
     print('  archive       archive/%s.html  %d bytes' % (a.date, len(html)))
-    print('  picker        stripped #sec-filter (%d) + metastrip (%d), %d chars removed' % (nsec, nms, n0 - len(html) + len(banner)))
+    print('  picker        stripped #sec-filter (%d) + metastrip (%d) + #sec-trend (%d), %d chars removed' % (nsec, nms, ntr, n0 - len(html) + len(banner)))
     print('  banner        inserted after <body>: %s / %s' % (vi, en))
     print('  links         rewritten: %d' % links)
     print('  manifest      latest %s -> %s, %d day(s) total' % (prev_latest, man['latest'], len(snaps)))

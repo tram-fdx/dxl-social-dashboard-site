@@ -68,6 +68,26 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 .mtag.hist:hover{background:#fbe0d7;text-decoration:none}
 #sec-filter{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
 .dp-lab{display:flex;align-items:center;gap:9px;font-size:11.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ink)}
+.acc-head{width:100%;display:flex;align-items:center;gap:12px;background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.acc-head .acc-sub{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+.acc-chev{flex:none;width:15px;height:15px;color:var(--muted);transition:transform .2s}
+.acc-head[aria-expanded="true"] .acc-chev{transform:rotate(180deg)}
+.acc-body{display:none}
+.acc-body.open{display:block}
+#sec-trend{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.tr-sec{margin-top:14px}
+.tr-sec .th{display:flex;align-items:baseline;gap:9px;margin-bottom:8px}
+.tr-sec .th b{font-size:13px;font-weight:800}
+.tr-sec .th span{font-size:11.5px;color:var(--muted)}
+.tr-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.tr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:11px}
+.tr-card{border:1px solid var(--line);border-radius:12px;padding:10px 12px 8px}
+.tr-card .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:700;line-height:1.3;min-height:27px}
+.tr-card .v{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.tr-card .d{font-size:11.5px;font-weight:700;margin-top:1px}
+.tr-card .d.up{color:var(--pos)}.tr-card .d.down{color:var(--neg)}.tr-card .d.flat{color:var(--muted)}
+.tr-spark{height:44px;margin-top:6px}
+@media(max-width:640px){.tr-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
 .dp-lab .bar{width:22px;height:3px;border-radius:2px;background:#e8543a;display:inline-block}
 .dp-help{font-size:12.5px;color:var(--muted);margin:8px 0 14px;max-width:900px;line-height:1.5}
 .dp-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:relative}
@@ -323,7 +343,7 @@ $("view").innerHTML=kpis(kp)+`
 clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,58,44,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
 }
 
-function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);}
+function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);renderTrend();}
 function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
 document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
 $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
@@ -331,6 +351,124 @@ $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[la
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
 select("facebook");
+
+// ============ trend section (reads every data/*.json snapshot; charts change over time) ============
+const TRT={
+ title:{vi:"Thay đổi chỉ số theo ngày",en:"How the numbers are changing"},
+ help:{vi:"Mỗi điểm là <b>một lần quét</b> đã lưu. Số lớn là giá trị mới nhất, dòng dưới là <b>thay đổi so với lần quét trước</b>. Biểu đồ đổi theo kênh bạn đang xem ở thanh bên trái.",
+       en:"Each point is <b>one stored scan</b>. The large number is the latest value and the line below it is the <b>change since the previous scan</b>. The charts follow whichever channel is selected in the left rail."},
+ loading:{vi:"Đang tải lịch sử số liệu…",en:"Loading metric history…"},
+ none:{vi:"Chưa đọc được lịch sử số liệu (cần ít nhất 2 ngày đã lưu).",en:"No metric history available yet (at least 2 stored days are needed)."},
+ nochg:{vi:"không đổi",en:"no change"},
+ first:{vi:"lần quét đầu",en:"first scan"},
+ span:{vi:(n,a,b)=>n+" lần quét · "+a+" → "+b, en:(n,a,b)=>n+" scans · "+a+" → "+b},
+ vsPrev:{vi:"so với lần quét trước",en:"vs previous scan"}
+};
+const TRCH={
+ facebook:{name:"Facebook",color:"#1877f2"},
+ instagram:{name:"Instagram",color:"#e1306c"},
+ youtube:{name:"YouTube",color:"#ff0000"},
+ linkedin:{name:"LinkedIn",color:"#0a66c2"}
+};
+const gv=(o,...p)=>{let d=o;for(const k of p){if(d==null||typeof d!=="object")return null;d=d[k];}return (d===undefined?null:d);};
+const TRKPI={
+ facebook:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"facebook","views","v")},
+  {l:{en:"Reach (viewers)",vi:"Người tiếp cận"},g:j=>gv(j,"facebook","viewers","v")},
+  {l:{en:"Facebook visits",vi:"Lượt truy cập"},g:j=>gv(j,"facebook","visits","v")},
+  {l:{en:"Content interactions",vi:"Tương tác nội dung"},g:j=>gv(j,"facebook","interactions","v")},
+  {l:{en:"Video 3s views",vi:"Lượt xem video 3 giây"},g:j=>gv(j,"facebook","video_3s","v")},
+  {l:{en:"Net new followers",vi:"Follower ròng"},g:j=>gv(j,"facebook","net_new_followers","v")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"facebook","followers")},
+  {l:{en:"Views from non-followers %",vi:"% views từ chưa follow"},g:j=>gv(j,"facebook","views_from_non_followers_pct"),d:1,suf:"%"}
+ ],
+ instagram:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"instagram","views","v")},
+  {l:{en:"Reach (28d)",vi:"Người tiếp cận (28n)"},g:j=>gv(j,"instagram","reach","v")},
+  {l:{en:"Content interactions",vi:"Tương tác nội dung"},g:j=>gv(j,"instagram","interactions","v")},
+  {l:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},g:j=>gv(j,"instagram","reach_from_non_followers")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"instagram","followers")},
+  {l:{en:"Posts published",vi:"Tổng bài đăng"},g:j=>gv(j,"instagram","posts_total")}
+ ],
+ youtube:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"youtube","views_28d","v")},
+  {l:{en:"Watch time (hrs)",vi:"Giờ xem"},g:j=>gv(j,"youtube","watch_time_hours","v"),d:1},
+  {l:{en:"Subscribers",vi:"Người đăng ký"},g:j=>gv(j,"youtube","subscribers")},
+  {l:{en:"Videos published",vi:"Tổng số video"},g:j=>gv(j,"youtube","videos")}
+ ],
+ linkedin:[
+  {l:{en:"Impressions",vi:"Impressions"},g:j=>gv(j,"linkedin","impressions","v")},
+  {l:{en:"Reactions",vi:"Cảm xúc"},g:j=>gv(j,"linkedin","reactions","v")},
+  {l:{en:"Comments",vi:"Bình luận"},g:j=>gv(j,"linkedin","comments","v")},
+  {l:{en:"Reposts",vi:"Chia sẻ lại"},g:j=>gv(j,"linkedin","reposts","v")},
+  {l:{en:"Page views",vi:"Lượt xem trang"},g:j=>gv(j,"linkedin","page_views","v")},
+  {l:{en:"Unique visitors",vi:"Khách duy nhất"},g:j=>gv(j,"linkedin","unique_visitors","v")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"linkedin","followers")},
+  {l:{en:"New followers (30d)",vi:"Follower mới (30n)"},g:j=>gv(j,"linkedin","new_followers_30d","v")}
+ ]
+};
+let TRD=null, trCharts=[], trLoaded=false;
+function trClear(){trCharts.forEach(c=>{try{c.destroy()}catch(e){}});trCharts=[];}
+const trFmtD=iso=>{const p=iso.split("-");return p[2]+"/"+p[1];};
+function trNum(v,d,suf){if(v==null)return "—";const n=(d?Number(v).toFixed(d):Math.round(v).toLocaleString());return n+(suf||"");}
+function trDelta(cur,prev,d,suf){
+  if(cur==null)return '<div class="d flat">—</div>';
+  if(prev==null)return '<div class="d flat">■ '+TRT.first[lang]+'</div>';
+  const diff=cur-prev;
+  if(Math.abs(diff)<1e-9)return '<div class="d flat">■ '+TRT.nochg[lang]+'</div>';
+  const pct=prev?Math.abs(diff/prev*100):null;
+  return '<div class="d '+(diff>0?"up":"down")+'">'+(diff>0?"▲":"▼")+" "+trNum(Math.abs(diff),d,suf)+
+         (pct!=null?" ("+pct.toFixed(1)+"%)":"")+'</div>';
+}
+function trSpark(id,labels,data,color){
+  const el=$(id); if(!el)return;
+  trCharts.push(new Chart(el,{type:"line",
+    data:{labels,datasets:[{data,borderColor:color,backgroundColor:color+"1f",fill:true,tension:.35,pointRadius:0,pointHoverRadius:4,borderWidth:2,spanGaps:true}]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      plugins:{legend:{display:false},tooltip:{displayColors:false,callbacks:{title:c=>c[0].label}}},
+      scales:{x:{display:false},y:{display:false,beginAtZero:false}}}}));
+}
+function trBlock(key){
+  const cfg=TRCH[key], defs=TRKPI[key], labels=TRD.map(r=>trFmtD(r.date));
+  let h='<div class="tr-sec"><div class="th"><span class="tr-dot" style="background:'+cfg.color+'"></span><b>'+cfg.name+'</b>'+
+        '<span>'+TRT.span[lang](TRD.length,trFmtD(TRD[0].date),trFmtD(TRD[TRD.length-1].date))+'</span></div><div class="tr-grid">';
+  const jobs=[];
+  defs.forEach((k,i)=>{
+    const series=TRD.map(r=>k.g(r.j));
+    const cur=series[series.length-1];
+    let prev=null;
+    for(let n=series.length-2;n>=0;n--){if(series[n]!=null){prev=series[n];break;}}
+    const cid="tsp_"+key+"_"+i;
+    h+='<div class="tr-card"><div class="l">'+k.l[lang]+'</div><div class="v">'+trNum(cur,k.d,k.suf)+'</div>'+
+       trDelta(cur,prev,k.d,k.suf)+'<div class="tr-spark"><canvas id="'+cid+'"></canvas></div></div>';
+    jobs.push([cid,series,cfg.color]);
+  });
+  return {html:h+'</div></div>', jobs, labels};
+}
+function renderTrend(){
+  const box=$("trBody"); if(!box)return;
+  $("trTitle").textContent=TRT.title[lang];
+  $("trHelp").innerHTML=TRT.help[lang];
+  trClear();
+  if(!trLoaded){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.loading[lang]+'</div>';return;}
+  if(!TRD||TRD.length<2){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';return;}
+  const keys=(current==="all")?["facebook","instagram","youtube","linkedin"]:[current];
+  let html="", jobs=[], labels=[];
+  keys.forEach(k=>{if(!TRKPI[k])return;const b=trBlock(k);html+=b.html;jobs=jobs.concat(b.jobs);labels=b.labels;});
+  box.innerHTML=html||'<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';
+  jobs.forEach(j=>trSpark(j[0],labels,j[1],j[2]));
+}
+if(document.getElementById("sec-trend")){
+  fetch("data/index.json").then(r=>r.json()).then(j=>{
+    const snaps=[...j.snapshots].sort((a,b)=>a.date.localeCompare(b.date));
+    return Promise.all(snaps.map(s=>fetch(s.data).then(r=>r.ok?r.json():null).catch(()=>null)
+      .then(d=>d?{date:s.date,j:d}:null)));
+  }).then(rows=>{
+    TRD=rows.filter(Boolean); trLoaded=true; renderTrend();
+  }).catch(()=>{
+    const sec=$("sec-trend"); if(sec)sec.style.display="none";
+  });
+}
 
 // ============ date picker (reads data/index.json; navigates, never recomputes) ============
 const DPT={
@@ -418,6 +556,9 @@ function dpRender(){
   $("dpCancel").textContent=DPT.cancel[lang];
   $("dpLegend").innerHTML=DPT.legend[lang];
   $("dpState").textContent=(lang==="vi"?"Đang xem báo cáo ngày "+dpFmt(DPI.latest)+" (mới nhất)":"Viewing "+dpFmt(DPI.latest)+" (latest)");
+  $("dpAccSub").textContent=(lang==="vi"
+    ? dpFmt(DPI.latest)+" (mới nhất) · "+DPI.snapshots.length+" ngày đã lưu"
+    : dpFmt(DPI.latest)+" (latest) · "+DPI.snapshots.length+" stored days");
   dpRenderMeta(); dpRenderQuick(); dpDraw();
 }
 if(document.getElementById("sec-filter")){
@@ -426,6 +567,13 @@ fetch("data/index.json").then(r=>r.json()).then(j=>{
   DPI=j; dpSel=j.latest;
   const d=new Date(j.latest+"T00:00:00"); dpMonth=new Date(d.getFullYear(),d.getMonth()-1,1);
   dpRender();
+  const acc=$("dpAcc"), body=$("dpBody");
+  acc.addEventListener("click",e=>{
+    e.stopPropagation();
+    const open=body.classList.toggle("open");
+    acc.setAttribute("aria-expanded",open?"true":"false");
+    if(!open)$("dpPop").classList.remove("open");
+  });
   $("dpBtn").addEventListener("click",e=>{e.stopPropagation();$("dpPop").classList.toggle("open");});
   $("dpCancel").addEventListener("click",()=>{dpSel=DPI.latest;$("dpPop").classList.remove("open");dpDraw();});
   $("dpOk").addEventListener("click",()=>{const t=dpTarget(dpSel);if(t)location.href=t;});
