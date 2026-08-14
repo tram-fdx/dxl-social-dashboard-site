@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-13",
+  "latest": "2026-08-14",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -107,6 +107,13 @@
       "report": "archive/2026-08-13.html",
       "label_vi": "StarEFX kéo cả bốn kênh; FB 5.320 views, IG 1.012, YT nhảy lên 73",
       "label_en": "StarEFX story lifts all four channels; FB 5,320 views, IG 1,012, YT jumps to 73"
+    },
+    {
+      "date": "2026-08-14",
+      "data": "data/2026-08-14.json",
+      "report": "archive/2026-08-14.html",
+      "label_vi": "Cửa sổ trượt sang 16/7–12/8: FB về 5.078 views, IG reach bùng 292 và có follower thứ 45, LinkedIn 71 reactions",
+      "label_en": "Window rolls to 16 Jul–12 Aug: FB settles at 5,078 views, IG reach breaks out to 292 and gains a 45th follower, LinkedIn hits 71 reactions"
     }
   ]
 }
