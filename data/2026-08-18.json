@@ -1,0 +1,531 @@
+{
+ "date": "2026-08-18",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read directly from Chrome on 2026-08-18 (macOS, local browser). All four channels read live. Facebook + Instagram from Meta Business Suite Insights (Overview + Recent content), window 20 Jul - 16 Aug 2026; total FB followers (115) and IG followers (45) read at business.facebook.com/latest/; Instagram post count (108) read at instagram.com/dxliving.au. YouTube Studio channel analytics read live for 20 Jul - 16 Aug 2026; subscribers (4) read in Studio realtime, and the video count was counted in Studio Content (Videos tab 14 + Shorts tab 12 = 26). LinkedIn read live from Page admin analytics (Content, Followers, Visitors), window 17 Jul - 15 Aug 2026. This cycle YouTube Studio DID display a percentage for Views (800% more than the previous 28 days), so views_prior is derived as 72/9 = 8 rather than carried. Facebook views KPI is displayed rounded as 4,9K; the exact value 4865 is taken from the sum of the 28-day daily series, which reconciles exactly. Facebook link_clicks was not re-read this cycle and is carried from the 2026-08-07 snapshot. LinkedIn impressions_prior (1433) is derived from the displayed +7.3% change, not read directly. LinkedIn total followers jumped 58 -> 80 between the 17 Aug and 18 Aug reads; the 80 figure is what the Page admin header and Follower highlights both showed. Instagram post-level figures remain reach (not views), and only the 8 most recent posts loaded, so posts before 3 Aug have dropped out of the visible list. No estimated values. No Supermetrics.",
+ "window": {
+  "en": "Last 28 days: 20 Jul – 16 Aug 2026",
+  "vi": "28 ngày qua: 20/7 – 16/8/2026"
+ },
+ "windows": {
+  "meta": "2026-07-20 → 2026-08-16",
+  "youtube": "2026-07-20 → 2026-08-16",
+  "linkedin": "2026-07-17 → 2026-08-15"
+ },
+ "facebook": {
+  "followers": 115,
+  "views": {
+   "v": 4865,
+   "change_pct": 79.0
+  },
+  "viewers": {
+   "v": 555,
+   "change_pct": 67.7
+  },
+  "visits": {
+   "v": 265,
+   "change_pct": 130.4
+  },
+  "interactions": {
+   "v": 160,
+   "change_pct": 52.4
+  },
+  "video_3s": {
+   "v": 160,
+   "change_pct": 344.4
+  },
+  "link_clicks": {
+   "v": 17,
+   "change_pct": 88.9
+  },
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": 50
+  },
+  "views_from_followers_pct": 47.9,
+  "views_from_non_followers_pct": 52.1,
+  "interactions_from_followers": 112,
+  "interactions_from_non_followers": 48,
+  "watch_time": "1h 8m",
+  "watch_time_change_pct": 755.8,
+  "daily": {
+   "views": [
+    101,
+    165,
+    189,
+    202,
+    55,
+    63,
+    73,
+    74,
+    329,
+    224,
+    174,
+    123,
+    49,
+    87,
+    575,
+    260,
+    215,
+    212,
+    154,
+    78,
+    63,
+    371,
+    422,
+    129,
+    91,
+    157,
+    111,
+    119
+   ],
+   "interactions": [
+    4,
+    8,
+    1,
+    9,
+    2,
+    1,
+    2,
+    0,
+    15,
+    5,
+    7,
+    1,
+    0,
+    0,
+    26,
+    10,
+    5,
+    7,
+    11,
+    2,
+    2,
+    8,
+    15,
+    3,
+    8,
+    4,
+    3,
+    1
+   ],
+   "visits": [
+    10,
+    15,
+    10,
+    3,
+    0,
+    2,
+    0,
+    0,
+    33,
+    13,
+    17,
+    13,
+    3,
+    23,
+    39,
+    5,
+    8,
+    3,
+    7,
+    0,
+    4,
+    32,
+    2,
+    1,
+    4,
+    11,
+    3,
+    4
+   ],
+   "video_3s": [
+    3,
+    34,
+    12,
+    3,
+    5,
+    0,
+    0,
+    14,
+    3,
+    11,
+    1,
+    2,
+    0,
+    0,
+    4,
+    4,
+    3,
+    0,
+    1,
+    0,
+    0,
+    12,
+    24,
+    6,
+    3,
+    3,
+    0,
+    12
+   ]
+  },
+  "top_posts": [
+   {
+    "d": "11 Aug",
+    "t": "Project 251 | LightEFX StarEFX fibre optic ceiling resolved before installation",
+    "reach": 225,
+    "react": 6,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "10 Aug",
+    "t": "Changing a finish after procurement rarely improves a project",
+    "reach": 186,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "14 Aug",
+    "t": "Project 251 | a bespoke stone element coordinated in the digital twin before fabrication",
+    "reach": 140,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination issues",
+    "reach": 122,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary of a resolved home",
+    "reach": 101,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "17 Aug",
+    "t": "How 3D coordination reduces design conflicts before construction",
+    "reach": 36,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "new_post_note": "The 17 Aug 3D-coordination article post is the newest item and opened at 36 reach in its first evening. The 12 Aug quality-management post sits at 23 reach and the 11 Aug Story drew 24. The 7 Aug post has now dropped out of the eight most recent items shown by Meta Business Suite."
+ },
+ "instagram": {
+  "followers": 45,
+  "posts_total": 108,
+  "following": 35,
+  "views": {
+   "v": 940,
+   "change_pct": 94.2
+  },
+  "reach": {
+   "v": 281,
+   "change_pct": 585.4
+  },
+  "interactions": {
+   "v": 60,
+   "change_pct": 172.7
+  },
+  "views_from_followers_pct": 48.8,
+  "views_from_non_followers_pct": 51.2,
+  "views_from_followers": 142,
+  "views_from_non_followers": 798,
+  "reach_from_followers": 19,
+  "reach_from_non_followers": 262,
+  "interactions_from_followers_pct": 86,
+  "interactions_from_non_followers_pct": 14,
+  "daily": {
+   "views": [
+    9,
+    172,
+    49,
+    91,
+    55,
+    5,
+    20,
+    14,
+    98,
+    49,
+    11,
+    12,
+    3,
+    8,
+    60,
+    7,
+    21,
+    13,
+    16,
+    6,
+    1,
+    17,
+    107,
+    32,
+    31,
+    17,
+    9,
+    7
+   ],
+   "reach": [
+    4,
+    73,
+    22,
+    24,
+    38,
+    1,
+    3,
+    3,
+    27,
+    11,
+    4,
+    4,
+    2,
+    2,
+    9,
+    1,
+    5,
+    5,
+    8,
+    4,
+    1,
+    4,
+    87,
+    25,
+    8,
+    9,
+    4,
+    2
+   ],
+   "interactions": [
+    2,
+    3,
+    3,
+    10,
+    0,
+    0,
+    2,
+    0,
+    7,
+    1,
+    2,
+    0,
+    1,
+    1,
+    2,
+    1,
+    4,
+    3,
+    3,
+    0,
+    0,
+    2,
+    6,
+    1,
+    4,
+    2,
+    0,
+    0
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series (390) does not sum to the 281 KPI. Views, interactions (and all Facebook series) do sum to their KPI.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "11 Aug",
+    "t": "Project 251 | LightEFX StarEFX fibre optic ceiling",
+    "reach": 111,
+    "react": 6,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "6 Aug",
+    "t": "Most people experience the landscape — we think about it first",
+    "reach": 11,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "3 Aug",
+    "t": "Every calm handover began with uncomfortable questions in a digital model",
+    "reach": 11,
+    "react": 5,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary",
+    "reach": 10,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "7 Aug",
+    "t": "Architectural drawings inform — the digital twin creates confidence",
+    "reach": 10,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination issues",
+    "reach": 8,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   }
+  ]
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 26,
+  "videos_long_form": 14,
+  "videos_shorts": 12,
+  "views_28d": {
+   "v": 72,
+   "change_pct": 800.0
+  },
+  "watch_time_hours": {
+   "v": 2.4,
+   "change_pct": 999
+  },
+  "latest_video_views": {
+   "v": 47,
+   "change_pct": null
+  },
+  "views_now": 72,
+  "views_prior": 8,
+  "stale": false,
+  "stale_note": "YouTube Studio analytics read live on 2026-08-18 for Jul 20 - Aug 16, 2026. Views 72, watch time 2.4 hrs. Studio displayed '800% more than previous 28 days' this cycle, so the prior-period baseline is derived as 8 rather than carried forward. The StarEFX Short (published 11 Aug) supplies 47 of the 72 views. Video count re-counted in Studio Content: 14 uploads + 12 Shorts = 26.",
+  "top_videos": [
+   {
+    "t": "Project 251 | LightEFX's StarEFX fibre optic ceiling",
+    "v": 47,
+    "dur": "0:05",
+    "ctr": "16.3%"
+   },
+   {
+    "t": "DX Living | Project 2238 Mosman, NSW",
+    "v": 19,
+    "dur": "28:13",
+    "ctr": null
+   },
+   {
+    "t": "251 PROJECT — PROGRESS UPDATE",
+    "v": 2,
+    "dur": null,
+    "ctr": null
+   },
+   {
+    "t": "251 PROJECT — Structural data becomes physical reality",
+    "v": 2,
+    "dur": null,
+    "ctr": null
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
+    "v": 2,
+    "dur": "0:28",
+    "ctr": "92.8%"
+   }
+  ]
+ },
+ "linkedin": {
+  "followers": 80,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "new_followers_30d": {
+   "v": 7,
+   "change_pct": 133.3
+  },
+  "impressions": {
+   "v": 1538,
+   "change_pct": 7.3
+  },
+  "reactions": {
+   "v": 61,
+   "change_pct": -26.5
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 2,
+   "change_pct": 0
+  },
+  "page_views": {
+   "v": 31,
+   "change_pct": -18.4
+  },
+  "unique_visitors": {
+   "v": 17,
+   "change_pct": -15.0
+  },
+  "impressions_prior": 1433,
+  "impressions_now": 1538,
+  "followers_by_location_pct": {
+   "Melbourne": 26.2,
+   "Ho Chi Minh City": 7.5,
+   "Brisbane": 3.8,
+   "Metro Manila": 3.8,
+   "Other": 58.7
+  },
+  "visitors_by_job_function": {
+   "Business Development": 13,
+   "Engineering": 9,
+   "Human Resources": 3,
+   "Military and Protective Services": 3,
+   "Accounting": 2,
+   "Administrative": 2,
+   "Research": 2,
+   "Marketing": 2,
+   "Arts and Design": 1
+  },
+  "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 31 page views.",
+  "page_views_by_device": {
+   "Desktop": 23,
+   "Mobile": 8
+  }
+ },
+ "notes": {
+  "vi": [
+   "Cả bốn kênh đọc trực tiếp. Cửa sổ Meta và YouTube trượt sang 20/7 – 16/8; LinkedIn sang 17/7 – 15/8.",
+   "Facebook: views 4.950 → 4.865 (▲79%) khi ngày 19/7 (204 views) rơi ra và ngày 16/8 mới chỉ thêm 119; visits 284 → 265 (▲130,4%), tương tác 164 → 160 (▲52,4%).",
+   "Facebook: video 3 giây 152 → 160 (▲344,4%) và thời gian xem lên 1 giờ 8 phút (▲755,8%) — kỷ lục mới lần thứ ba liên tiếp. Người chưa follow giữ 52,1% lượt xem và 48/160 tương tác.",
+   "Bài mới 17/8 về '3D coordination' mở hàng 36 reach ngay tối đầu tiên. Bài trần StarEFX 11/8 vẫn dẫn đầu với 225 reach; bài đá tự nhiên 14/8 lên 140 và bài coordination 15/8 lên 122.",
+   "Instagram: views 951 → 940 (▲94,2%), reach 280 → 281 (▲585,4%), tương tác 63 → 60 (▲172,7%). 93,2% reach vẫn từ người chưa follow (262/281).",
+   "Instagram: bài 17/8 chưa xuất hiện trong danh sách nội dung IG — bài này mới chỉ chạy trên Facebook. Follower giữ 45, số bài giữ 108.",
+   "YouTube: views 73 → 72 khi cửa sổ trượt, watch time giữ 2,4 giờ. Lần này Studio hiển thị đúng '800% more', nên nền kỳ trước là 8 (đọc được, không phải giữ tiếp) — đây là cải thiện chất lượng dữ liệu so với hai kỳ trước.",
+   "LinkedIn: follower nhảy 58 → 80 (+22) — mức tăng lớn nhất từng ghi nhận trên kênh này, nhiều khả năng do lời mời theo dõi được chấp nhận hàng loạt. Nhưng chỉ số nội dung lại lùi: impressions 1.667 → 1.538 (▲7,3%), reactions 66 → 61 (▼26,5%), page views 34 → 31 (▼18,4%), khách duy nhất 19 → 17 (▼15%). Vẫn 0 comment.",
+   "LinkedIn: cơ cấu nghề nghiệp khách truy cập đổi mạnh — Phát triển kinh doanh 13, Kỹ thuật 9, và hai nhóm mới Nhân sự (3) và Quân đội & Dịch vụ bảo vệ (3) thay chỗ Kinh doanh/Bất động sản. Tỷ trọng Melbourne giảm 36,2% → 26,2% vì mẫu follower lớn hơn.",
+   "Lưu ý dữ liệu: KPI views Facebook hiển thị làm tròn '4,9K'; giá trị 4.865 lấy từ tổng chuỗi 28 ngày và khớp chính xác. LinkedIn impressions_prior (1.433) suy ra từ mức ▲7,3%. Bảng nội dung Instagram vẫn trả về reach và chỉ tải 8 bài gần nhất. Facebook link clicks không đọc lại kỳ này."
+  ],
+  "en": [
+   "All four channels read live. The Meta and YouTube windows slid to 20 Jul – 16 Aug; LinkedIn rolled to 17 Jul – 15 Aug.",
+   "Facebook: views 4,950 → 4,865 (▲79%) as 19 Jul (204 views) dropped out and the new 16 Aug added only 119; visits 284 → 265 (▲130.4%), interactions 164 → 160 (▲52.4%).",
+   "Facebook: 3-second video views 152 → 160 (▲344.4%) and watch time rose to 1h 8m (▲755.8%) — a third consecutive record. Non-followers hold 52.1% of views and 48 of 160 interactions.",
+   "The new 17 Aug 3D-coordination post opened at 36 reach on its first evening. The 11 Aug StarEFX ceiling post still leads at 225 reach; the 14 Aug stone post climbed to 140 and the 15 Aug coordination post to 122.",
+   "Instagram: views 951 → 940 (▲94.2%), reach 280 → 281 (▲585.4%), interactions 63 → 60 (▲172.7%). 93.2% of reach is still non-follower (262 of 281).",
+   "Instagram: the 17 Aug post has not appeared in the IG content list — that post ran on Facebook only. Followers held at 45 and post count at 108.",
+   "YouTube: views 73 → 72 as the window rolled, watch time held at 2.4 hrs. This cycle Studio did display '800% more', so the prior baseline of 8 is read rather than carried — a data-quality improvement over the last two cycles.",
+   "LinkedIn: followers jumped 58 → 80 (+22) — the largest single-day gain recorded on this channel, most likely a batch of accepted follow invitations. Content metrics went the other way: impressions 1,667 → 1,538 (▲7.3%), reactions 66 → 61 (▼26.5%), page views 34 → 31 (▼18.4%), unique visitors 19 → 17 (▼15%). Still 0 comments.",
+   "LinkedIn: the visitor job-function mix shifted sharply — Business Development 13, Engineering 9, with Human Resources (3) and Military and Protective Services (3) replacing Sales and Real Estate. Melbourne's share fell 36.2% → 26.2% because the follower base is now larger.",
+   "Data note: the Facebook views KPI displays rounded as 4.9K; the 4,865 figure comes from the 28-day daily series and reconciles exactly. LinkedIn impressions_prior (1,433) is derived from the displayed ▲7.3%. The Instagram content table still returns reach and only loaded the 8 most recent posts. Facebook link clicks were not re-read this cycle."
+  ]
+ }
+}
