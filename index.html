@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DX Living — Social Dashboard</title>
+<script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
 <style>
 :root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;
@@ -143,6 +145,7 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 <div class="ttl"><div class="badge" id="hdBadge">f</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
 <div class="right">
 <span class="chip" id="hdChip"></span>
+<button class="tbtn" id="pdfBtn"></button>
 <button class="tbtn" id="shareBtn"></button>
 <button class="tbtn p" id="langBtn">VI</button>
 </div>
@@ -192,6 +195,7 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 
 <script>
 // ============ REAL DATA — captured 18 Aug 2026 via Chrome (FB, IG, YouTube Studio + LinkedIn admin all read live) ============
+const SNAPDATE="2026-08-18";
 const PERIOD_EN="Last 28 days: 20 Jul – 16 Aug 2026", PERIOD_VI="28 ngày qua: 20/7 – 16/8/2026";
 const dlabels=(()=>{const a=[];const d=new Date(2026,6,20);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
 
@@ -247,6 +251,7 @@ vi:["Trả lời mọi bình luận & tin nhắn trong 2h ở tất cả kênh",
 const T={
 title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
 live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
+pdf:{en:"PDF ⤓",vi:"PDF ⤓"}, pdfBusy:{en:"Building…",vi:"Đang tạo…"}, pdfErr:{en:"PDF tools could not load — check your internet connection and try again.",vi:"Không tải được thư viện PDF — kiểm tra kết nối internet rồi thử lại."},
 dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
 viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
 reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
@@ -379,11 +384,43 @@ $("view").innerHTML=kpis(kp)+`
 clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,80,45,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
 }
 
-function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);renderTrend();}
+function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);if(!$("pdfBtn").dataset.busy)$("pdfBtn").textContent=tt(T.pdf);renderTrend();}
 function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
 document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
 $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
+
+// ============ one-click PDF of all five channels ============
+async function downloadPdf(){
+  const btn=$("pdfBtn");
+  if(btn.dataset.busy)return;
+  const jsPDF=(window.jspdf||{}).jsPDF;
+  if(typeof html2canvas!=="function"||!jsPDF){alert(tt(T.pdfErr));return;}
+  btn.dataset.busy="1";btn.disabled=true;btn.textContent=tt(T.pdfBusy);
+  const prev=current;
+  const main=document.querySelector(".main");
+  const hide=[$("sec-filter"),$("metastrip"),$("sec-trend"),document.querySelector(".hd .right")].filter(Boolean);
+  const memo=hide.map(e=>e.style.display);
+  let doc=null;
+  try{
+    for(const k of ["facebook","instagram","youtube","linkedin","all"]){
+      current=k;render();
+      hide.forEach(e=>{e.style.display="none";});
+      await new Promise(r=>setTimeout(r,900));
+      const cv=await html2canvas(main,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:main.scrollWidth});
+      const w=cv.width/2,h=cv.height/2;
+      if(!doc)doc=new jsPDF({unit:"pt",format:[w,h],orientation:w>h?"landscape":"portrait"});
+      else doc.addPage([w,h],w>h?"landscape":"portrait");
+      doc.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,w,h);
+    }
+    doc.save("DXL-social-dashboard-"+SNAPDATE+".pdf");
+  }catch(e){alert(tt(T.pdfErr));}
+  finally{
+    hide.forEach((e,i)=>{e.style.display=memo[i];});
+    current=prev;delete btn.dataset.busy;btn.disabled=false;render();
+  }
+}
+$("pdfBtn").addEventListener("click",downloadPdf);
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
 // ============ trend section (reads every data/*.json snapshot; charts change over time) ============
