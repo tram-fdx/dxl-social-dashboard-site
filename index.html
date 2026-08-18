@@ -25,7 +25,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .hd .badge{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
 .hd h1{font-size:18px;font-weight:800}
 .hd .per{font-size:12px;color:var(--muted)}
-.hd .right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hd .right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;position:relative}
+.pdfpop{position:absolute;top:calc(100% + 8px);right:0;z-index:60;width:290px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(20,30,60,.16);padding:14px;display:none}
+.pdfpop.open{display:block}
+.pdfpop h4{font-size:12px;font-weight:800;margin-bottom:10px;letter-spacing:.02em}
+.pdfpop label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin:0 0 4px}
+.pdfpop select{width:100%;font-size:12px;font-weight:600;padding:7px 8px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);margin-bottom:9px;cursor:pointer}
+.pdfpop .pdfquick{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.pdfpop .pdfquick button{flex:1 1 auto;font-size:11px;font-weight:700;padding:5px 8px;border-radius:7px;border:1px solid var(--line);background:#f6f8fc;color:var(--ink);cursor:pointer}
+.pdfpop .pdfquick button:hover{background:#eef1f6}
+.pdfpop .pdfmeta{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:10px}
+.pdfpop .pdfact{display:flex;gap:8px}
+.pdfpop .pdfact button{flex:1;font-size:12px;font-weight:700;padding:8px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.pdfpop .pdfact button.go{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pdfpop .pdfact button:disabled{opacity:.55;cursor:not-allowed}
 .chip{font-size:11px;background:#eef2ff;color:#3949ab;padding:5px 10px;border-radius:999px;font-weight:700}
 .tbtn{font-size:12px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
 .tbtn:hover{background:#eef1f6}
@@ -147,6 +160,14 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 <span class="chip" id="hdChip"></span>
 <button class="tbtn" id="pdfBtn"></button>
 <button class="tbtn" id="shareBtn"></button>
+<div class="pdfpop" id="pdfPop">
+  <h4 id="pdfPopTitle"></h4>
+  <div class="pdfquick" id="pdfQuick"></div>
+  <label id="pdfFromLab"></label><select id="pdfFrom"></select>
+  <label id="pdfToLab"></label><select id="pdfTo"></select>
+  <div class="pdfmeta" id="pdfMeta"></div>
+  <div class="pdfact"><button id="pdfGo" class="go"></button><button id="pdfCancel"></button></div>
+</div>
 <button class="tbtn p" id="langBtn">VI</button>
 </div>
 </div>
@@ -252,6 +273,14 @@ const T={
 title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
 live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
 pdf:{en:"PDF ⤓",vi:"PDF ⤓"}, pdfBusy:{en:"Building…",vi:"Đang tạo…"}, pdfErr:{en:"PDF tools could not load — check your internet connection and try again.",vi:"Không tải được thư viện PDF — kiểm tra kết nối internet rồi thử lại."},
+pdfTitle:{en:"Download PDF — pick a period",vi:"Tải PDF — chọn khoảng thời gian"},
+pdfFrom:{en:"From",vi:"Từ ngày"}, pdfTo:{en:"To",vi:"Đến ngày"},
+pdfGo:{en:"Download",vi:"Tải về"}, pdfCancel:{en:"Cancel",vi:"Huỷ"},
+pdfQ1:{en:"Latest day",vi:"Ngày mới nhất"}, pdfQ7:{en:"Last 7 stored",vi:"7 ngày gần nhất"}, pdfQAll:{en:"All stored",vi:"Tất cả"},
+pdfRange:{en:d=>d+" day(s) · "+(d*5)+" pages · about "+Math.max(1,Math.round(d*(d>3?2.1:3.4)))+" MB",vi:d=>d+" ngày · "+(d*5)+" trang · khoảng "+Math.max(1,Math.round(d*(d>3?2.1:3.4)))+" MB"},
+pdfBad:{en:"\"From\" must be on or before \"To\".",vi:"\"Từ ngày\" phải trước hoặc bằng \"Đến ngày\"."},
+pdfStep:{en:(i,n,d)=>"Day "+i+"/"+n+" · "+d,vi:(i,n,d)=>"Ngày "+i+"/"+n+" · "+d},
+pdfNone:{en:"No stored days found.",vi:"Không tìm thấy ngày nào đã lưu."},
 dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
 viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
 reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
@@ -384,43 +413,147 @@ $("view").innerHTML=kpis(kp)+`
 clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,80,45,4],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
 }
 
-function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);if(!$("pdfBtn").dataset.busy)$("pdfBtn").textContent=tt(T.pdf);renderTrend();}
+function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);$("pdfBtn").textContent=tt(T.pdf);if(typeof pdfLabels==="function")pdfLabels();renderTrend();}
 function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
 document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
 $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 
-// ============ one-click PDF of all five channels ============
-async function downloadPdf(){
-  const btn=$("pdfBtn");
-  if(btn.dataset.busy)return;
-  const jsPDF=(window.jspdf||{}).jsPDF;
-  if(typeof html2canvas!=="function"||!jsPDF){alert(tt(T.pdfErr));return;}
-  btn.dataset.busy="1";btn.disabled=true;btn.textContent=tt(T.pdfBusy);
-  const prev=current;
-  const main=document.querySelector(".main");
-  const hide=[$("sec-filter"),$("metastrip"),$("sec-trend"),document.querySelector(".hd .right")].filter(Boolean);
+// ============ PDF export — pick a period, then download all five channel views per day ============
+const PDFCH=["facebook","instagram","youtube","linkedin","all"];
+let PDFDAYS=[];
+
+function pdfFmt(iso){const[y,m,d]=iso.split("-");return d+"/"+m+"/"+y;}
+function pdfSel(id){return $(id).value;}
+function pdfRangeDays(){
+  const a=PDFDAYS.indexOf(pdfSel("pdfFrom")),b=PDFDAYS.indexOf(pdfSel("pdfTo"));
+  if(a<0||b<0||a>b)return null;
+  return PDFDAYS.slice(a,b+1);
+}
+function pdfSyncMeta(){
+  const r=pdfRangeDays();
+  $("pdfMeta").textContent=r?tt(T.pdfRange)(r.length):tt(T.pdfBad);
+  $("pdfGo").disabled=!r;
+}
+function pdfLabels(){
+  $("pdfPopTitle").textContent=tt(T.pdfTitle);
+  $("pdfFromLab").textContent=tt(T.pdfFrom);
+  $("pdfToLab").textContent=tt(T.pdfTo);
+  $("pdfCancel").textContent=tt(T.pdfCancel);
+  if(!$("pdfGo").dataset.busy)$("pdfGo").textContent=tt(T.pdfGo);
+  const q=$("pdfQuick");
+  if(q.children.length===3){q.children[0].textContent=tt(T.pdfQ1);q.children[1].textContent=tt(T.pdfQ7);q.children[2].textContent=tt(T.pdfQAll);}
+  pdfSyncMeta();
+}
+function pdfFill(days){
+  PDFDAYS=days;
+  const opt=d=>'<option value="'+d+'">'+pdfFmt(d)+'</option>';
+  $("pdfFrom").innerHTML=days.map(opt).join("");
+  $("pdfTo").innerHTML=days.map(opt).join("");
+  const last=days[days.length-1];
+  $("pdfFrom").value=last;$("pdfTo").value=last;
+  pdfSyncMeta();
+}
+function pdfQuickSet(n){
+  if(!PDFDAYS.length)return;
+  const days=n===0?PDFDAYS.slice():PDFDAYS.slice(-n);
+  $("pdfFrom").value=days[0];$("pdfTo").value=days[days.length-1];
+  pdfSyncMeta();
+}
+fetch("data/index.json").then(r=>r.json()).then(j=>{
+  const days=(j.snapshots||[]).map(s=>s.date).filter(Boolean).sort();
+  if(days.length)pdfFill(days);else $("pdfMeta").textContent=tt(T.pdfNone);
+}).catch(()=>{ $("pdfMeta").textContent=tt(T.pdfNone); });
+
+// capture the five channel views of one document into the pdf
+async function pdfCaptureDoc(win,doc,addPage,scale){
+  const main=doc.querySelector(".main");
+  if(!main)return;
+  const hide=[doc.getElementById("sec-filter"),doc.getElementById("metastrip"),doc.getElementById("sec-trend"),doc.querySelector(".hd .right")].filter(Boolean);
   const memo=hide.map(e=>e.style.display);
-  let doc=null;
   try{
-    for(const k of ["facebook","instagram","youtube","linkedin","all"]){
-      current=k;render();
+    for(const k of PDFCH){
+      const rb=doc.querySelector('.rbtn[data-k="'+k+'"]');
+      if(rb)rb.click();
       hide.forEach(e=>{e.style.display="none";});
       await new Promise(r=>setTimeout(r,900));
-      const cv=await html2canvas(main,{scale:2,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:main.scrollWidth});
-      const w=cv.width/2,h=cv.height/2;
-      if(!doc)doc=new jsPDF({unit:"pt",format:[w,h],orientation:w>h?"landscape":"portrait"});
-      else doc.addPage([w,h],w>h?"landscape":"portrait");
-      doc.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,w,h);
+      const cv=await win.html2canvas(main,{scale:scale,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:main.scrollWidth});
+      addPage(cv);
     }
-    doc.save("DXL-social-dashboard-"+SNAPDATE+".pdf");
-  }catch(e){alert(tt(T.pdfErr));}
-  finally{
+  }finally{
     hide.forEach((e,i)=>{e.style.display=memo[i];});
-    current=prev;delete btn.dataset.busy;btn.disabled=false;render();
   }
 }
-$("pdfBtn").addEventListener("click",downloadPdf);
+
+function pdfInject(win,doc,src){
+  return new Promise((ok,bad)=>{
+    if(typeof win.html2canvas==="function")return ok();
+    const sc=doc.createElement("script");sc.src=src;sc.onload=()=>ok();sc.onerror=()=>bad();doc.head.appendChild(sc);
+  });
+}
+const H2C_SRC="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js";
+
+async function downloadPdf(){
+  const go=$("pdfGo");
+  if(go.dataset.busy)return;
+  const days=pdfRangeDays();
+  if(!days)return;
+  const jsPDF=(window.jspdf||{}).jsPDF;
+  if(typeof html2canvas!=="function"||!jsPDF){alert(tt(T.pdfErr));return;}
+  go.dataset.busy="1";go.disabled=true;$("pdfCancel").disabled=true;
+  const prev=current;
+  const scale=days.length>3?1.5:2;
+  let doc=null;
+  const addPage=cv=>{
+    const w=cv.width/scale,h=cv.height/scale;
+    if(!doc)doc=new jsPDF({unit:"pt",format:[w,h],orientation:w>h?"landscape":"portrait"});
+    else doc.addPage([w,h],w>h?"landscape":"portrait");
+    doc.addImage(cv.toDataURL("image/jpeg",days.length>3?0.85:0.92),"JPEG",0,0,w,h);
+  };
+  let ifr=null;
+  try{
+    for(let i=0;i<days.length;i++){
+      const d=days[i];
+      go.textContent=tt(T.pdfStep)(i+1,days.length,pdfFmt(d));
+      if(d===SNAPDATE){
+        await pdfCaptureDoc(window,document,addPage,scale);
+      }else{
+        ifr=document.createElement("iframe");
+        ifr.setAttribute("aria-hidden","true");
+        ifr.style.cssText="position:fixed;left:-20000px;top:0;width:1440px;height:2400px;border:0;visibility:hidden";
+        const loaded=new Promise((ok,bad)=>{ifr.onload=()=>ok();ifr.onerror=()=>bad();});
+        ifr.src="archive/"+d+".html";
+        document.body.appendChild(ifr);
+        await loaded;
+        await new Promise(r=>setTimeout(r,1400));
+        const w2=ifr.contentWindow,d2=ifr.contentDocument;
+        await pdfInject(w2,d2,H2C_SRC);
+        ifr.style.height=Math.max(2400,d2.body.scrollHeight)+"px";
+        await new Promise(r=>setTimeout(r,300));
+        await pdfCaptureDoc(w2,d2,addPage,scale);
+        ifr.remove();ifr=null;
+      }
+    }
+    const from=days[0],to=days[days.length-1];
+    doc.save("DXL-social-dashboard-"+(from===to?from:from+"_to_"+to)+".pdf");
+  }catch(e){alert(tt(T.pdfErr));}
+  finally{
+    if(ifr)try{ifr.remove()}catch(e){}
+    current=prev;
+    delete go.dataset.busy;go.disabled=false;$("pdfCancel").disabled=false;
+    go.textContent=tt(T.pdfGo);
+    render();pdfSyncMeta();
+  }
+}
+
+$("pdfBtn").addEventListener("click",e=>{e.stopPropagation();pdfLabels();$("pdfPop").classList.toggle("open");});
+$("pdfCancel").addEventListener("click",()=>$("pdfPop").classList.remove("open"));
+$("pdfFrom").addEventListener("change",pdfSyncMeta);
+$("pdfTo").addEventListener("change",pdfSyncMeta);
+$("pdfGo").addEventListener("click",downloadPdf);
+$("pdfPop").addEventListener("click",e=>e.stopPropagation());
+document.addEventListener("click",()=>{if(!$("pdfGo").dataset.busy)$("pdfPop").classList.remove("open");});
+(function(){const q=$("pdfQuick");[1,7,0].forEach(n=>{const b=document.createElement("button");b.addEventListener("click",()=>pdfQuickSet(n));q.appendChild(b);});})();
 function closeShare(){$("shareModal").classList.remove("open");}
 $("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
 // ============ trend section (reads every data/*.json snapshot; charts change over time) ============
