@@ -1,0 +1,202 @@
+{
+ "date": "2026-08-21",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read directly from Chrome on 2026-08-21 (macOS, local browser). Facebook and Instagram read LIVE from Meta Business Suite Insights (Overview + Content table), window 23 Jul - 19 Aug 2026 — the window rolled forward one day from the previous snapshot. Facebook KPI for views is displayed rounded as 5,0K; the exact value 4978 is the sum of the 28-day daily series and reconciles exactly, as do visits (261), interactions (170) and video 3s (133). Total Facebook followers (115) and Instagram followers (46) read at business.facebook.com/latest/; Instagram post count (111) and following (35) read at instagram.com/dxliving.au. Instagram post-level reach was read from the Instagram content table (Nội dung) rather than the overview card, so reach, views, likes, comments and shares are all real per-post readings this cycle. YouTube Studio read LIVE for Jul 23 - Aug 19, 2026: views 60, watch time 0.1 hrs (97% less than the previous 28 days), and the full top-content table. Studio again displayed 'About the same as usual' for Views instead of a percentage, so views_prior and the views change percentage are recorded as null rather than derived. Subscribers (4) and video count (27) read from the public channel page at youtube.com/channel/UCuxr30df_qmARRgETsruEyw; the long-form/Shorts split was NOT re-counted this run and is recorded as null. LinkedIn Content and Followers admin pages read LIVE, window 20 Jul - 18 Aug 2026 — LinkedIn's window did NOT advance and is identical to the previous snapshot, so impressions 1708 (+21.1%), reactions 62 (-21.5%), comments 0, reposts 2, total followers 101 and new followers 30d 48 (+1100%) are unchanged real readings, not carried values. The LinkedIn follower location breakdown WAS re-read and changed materially: Ho Chi Minh City is now the top location at 23 (22.8%) ahead of Greater Melbourne at 22 (21.8%). The LinkedIn Visitors analytics page would NOT render on three attempts (blank panel below the date range), so page_views (106), unique_visitors (39), visitors_by_job_function and page_views_by_device are CARRIED from the 2026-08-20 snapshot and were not read today; they are flagged with visitors_stale=true. Facebook link_clicks is carried from the 2026-08-07 snapshot. No estimated values. No Supermetrics.",
+ "window": {
+  "en": "Last 28 days: 23 Jul – 19 Aug 2026",
+  "vi": "28 ngày qua: 23/7 – 19/8/2026"
+ },
+ "windows": {
+  "meta": "2026-07-23 → 2026-08-19",
+  "youtube": "2026-07-23 → 2026-08-19",
+  "linkedin": "2026-07-20 → 2026-08-18"
+ },
+ "facebook": {
+  "followers": 115,
+  "views": { "v": 4978, "change_pct": 65.4 },
+  "viewers": { "v": 546, "change_pct": 56.4 },
+  "visits": { "v": 261, "change_pct": 86.4 },
+  "interactions": { "v": 170, "change_pct": 54.5 },
+  "video_3s": { "v": 133, "change_pct": 62.2 },
+  "link_clicks": { "v": 17, "change_pct": 88.9 },
+  "net_new_followers": { "v": 3, "change_pct": 50 },
+  "follows": 3,
+  "unfollows": 0,
+  "views_from_followers_pct": 45.3,
+  "views_from_non_followers_pct": 54.7,
+  "interactions_from_followers": 120,
+  "interactions_from_non_followers": 50,
+  "watch_time": "43m 20s",
+  "watch_time_change_pct": 5.9,
+  "conversations_started": 2,
+  "daily": {
+   "views": [202,55,63,73,74,329,224,174,123,49,87,575,260,215,212,154,78,63,371,422,129,91,157,111,119,122,266,180],
+   "interactions": [9,2,1,2,0,15,5,7,1,0,0,26,10,5,7,11,2,2,8,15,3,8,4,3,1,3,10,10],
+   "visits": [3,0,2,0,0,33,13,17,13,3,23,39,5,8,3,7,0,4,32,2,1,4,11,3,4,6,22,3],
+   "video_3s": [3,5,0,0,14,3,11,1,2,0,0,4,4,3,0,1,0,0,12,24,6,3,3,0,12,5,5,12]
+  },
+  "top_posts": [
+   { "d": "18 Aug", "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin", "reach": 181, "react": 4, "com": 0, "sh": 2 },
+   { "d": "14 Aug", "t": "Project 251 | a bespoke stone element coordinated before fabrication", "reach": 168, "react": 4, "com": 0, "sh": 2 },
+   { "d": "15 Aug", "t": "Most construction delays don't begin on site — they begin with coordination", "reach": 150, "react": 2, "com": 0, "sh": 1 },
+   { "d": "17 Aug", "t": "How 3D coordination reduces design conflicts before construction", "reach": 119, "react": 2, "com": 0, "sh": 2 },
+   { "d": "13 Aug", "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary of a resolved home", "reach": 114, "react": 3, "com": 0, "sh": 1 },
+   { "d": "19 Aug", "t": "Project 251 | a natural stone element carries more project information than meets the eye", "reach": 76, "react": 3, "com": 0, "sh": 1 }
+  ],
+  "all_recent_posts": [
+   { "d": "20 Aug", "t": "Project 251 | the foyer pond coordinated in the digital twin before construction", "reach": 45, "react": 2, "com": 0, "sh": 1 },
+   { "d": "19 Aug", "t": "Project 251 | a natural stone element carries more project information than meets the eye", "reach": 76, "react": 3, "com": 0, "sh": 1 },
+   { "d": "18 Aug", "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin", "reach": 181, "react": 4, "com": 0, "sh": 2 },
+   { "d": "17 Aug", "t": "How 3D coordination reduces design conflicts before construction", "reach": 119, "react": 2, "com": 0, "sh": 2 },
+   { "d": "15 Aug", "t": "Most construction delays don't begin on site — they begin with coordination", "reach": 150, "react": 2, "com": 0, "sh": 1 },
+   { "d": "14 Aug", "t": "Project 251 | a bespoke stone element coordinated before fabrication", "reach": 168, "react": 4, "com": 0, "sh": 2 },
+   { "d": "13 Aug", "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary of a resolved home", "reach": 114, "react": 3, "com": 0, "sh": 1 },
+   { "d": "12 Aug", "t": "Quality management: most defects begin as decisions that were never clearly defined", "reach": 34, "react": 0, "com": 0, "sh": 0 }
+  ],
+  "new_post_note": "The 20 Aug foyer-pond post is the newest item and opened at 45 reach, 2 reactions and 1 share. Every post that was already in the window climbed as it aged: the 18 Aug fire pit 161 → 181 (now the strongest post of the month), the 14 Aug stone post 158 → 168, the 15 Aug coordination post 144 → 150, the 17 Aug article post 108 → 119, the 13 Aug vocabulary post 113 → 114 and the 19 Aug stone-support post 59 → 76. The 12 Aug quality-management post is unchanged at 34."
+ },
+ "instagram": {
+  "followers": 46,
+  "posts_total": 111,
+  "following": 35,
+  "views": { "v": 925, "change_pct": 48.5 },
+  "reach": { "v": 317, "change_pct": 149.6 },
+  "interactions": { "v": 74, "change_pct": 146.7 },
+  "views_from_followers_pct": 48.1,
+  "views_from_non_followers_pct": 51.9,
+  "views_from_followers": 62,
+  "views_from_non_followers": 863,
+  "reach_from_followers": 20,
+  "reach_from_non_followers": 300,
+  "reach_from_followers_change_pct": 25.0,
+  "reach_from_non_followers_change_pct": 167.9,
+  "interactions_from_followers_pct": 82,
+  "interactions_from_non_followers_pct": 18,
+  "daily": {
+   "views": [91,55,5,20,14,98,49,11,12,3,8,60,7,21,13,16,6,1,17,107,32,31,17,9,7,9,46,160],
+   "reach": [24,38,1,3,3,27,11,4,4,2,2,9,1,5,5,8,4,1,4,87,25,8,9,4,2,2,9,131],
+   "interactions": [10,0,0,2,0,7,1,2,0,1,1,2,1,4,3,3,0,0,2,6,1,4,2,0,0,2,4,16]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series (433) does not sum to the 317 KPI. Views (925) and interactions (74) do sum to their KPIs, as do all Facebook series.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   { "d": "20 Aug", "t": "Project 251 | the foyer pond coordinated in the digital twin before construction", "reach": 139, "react": 7, "com": 0, "sh": 1 },
+   { "d": "11 Aug", "t": "Project 251 | LightEFX StarEFX fibre optic ceiling", "reach": 111, "react": 7, "com": 0, "sh": 0 },
+   { "d": "13 Aug", "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary", "reach": 13, "react": 4, "com": 0, "sh": 0 },
+   { "d": "18 Aug", "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin", "reach": 12, "react": 6, "com": 0, "sh": 0 },
+   { "d": "19 Aug", "t": "Project 251 | a natural stone element carries more project information than meets the eye", "reach": 11, "react": 7, "com": 0, "sh": 0 },
+   { "d": "15 Aug", "t": "Most construction delays don't begin on site — they begin with coordination", "reach": 8, "react": 1, "com": 0, "sh": 0 }
+  ],
+  "post_views": {
+   "20 Aug": 160, "19 Aug": 28, "18 Aug": 33, "15 Aug": 18, "14 Aug": 26, "13 Aug": 44,
+   "11 Aug": 139, "10 Aug": 9, "7 Aug": 16, "6 Aug": 31, "3 Aug": 29
+  }
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 27,
+  "videos_long_form": null,
+  "videos_shorts": null,
+  "views_28d": { "v": 60, "change_pct": null },
+  "views_change_text": "About the same as usual (YouTube Studio reported no percentage and no prior-period figure this cycle)",
+  "watch_time_hours": { "v": 0.1, "change_pct": -97.0 },
+  "latest_video_views": { "v": 47, "change_pct": null },
+  "views_now": 60,
+  "views_prior": null,
+  "stale": false,
+  "stale_note": "YouTube Studio was read LIVE on 2026-08-21 for Jul 23 - Aug 19, 2026, matching the Meta window. Views 60 and watch time 0.1 hrs (97% less than the previous 28 days). Studio again showed 'About the same as usual' for Views rather than a percentage, so views_prior and the views change percentage are recorded as null rather than derived. The video count rose 26 → 27 with the 20 Aug pond upload; the count is from the public channel header and the long-form/Shorts split was not re-counted, so both are null.",
+  "new_upload": { "t": "Project 251 | Explore the pond through the interactive BIM model", "date": "2026-08-20", "views_in_window": 1, "dur": "0:10", "ctr": "22.5%", "public_page_views": 2 },
+  "top_videos": [
+   { "t": "Project 251 | LightEFX's StarEFX fibre optic ceiling", "v": 47, "dur": "0:05", "ctr": "16.3%" },
+   { "t": "DX Living | Project 2238 Mosman, NSW", "v": 3, "dur": "0:22", "ctr": "44.0%" },
+   { "t": "DX Living | Will your home still feel right decades from now?", "v": 2, "dur": "0:34", "ctr": "86.9%" },
+   { "t": "251 PROJECT — PROGRESS UPDATE", "v": 2, "dur": null, "ctr": null },
+   { "t": "251 PROJECT — Structural data becomes physical reality", "v": 2, "dur": null, "ctr": null },
+   { "t": "Project 251 | Explore the pond through the interactive BIM model", "v": 1, "dur": "0:10", "ctr": "22.5%" }
+  ]
+ },
+ "linkedin": {
+  "followers": 101,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": false,
+  "visitors_stale": true,
+  "stale_note": "LinkedIn Content and Followers were read LIVE on 2026-08-21. The date range LinkedIn offers did NOT advance and is still 20 Jul - 18 Aug 2026, so impressions, reactions, comments, reposts, total followers and new followers 30d are identical to the 2026-08-20 reading — unchanged real values, not carried ones. The follower location breakdown was re-read and changed materially. The Visitors analytics page would not render on three attempts, so page_views, unique_visitors, visitors_by_job_function and page_views_by_device are CARRIED from 2026-08-20 and were not read today. impressions_prior (1410) is derived from the displayed +21.1% change, not read directly.",
+  "new_followers_30d": { "v": 48, "change_pct": 1100.0 },
+  "impressions": { "v": 1708, "change_pct": 21.1 },
+  "reactions": { "v": 62, "change_pct": -21.5 },
+  "comments": { "v": 0, "change_pct": 0 },
+  "reposts": { "v": 2, "change_pct": 0 },
+  "page_views": { "v": 106, "change_pct": 186.5, "carried": true },
+  "unique_visitors": { "v": 39, "change_pct": 105.3, "carried": true },
+  "impressions_prior": 1410,
+  "impressions_now": 1708,
+  "followers_by_location_count": {
+   "Ho Chi Minh City": 23,
+   "Melbourne": 22,
+   "Brisbane": 3,
+   "Metro Manila": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Other": 42
+  },
+  "followers_by_location_pct": {
+   "Ho Chi Minh City": 22.8,
+   "Melbourne": 21.8,
+   "Brisbane": 3.0,
+   "Metro Manila": 3.0,
+   "Mumbai": 2.0,
+   "Delhi": 2.0,
+   "Karachi": 2.0,
+   "Other": 41.6
+  },
+  "followers_by_location_note": "Re-read live on 2026-08-21 and materially different from the previous snapshot: Ho Chi Minh City moved from 5.9% (6) to 22.8% (23) and is now the largest single location, ahead of Greater Melbourne at 21.8% (22). The Melbourne count itself rose 21 → 22, so this is Vietnam-side follower growth on top of a stable Australian base rather than a loss of Australian followers.",
+  "visitors_by_job_function": {
+   "Business Development": 15,
+   "Arts and Design": 14,
+   "Engineering": 11,
+   "Information Technology": 4,
+   "Marketing": 4,
+   "Real Estate": 3,
+   "Research": 2,
+   "Operations": 2,
+   "Program and Project Management": 2,
+   "Human Resources": 1
+  },
+  "visitors_by_job_function_note": "CARRIED from 2026-08-20 — the LinkedIn Visitors page would not render today. LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 106 page views.",
+  "page_views_by_device": { "Desktop": 69, "Mobile": 37 }
+ },
+ "notes": {
+  "vi": [
+   "Cửa sổ Meta và YouTube trượt sang 23/7 – 19/8; LinkedIn vẫn đứng ở 20/7 – 18/8 vì bộ chọn ngày của LinkedIn chưa nhích.",
+   "Instagram là câu chuyện của ngày hôm nay. Bài hồ nước tiền sảnh Project 251 đăng 20/8 đạt 139 reach và 160 views chỉ trong ngày đầu — vượt cả bài trần StarEFX 11/8 (111 reach) vốn dẫn đầu suốt sáu kỳ.",
+   "Nhờ vậy Instagram bật mạnh: views 814 → 925 (▲48,5%), reach 213 → 317 (▲149,6%), tương tác 61 → 74 (▲146,7%). Riêng ngày 20/8 đóng góp 160 views, 131 reach và 16 tương tác.",
+   "Người chưa follow chiếm 300 trên 317 reach của Instagram (94,6%) — mức phụ thuộc thuật toán cao nhất từng ghi nhận. Nhưng tương tác thì ngược lại: 82% đến từ follower.",
+   "Facebook đi ngang khi cửa sổ trượt: views 4.987 → 4.978 (▲65,4%), lượt truy cập 261 (▲86,4%), tương tác 161 → 170 (▲54,5%), video 3 giây 133 (▲62,2%). Cả bốn chuỗi 28 ngày khớp đúng KPI.",
+   "Mọi bài Facebook đang trong cửa sổ đều tăng reach khi già đi: fire pit 18/8 lên 181 (mạnh nhất tháng), đá 14/8 lên 168, coordination 15/8 lên 150, bài viết 17/8 lên 119, đá 19/8 lên 76. Bài hồ nước 20/8 mở hàng ở 45.",
+   "Thời gian xem Facebook giảm 47 phút 20 giây → 43 phút 20 giây (▲5,9% so với kỳ trước) — vẫn dương nhưng biên đã mỏng đi nhiều so với ▲51,3% kỳ trước.",
+   "YouTube: views 60 cho kỳ 23/7 – 19/8, watch time vẫn 0,1 giờ (▼97%). Studio lại ghi 'About the same as usual' nên không có số kỳ trước. Video hồ nước đăng 20/8 đã vào bảng với 1 view trong cửa sổ (2 view trên trang công khai). Số video lên 27.",
+   "LinkedIn giữ nguyên số vì cửa sổ chưa nhích: impressions 1.708 (▲21,1%), reactions 62 (▼21,5%), 0 comment, follower 101, follower mới 30 ngày 48 (▲1.100%).",
+   "Cơ cấu vị trí follower LinkedIn đổi rõ: TP.HCM từ 5,9% (6) lên 22,8% (23), nay là vị trí lớn nhất, vượt Greater Melbourne 21,8% (22). Melbourne vẫn tăng 21 → 22, nên đây là tăng trưởng phía Việt Nam chứ không phải mất follower Úc.",
+   "Trang Visitors của LinkedIn không tải được sau ba lần thử, nên lượt xem trang (106), khách duy nhất (39), cơ cấu chức năng và thiết bị là số giữ từ ngày 20/8, không phải số đọc hôm nay.",
+   "Hành động 1: bài hồ nước Project 251 vừa chứng minh định dạng chi tiết vật liệu + BIM tương tác là thứ lan xa nhất trên Instagram. Lên lịch một bài cùng kiểu cho tuần tới thay vì bài thương hiệu chung chung.",
+   "Hành động 2: TP.HCM nay là tệp follower LinkedIn lớn nhất trong khi thị trường mục tiêu là Melbourne. Nếu tăng trưởng này không phải khách hàng tiềm năng, cần kiểm tra lại đối tượng của các bài đang chạy và đẩy mạnh nội dung dự án Melbourne."
+  ],
+  "en": [
+   "The Meta and YouTube windows rolled forward to 23 Jul – 19 Aug; LinkedIn is still on 20 Jul – 18 Aug because LinkedIn's own date range has not advanced.",
+   "Instagram is the story of the day. The 20 Aug Project 251 foyer-pond post took 139 reach and 160 views on its first day — more than the 11 Aug StarEFX ceiling post (111 reach) that had led for six cycles.",
+   "That lifted the whole channel: views 814 → 925 (▲48.5%), reach 213 → 317 (▲149.6%), interactions 61 → 74 (▲146.7%). 20 Aug alone supplied 160 views, 131 reach and 16 interactions.",
+   "Non-followers account for 300 of Instagram's 317 reach (94.6%) — the highest algorithmic dependence recorded here. Interactions run the other way: 82% come from followers.",
+   "Facebook was flat as the window rolled: views 4,987 → 4,978 (▲65.4%), visits 261 (▲86.4%), interactions 161 → 170 (▲54.5%), video 3s 133 (▲62.2%). All four 28-day series reconcile exactly to their KPIs.",
+   "Every Facebook post already in the window gained reach as it aged: the 18 Aug fire pit to 181 (strongest of the month), the 14 Aug stone post to 168, the 15 Aug coordination post to 150, the 17 Aug article to 119 and the 19 Aug stone-support post to 76. The 20 Aug pond post opened at 45.",
+   "Facebook watch time fell 47m 20s → 43m 20s (▲5.9% against the prior period) — still positive but a much thinner margin than the ▲51.3% of the last cycle.",
+   "YouTube: 60 views for 23 Jul – 19 Aug, watch time still 0.1 hrs (▼97%). Studio again said 'About the same as usual', so there is no prior-period figure. The 20 Aug pond video has entered the table at 1 view in-window (2 on the public page) and the video count rose to 27.",
+   "LinkedIn figures are unchanged because its window has not moved: impressions 1,708 (▲21.1%), reactions 62 (▼21.5%), 0 comments, followers 101, new followers 30d 48 (▲1,100%).",
+   "The LinkedIn follower location mix changed sharply: Ho Chi Minh City went from 5.9% (6) to 22.8% (23) and is now the largest single location, ahead of Greater Melbourne at 21.8% (22). Melbourne itself rose 21 → 22, so this is Vietnam-side growth on a stable Australian base, not a loss of Australian followers.",
+   "The LinkedIn Visitors page would not render across three attempts, so page views (106), unique visitors (39), job-function mix and device split are carried from 20 Aug and were not read today.",
+   "Action 1: the Project 251 pond post has just proved that material detail plus an interactive BIM link is the format that travels furthest on Instagram. Schedule another of the same kind for next week instead of a generic brand post.",
+   "Action 2: Ho Chi Minh City is now the largest LinkedIn follower group while the target market is Melbourne. If that growth is not prospective clients, check the audience the current posts are reaching and push Melbourne project content harder."
+  ]
+ }
+}
