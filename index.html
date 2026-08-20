@@ -148,14 +148,14 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 <nav class="rail">
 <div class="logo">DX</div>
 <button class="rbtn" data-k="all" style="background:#5b6bf5">All</button><div class="rlabel">All</div>
-<button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
-<button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
-<button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
 <button class="rbtn" data-k="linkedin" style="background:#0a66c2">in</button><div class="rlabel">LI</div>
+<button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
+<button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
+<button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
 </nav>
 <main class="main">
 <div class="hd">
-<div class="ttl"><div class="badge" id="hdBadge">f</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
+<div class="ttl"><div class="badge" id="hdBadge">◆</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
 <div class="right">
 <span class="chip" id="hdChip"></span>
 <button class="tbtn" id="pdfBtn"></button>
@@ -306,7 +306,7 @@ const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b
 vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 20/8/2026; Facebook, Instagram, YouTube và LinkedIn đều đọc trực tiếp. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
 
 // ============ render ============
-let lang="en", current="facebook", charts=[];
+let lang="en", current="all", charts=[];
 const $=id=>document.getElementById(id);
 const tt=(o)=>o[lang];
 const num=v=>typeof v==="string"?v:v.toLocaleString();
@@ -420,7 +420,7 @@ $("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 
 // ============ PDF export — pick a period, then download all five channel views per day ============
-const PDFCH=["facebook","instagram","youtube","linkedin","all"];
+const PDFCH=["all","linkedin","instagram","facebook","youtube"];
 let PDFDAYS=[];
 
 function pdfFmt(iso){const[y,m,d]=iso.split("-");return d+"/"+m+"/"+y;}
@@ -656,7 +656,7 @@ function renderTrend(){
   trClear();
   if(!trLoaded){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.loading[lang]+'</div>';return;}
   if(!TRD||TRD.length<2){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';return;}
-  const keys=(current==="all")?["facebook","instagram","youtube","linkedin"]:[current];
+  const keys=(current==="all")?["linkedin","instagram","facebook","youtube"]:[current];
   let html="", jobs=[], labels=[];
   keys.forEach(k=>{if(!TRKPI[k])return;const b=trBlock(k);html+=b.html;jobs=jobs.concat(b.jobs);labels=b.labels;});
   box.innerHTML=html||'<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';
@@ -674,7 +674,7 @@ if(document.getElementById("sec-trend")){
   });
 }
 
-select("facebook");
+select("all");
 
 // ============ date picker (reads data/index.json; navigates, never recomputes) ============
 const DPT={
