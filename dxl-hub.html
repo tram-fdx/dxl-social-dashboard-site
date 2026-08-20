@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DXL Marketing Hub</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f1115}
+  #bar{display:flex;align-items:center;gap:4px;height:52px;padding:0 14px;background:#171a21;border-bottom:1px solid #262b36;position:sticky;top:0;z-index:10}
+  #brand{color:#fff;font-weight:600;font-size:14px;margin-right:16px;letter-spacing:.02em}
+  .tab{appearance:none;border:0;background:transparent;color:#9aa4b2;font-size:13px;font-weight:500;padding:8px 16px;border-radius:8px;cursor:pointer;transition:.15s}
+  .tab:hover{background:#20242e;color:#d7dde6}
+  .tab.on{background:#2b6cf6;color:#fff}
+  #spacer{flex:1}
+  #open{color:#7f8b9c;font-size:12px;text-decoration:none;padding:6px 10px;border:1px solid #2b313d;border-radius:7px}
+  #open:hover{color:#d7dde6;border-color:#3d4553}
+  #stage{position:relative;height:calc(100% - 52px)}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;display:none}
+  iframe.on{display:block}
+</style>
+</head>
+<body>
+
+<div id="bar">
+  <span id="brand">DX Living · Marketing Hub</span>
+  <button class="tab on" data-i="0">Social</button>
+  <button class="tab" data-i="1">SEO</button>
+  <button class="tab" data-i="2">Website Audit</button>
+  <span id="spacer"></span>
+  <a id="open" target="_blank" rel="noopener">Open in new tab ↗</a>
+</div>
+
+<div id="stage">
+  <iframe class="on" src="https://tram-fdx.github.io/dxl-social-dashboard-site/"></iframe>
+  <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/"></iframe>
+  <iframe data-src="https://tram-fdx.github.io/dxl-seo-audit/"></iframe>
+</div>
+
+<script>
+  const tabs = [...document.querySelectorAll('.tab')];
+  const frames = [...document.querySelectorAll('iframe')];
+  const openLink = document.getElementById('open');
+  const urls = frames.map(f => f.src || f.dataset.src);
+
+  function show(i) {
+    tabs.forEach((t, n) => t.classList.toggle('on', n === i));
+    frames.forEach((f, n) => {
+      f.classList.toggle('on', n === i);
+      if (n === i && !f.src) f.src = f.dataset.src; // lazy load
+    });
+    openLink.href = urls[i];
+    location.hash = ['social', 'seo', 'audit'][i];
+  }
+
+  tabs.forEach(t => t.onclick = () => show(+t.dataset.i));
+  openLink.href = urls[0];
+
+  const start = ['social', 'seo', 'audit'].indexOf(location.hash.slice(1));
+  if (start > 0) show(start);
+
+  // Iframes chi load duoc khi trang nay chay tren cung origin tram-fdx.github.io.
+  if (location.protocol === 'file:') {
+    const w = document.createElement('div');
+    w.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#9aa4b2;font-size:14px;line-height:1.7;padding:40px;background:#0f1115';
+    w.innerHTML = 'Trang nay dang mo bang file:// nen 3 dashboard khong nhung duoc.<br>Deploy len <b>tram-fdx.github.io</b> (cung origin) roi mo lai la chay binh thuong.';
+    document.getElementById('stage').appendChild(w);
+  }
+</script>
+
+</body>
+</html>
