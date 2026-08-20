@@ -1,0 +1,544 @@
+{
+ "date": "2026-08-20",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read directly from Chrome on 2026-08-20 (macOS, local browser). Facebook and Instagram read LIVE from Meta Business Suite Insights (Overview + Recent content), window 22 Jul - 18 Aug 2026; total Facebook followers (115) and Instagram followers (46) read at business.facebook.com/latest/; Instagram post count (110), followers (46) and following (35) read at instagram.com/dxliving.au. YouTube Studio analytics COULD NOT BE READ this cycle: studio.youtube.com returned 'Oops, you don't have permission to view this page' for channel UCuxr30df_qmARRgETsruEyw on the Google account signed into this Chrome profile (authuser=0/1/2 all denied; the profile defaults to the personal channel UCsmFibHJX6sRiKPYmWu_ZCQ). YouTube subscribers (4) and video count (26) WERE read live from the public channel page at youtube.com/channel/UCuxr30df_qmARRgETsruEyw; views_28d (75), watch_time_hours (2.4), views_prior (8), latest_video_views (47) and top_videos are CARRIED UNCHANGED from the 2026-08-19 snapshot. LinkedIn COULD NOT BE READ this cycle: /company/108389291/admin/analytics/updates/ redirected to the LinkedIn authwall, so every LinkedIn figure is CARRIED UNCHANGED from the 2026-08-19 snapshot and still describes the 19 Jul - 17 Aug window. Facebook link_clicks is likewise carried (last read 2026-08-07). Facebook views KPI is displayed rounded as 5,0K; the exact value 4987 is the sum of the 28-day daily series and reconciles exactly (visits 268, interactions 161, video_3s 133 all reconcile too). Instagram views (814) and interactions (61) reconcile to their KPIs; Instagram daily reach sums to 324 against a de-duplicated 213 KPI, as always. No estimated values. No Supermetrics.",
+ "window": {
+  "en": "Last 28 days: 22 Jul – 18 Aug 2026",
+  "vi": "28 ngày qua: 22/7 – 18/8/2026"
+ },
+ "windows": {
+  "meta": "2026-07-22 → 2026-08-18",
+  "youtube": "2026-07-21 → 2026-08-17 (carried)",
+  "linkedin": "2026-07-19 → 2026-08-17 (carried)"
+ },
+ "facebook": {
+  "followers": 115,
+  "views": {
+   "v": 4987,
+   "change_pct": 71.1
+  },
+  "viewers": {
+   "v": 543,
+   "change_pct": 56.0
+  },
+  "visits": {
+   "v": 268,
+   "change_pct": 106.2
+  },
+  "interactions": {
+   "v": 161,
+   "change_pct": 38.8
+  },
+  "video_3s": {
+   "v": 133,
+   "change_pct": 90.0
+  },
+  "link_clicks": {
+   "v": 17,
+   "change_pct": 88.9
+  },
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": 50
+  },
+  "views_from_followers_pct": 46.6,
+  "views_from_non_followers_pct": 53.4,
+  "interactions_from_followers": 111,
+  "interactions_from_non_followers": 50,
+  "watch_time": "47m 20s",
+  "watch_time_change_pct": 51.3,
+  "conversations_started": 2,
+  "daily": {
+   "views": [
+    189,
+    202,
+    55,
+    63,
+    73,
+    74,
+    329,
+    224,
+    174,
+    123,
+    49,
+    87,
+    575,
+    260,
+    215,
+    212,
+    154,
+    78,
+    63,
+    371,
+    422,
+    129,
+    91,
+    157,
+    111,
+    119,
+    122,
+    266
+   ],
+   "interactions": [
+    1,
+    9,
+    2,
+    1,
+    2,
+    0,
+    15,
+    5,
+    7,
+    1,
+    0,
+    0,
+    26,
+    10,
+    5,
+    7,
+    11,
+    2,
+    2,
+    8,
+    15,
+    3,
+    8,
+    4,
+    3,
+    1,
+    3,
+    10
+   ],
+   "visits": [
+    10,
+    3,
+    0,
+    2,
+    0,
+    0,
+    33,
+    13,
+    17,
+    13,
+    3,
+    23,
+    39,
+    5,
+    8,
+    3,
+    7,
+    0,
+    4,
+    32,
+    2,
+    1,
+    4,
+    11,
+    3,
+    4,
+    6,
+    22
+   ],
+   "video_3s": [
+    12,
+    3,
+    5,
+    0,
+    0,
+    14,
+    3,
+    11,
+    1,
+    2,
+    0,
+    0,
+    4,
+    4,
+    3,
+    0,
+    1,
+    0,
+    0,
+    12,
+    24,
+    6,
+    3,
+    3,
+    0,
+    12,
+    5,
+    5
+   ]
+  },
+  "top_posts": [
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 161,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "14 Aug",
+    "t": "Project 251 | a bespoke stone element coordinated before fabrication",
+    "reach": 158,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination",
+    "reach": 144,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary of a resolved home",
+    "reach": 113,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "17 Aug",
+    "t": "How 3D coordination reduces design conflicts before construction",
+    "reach": 107,
+    "react": 2,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 59,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "new_post_note": "The 19 Aug stone-support post is the newest item and opened at 59 reach, 3 reactions and 1 share. The 18 Aug fire-pit post has climbed to 161 reach and is now the strongest post of the month, ahead of the 14 Aug stone post (158) and the 15 Aug coordination post (144). The 12 Aug quality-management post sits at 34 and the 11 Aug Story at 24. The 11 Aug StarEFX ceiling post (232 reach last cycle) has dropped out of the eight most recent items shown by Meta Business Suite."
+ },
+ "instagram": {
+  "followers": 46,
+  "posts_total": 110,
+  "following": 35,
+  "views": {
+   "v": 814,
+   "change_pct": 22.4
+  },
+  "reach": {
+   "v": 213,
+   "change_pct": 91.9
+  },
+  "interactions": {
+   "v": 61,
+   "change_pct": 125.9
+  },
+  "views_from_followers_pct": 54.8,
+  "views_from_non_followers_pct": 45.2,
+  "views_from_followers": 68,
+  "views_from_non_followers": 746,
+  "reach_from_followers": 19,
+  "reach_from_non_followers": 195,
+  "interactions_from_followers_pct": 87,
+  "interactions_from_non_followers_pct": 13,
+  "daily": {
+   "views": [
+    49,
+    91,
+    55,
+    5,
+    20,
+    14,
+    98,
+    49,
+    11,
+    12,
+    3,
+    8,
+    60,
+    7,
+    21,
+    13,
+    16,
+    6,
+    1,
+    17,
+    107,
+    32,
+    31,
+    17,
+    9,
+    7,
+    9,
+    46
+   ],
+   "reach": [
+    22,
+    24,
+    38,
+    1,
+    3,
+    3,
+    27,
+    11,
+    4,
+    4,
+    2,
+    2,
+    9,
+    1,
+    5,
+    5,
+    8,
+    4,
+    1,
+    4,
+    87,
+    25,
+    8,
+    9,
+    4,
+    2,
+    2,
+    9
+   ],
+   "interactions": [
+    3,
+    10,
+    0,
+    0,
+    2,
+    0,
+    7,
+    1,
+    2,
+    0,
+    1,
+    1,
+    2,
+    1,
+    4,
+    3,
+    3,
+    0,
+    0,
+    2,
+    6,
+    1,
+    4,
+    2,
+    0,
+    0,
+    2,
+    4
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series (324) does not sum to the 213 KPI. Views (814) and interactions (61) do sum to their KPIs, as do all Facebook series.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "11 Aug",
+    "t": "Project 251 | LightEFX StarEFX fibre optic ceiling",
+    "reach": 111,
+    "react": 6,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary",
+    "reach": 11,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 10,
+    "react": 6,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "7 Aug",
+    "t": "Architectural drawings inform — the digital twin creates confidence",
+    "reach": 10,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination",
+    "reach": 8,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 7,
+    "react": 6,
+    "com": 0,
+    "sh": 0
+   }
+  ]
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 26,
+  "videos_long_form": 14,
+  "videos_shorts": 12,
+  "views_28d": {
+   "v": 75,
+   "change_pct": 837.5
+  },
+  "watch_time_hours": {
+   "v": 2.4,
+   "change_pct": 999
+  },
+  "latest_video_views": {
+   "v": 47,
+   "change_pct": null
+  },
+  "views_now": 75,
+  "views_prior": 8,
+  "stale": true,
+  "stale_note": "YouTube Studio analytics were NOT read on 2026-08-20. studio.youtube.com returned 'Oops, you don't have permission to view this page' for channel UCuxr30df_qmARRgETsruEyw on the Google account signed into this Chrome profile; authuser=0, 1 and 2 were all denied and the profile defaults to the personal channel UCsmFibHJX6sRiKPYmWu_ZCQ (0 subscribers, 0 views). Subscribers (4) and video count (26) WERE read live from the public channel page. views_28d (75), watch_time_hours (2.4), views_prior (8), latest_video_views (47) and top_videos are carried unchanged from the 2026-08-19 snapshot and still describe the 21 Jul - 17 Aug window. Fix required: grant the signed-in Google account access to the DXLVNG channel, or sign the brand account into this Chrome profile.",
+  "top_videos": [
+   {
+    "t": "Project 251 | LightEFX's StarEFX fibre optic ceiling",
+    "v": 47,
+    "dur": "0:05",
+    "ctr": "16.3%"
+   },
+   {
+    "t": "DX Living | Project 2238 Mosman, NSW",
+    "v": 19,
+    "dur": "28:13",
+    "ctr": null
+   },
+   {
+    "t": "DX Living | Will your home still feel right decades from now?",
+    "v": 2,
+    "dur": "0:34",
+    "ctr": "86.9%"
+   },
+   {
+    "t": "251 PROJECT — PROGRESS UPDATE",
+    "v": 2,
+    "dur": null,
+    "ctr": null
+   },
+   {
+    "t": "251 PROJECT — Structural data becomes physical reality",
+    "v": 2,
+    "dur": null,
+    "ctr": null
+   }
+  ]
+ },
+ "linkedin": {
+  "followers": 101,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": true,
+  "stale_note": "LinkedIn was NOT read on 2026-08-20. https://www.linkedin.com/company/108389291/admin/analytics/updates/ redirected to the LinkedIn authwall (session not signed in). Every LinkedIn figure below is carried unchanged from the 2026-08-19 snapshot and still describes the 19 Jul - 17 Aug window. Fix required: sign in to LinkedIn in this Chrome profile as a page admin.",
+  "new_followers_30d": {
+   "v": 28,
+   "change_pct": 600.0
+  },
+  "impressions": {
+   "v": 1630,
+   "change_pct": 15.4
+  },
+  "reactions": {
+   "v": 62,
+   "change_pct": -22.5
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 2,
+   "change_pct": 0
+  },
+  "page_views": {
+   "v": 79,
+   "change_pct": 113.5
+  },
+  "unique_visitors": {
+   "v": 28,
+   "change_pct": 47.4
+  },
+  "impressions_prior": 1413,
+  "impressions_now": 1630,
+  "followers_by_location_pct": {
+   "Melbourne": 20.8,
+   "Ho Chi Minh City": 5.9,
+   "Brisbane": 3.0,
+   "Metro Manila": 3.0,
+   "Other": 67.3
+  },
+  "followers_by_location_count": {
+   "Melbourne": 21,
+   "Ho Chi Minh City": 6,
+   "Brisbane": 3,
+   "Metro Manila": 3,
+   "Other": 68
+  },
+  "visitors_by_job_function": {
+   "Business Development": 16,
+   "Engineering": 12,
+   "Arts and Design": 10,
+   "Human Resources": 3,
+   "Information Technology": 3,
+   "Customer Success and Support": 2,
+   "Military and Protective Services": 2,
+   "Research": 1,
+   "Sales": 1,
+   "Marketing": 1
+  },
+  "visitors_by_job_function_note": "LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 79 page views.",
+  "page_views_by_device": {
+   "Desktop": 47,
+   "Mobile": 32
+  }
+ },
+ "notes": {
+  "vi": [
+   "Chỉ Facebook và Instagram đọc trực tiếp kỳ này. YouTube Studio và LinkedIn KHÔNG đọc được; toàn bộ số của hai kênh đó là giữ nguyên từ bản 19/8 và đã ghi chú rõ.",
+   "Cửa sổ Meta trượt sang 22/7 – 18/8. Facebook: views 4.886 → 4.987 (▲71,1%) khi ngày 21/7 (165 views) rơi ra và ngày 18/8 thêm 266 — ngày mạnh nhất kể từ 11/8.",
+   "Facebook: lượt truy cập 261 → 268 (▲106,2%), tương tác 159 → 161 (▲38,8%), người tiếp cận 555 → 543 (▲56%). Cả bốn chuỗi 28 ngày đều khớp đúng KPI.",
+   "Facebook: video 3 giây rời đỉnh, 162 → 133 (▲90%) và thời gian xem 1 giờ 8 phút → 47 phút 20 giây (▲51,3%) vì đỉnh 34 của ngày 21/7 rơi khỏi cửa sổ. Nền vẫn cao hơn nhiều so với một tháng trước.",
+   "Bài fire pit 18/8 leo lên 161 reach, 4 cảm xúc, 2 chia sẻ — nay là bài mạnh nhất tháng, vượt bài đá 14/8 (158) và bài coordination 15/8 (144). Bài đá mới 19/8 mở hàng 59 reach.",
+   "Facebook: người chưa follow giữ 53,4% lượt xem và 50 trên 161 tương tác. Follower ròng vẫn chỉ 3 trên 4.987 views — khám phá tốt, 'mồi' theo dõi vẫn yếu.",
+   "Instagram: views 940 → 814 (▲22,4%) khi đỉnh 172 của 21/7 rơi ra và 18/8 thêm 46; reach 281 → 213 (▲91,9%); tương tác 60 → 61 (▲125,9%). 91,5% reach vẫn từ người chưa follow (195/213).",
+   "Instagram: follower 45 → 46, số bài 109 → 110. Bài đá 19/8 đạt 6 likes trên 7 reach — tỷ lệ like/reach cao nhất từng ghi nhận. Bài trần StarEFX 11/8 vẫn giữ 111 reach, hơn tất cả bài còn lại cộng lại.",
+   "YouTube: Studio trả về 'không có quyền xem trang này' cho kênh DXLVNG trên tài khoản Google đang đăng nhập ở profile Chrome này (thử authuser 0/1/2 đều bị từ chối). Subscriber (4) và số video (26) đọc được từ trang kênh công khai; views 28 ngày (75) và watch time (2,4 giờ) là giữ nguyên từ 19/8.",
+   "LinkedIn: trang admin analytics chuyển hướng sang authwall nên không đọc được số nào. Mọi chỉ số LinkedIn trên dashboard là bản 19/8 giữ nguyên, vẫn mô tả cửa sổ 19/7 – 17/8.",
+   "Việc cần làm: cấp lại quyền Studio kênh DXLVNG và đăng nhập LinkedIn với quyền admin trang trên profile Chrome này, để lần chạy ngày mai đọc lại được cả bốn kênh."
+  ],
+  "en": [
+   "Only Facebook and Instagram were read live this cycle. YouTube Studio and LinkedIn could NOT be read; every figure for those two channels is carried unchanged from the 19 Aug snapshot and is flagged as such.",
+   "The Meta window rolled to 22 Jul – 18 Aug. Facebook: views 4,886 → 4,987 (▲71.1%) as 21 Jul's 165 dropped out and the new 18 Aug added 266 — the strongest single day since 11 Aug.",
+   "Facebook: visits 261 → 268 (▲106.2%), interactions 159 → 161 (▲38.8%), viewers 555 → 543 (▲56%). All four 28-day series reconcile exactly to their KPIs.",
+   "Facebook: video came off its record — 3-second views 162 → 133 (▲90%) and watch time 1h 8m → 47m 20s (▲51.3%) as the 21 Jul spike of 34 rolled out of the window. The baseline is still far above where it sat a month ago.",
+   "The 18 Aug fire-pit post climbed to 161 reach, 4 reactions and 2 shares — now the strongest post of the month, ahead of the 14 Aug stone post (158) and the 15 Aug coordination post (144). The new 19 Aug stone post opened at 59 reach.",
+   "Facebook: non-followers hold 53.4% of views and supplied 50 of 161 interactions. Net new followers stayed at 3 on 4,987 views — discovery works, the follow prompt does not.",
+   "Instagram: views 940 → 814 (▲22.4%) as the 21 Jul peak of 172 dropped out and 18 Aug added 46; reach 281 → 213 (▲91.9%); interactions 60 → 61 (▲125.9%). 91.5% of reach is still non-follower (195 of 213).",
+   "Instagram: followers 45 → 46 and post count 109 → 110. The 19 Aug stone post drew 6 likes on 7 reach — the highest like-per-reach ratio recorded on this account. The 11 Aug StarEFX ceiling post still holds 111 reach, more than every other post in the window combined.",
+   "YouTube: Studio returned 'you don't have permission to view this page' for the DXLVNG channel on the Google account signed into this Chrome profile (authuser 0, 1 and 2 all denied). Subscribers (4) and video count (26) were read from the public channel page; 28-day views (75) and watch time (2.4 hrs) are carried from 19 Aug.",
+   "LinkedIn: the page admin analytics URLs redirected to the authwall, so nothing could be read. Every LinkedIn metric on the dashboard is the 19 Aug reading carried forward and still describes the 19 Jul – 17 Aug window.",
+   "Action required: restore DXLVNG Studio access and sign in to LinkedIn as a page admin in this Chrome profile so tomorrow's run reads all four channels again."
+  ]
+ }
+}

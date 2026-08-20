@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-19",
+  "latest": "2026-08-20",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -135,6 +135,13 @@
       "report": "archive/2026-08-19.html",
       "label_vi": "LinkedIn vượt mốc 100 follower (+21) và lượt xem trang tăng gấp đôi lên 79; bài fire pit 18/8 mở hàng 112 reach trên Facebook",
       "label_en": "LinkedIn crosses 100 followers (+21) and page views more than double to 79; the 18 Aug fire-pit post opens at 112 reach on Facebook"
+    },
+    {
+      "date": "2026-08-20",
+      "data": "data/2026-08-20.json",
+      "report": "archive/2026-08-20.html",
+      "label_vi": "FB views 4.886→4.987; IG reach 281→213, follower 45→46; YouTube + LinkedIn không đọc được, giữ số 19/8",
+      "label_en": "FB views 4,886→4,987; IG reach 281→213, followers 45→46; YouTube + LinkedIn unreadable, carried from 19 Aug"
     }
   ]
 }
