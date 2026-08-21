@@ -41,6 +41,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .pdfpop .pdfact button:disabled{opacity:.55;cursor:not-allowed}
 .chip{font-size:11px;background:#eef2ff;color:#3949ab;padding:5px 10px;border-radius:999px;font-weight:700}
 .tbtn{font-size:12px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.langfloat{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 24px rgba(20,30,60,.20);overflow:hidden}
+.langfloat button{font-size:12px;font-weight:800;letter-spacing:.4px;padding:10px 16px;border:none;background:#fff;color:var(--ink);cursor:pointer;line-height:1}
+.langfloat button:hover{background:#eef1f6}
+.langfloat button.on{background:var(--accent);color:#fff}
+.langfloat button.on:hover{background:var(--accent)}
+@media print{.langfloat{display:none}}
+@media (max-width:640px){.langfloat{right:12px;bottom:12px}.langfloat button{padding:9px 13px}}
 .tbtn:hover{background:#eef1f6}
 .tbtn.p{background:var(--accent);color:#fff;border-color:var(--accent)}
 .kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:16px}
@@ -153,6 +160,9 @@ ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(-
 <button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
 <button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
 </nav>
+<div class="langfloat" id="langFloat" role="group" aria-label="Language / Ngôn ngữ">
+<button type="button" data-l="en" class="on">EN</button><button type="button" data-l="vi">VI</button>
+</div>
 <main class="main">
 <div class="hd">
 <div class="ttl"><div class="badge" id="hdBadge">◆</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
@@ -306,7 +316,7 @@ const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b
 vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 20/8/2026; Facebook, Instagram, YouTube và LinkedIn đều đọc trực tiếp. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
 
 // ============ render ============
-let lang="en", current="all", charts=[];
+let lang="en", current="all", charts=[];  // English is the pinned default on load
 const $=id=>document.getElementById(id);
 const tt=(o)=>o[lang];
 const num=v=>typeof v==="string"?v:v.toLocaleString();
@@ -416,7 +426,9 @@ clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[115,101,46
 function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);$("pdfBtn").textContent=tt(T.pdf);if(typeof pdfLabels==="function")pdfLabels();renderTrend();}
 function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
 document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
-$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";render();});
+function syncLangFloat(){document.querySelectorAll("#langFloat button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));}
+$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";syncLangFloat();render();});
+document.querySelectorAll("#langFloat button").forEach(b=>b.addEventListener("click",()=>{if(lang!==b.dataset.l)$("langBtn").click();}));
 $("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
 
 // ============ PDF export — pick a period, then download all five channel views per day ============
@@ -469,7 +481,7 @@ fetch("data/index.json").then(r=>r.json()).then(j=>{
 async function pdfCaptureDoc(win,doc,addPage,scale){
   const main=doc.querySelector(".main");
   if(!main)return;
-  const hide=[doc.getElementById("sec-filter"),doc.getElementById("metastrip"),doc.getElementById("sec-trend"),doc.querySelector(".hd .right")].filter(Boolean);
+  const hide=[doc.getElementById("sec-filter"),doc.getElementById("metastrip"),doc.getElementById("sec-trend"),doc.getElementById("langFloat"),doc.querySelector(".hd .right")].filter(Boolean);
   const memo=hide.map(e=>e.style.display);
   try{
     for(const k of PDFCH){
@@ -674,6 +686,7 @@ if(document.getElementById("sec-trend")){
   });
 }
 
+syncLangFloat();
 select("all");
 
 // ============ date picker (reads data/index.json; navigates, never recomputes) ============
