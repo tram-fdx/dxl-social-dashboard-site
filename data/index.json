@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-21",
+  "latest": "2026-08-24",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -149,6 +149,13 @@
       "report": "archive/2026-08-21.html",
       "label_vi": "IG bùng nổ nhờ bài hồ nước 20/8: reach 213→317; FB views 4.978; TP.HCM vượt Melbourne trên LinkedIn",
       "label_en": "IG surge from 20 Aug pond post: reach 213→317; FB views 4,978; HCMC overtakes Melbourne on LinkedIn"
+    },
+    {
+      "date": "2026-08-24",
+      "data": "data/2026-08-24.json",
+      "report": "archive/2026-08-24.html",
+      "label_vi": "FB đọc trực tiếp: views 4.898, truy cập 274 (▲93%), watch time 53p9s; IG hạ nhiệt reach 317→281 vì không có bài mới; YouTube mất quyền Studio và LinkedIn đăng xuất — số hai kênh này giữ từ 21/8",
+      "label_en": "FB live: 4,898 views, 274 visits (▲93%), watch time 53m 9s; IG cools 317→281 reach with no new post; YouTube Studio access lost and LinkedIn signed out — both carried from 21 Aug"
     }
   ]
 }
