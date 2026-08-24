@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-24",
+  "latest": "2026-08-25",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -156,6 +156,13 @@
       "report": "archive/2026-08-24.html",
       "label_vi": "Chạy lại: cả 4 kênh trực tiếp · FB views 4.898, truy cập 274 (▲93%); IG reach 281; YT views 55 (cửa sổ trùng Meta); LI impressions 1.660, lượt xem trang 120 (▲224%) nhưng follower 101→100",
       "label_en": "Re-run: all 4 channels live · FB 4,898 views, 274 visits (▲93%); IG reach 281; YT 55 views (window now matches Meta); LI 1,660 impressions, 120 page views (▲224%) but followers 101→100"
+    },
+    {
+      "date": "2026-08-25",
+      "data": "data/2026-08-25.json",
+      "report": "archive/2026-08-25.html",
+      "label_vi": "FB views 4.981 (▲57,4%), watch time 55 phút 46 giây; IG phá vỡ 4 ngày im lặng, reach 291; YT 56 views + video mới; LinkedIn chưa làm mới cửa sổ",
+      "label_en": "FB 4,981 views (▲57.4%), watch time 55m 46s; IG breaks 4-day silence, reach 291; YT 56 views + new upload; LinkedIn window unrefreshed"
     }
   ]
 }
