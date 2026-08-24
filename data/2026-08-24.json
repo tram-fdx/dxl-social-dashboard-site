@@ -2,15 +2,15 @@
  "date": "2026-08-24",
  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
  "source_commit": "",
- "provenance": "Read directly from Chrome on 2026-08-24 (macOS, local browser). Facebook and Instagram read LIVE from Meta Business Suite Insights (Overview + Recent content table), window 26 Jul - 22 Aug 2026 — the Meta window rolled forward three days from the 2026-08-21 snapshot (weekend gap: no runs on 22 or 23 Aug). Facebook KPI for views is displayed rounded as 4,9K; the exact value 4898 is the sum of the 28-day daily series and reconciles exactly, as do visits (274), interactions (162) and video 3s (142). Total Facebook followers (115) and Instagram followers (46) read at business.facebook.com/latest/; Instagram post count (111) and following (35) read at instagram.com/dxliving.au. Instagram post-level reach, likes, comments and shares were read from the Instagram recent-content table, so they are real per-post readings. YouTube Studio was NOT readable this run: studio.youtube.com returned the 'you do not have permission to view this page' interstitial on two attempts, so views_28d (60), watch time (0.1 hrs) and the top-video table are CARRIED from the 2026-08-21 snapshot and are flagged stale=true. Subscribers (4) and video count (27) WERE read live from the public channel page at youtube.com/channel/UCuxr30df_qmARRgETsruEyw, as was the latest upload (Project 251 pond, now 2 public views). LinkedIn could NOT be read: both /admin/analytics/updates/ and /feed/ redirected to the LinkedIn authwall / login page, i.e. the browser profile is signed out of LinkedIn. Every LinkedIn figure in this snapshot — followers 101, impressions 1708, reactions 62, comments 0, reposts 2, new followers 30d 48, page views 106, unique visitors 39, location, job-function and device breakdowns — is CARRIED unchanged from the 2026-08-21 snapshot and flagged stale=true. Facebook link_clicks is carried from the 2026-08-07 snapshot. No estimated values. No Supermetrics.",
+ "provenance": "RE-RUN on 2026-08-24, later the same day. All FOUR channels read LIVE from Chrome (macOS, local browser) on this pass — the earlier 2026-08-24 run could not open YouTube Studio or LinkedIn, and this snapshot replaces those carried values with real readings. Facebook and Instagram re-read from Meta Business Suite Insights, window 26 Jul - 22 Aug 2026: every figure is byte-identical to the earlier read today, so no Meta value changed. Facebook views display rounded as 4,9K; the exact 4898 is the sum of the 28-day daily series and reconciles exactly, as do visits (274), interactions (162) and video 3s (142). Total Facebook followers (115) and Instagram followers (46) read at business.facebook.com/latest/; Instagram post count (111) and following (35) read at instagram.com/dxliving.au. YouTube Studio access is RESTORED: channel analytics read live for Jul 26 - Aug 22, 2026, matching the Meta window exactly — views 55, watch time 0.1 hrs (97% less than the previous 28 days), and the full 8-row top-content table which sums to 55 exactly. Studio showed '15 more than usual' for Views, a typical-performance comparison rather than a prior-period percentage, so views_prior and the views change percentage are recorded as null rather than derived. Subscribers (4) and video count (27) read from the public channel page. LinkedIn login is RESTORED: Content, Followers and Visitors admin pages all read live, and LinkedIn's own window advanced four days to 24 Jul - 22 Aug 2026 — the first time it has moved since the 2026-08-19 snapshot. Every LinkedIn figure here is a fresh reading, none carried. Facebook link_clicks remains carried from the 2026-08-07 snapshot. No estimated values. No Supermetrics.",
  "window": {
   "en": "Last 28 days: 26 Jul – 22 Aug 2026",
   "vi": "28 ngày qua: 26/7 – 22/8/2026"
  },
  "windows": {
   "meta": "2026-07-26 → 2026-08-22",
-  "youtube": "2026-07-23 → 2026-08-19 (carried, Studio unreadable)",
-  "linkedin": "2026-07-20 → 2026-08-18 (carried, signed out)"
+  "youtube": "2026-07-26 → 2026-08-22",
+  "linkedin": "2026-07-24 → 2026-08-22"
  },
  "facebook": {
   "followers": 115,
@@ -536,32 +536,30 @@
   "videos_long_form": null,
   "videos_shorts": null,
   "views_28d": {
-   "v": 60,
-   "change_pct": null,
-   "carried": true
+   "v": 55,
+   "change_pct": null
   },
-  "views_change_text": "Not read this cycle — YouTube Studio returned a permission interstitial",
+  "views_change_text": "15 more than usual (YouTube Studio reported a typical-performance comparison, not a prior-period percentage)",
   "watch_time_hours": {
    "v": 0.1,
-   "change_pct": -97.0,
-   "carried": true
+   "change_pct": -97.0
   },
   "latest_video_views": {
    "v": 47,
-   "change_pct": null,
-   "carried": true
+   "change_pct": null
   },
-  "views_now": 60,
+  "views_now": 55,
   "views_prior": null,
-  "stale": true,
-  "stale_note": "YouTube Studio could NOT be read on 2026-08-24: studio.youtube.com/channel/UCuxr30df_qmARRgETsruEyw/analytics returned 'Rất tiếc, bạn không có quyền xem trang này' (you do not have permission to view this page) on two attempts, meaning the signed-in Google account on this Chrome profile no longer has access to the DXLVNG channel. Views 60, watch time 0.1 hrs and the whole top-video table are therefore CARRIED from the 2026-08-21 snapshot and were not verified today. What WAS read live from the public channel page: subscribers 4, video count 27, and the newest upload (Project 251 pond) now showing 2 public views. Restoring Studio access on this Chrome profile is the single fix that unblocks the YouTube half of this report.",
+  "stale": false,
+  "stale_note": "Studio access RESTORED. YouTube Studio read LIVE on 2026-08-24 for Jul 26 - Aug 22, 2026 — the first YouTube window that matches the Meta window exactly. Views 55 (down from 60 on the 23 Jul - 19 Aug window as older traffic rolled out), watch time 0.1 hrs (97% less than the previous 28 days). The 8-row top-content table sums to 55 exactly. Studio showed '15 more than usual' rather than a prior-period percentage, so views_prior and the views change are null rather than derived. Subscribers 4 and video count 27 from the public channel page; the long-form/Shorts split was not counted, so both are null.",
   "new_upload": {
    "t": "Project 251 | Explore the pond through the interactive BIM model",
    "date": "2026-08-20",
-   "views_in_window": 1,
-   "dur": "0:10",
-   "ctr": "22.5%",
-   "public_page_views": 2
+   "views_in_window": 2,
+   "dur": "0:22",
+   "ctr": "10.0%",
+   "avg_view_pct": "50.0%",
+   "age_at_read": "first 3 days 19 hours"
   },
   "top_videos": [
    {
@@ -571,147 +569,160 @@
     "ctr": "16.3%"
    },
    {
-    "t": "DX Living | Project 2238 Mosman, NSW",
-    "v": 3,
-    "dur": "0:22",
-    "ctr": "44.0%"
-   },
-   {
     "t": "DX Living | Will your home still feel right decades from now?",
     "v": 2,
     "dur": "0:34",
     "ctr": "86.9%"
    },
    {
-    "t": "251 PROJECT — PROGRESS UPDATE",
-    "v": 2,
-    "dur": null,
-    "ctr": null
-   },
-   {
-    "t": "251 PROJECT — Structural data becomes physical reality",
-    "v": 2,
-    "dur": null,
-    "ctr": null
-   },
-   {
     "t": "Project 251 | Explore the pond through the interactive BIM model",
+    "v": 2,
+    "dur": "0:22",
+    "ctr": "50.0%"
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
     "v": 1,
-    "dur": "0:10",
-    "ctr": "22.5%"
+    "dur": "0:30",
+    "ctr": "97.8%"
+   },
+   {
+    "t": "DX Living | Featuring Nagambie Project",
+    "v": 1,
+    "dur": "0:12",
+    "ctr": "39.5%"
+   },
+   {
+    "t": "DX Living | Project 2238 Mosman, NSW",
+    "v": 1,
+    "dur": "0:38",
+    "ctr": "74.6%"
+   },
+   {
+    "t": "251 PROJECT — PROGRESS UPDATE",
+    "v": 1,
+    "dur": null,
+    "ctr": null
+   },
+   {
+    "t": "DX Living | Setting the visual standard for construction sites",
+    "v": 0,
+    "dur": null,
+    "ctr": null
    }
   ]
  },
  "linkedin": {
-  "followers": 101,
+  "followers": 100,
   "url": "https://www.linkedin.com/company/108389291/",
-  "stale": true,
-  "visitors_stale": true,
-  "stale_note": "LinkedIn could NOT be read on 2026-08-24. Both https://www.linkedin.com/company/108389291/admin/analytics/updates/ and https://www.linkedin.com/feed/ redirected to the LinkedIn authwall / login page, so this Chrome profile is signed out of LinkedIn. No credentials were entered. EVERY LinkedIn figure below is CARRIED unchanged from the 2026-08-21 snapshot and was not verified today: followers 101, new followers 30d 48, impressions 1708, reactions 62, comments 0, reposts 2, page views 106, unique visitors 39, and the location, job-function and device breakdowns. Signing this Chrome profile back into LinkedIn is required before the next run.",
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn login RESTORED. Content, Followers and Visitors admin pages ALL read LIVE on 2026-08-24, and LinkedIn's own date range finally advanced four days to 24 Jul - 22 Aug 2026 — it had been stuck on 20 Jul - 18 Aug since the 2026-08-19 snapshot. Every figure below is a fresh reading; nothing is carried. impressions_prior (1529) is derived from the displayed increase of 8.6%, not read directly.",
   "new_followers_30d": {
-   "v": 48,
-   "change_pct": 1100.0,
-   "carried": true
+   "v": 47,
+   "change_pct": 840.0
   },
   "impressions": {
-   "v": 1708,
-   "change_pct": 21.1,
-   "carried": true
+   "v": 1660,
+   "change_pct": 8.6
   },
   "reactions": {
-   "v": 62,
-   "change_pct": -21.5,
-   "carried": true
+   "v": 60,
+   "change_pct": -34.8
   },
   "comments": {
    "v": 0,
-   "change_pct": 0,
-   "carried": true
+   "change_pct": 0
   },
   "reposts": {
    "v": 2,
-   "change_pct": 0,
-   "carried": true
+   "change_pct": 0
   },
   "page_views": {
-   "v": 106,
-   "change_pct": 186.5,
-   "carried": true
+   "v": 120,
+   "change_pct": 224.3
   },
   "unique_visitors": {
-   "v": 39,
-   "change_pct": 105.3,
-   "carried": true
+   "v": 44,
+   "change_pct": 144.4
   },
-  "impressions_prior": 1410,
-  "impressions_now": 1708,
+  "impressions_prior": 1529,
+  "impressions_now": 1660,
   "followers_by_location_count": {
-   "Ho Chi Minh City": 23,
+   "Ho Chi Minh City": 24,
    "Melbourne": 22,
    "Brisbane": 3,
-   "Metro Manila": 3,
    "Mumbai": 2,
    "Delhi": 2,
    "Karachi": 2,
-   "Other": 42
+   "Metro Manila": 2,
+   "Angeles": 1,
+   "Kolkata": 1,
+   "Vacoas": 1,
+   "Other": 40
   },
   "followers_by_location_pct": {
-   "Ho Chi Minh City": 22.8,
-   "Melbourne": 21.8,
+   "Ho Chi Minh City": 24.0,
+   "Melbourne": 22.0,
    "Brisbane": 3.0,
-   "Metro Manila": 3.0,
    "Mumbai": 2.0,
    "Delhi": 2.0,
    "Karachi": 2.0,
-   "Other": 41.6
+   "Metro Manila": 2.0,
+   "Angeles": 1.0,
+   "Kolkata": 1.0,
+   "Vacoas": 1.0,
+   "Other": 40.0
   },
-  "followers_by_location_note": "CARRIED from 2026-08-21 — LinkedIn was not readable today. Last verified reading: Ho Chi Minh City 22.8% (23) ahead of Greater Melbourne 21.8% (22).",
+  "followers_by_location_note": "Read live on 2026-08-24. Ho Chi Minh City widened its lead: 24 (24%) against Greater Melbourne 22 (22%). Melbourne is flat at 22 while HCMC added one, so the gap is opening rather than closing. Total followers fell 101 to 100 even though 47 new followers were gained in the last 30 days, meaning unfollows offset the gains.",
   "visitors_by_job_function": {
-   "Business Development": 15,
+   "Business Development": 16,
    "Arts and Design": 14,
-   "Engineering": 11,
-   "Information Technology": 4,
-   "Marketing": 4,
-   "Real Estate": 3,
-   "Research": 2,
-   "Operations": 2,
-   "Program and Project Management": 2,
-   "Human Resources": 1
+   "Engineering": 8,
+   "Information Technology": 6,
+   "Product Management": 6,
+   "Human Resources": 5,
+   "Media and Communication": 4,
+   "Sales": 3,
+   "Real Estate": 2,
+   "Research": 2
   },
-  "visitors_by_job_function_note": "CARRIED from 2026-08-21 (itself carried from 2026-08-20). LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 106 page views.",
+  "visitors_by_job_function_note": "Read live on 2026-08-24 and materially reshuffled from the 21 Aug carried values: Engineering fell 11 to 8 while Product Management (6) and Media and Communication (4) entered the top ten and Human Resources rose 1 to 5. LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 120 page views.",
   "page_views_by_device": {
-   "Desktop": 69,
-   "Mobile": 37
+   "Desktop": 80,
+   "Mobile": 40
   }
  },
  "notes": {
   "vi": [
-   "Cửa sổ Meta trượt ba ngày sang 26/7 – 22/8 (không có lần chạy cuối tuần 22 và 23/8). Facebook và Instagram đọc trực tiếp; YouTube Studio và LinkedIn đều KHÔNG đọc được hôm nay.",
-   "Facebook: views 4.898 (▲57,4%), người xem 548 (▲57,5%), lượt truy cập 274 (▲93%), tương tác 162 (▲40,9%), video 3 giây 142 (▲65,1%). Cả bốn chuỗi 28 ngày khớp đúng KPI.",
-   "Lượt truy cập Trang Facebook là chỉ số mạnh nhất kỳ này: 261 → 274 và mức tăng so với kỳ trước nhảy từ ▲86,4% lên ▲93% — người xem đang chủ động bấm vào Trang chứ không chỉ lướt qua.",
-   "Thời gian xem Facebook đảo chiều đẹp: 43 phút 20 giây → 53 phút 9 giây, và mức tăng so kỳ trước dày lên từ ▲5,9% lên ▲27,7%. Cảnh báo watch time của kỳ trước đã được gỡ.",
-   "Bài Facebook 17/8 về 3D coordination tăng mạnh nhất cuối tuần: 119 → 146 reach. Bài fire pit 18/8 lên 181 → 191 và vẫn mạnh nhất tháng; bài hồ nước 20/8 lên 45 → 67.",
-   "Bài mới 21/8 (bài viết pre-build clarity cho builder Melbourne) mở hàng yếu nhất cửa sổ: 35 reach, 2 reaction, 0 chia sẻ. Bài dẫn link ra website vẫn kém xa bài chi tiết vật liệu.",
-   "Instagram hạ nhiệt sau cú nổ 20/8: views 925 → 887 (▲26,5%), reach 317 → 281 (▲56,1%), tương tác 74 → 72 (▲80%). Không có bài mới nào từ 20/8 nên đà giảm là do thiếu nội dung, không phải do thuật toán.",
-   "Cơ cấu Instagram đảo ngược rõ: views từ follower lên 55,8% (từ 48,1%) trong khi reach từ follower chỉ còn 19 trên 281 (6,8%). Tệp nhỏ xem nhiều lần, người lạ thì tiếp cận một lần rồi thôi.",
-   "YouTube Studio trả về trang 'không có quyền xem' hai lần — profile Chrome này đã mất quyền vào kênh DXLVNG. Views 60 và watch time 0,1 giờ là số GIỮ từ 21/8, không phải số hôm nay. Đọc trực tiếp được: 4 subscriber, 27 video, video hồ nước nay 2 view công khai.",
-   "LinkedIn bị authwall — profile Chrome đã đăng xuất khỏi LinkedIn. Toàn bộ số LinkedIn trong bản này (follower 101, impressions 1.708, reactions 62, lượt xem trang 106, cơ cấu vị trí và chức năng) là số GIỮ từ 21/8, chưa xác nhận lại.",
-   "Hành động 1: khôi phục quyền truy cập — đăng nhập lại LinkedIn và cấp lại quyền Studio kênh DXLVNG trên đúng profile Chrome này. Hai kênh đang chạy mù, và LinkedIn là kênh có impressions lớn nhất.",
-   "Hành động 2: Instagram cần bài mới. Bốn ngày im lặng đã kéo reach xuống 317 → 281. Bài chi tiết vật liệu kèm link BIM (hồ nước 141, trần StarEFX 111) là định dạng duy nhất vượt ngưỡng ba con số — lên lịch một bài cùng kiểu ngay tuần này."
+   "Chạy lại lần hai trong ngày. Lần chạy sáng nay không mở được YouTube Studio và LinkedIn; lần này CẢ BỐN kênh đều đọc trực tiếp. Bản snapshot này thay toàn bộ số giữ bằng số thật.",
+   "Facebook và Instagram đọc lại: không có giá trị nào thay đổi so với lần đọc sáng nay. FB views 4.898 (▲57,4%), truy cập 274 (▲93%), tương tác 162 (▲40,9%), watch time 53 phút 9 giây (▲27,7%). IG views 887, reach 281, tương tác 72.",
+   "YouTube đã lấy lại quyền Studio. Lần đầu tiên cửa sổ YouTube trùng khít cửa sổ Meta: 26/7 – 22/8. Views 55 (không phải 60 như số giữ — cửa sổ trượt làm rơi 5 view), watch time vẫn 0,1 giờ (▼97%). Bảng 8 video cộng đúng bằng 55.",
+   "Short StarEFX vẫn gánh 47 trong 55 views của cả kênh (85%). Bảy video còn lại cộng lại được 8 view. Đây không phải kênh phân phối, mới là kho lưu trữ.",
+   "Video hồ nước 20/8 sau 3 ngày 19 giờ đạt 2 view, CTR 10,0% và tỷ lệ xem trung bình 50,0% — tỷ lệ giữ chân tốt trên một lượng hiển thị rất nhỏ. Vấn đề là impression, không phải nội dung.",
+   "LinkedIn đã đăng nhập lại và cửa sổ cuối cùng cũng nhích bốn ngày sang 24/7 – 22/8 — lần đầu kể từ bản 19/8. Mọi số LinkedIn dưới đây là số đọc mới, không có số giữ nào.",
+   "Impressions 1.708 → 1.660 và mức tăng so kỳ trước co lại mạnh từ ▲21,1% xuống ▲8,6%. Reactions 62 → 60 (▼34,8%). Vẫn 0 comment — con số này chưa đổi suốt nhiều kỳ.",
+   "Lượt xem trang LinkedIn là điểm sáng thật: 106 → 120 (▲224,3%) và khách duy nhất 39 → 44 (▲144,4%). Máy tính chiếm 80 trên 120 lượt xem (67%).",
+   "Follower LinkedIn giảm 101 → 100 dù có 47 follower mới trong 30 ngày (▲840%). Tức là số người bỏ theo dõi đã nuốt hết phần tăng — đáng theo dõi sát.",
+   "TP.HCM nới rộng khoảng cách: 24 (24%) so với Greater Melbourne 22 (22%). Melbourne đứng yên còn TP.HCM tăng thêm một. Khoảng cách đang mở ra chứ không thu hẹp.",
+   "Cơ cấu chức năng khách truy cập xáo trộn rõ: Kỹ thuật rơi 11 → 8, trong khi Quản lý sản phẩm (6) và Truyền thông (4) lọt vào top 10. Phát triển kinh doanh (16) và Nghệ thuật & Thiết kế (14) vẫn dẫn đầu.",
+   "Hành động 1: Instagram vẫn im lặng từ 20/8 — đó là lý do reach tụt 317 → 281. Lên lịch một bài chi tiết vật liệu kèm link BIM ngay tuần này; đây là định dạng duy nhất vượt ba con số.",
+   "Hành động 2: LinkedIn có 120 lượt xem trang nhưng mất một follower ròng. Trang đang thu hút người xem mà không giữ được họ. Rà lại phần giới thiệu trang và bài ghim trước khi đẩy thêm reach."
   ],
   "en": [
-   "The Meta window rolled three days forward to 26 Jul – 22 Aug (no weekend runs on 22 or 23 Aug). Facebook and Instagram were read live; YouTube Studio and LinkedIn could NOT be read today.",
-   "Facebook: views 4,898 (▲57.4%), viewers 548 (▲57.5%), visits 274 (▲93%), interactions 162 (▲40.9%), video 3s 142 (▲65.1%). All four 28-day series reconcile exactly to their KPIs.",
-   "Facebook Page visits are the strongest metric this cycle: 261 → 274 with the change against the prior period rising from ▲86.4% to ▲93% — people are actively clicking through to the Page, not just scrolling past.",
-   "Facebook watch time reversed cleanly: 43m 20s → 53m 9s, and the margin against the prior period thickened from ▲5.9% to ▲27.7%. Last cycle's watch-time warning is cleared.",
-   "The 17 Aug 3D-coordination post gained the most over the weekend: 119 → 146 reach. The 18 Aug fire pit went 181 → 191 and is still the strongest post of the month; the 20 Aug pond post went 45 → 67.",
-   "The new 21 Aug post — the pre-build clarity article for Melbourne builders — opened weakest of anything in the window: 35 reach, 2 reactions, 0 shares. Link-out posts still trail material-detail posts by a wide margin.",
-   "Instagram cooled after the 20 Aug spike: views 925 → 887 (▲26.5%), reach 317 → 281 (▲56.1%), interactions 74 → 72 (▲80%). Nothing has been posted since 20 Aug, so the decline is a content gap rather than an algorithmic one.",
-   "The Instagram mix inverted: views from followers rose to 55.8% (from 48.1%) while follower reach fell to 19 of 281 (6.8%). The small base is watching repeatedly; strangers reach once and move on.",
-   "YouTube Studio returned a 'no permission to view this page' interstitial twice — this Chrome profile has lost access to the DXLVNG channel. Views 60 and watch time 0.1 hrs are CARRIED from 21 Aug, not today's figures. Read live: 4 subscribers, 27 videos, and the pond video now on 2 public views.",
-   "LinkedIn hit the authwall — this Chrome profile is signed out. Every LinkedIn number in this snapshot (101 followers, 1,708 impressions, 62 reactions, 106 page views, the location and job-function mixes) is CARRIED from 21 Aug and was not verified.",
-   "Action 1: restore access — sign back into LinkedIn and re-grant DXLVNG Studio permission on this exact Chrome profile. Two channels are currently reporting blind, and LinkedIn carries the largest impression volume of the four.",
-   "Action 2: Instagram needs a post. Four silent days pulled reach from 317 to 281. Material-detail posts carrying an interactive BIM link (pond 141, StarEFX ceiling 111) are the only format that clears three figures — schedule another this week."
+   "Second run of the day. This morning's pass could not open YouTube Studio or LinkedIn; this one read ALL FOUR channels live. This snapshot replaces every carried value with a real reading.",
+   "Facebook and Instagram were re-read and nothing changed from this morning. FB views 4,898 (▲57.4%), visits 274 (▲93%), interactions 162 (▲40.9%), watch time 53m 9s (▲27.7%). IG views 887, reach 281, interactions 72.",
+   "YouTube Studio access is back. For the first time the YouTube window matches the Meta window exactly: 26 Jul – 22 Aug. Views 55, not the carried 60 — the roll-forward dropped 5 views. Watch time still 0.1 hrs (▼97%). The 8-row content table sums to 55 exactly.",
+   "The StarEFX Short still carries 47 of the channel's 55 views (85%). The other seven videos add up to 8 views between them. This is a storage location, not a distribution channel.",
+   "The 20 Aug pond video is on 2 views after 3 days 19 hours, with a 10.0% click-through rate and a 50.0% average view percentage — strong retention on a tiny number of impressions. The constraint is impressions, not the content.",
+   "LinkedIn is signed back in and its window finally advanced four days to 24 Jul – 22 Aug — the first move since the 19 Aug snapshot. Every LinkedIn figure below is a fresh reading with nothing carried.",
+   "Impressions went 1,708 → 1,660 and the margin against the prior period compressed sharply from ▲21.1% to ▲8.6%. Reactions 62 → 60 (▼34.8%). Still 0 comments, unchanged across many cycles.",
+   "LinkedIn page views are the genuine win: 106 → 120 (▲224.3%) with unique visitors 39 → 44 (▲144.4%). Desktop supplies 80 of the 120 views (67%).",
+   "Followers fell 101 → 100 despite 47 new followers in the last 30 days (▲840%). Unfollows are consuming the entire gain, which is worth watching closely.",
+   "Ho Chi Minh City widened its lead: 24 (24%) against Greater Melbourne's 22 (22%). Melbourne is flat while HCMC added one, so the gap is opening rather than closing.",
+   "The visitor job-function mix reshuffled: Engineering fell 11 → 8 while Product Management (6) and Media and Communication (4) entered the top ten. Business Development (16) and Arts and Design (14) still lead.",
+   "Action 1: Instagram has been silent since 20 Aug, which is why reach fell 317 → 281. Schedule a material-detail post with an interactive BIM link this week; it is the only format that clears three figures.",
+   "Action 2: LinkedIn drew 120 page views but lost a net follower. The page is attracting visitors and failing to convert them. Review the page tagline and pinned post before pushing more reach at it."
   ]
  }
 }
