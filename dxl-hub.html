@@ -26,7 +26,8 @@
   <span id="brand">DX Living · Marketing Hub</span>
   <button class="tab on" data-i="0">Social</button>
   <button class="tab" data-i="1">SEO</button>
-  <button class="tab" data-i="2">Website Audit</button>
+  <button class="tab" data-i="2">SEO Weekly</button>
+  <button class="tab" data-i="3">Website Audit</button>
   <span id="spacer"></span>
   <a id="open" target="_blank" rel="noopener">Open in new tab ↗</a>
 </div>
@@ -34,6 +35,7 @@
 <div id="stage">
   <iframe class="on" src="https://tram-fdx.github.io/dxl-social-dashboard-site/"></iframe>
   <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/"></iframe>
+  <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/weekly/2026-08-22.html"></iframe>
   <iframe data-src="https://tram-fdx.github.io/dxl-seo-audit/"></iframe>
 </div>
 
@@ -50,13 +52,13 @@
       if (n === i && !f.src) f.src = f.dataset.src; // lazy load
     });
     openLink.href = urls[i];
-    location.hash = ['social', 'seo', 'audit'][i];
+    location.hash = ['social', 'seo', 'weekly', 'audit'][i];
   }
 
   tabs.forEach(t => t.onclick = () => show(+t.dataset.i));
   openLink.href = urls[0];
 
-  const start = ['social', 'seo', 'audit'].indexOf(location.hash.slice(1));
+  const start = ['social', 'seo', 'weekly', 'audit'].indexOf(location.hash.slice(1));
   if (start > 0) show(start);
 
   // Iframes chi load duoc khi trang nay chay tren cung origin tram-fdx.github.io.
