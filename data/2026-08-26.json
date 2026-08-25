@@ -1,0 +1,746 @@
+{
+ "date": "2026-08-26",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "All FOUR channels read LIVE from Chrome (macOS, local browser) on 2026-08-26. Facebook and Instagram read from Meta Business Suite Insights; the Meta window rolled one day forward to 28 Jul - 24 Aug 2026. All four Facebook 28-day series reconcile exactly to their KPIs: views 4939 (displayed 4.9K), visits 281, interactions 187, video 3s 145. Instagram views (894) and interactions (74) also sum exactly; Instagram reach is de-duplicated per person over the window so its daily series (413) does not sum to the 299 KPI, which is expected. Note that Meta's own follower/non-follower reach split for Instagram (20 + 280) sums to 300 against a 299 total - that is Meta rounding, read as displayed and not adjusted. Total Facebook followers (115) and Instagram followers (46) read at business.facebook.com/latest/; Instagram post count (113) and following (35) read at instagram.com/dxliving.au. IMPORTANT METRIC NOTE: the Facebook per-post figure carried in this series (and in every prior snapshot) is the number shown in the Business Suite Insights recent-content panel, which is VIEWS, not reach. This run did NOT re-open the Business Suite content table, so no fresh true-reach figures were read; the values under facebook.post_true_reach are the 2026-08-25 readings and are explicitly marked carried. The Facebook recent-content panel now returns only seven posts plus one Story, so the 14 Aug and 15 Aug posts are no longer visible in it even though they remain inside the 28-day window; they are therefore absent from all_recent_posts rather than carried at stale values. The same applies to the 11 Aug Instagram StarEFX post. Instagram per-post figures ARE true reach, read from the Instagram content table. YouTube Studio read live for Jul 28 - Aug 24, 2026, matching the Meta window exactly: views 60, watch time 0.1 hrs (96% less than the previous 28 days). Studio showed '20 more than usual' - a typical-performance comparison, not a prior-period percentage - so views_prior and the views change percentage are null rather than derived. The top-content table rendered fully this run and reconciles exactly: nine rows summing to 60. Subscribers (4) read from Studio realtime; the library split (15 long-form + 13 Shorts = 28) read from the Studio content tabs. LinkedIn Content, Followers and Visitors admin pages all read live and LinkedIn's window ADVANCED one day to 25 Jul - 23 Aug 2026 after three static cycles, so every LinkedIn figure changed. impressions_prior (1395) is derived from the displayed increase of 14.5%, not read directly. Facebook link_clicks remains carried from the 2026-08-07 snapshot. No estimated values. No Supermetrics.",
+ "window": {
+  "en": "Last 28 days: 28 Jul – 24 Aug 2026",
+  "vi": "28 ngày qua: 28/7 – 24/8/2026"
+ },
+ "windows": {
+  "meta": "2026-07-28 → 2026-08-24",
+  "youtube": "2026-07-28 → 2026-08-24",
+  "linkedin": "2026-07-25 → 2026-08-23"
+ },
+ "facebook": {
+  "followers": 115,
+  "views": {
+   "v": 4939,
+   "change_pct": 56.2
+  },
+  "viewers": {
+   "v": 546,
+   "change_pct": 62.0
+  },
+  "visits": {
+   "v": 281,
+   "change_pct": 105.1
+  },
+  "interactions": {
+   "v": 187,
+   "change_pct": 65.5
+  },
+  "video_3s": {
+   "v": 145,
+   "change_pct": 48.0
+  },
+  "link_clicks": {
+   "v": 17,
+   "change_pct": 88.9,
+   "carried": true
+  },
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": 50
+  },
+  "follows": 3,
+  "unfollows": 0,
+  "views_from_followers_pct": 44.1,
+  "views_from_non_followers_pct": 55.9,
+  "interactions_from_followers": 116,
+  "interactions_from_non_followers": 71,
+  "watch_time": "53m 26s",
+  "watch_time_change_pct": 17.8,
+  "conversations_started": 2,
+  "daily": {
+   "views": [
+    329,
+    224,
+    174,
+    123,
+    49,
+    87,
+    575,
+    260,
+    215,
+    212,
+    154,
+    78,
+    63,
+    371,
+    422,
+    129,
+    91,
+    157,
+    111,
+    119,
+    122,
+    266,
+    180,
+    109,
+    77,
+    54,
+    156,
+    32
+   ],
+   "interactions": [
+    15,
+    5,
+    7,
+    1,
+    0,
+    0,
+    26,
+    10,
+    5,
+    7,
+    11,
+    2,
+    2,
+    8,
+    15,
+    3,
+    8,
+    4,
+    3,
+    1,
+    3,
+    10,
+    10,
+    0,
+    3,
+    1,
+    23,
+    4
+   ],
+   "visits": [
+    33,
+    13,
+    17,
+    13,
+    3,
+    23,
+    39,
+    5,
+    8,
+    3,
+    7,
+    0,
+    4,
+    32,
+    2,
+    1,
+    4,
+    11,
+    3,
+    4,
+    6,
+    22,
+    3,
+    7,
+    7,
+    4,
+    4,
+    3
+   ],
+   "video_3s": [
+    3,
+    11,
+    1,
+    2,
+    0,
+    0,
+    4,
+    4,
+    3,
+    0,
+    1,
+    0,
+    0,
+    12,
+    24,
+    6,
+    3,
+    3,
+    0,
+    12,
+    5,
+    5,
+    12,
+    12,
+    4,
+    1,
+    10,
+    7
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures below are VIEWS from the Business Suite Insights recent-content panel, the same source every prior snapshot used. The panel now returns only seven posts plus one Story, so the 14 Aug and 15 Aug posts are not listed even though they remain inside the window.",
+  "post_true_reach": {
+   "24 Aug": 19,
+   "21 Aug": 20,
+   "20 Aug": 45,
+   "19 Aug": 45,
+   "18 Aug": 73,
+   "carried_from": "2026-08-25",
+   "carried": true
+  },
+  "story": {
+   "d": "25 Aug",
+   "t": "Your story",
+   "views": 9,
+   "react": 0,
+   "com": 0,
+   "sh": 0
+  },
+  "top_posts": [
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 199,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "17 Aug",
+    "t": "How 3D coordination reduces design conflicts before construction",
+    "reach": 153,
+    "react": 3,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 106,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "20 Aug",
+    "t": "Project 251 | the foyer pond coordinated in the digital twin before construction",
+    "reach": 79,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "21 Aug",
+    "t": "Pre-build clarity for Melbourne custom home builders — the full guide on dxliving.com",
+    "reach": 51,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "25 Aug",
+    "t": "Procurement becomes more predictable when material and fixture decisions are resolved before ordering",
+    "reach": 32,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "25 Aug",
+    "t": "Procurement becomes more predictable when material and fixture decisions are resolved before ordering",
+    "reach": 32,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "24 Aug",
+    "t": "The cost of a project decision changes as the project moves forward",
+    "reach": 32,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "21 Aug",
+    "t": "Pre-build clarity for Melbourne custom home builders — the full guide on dxliving.com",
+    "reach": 51,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "20 Aug",
+    "t": "Project 251 | the foyer pond coordinated in the digital twin before construction",
+    "reach": 79,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 106,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 199,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "17 Aug",
+    "t": "How 3D coordination reduces design conflicts before construction",
+    "reach": 153,
+    "react": 3,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "new_post_note": "A new 25 Aug post entered the window - a procurement-predictability brand post - and opened at 32 views, 5 reactions and 1 share, the strongest first-day reaction count of any recent post, alongside a Story on 9 views. The 27 Jul day rolled out of the window as it advanced to 28 Jul. Every visible surviving post kept climbing: the 19 Aug stone-support post 105 -> 106, the 20 Aug pond post 75 -> 79 and the 21 Aug guide post 44 -> 51. The 18 Aug fire pit held at 199 and the 17 Aug article at 153."
+ },
+ "instagram": {
+  "followers": 46,
+  "posts_total": 113,
+  "following": 35,
+  "views": {
+   "v": 894,
+   "change_pct": 24.2
+  },
+  "reach": {
+   "v": 299,
+   "change_pct": 67.0
+  },
+  "interactions": {
+   "v": 74,
+   "change_pct": 80.5
+  },
+  "views_from_followers_pct": 54.4,
+  "views_from_non_followers_pct": 45.6,
+  "views_from_followers": 59,
+  "views_from_non_followers": 835,
+  "reach_from_followers": 20,
+  "reach_from_non_followers": 280,
+  "reach_from_followers_change_pct": 5.3,
+  "reach_from_non_followers_change_pct": 73.9,
+  "interactions_from_followers_pct": 80,
+  "interactions_from_non_followers_pct": 20,
+  "daily": {
+   "views": [
+    98,
+    49,
+    11,
+    12,
+    3,
+    8,
+    60,
+    7,
+    21,
+    13,
+    16,
+    6,
+    1,
+    17,
+    107,
+    32,
+    31,
+    17,
+    9,
+    7,
+    9,
+    46,
+    160,
+    84,
+    26,
+    3,
+    21,
+    20
+   ],
+   "reach": [
+    27,
+    11,
+    4,
+    4,
+    2,
+    2,
+    9,
+    1,
+    5,
+    5,
+    8,
+    4,
+    1,
+    4,
+    87,
+    25,
+    8,
+    9,
+    4,
+    2,
+    2,
+    9,
+    131,
+    19,
+    4,
+    1,
+    12,
+    13
+   ],
+   "interactions": [
+    7,
+    1,
+    2,
+    0,
+    1,
+    1,
+    2,
+    1,
+    4,
+    3,
+    3,
+    0,
+    0,
+    2,
+    6,
+    1,
+    4,
+    2,
+    0,
+    0,
+    2,
+    4,
+    16,
+    8,
+    0,
+    0,
+    1,
+    3
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series (413) does not sum to the 299 KPI. Views (894) and interactions (74) do sum to their KPIs, as do all four Facebook series. Meta's follower/non-follower reach split (20 + 280 = 300) also exceeds the 299 total by one through its own rounding; both were read as displayed.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "20 Aug",
+    "t": "Project 251 | the foyer pond coordinated in the digital twin before construction",
+    "reach": 142,
+    "react": 8,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "24 Aug",
+    "t": "The cost of a project decision changes as the project moves forward",
+    "reach": 24,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary",
+    "reach": 13,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 12,
+    "react": 7,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 12,
+    "react": 7,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination",
+    "reach": 9,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "25 Aug",
+    "t": "Procurement becomes more predictable when material and fixture decisions are resolved before ordering",
+    "reach": 3,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "24 Aug",
+    "t": "The cost of a project decision changes as the project moves forward",
+    "reach": 24,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "20 Aug",
+    "t": "Project 251 | the foyer pond coordinated in the digital twin before construction",
+    "reach": 142,
+    "react": 8,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "19 Aug",
+    "t": "Project 251 | a natural stone element carries more project information than meets the eye",
+    "reach": 12,
+    "react": 7,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "18 Aug",
+    "t": "Project 251 | the fire pit and its landscape coordinated in the digital twin",
+    "reach": 12,
+    "react": 7,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Aug",
+    "t": "Most construction delays don't begin on site — they begin with coordination",
+    "reach": 9,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "14 Aug",
+    "t": "Project 251 | a bespoke stone element coordinated before fabrication",
+    "reach": 8,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "13 Aug",
+    "t": "Shadow gap, tolerance, reveal, junction, clearance — the quiet vocabulary",
+    "reach": 13,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "post_note": "Instagram published two days running for the first time in weeks: the 25 Aug procurement post is only hours old and sits at 3 reach but already has 5 likes and 1 share, and the 24 Aug Reel matured 20 -> 24 reach. Post count rose 112 -> 113. The 20 Aug pond post holds at 142 reach and remains the account's strongest. The 11 Aug StarEFX ceiling post (111 reach at the last read) is still inside the window but has scrolled off the eight-row content panel, so it is not listed rather than carried at a stale value."
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 28,
+  "videos_long_form": 15,
+  "videos_shorts": 13,
+  "views_28d": {
+   "v": 60,
+   "change_pct": null
+  },
+  "views_change_text": "20 more than usual (YouTube Studio reported a typical-performance comparison, not a prior-period percentage)",
+  "watch_time_hours": {
+   "v": 0.1,
+   "change_pct": -96.0
+  },
+  "latest_video_views": {
+   "v": 3,
+   "change_pct": null
+  },
+  "views_now": 60,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YouTube Studio read LIVE on 2026-08-26 for Jul 28 - Aug 24, 2026, matching the Meta window exactly for a third cycle. Views 60 (up from 56), watch time 0.1 hrs (96% less than the previous 28 days). Studio showed '20 more than usual' rather than a prior-period percentage, so views_prior and the views change are null rather than derived. The top-content table rendered fully this run and reconciles exactly: nine rows summing to 60, the channel total, with nothing left unenumerated. The Shorts-versus-long-form view split was NOT broken out by Studio this run and is left null rather than inferred from titles. Subscribers 4 from Studio realtime; the library split of 15 long-form and 13 Shorts (28 total) read from the Studio content tabs.",
+  "new_upload": {
+   "t": "DX Living | Resolve earlier, build with greater certainty!",
+   "date": "2026-08-24",
+   "views_in_window": 3,
+   "dur": "0:04",
+   "ctr": null,
+   "avg_view_pct": "12.3%",
+   "age_at_read": "first 1 day 18 hours"
+  },
+  "top_videos": [
+   {
+    "t": "Project 251 | LightEFX's StarEFX fibre optic ceiling (Short)",
+    "v": 47,
+    "dur": "0:05",
+    "avg_view_pct": "16.3%"
+   },
+   {
+    "t": "Project 251 | Explore the pond through the interactive BIM model",
+    "v": 3,
+    "dur": "0:16",
+    "avg_view_pct": "37.6%"
+   },
+   {
+    "t": "DX Living | Resolve earlier, build with greater certainty!",
+    "v": 3,
+    "dur": "0:04",
+    "avg_view_pct": "12.3%"
+   },
+   {
+    "t": "DX Living | Will your home still feel right decades from now?",
+    "v": 2,
+    "dur": "0:34",
+    "avg_view_pct": "86.9%"
+   },
+   {
+    "t": "DX Living | Setting the visual standard for construction sites",
+    "v": 1,
+    "dur": "0:18",
+    "avg_view_pct": "50.4%"
+   },
+   {
+    "t": "DX Living | Featuring Nagambie Project",
+    "v": 1,
+    "dur": "0:12",
+    "avg_view_pct": "39.5%"
+   },
+   {
+    "t": "DX Living | Project 2238 Mosman, NSW",
+    "v": 1,
+    "dur": "0:38",
+    "avg_view_pct": "74.6%"
+   },
+   {
+    "t": "251 PROJECT — PROGRESS UPDATE (Short)",
+    "v": 1,
+    "dur": null,
+    "avg_view_pct": null
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
+    "v": 1,
+    "dur": "0:30",
+    "avg_view_pct": "97.8%"
+   }
+  ]
+ },
+ "linkedin": {
+  "followers": 100,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn Content, Followers and Visitors admin pages were ALL read live on 2026-08-26. LinkedIn's own date range ADVANCED one day to 25 Jul - 23 Aug 2026 after three static cycles, so every figure below changed from the 2026-08-25 read. impressions_prior (1395) is derived from the displayed increase of 14.5%, not read directly.",
+  "new_followers_30d": {
+   "v": 47,
+   "change_pct": 840.0
+  },
+  "impressions": {
+   "v": 1597,
+   "change_pct": 14.5
+  },
+  "reactions": {
+   "v": 55,
+   "change_pct": 1.9
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 2,
+   "change_pct": 0
+  },
+  "page_views": {
+   "v": 123,
+   "change_pct": 232.4
+  },
+  "unique_visitors": {
+   "v": 45,
+   "change_pct": 150.0
+  },
+  "impressions_prior": 1395,
+  "impressions_now": 1597,
+  "followers_by_location_count": {
+   "Ho Chi Minh City": 24,
+   "Melbourne": 22,
+   "Brisbane": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Metro Manila": 2,
+   "Kolkata": 1,
+   "Angeles": 1,
+   "Vacoas": 1,
+   "Other": 40
+  },
+  "followers_by_location_pct": {
+   "Ho Chi Minh City": 24.0,
+   "Melbourne": 22.0,
+   "Brisbane": 3.0,
+   "Mumbai": 2.0,
+   "Delhi": 2.0,
+   "Karachi": 2.0,
+   "Metro Manila": 2.0,
+   "Kolkata": 1.0,
+   "Angeles": 1.0,
+   "Vacoas": 1.0,
+   "Other": 40.0
+  },
+  "followers_by_location_note": "Read live on 2026-08-26 and unchanged from 25 Aug even though LinkedIn's window advanced a day, so the geographic split is stable. Ho Chi Minh City holds its lead at 24 (24%) against Greater Melbourne 22 (22%). Total followers remain 100 despite 47 new followers in the last 30 days, so unfollows are still offsetting the gains.",
+  "visitors_by_job_function": {
+   "Arts and Design": 16,
+   "Business Development": 16,
+   "Engineering": 9,
+   "Product Management": 8,
+   "Information Technology": 6,
+   "Media and Communication": 6,
+   "Human Resources": 2,
+   "Research": 2,
+   "Marketing": 2,
+   "Program and Project Management": 2
+  },
+  "visitors_by_job_function_note": "Read live on 2026-08-26. Arts and Design and Business Development stay tied at the top on 16 each (13%). Engineering rose 8 -> 9, Product Management 7 -> 8 and Media and Communication 4 -> 6, while Human Resources, Research and Program and Project Management (2 each) replaced Sales, Operations and Purchasing in the top ten. LinkedIn assigns a visitor to more than one function, so these counts do not sum to the 123 page views.",
+  "page_views_by_device": {
+   "Desktop": 80,
+   "Mobile": 43
+  }
+ },
+ "notes": {
+  "vi": [
+   "Cả bốn kênh đọc trực tiếp. Cửa sổ Meta và YouTube trượt một ngày sang 28/7 – 24/8; cửa sổ LinkedIn cuối cùng cũng nhích một ngày sang 25/7 – 23/8 sau ba kỳ đứng yên, nên mọi số LinkedIn đều đổi.",
+   "Facebook trái chiều: views 4.981 → 4.939 (▲56,2%), lượt truy cập 278 → 281 (▲105,1%), tương tác 183 → 187 (▲65,5%), nhưng video 3 giây giảm 152 → 145 (▲48%). Cả bốn chuỗi 28 ngày khớp đúng KPI.",
+   "Thời gian xem Facebook trả lại phần tăng kỳ trước: 55 phút 46 giây → 53 phút 26 giây, biên so kỳ trước từ ▲35,1% xuống ▲17,8%. Ngày 27/7 rời cửa sổ mang nhiều thời gian xem hơn ngày 24/8 thay chỗ.",
+   "Bài Facebook mới ngày 25/8 về tính dự đoán được trong mua sắm vật tư mở hàng ở 32 view, 5 cảm xúc và 1 chia sẻ — số cảm xúc ngày đầu cao nhất trong các bài gần đây — kèm một Story đạt 9 view.",
+   "Lưu ý về chỉ số: con số từng bài Facebook trong chuỗi này là LƯỢT XEM lấy từ bảng nội dung gần đây của Business Suite, không phải reach. Lần chạy này KHÔNG mở lại bảng nội dung nên không có reach thật mới; giá trị trong post_true_reach là số đọc ngày 25/8 và đã đánh dấu là số giữ.",
+   "Bảng nội dung gần đây của Facebook giờ chỉ trả về bảy bài, nên bài 14/8 và 15/8 không còn thấy dù vẫn nằm trong cửa sổ 28 ngày. Chúng bị bỏ khỏi danh sách thay vì giữ số cũ. Mọi bài còn thấy đều tăng: 19/8 lên 106, 20/8 lên 79, 21/8 lên 51.",
+   "Instagram đăng hai ngày liên tiếp lần đầu sau nhiều tuần. Bài 25/8 mới vài giờ, mới ở 3 reach nhưng đã có 5 like và 1 chia sẻ; Reel 24/8 chín dần 20 → 24 reach. Số bài 112 → 113.",
+   "Instagram tăng toàn diện: views 888 → 894 (▲24,2%), reach 291 → 299 (▲67%), tương tác 71 → 74 (▲80,5%). Reach từ người chưa follow 273 → 280 trong khi reach từ follower chỉ nhích 19 → 20.",
+   "YouTube views 56 → 60 và bảng video gần đây dựng đầy đủ lần đầu sau vài kỳ, khớp chính xác chín dòng cộng đúng 60. Riêng Short StarEFX gánh 47 (78%); không video nào khác vượt 3 view trong 28 ngày.",
+   "Kho video YouTube đọc từ Studio: 15 video dài + 13 Shorts = 28. Watch time vẫn 0,1 giờ (▼96%). Video 24/8 đạt 3 view sau 1 ngày 18 giờ, tỷ lệ xem trung bình 12,3%.",
+   "LinkedIn dịch chuyển: impressions 1.660 → 1.597 nhưng biên nới từ ▲8,6% lên ▲14,5%; reactions 60 → 55 với phép so đảo chiều từ ▼34,8% thành ▲1,9%; 0 comment; lượt xem trang 120 → 123; khách duy nhất 44 → 45; follower vẫn 100 dù 47 follower mới trong 30 ngày.",
+   "Hành động 1: Cả ba kênh chính giờ cùng một hình dạng — người chưa follow mang lại gần như toàn bộ reach (FB 55,9%, IG 93,6%) trong khi tệp follower đứng yên ở 115 / 46 / 100. Tần suất đăng đã tăng; chỗ hổng là chuyển đổi thành follow. Đặt CTA theo dõi rõ ràng vào từng bài và từng Reel trong hai tuần tới rồi đo lại.",
+   "Hành động 2: LinkedIn có 123 lượt xem trang, 65% từ máy tính, nhưng 0 comment và 0 follower ròng. Đây là đối tượng đúng nhất mà chưa được khai thác — thử một bài dạng câu hỏi mở về kiểm soát chi phí dự án, đăng trong giờ làm việc Melbourne, và để founder reshare."
+  ],
+  "en": [
+   "All four channels read live. The Meta and YouTube windows rolled one day forward to 28 Jul – 24 Aug; LinkedIn's window finally advanced one day to 25 Jul – 23 Aug after three static cycles, so every LinkedIn figure changed.",
+   "Facebook was mixed: views 4,981 → 4,939 (▲56.2%), visits 278 → 281 (▲105.1%), interactions 183 → 187 (▲65.5%), but video 3-second views eased 152 → 145 (▲48%). All four 28-day series reconcile exactly to their KPIs.",
+   "Facebook watch time gave back last cycle's gain: 55m 46s → 53m 26s, with the margin against the prior period falling from ▲35.1% to ▲17.8%. The 27 Jul day that left the window carried more watch time than the 24 Aug day that replaced it.",
+   "The new 25 Aug Facebook post on procurement predictability opened at 32 views, 5 reactions and 1 share — the strongest first-day reaction count of any recent post — alongside a Story on 9 views.",
+   "Metric note: the Facebook per-post figure in this series is VIEWS from the Business Suite recent-content panel, not reach. This run did NOT re-open the content table, so no fresh true-reach figures were read; the values in post_true_reach are the 25 Aug readings and are marked as carried.",
+   "The Facebook recent-content panel now returns only seven posts, so the 14 Aug and 15 Aug posts are no longer visible even though they remain inside the 28-day window. They are dropped rather than carried at stale values. Every visible post climbed: 19 Aug to 106, 20 Aug to 79, 21 Aug to 51.",
+   "Instagram published two days running for the first time in weeks. The 25 Aug post is only hours old at 3 reach but already has 5 likes and 1 share; the 24 Aug Reel matured 20 → 24 reach. Post count 112 → 113.",
+   "Instagram improved across the board: views 888 → 894 (▲24.2%), reach 291 → 299 (▲67%), interactions 71 → 74 (▲80.5%). Reach from non-followers rose 273 → 280 while reach from followers moved only 19 → 20.",
+   "YouTube views 56 → 60 and the recent-videos table rendered fully for the first time in several cycles, reconciling exactly at nine rows summing to 60. The StarEFX Short alone carries 47 (78%); nothing else clears 3 views across 28 days.",
+   "The YouTube library read from Studio: 15 long-form videos + 13 Shorts = 28. Watch time still 0.1 hrs (▼96%). The 24 Aug upload is on 3 views after 1 day 18 hours with a 12.3% average view percentage.",
+   "LinkedIn moved: impressions 1,660 → 1,597 but the margin widened from ▲8.6% to ▲14.5%; reactions 60 → 55 with the comparison flipping from ▼34.8% to ▲1.9%; 0 comments; page views 120 → 123; unique visitors 44 → 45; followers still 100 against 47 new followers in 30 days.",
+   "Action 1: all three main channels now show the same shape — non-followers deliver nearly all the reach (FB 55.9%, IG 93.6%) while the follower base sits still at 115 / 46 / 100. Publishing frequency is up; conversion to follow is the gap. Put an explicit follow CTA on every post and Reel for the next fortnight and re-measure.",
+   "Action 2: LinkedIn has 123 page views, 65% from desktop, but 0 comments and 0 net followers. This is the best-fit audience and the least worked — try one open-question post about project cost control, published in Melbourne working hours, with the founder resharing it."
+  ]
+ }
+}
