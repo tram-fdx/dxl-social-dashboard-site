@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-26",
+  "latest": "2026-08-27",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -170,6 +170,13 @@
       "report": "archive/2026-08-26.html",
       "label_vi": "Cả bốn kênh đọc trực tiếp; cửa sổ LinkedIn nhích sang 25/7 – 23/8 sau ba kỳ đứng yên",
       "label_en": "All four channels read live; LinkedIn's window finally advanced to 25 Jul – 23 Aug"
+    },
+    {
+      "date": "2026-08-27",
+      "data": "data/2026-08-27.json",
+      "report": "archive/2026-08-27.html",
+      "label_vi": "LinkedIn bứt tốc (1.689 impressions, 77 reactions); Facebook và Instagram giảm nhẹ khi ngày 28/7 rời cửa sổ",
+      "label_en": "LinkedIn's strongest cycle on record (1,689 impressions, 77 reactions); Facebook and Instagram ease as the 28 Jul day leaves the window"
     }
   ]
 }
