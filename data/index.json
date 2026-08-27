@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-08-27",
+  "latest": "2026-08-28",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -177,6 +177,13 @@
       "report": "archive/2026-08-27.html",
       "label_vi": "LinkedIn bứt tốc (1.689 impressions, 77 reactions); Facebook và Instagram giảm nhẹ khi ngày 28/7 rời cửa sổ",
       "label_en": "LinkedIn's strongest cycle on record (1,689 impressions, 77 reactions); Facebook and Instagram ease as the 28 Jul day leaves the window"
+    },
+    {
+      "date": "2026-08-28",
+      "data": "data/2026-08-28.json",
+      "report": "archive/2026-08-28.html",
+      "label_vi": "FB views 4.767→4.684; IG follower 46→47; LI impressions 1.689→1.709; YT 59→58",
+      "label_en": "FB views 4,767→4,684; IG followers 46→47; LI impressions 1,689→1,709; YT 59→58"
     }
   ]
 }
