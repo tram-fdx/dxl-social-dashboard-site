@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-10",
+  "latest": "2026-09-11",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -233,6 +233,13 @@
       "report": "archive/2026-09-10.html",
       "label_vi": "Bài Concreet 9/9 mở hàng 173 view; YouTube bứt lên 288 view nhờ Short 8/9",
       "label_en": "9 Sep Concreet post opened at 173 views; YouTube broke out to 288 on the 8 Sep Short"
+    },
+    {
+      "date": "2026-09-11",
+      "data": "data/2026-09-11.json",
+      "report": "archive/2026-09-11.html",
+      "label_vi": "Ngày 9/9 lớn nhất chuỗi; video FB ▲72,8%; YouTube không đọc được",
+      "label_en": "9 Sep is the biggest day on record; FB video ▲72.8%; YouTube not readable"
     }
   ]
 }
