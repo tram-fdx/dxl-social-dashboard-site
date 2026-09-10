@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-09",
+  "latest": "2026-09-10",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -226,6 +226,13 @@
       "report": "archive/2026-09-09.html",
       "label_vi": "YouTube bùng: Short mới 8/9 đạt 269 view sau 13 giờ (gấp 4 lần cả cửa sổ 61); FB views 4.163→3.951 (▼20,9%) do ngày 10/8 rơi ra; LI follower trở lại 100, impressions 1.221 (▼27,3%, lần đầu bớt xấu)",
       "label_en": "YouTube breaks out: the new 8 Sep Short hit 269 views in 13 hours (4x the whole 61-view window); FB views 4,163→3,951 (▼20.9%) as 10 Aug rolled off; LI followers back to 100, impressions 1,221 (▼27.3%, first easing)"
+    },
+    {
+      "date": "2026-09-10",
+      "data": "data/2026-09-10.json",
+      "report": "archive/2026-09-10.html",
+      "label_vi": "Bài Concreet 9/9 mở hàng 173 view; YouTube bứt lên 288 view nhờ Short 8/9",
+      "label_en": "9 Sep Concreet post opened at 173 views; YouTube broke out to 288 on the 8 Sep Short"
     }
   ]
 }
