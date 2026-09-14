@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-11",
+  "latest": "2026-09-14",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -240,6 +240,13 @@
       "report": "archive/2026-09-11.html",
       "label_vi": "Chạy lại: YouTube đọc live (407 view nhờ Short 9/9 vào cửa sổ); ngày 9/9 lớn nhất cửa sổ, FB 4.284 view, IG 1.619 (▲63,4%); LinkedIn chưa nhích cửa sổ",
       "label_en": "Re-run: YouTube read live (407 views as the 9 Sep Short enters); 9 Sep is the window's biggest day, FB 4,284 views, IG 1,619 (▲63.4%); LinkedIn window not advanced"
+    },
+    {
+      "date": "2026-09-14",
+      "data": "data/2026-09-14.json",
+      "report": "archive/2026-09-14.html",
+      "label_vi": "Quét đầu tiên sau 3 ngày · FB views 4.284→4.394; IG views 1.619→1.849; LI impressions 1.226→1.446 (cửa sổ đã nhích); YT 407→409",
+      "label_en": "First scan in 3 days · FB views 4,284→4,394; IG views 1,619→1,849; LI impressions 1,226→1,446 (window advanced); YT 407→409"
     }
   ]
 }
