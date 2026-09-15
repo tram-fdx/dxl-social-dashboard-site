@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-14",
+  "latest": "2026-09-15",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -247,6 +247,13 @@
       "report": "archive/2026-09-14.html",
       "label_vi": "Quét đầu tiên sau 3 ngày · FB views 4.284→4.394; IG views 1.619→1.849; LI impressions 1.226→1.446 (cửa sổ đã nhích); YT 407→409",
       "label_en": "First scan in 3 days · FB views 4,284→4,394; IG views 1,619→1,849; LI impressions 1,226→1,446 (window advanced); YT 407→409"
+    },
+    {
+      "date": "2026-09-15",
+      "data": "data/2026-09-15.json",
+      "report": "archive/2026-09-15.html",
+      "label_vi": "Bài Concreet 14/9 vào bảng 78 view; FB views 4.391 (▼9,7%, dịu lại) và truy cập 334 (▲26%); IG 1.883 view (▲100,3%); LI 1.442 impressions; YT 413",
+      "label_en": "14 Sep Concreet post enters at 78 views; FB views 4,391 (▼9.7%, easing) and visits 334 (▲26%); IG 1,883 views (▲100.3%); LI 1,442 impressions; YT 413"
     }
   ]
 }
