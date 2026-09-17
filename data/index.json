@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-16",
+  "latest": "2026-09-17",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -261,6 +261,13 @@
       "report": "archive/2026-09-16.html",
       "label_vi": "Short YouTube mới: 120 view/18h, realtime 4→121; FB views 4.391→4.487; IG views 1.883→2.052; LI impressions 1.442→1.466 (▼4,7%)",
       "label_en": "New YouTube Short: 120 views in 18h, realtime 4→121; FB views 4,391→4,487; IG views 1,883→2,052; LI impressions 1,442→1,466 (▼4.7%)"
+    },
+    {
+      "date": "2026-09-17",
+      "data": "data/2026-09-17.json",
+      "report": "archive/2026-09-17.html",
+      "label_vi": "Short mới vào cửa sổ: YT views 409→531; video 3 giây FB 282→335 (▲151,9%) và truy cập 335→390; IG views 2.052→2.316 và reach 177→211 (▼0,9%); cửa sổ LinkedIn không dịch chuyển",
+      "label_en": "New Short enters the window: YT views 409→531; FB video 3s 282→335 (▲151.9%) and visits 335→390; IG views 2,052→2,316 and reach 177→211 (▼0.9%); LinkedIn window did not advance"
     }
   ]
 }
