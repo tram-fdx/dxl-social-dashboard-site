@@ -1,0 +1,703 @@
+{
+ "date": "2026-09-18",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-09-18 (~06:10-06:45 ICT) from Chrome on macOS. ALL FOUR channels were read LIVE: no figure is carried. Facebook and Instagram: Meta Business Suite Insights, Overview + Results pages (asset 740407369159752). The Meta window rolled ONE day forward to 20 Aug - 16 Sep 2026 (previous read covered 19 Aug - 15 Sep): 19 Aug (180 views) dropped out and 16 Sep (97) came in. All four Facebook 28-day series reconcile exactly to their KPIs: views 4353 (tile rounds to 4,4K), visits 400, interactions 153, video 3s 332. Change directions were decoded from the label colour via getComputedStyle (rgb(0,107,78)=up, rgb(162,12,23)=down), because Meta prints the percentage without a sign. Facebook link clicks read live from the Results page (4, down 66.7%), and the link-click series (1+1+2) reconciles to 4. Instagram followers from Meta Business Suite home; post count and following from instagram.com/dxliving.au. Instagram daily reach sums to 171 against a 94 KPI because Meta de-duplicates reach per person across the window - this is expected, not an error. Instagram views reconcile exactly: 2258 = 1779 followers + 479 non-followers. THE 16 SEP POST IS GONE from both the Facebook and the Instagram 'Nội dung mới đây' panels and from the Meta Business Suite published-posts list, which now jumps 17 Sep -> 15 Sep; Instagram's post count held at 126 while a new 17 Sep post was added. Three independent surfaces agree, so the 16 Sep 'Before a project moves forward' post appears to have been deleted or unpublished after yesterday's read. YouTube Studio (channel UCuxr30df_qmARRgETsruEyw) was readable this cycle, no permission error: overview for the Aug 20 - Sep 16 window, realtime card, latest-content card, and /videos/upload + /videos/short for the 15 + 16 counts. YouTube reports views as '436 more than usual' rather than a percentage against the previous period, so views_28d.change_pct is null by design. The 15 Sep Short's lifetime views were REVISED DOWN 123 -> 116 by Studio between reads, and the top-content table shows the same 116, so both agree; Studio still displays the banner that view counting was updated. youtube.new_upload.ranking_by_views is the '1 of 10' printed on the latest-content card; by views in the 28-day top-content table the Short now sits third. LinkedIn company 108389291 admin: Content, Followers and Visitors pages all read live, and the LinkedIn window DID advance this cycle to 17 Aug - 15 Sep 2026 after holding still for four reads. Trend directions from the DOM classes analytics-tools-shared-trend-text__value--increase/--decrease/--neutral. impressions_prior (1532) is derived from the displayed -0.5% against 1524 impressions, not read directly.",
+ "window": {
+  "en": "Last 28 days: 20 Aug – 16 Sep 2026",
+  "vi": "28 ngày qua: 20/8 – 16/9/2026"
+ },
+ "windows": {
+  "meta": "2026-08-20 → 2026-09-16",
+  "youtube": "2026-08-20 → 2026-09-16",
+  "linkedin": "2026-08-17 → 2026-09-15"
+ },
+ "facebook": {
+  "followers": 116,
+  "views": {
+   "v": 4353,
+   "change_pct": -12.6
+  },
+  "viewers": {
+   "v": 279,
+   "change_pct": -48.9
+  },
+  "visits": {
+   "v": 400,
+   "change_pct": 53.3
+  },
+  "interactions": {
+   "v": 153,
+   "change_pct": -10.0
+  },
+  "video_3s": {
+   "v": 332,
+   "change_pct": 149.6
+  },
+  "link_clicks": {
+   "v": 4,
+   "change_pct": -66.7
+  },
+  "net_new_followers": {
+   "v": 1,
+   "change_pct": -66.7
+  },
+  "follows": 1,
+  "unfollows": 0,
+  "views_from_followers_pct": 43.4,
+  "views_from_non_followers_pct": 56.6,
+  "views_from_followers_change_pct": -4.2,
+  "views_from_non_followers_change_pct": 3.5,
+  "interactions_from_followers": 100,
+  "interactions_from_non_followers": 53,
+  "interactions_from_followers_change_pct": -16.7,
+  "interactions_from_non_followers_change_pct": 6.0,
+  "watch_time": "1h 43m",
+  "watch_time_change_pct": 138.3,
+  "conversations_started": 0,
+  "daily": {
+   "views": [
+    109,
+    77,
+    54,
+    156,
+    32,
+    157,
+    141,
+    175,
+    173,
+    34,
+    52,
+    157,
+    187,
+    250,
+    187,
+    123,
+    62,
+    69,
+    159,
+    259,
+    625,
+    255,
+    109,
+    105,
+    116,
+    218,
+    215,
+    97
+   ],
+   "visits": [
+    7,
+    7,
+    4,
+    4,
+    3,
+    3,
+    0,
+    69,
+    3,
+    1,
+    7,
+    26,
+    1,
+    23,
+    6,
+    0,
+    0,
+    37,
+    27,
+    30,
+    8,
+    12,
+    6,
+    3,
+    16,
+    7,
+    77,
+    13
+   ],
+   "interactions": [
+    0,
+    3,
+    1,
+    23,
+    4,
+    10,
+    9,
+    1,
+    5,
+    2,
+    6,
+    3,
+    13,
+    7,
+    2,
+    2,
+    1,
+    0,
+    8,
+    7,
+    9,
+    10,
+    0,
+    3,
+    0,
+    8,
+    6,
+    10
+   ],
+   "video_3s": [
+    12,
+    4,
+    1,
+    10,
+    7,
+    9,
+    1,
+    1,
+    3,
+    0,
+    0,
+    5,
+    1,
+    4,
+    5,
+    6,
+    3,
+    9,
+    3,
+    30,
+    100,
+    21,
+    3,
+    2,
+    19,
+    6,
+    58,
+    9
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts / all_recent_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The four columns read views, reactions, comments, shares.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "17 Sep",
+    "t": "Behind every finished space is a chain of decisions — good planning keeps those decisions connected as the project moves forward",
+    "reach": 48,
+    "react": 2,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "15 Sep",
+    "t": "A drawing can describe a decision, context can reveal what it means — interactive project environments",
+    "reach": 158,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "14 Sep",
+    "t": "What makes a concrete surface feel closer to stone? — Concreet decorative concrete on Project 251",
+    "reach": 159,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "12 Sep",
+    "t": "Good design has to work beyond the drawing — architecture, structure, services and programme answering one intent",
+    "reach": 66,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "17 Sep",
+    "views": 8,
+    "react": 0
+   },
+   {
+    "d": "15 Sep",
+    "views": 2,
+    "react": 1
+   },
+   {
+    "d": "14 Sep",
+    "views": 11,
+    "react": 0
+   },
+   {
+    "d": "12 Sep",
+    "views": 8,
+    "react": 0
+   }
+  ],
+  "post_true_reach_carried": {
+   "as_of": "2026-09-03",
+   "2 Sep": 82,
+   "1 Sep": 12,
+   "31 Aug": 36,
+   "28 Aug": 42,
+   "27 Aug": 18,
+   "26 Aug": 58,
+   "25 Aug": 49
+  },
+  "new_post_note": "One new Facebook post since the 17 Sep read: the 17 Sep 17:00 'Behind every finished space is a chain of decisions' post entered the panel at 48 views, 2 reactions, 0 comments and 2 shares on its first evening, alongside a 17 Sep story at 8 views. The 16 Sep 'Before a project moves forward' post has DISAPPEARED - it is absent from the panel, from the published-posts list and from Instagram, so it was most likely deleted or unpublished. The panel returns four post rows and four story rows: 17, 15, 14 and 12 Sep.",
+  "conversations_started_change_pct": -100.0,
+  "new_contacts_change_pct": -100.0
+ },
+ "instagram": {
+  "followers": 49,
+  "posts_total": 126,
+  "following": 36,
+  "views": {
+   "v": 2258,
+   "change_pct": 144.1
+  },
+  "reach": {
+   "v": 94,
+   "change_pct": -70.3
+  },
+  "interactions": {
+   "v": 26,
+   "change_pct": -64.9
+  },
+  "views_from_followers_pct": 69.8,
+  "views_from_non_followers_pct": 30.2,
+  "views_from_followers": 1779,
+  "views_from_non_followers": 479,
+  "views_from_followers_change_pct": 45.0,
+  "views_from_non_followers_change_pct": -41.8,
+  "reach_from_followers": 17,
+  "reach_from_non_followers": 77,
+  "reach_from_followers_change_pct": -15.0,
+  "reach_from_non_followers_change_pct": -74.3,
+  "interactions_from_followers_pct": 68,
+  "interactions_from_non_followers_pct": 32,
+  "daily": {
+   "views": [
+    84,
+    26,
+    3,
+    21,
+    20,
+    64,
+    108,
+    54,
+    89,
+    22,
+    41,
+    59,
+    21,
+    35,
+    45,
+    42,
+    11,
+    25,
+    46,
+    84,
+    440,
+    166,
+    47,
+    74,
+    41,
+    178,
+    310,
+    102
+   ],
+   "reach": [
+    19,
+    4,
+    1,
+    12,
+    13,
+    5,
+    4,
+    1,
+    5,
+    0,
+    3,
+    2,
+    0,
+    1,
+    3,
+    8,
+    2,
+    1,
+    2,
+    10,
+    14,
+    6,
+    2,
+    3,
+    2,
+    3,
+    39,
+    6
+   ],
+   "interactions": [
+    8,
+    0,
+    0,
+    1,
+    3,
+    3,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series sums to 171 while the window KPI is 94. Views (2258) and interactions (26) reconcile exactly, and the views split 1779 + 479 = 2258.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "15 Sep",
+    "t": "A drawing can describe a decision, context can reveal what it means — interactive project environments",
+    "reach": 41,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "9 Sep",
+    "t": "Project 251 | a distinctive finish is built, not simply selected — Concreet's decorative concrete, layer by layer",
+    "reach": 13,
+    "react": 6,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "8 Sep",
+    "t": "A client decision is only useful if its intent stays clear as the project moves forward",
+    "reach": 10,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "10 Sep",
+    "t": "R U OK? Day — every project has people behind it, coordinating details and keeping things moving",
+    "reach": 5,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "12 Sep",
+    "t": "Good design has to work beyond the drawing — architecture, structure, services and programme answering one intent",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "14 Sep",
+    "t": "What makes a concrete surface feel closer to stone? — Concreet decorative concrete on Project 251",
+    "reach": 3,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "17 Sep",
+    "t": "Behind every finished space is a chain of decisions — good planning keeps those decisions connected as the project moves forward",
+    "reach": 1,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Sep",
+    "t": "A drawing can describe a decision, context can reveal what it means — interactive project environments",
+    "reach": 41,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "14 Sep",
+    "t": "What makes a concrete surface feel closer to stone? — Concreet decorative concrete on Project 251",
+    "reach": 3,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "12 Sep",
+    "t": "Good design has to work beyond the drawing — architecture, structure, services and programme answering one intent",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "10 Sep",
+    "t": "R U OK? Day — every project has people behind it, coordinating details and keeping things moving",
+    "reach": 5,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "9 Sep",
+    "t": "Project 251 | a distinctive finish is built, not simply selected — Concreet's decorative concrete, layer by layer",
+    "reach": 13,
+    "react": 6,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "8 Sep",
+    "t": "A client decision is only useful if its intent stays clear as the project moves forward",
+    "reach": 10,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "7 Sep",
+    "t": "A good plan is not one that never changes — it is one that can change without losing control",
+    "reach": 3,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "post_note": "Followers moved for the first time in nine reads: 48 -> 49. Post count held at 126 even though the 17 Sep 'Behind every finished space' cross-post was added, because the 16 Sep post disappeared in the same cycle. The new post enters at just 1 reach; the 15 Sep post matured 39 -> 41 reach and leads the panel. The 4 Sep post has scrolled off."
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 31,
+  "videos_long_form": 15,
+  "videos_shorts": 16,
+  "views_28d": {
+   "v": 526,
+   "change_pct": null
+  },
+  "views_change_text": "436 more than usual (YouTube Studio reports channel views against a typical-performance band, not against the previous 28 days)",
+  "watch_time_hours": {
+   "v": 0.5,
+   "change_pct": 557.0
+  },
+  "latest_video_views": {
+   "v": 116,
+   "change_pct": null
+  },
+  "views_now": 526,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YouTube Studio read LIVE on 2026-09-18 for Aug 20 - Sep 16, 2026. No permission error this cycle.",
+  "new_upload": {
+   "title": "DX Living | When a Drawing Becomes a Decision",
+   "published": "2026-09-15",
+   "views_first_2d14h": 116,
+   "avg_pct_viewed": "64.1%",
+   "likes": 0,
+   "comments": 0,
+   "ranking_by_views": "1 of 10"
+  },
+  "top_videos": [
+   {
+    "t": "DX Living | How Project Control Keeps Decisions Moving (Short)",
+    "v": 272,
+    "dur": "0:27",
+    "avg_view_pct": "71.2%"
+   },
+   {
+    "t": "DX Living | The Process Behind the Finish - Project 251 (Short)",
+    "v": 117,
+    "dur": "0:20",
+    "avg_view_pct": "36.4%"
+   },
+   {
+    "t": "DX Living | When a Drawing Becomes a Decision (Short)",
+    "v": 116,
+    "dur": "0:16",
+    "avg_view_pct": "64.1%"
+   },
+   {
+    "t": "DX Living | Resolve earlier, build with greater certainty!",
+    "v": 6,
+    "dur": "0:04",
+    "avg_view_pct": "11.6%"
+   },
+   {
+    "t": "Project 251 | Explore the pond through the interactive BIM model",
+    "v": 5,
+    "dur": "0:24",
+    "avg_view_pct": "54.9%"
+   },
+   {
+    "t": "251 PROJECT - Structural data is officially becoming physical reality",
+    "v": 1,
+    "dur": "—",
+    "avg_view_pct": "—"
+   },
+   {
+    "t": "251 PROJECT - PROGRESS UPDATE",
+    "v": 1,
+    "dur": "—",
+    "avg_view_pct": "—"
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
+    "v": 1,
+    "dur": "0:08",
+    "avg_view_pct": "27.3%"
+   },
+   {
+    "t": "DX Living | Experience how natural light transforms each room",
+    "v": 1,
+    "dur": "0:17",
+    "avg_view_pct": "65.7%"
+   },
+   {
+    "t": "DX Living | 85 Commodore Street, Surfers Paradise Project",
+    "v": 1,
+    "dur": "0:04",
+    "avg_view_pct": "11.1%"
+   }
+  ],
+  "realtime_48h_views": 4
+ },
+ "linkedin": {
+  "followers": 101,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn Content, Followers and Visitors admin pages were ALL read live on 2026-09-18, and the reporting window finally ADVANCED after four static reads: it is now 17 Aug - 15 Sep 2026 (previously 16 Aug - 14 Sep). Every headline figure below is a fresh window, not a repeat.",
+  "new_followers_30d": {
+   "v": 44,
+   "change_pct": 633.3
+  },
+  "impressions": {
+   "v": 1524,
+   "change_pct": -0.5
+  },
+  "reactions": {
+   "v": 86,
+   "change_pct": 43.3
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 0,
+   "change_pct": -100.0
+  },
+  "page_views": {
+   "v": 119,
+   "change_pct": 283.9
+  },
+  "unique_visitors": {
+   "v": 41,
+   "change_pct": 141.2
+  },
+  "impressions_prior": 1532,
+  "impressions_now": 1524,
+  "followers_by_location_count": {
+   "Ho Chi Minh City": 24,
+   "Melbourne": 22,
+   "Brisbane": 3,
+   "Metro Manila": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Angeles": 1,
+   "Kolkata": 1,
+   "Vacoas": 1,
+   "Other": 40
+  },
+  "followers_by_location_pct": {
+   "Ho Chi Minh City": 23.8,
+   "Melbourne": 21.8,
+   "Brisbane": 3.0,
+   "Metro Manila": 3.0,
+   "Mumbai": 2.0,
+   "Delhi": 2.0,
+   "Karachi": 2.0,
+   "Angeles": 1.0,
+   "Kolkata": 1.0,
+   "Vacoas": 1.0,
+   "Other": 39.6
+  },
+  "followers_by_location_note": "Read live on 2026-09-18 for the new 17 Aug - 15 Sep window. Even though the window advanced, every city count is identical for a fifth consecutive read: Ho Chi Minh City 24 and Melbourne 22 still carry 45.6% of the base between them.",
+  "visitors_by_job_function": {
+   "Arts and Design": 23,
+   "Business Development": 10,
+   "Information Technology": 6,
+   "Product Management": 6,
+   "Media and Communication": 5,
+   "Operations": 4,
+   "Human Resources": 3,
+   "Program and Project Management": 3,
+   "Quality Assurance": 1,
+   "Healthcare Services": 1
+  },
+  "visitors_by_job_function_note": "Read live on 2026-09-18 for the new 17 Aug - 15 Sep window. Arts and Design extends its lead 18 -> 23 (19.3%) and Business Development 8 -> 10; Information Technology eases 7 -> 6, Operations 5 -> 4 and Program and Project Management 4 -> 3. Quality Assurance and Healthcare Services (1 each) replace Marketing and Purchasing in the tail.",
+  "page_views_by_device": {
+   "Desktop": 83,
+   "Mobile": 36
+  },
+  "window_advanced": true
+ },
+ "notes": {
+  "en": [
+   "All four channels read live via Chrome on 18 Sep. Every window advanced this cycle: Meta and YouTube to 20 Aug – 16 Sep, and LinkedIn to 17 Aug – 15 Sep after four reads stuck on the same range.",
+   "THE 16 SEP POST HAS VANISHED. 'Before a project moves forward' is gone from the Facebook panel, the Meta published-posts list (which now jumps 17 Sep → 15 Sep) and Instagram, where the post count held at 126 despite a new 17 Sep post. It was deleted or unpublished after yesterday's read — worth confirming it was intentional.",
+   "A new post landed on 17 Sep instead: 'Behind every finished space is a chain of decisions' — 48 Facebook views, 2 reactions, 2 shares on its first evening, but only 1 reach on Instagram.",
+   "INSTAGRAM FOLLOWERS MOVED FOR THE FIRST TIME IN NINE READS: 48 → 49. Small, but it is the first follower this report has recorded on any channel in five days.",
+   "Instagram reach fell back hard: 211 → 94 (▼0.9% → ▼70.3%), giving up all of yesterday's gain as the 9 Sep spike day aged out of the window. Interactions followed, 42 → 26.",
+   "Instagram views eased 2,316 → 2,258 but the mix shifted decisively to followers: 1,686 → 1,779 from followers (▲45.0%) against 630 → 479 from non-followers (▼41.8%).",
+   "Facebook views 4,436 → 4,353 as 19 Aug (180) dropped out and 16 Sep contributed only 97; the comparison widened ▼11.0% → ▼12.6%.",
+   "Facebook visits reached a window high of 400 (▲45.5% → ▲53.3%), with 15 Sep's 77-visit day still the single biggest contributor.",
+   "Facebook video held its gains: 3-second views 335 → 332 (▲149.6%) and watch time 1h 46m → 1h 43m, where the comparison actually strengthened ▲125% → ▲138.3%.",
+   "Facebook link clicks slipped 5 → 4 (▼66.7%) and viewers 284 → 279 (▼48.9%). Interactions held flat at 153, but against a stronger prior period (▼5.0% → ▼10%).",
+   "YouTube views eased 531 → 526 and the Short's burst is over: realtime 48-hour views collapsed 125 → 4. Studio also REVISED the Short's lifetime views down 123 → 116.",
+   "LINKEDIN'S WINDOW FINALLY MOVED and brought good news with it: impressions 1,466 → 1,524 with the gap to the prior period all but closed (▼4.7% → ▼0.5%), page views 113 → 119 and unique visitors 40 → 41.",
+   "Follower base: FB 116 / IG 49 / LI 101 / YT 4. Nine days of rising attention have produced exactly one new follower — the subscribe and follow CTAs remain the binding constraint across every channel."
+  ],
+  "vi": [
+   "Cả bốn kênh đọc trực tiếp qua Chrome ngày 18/9. Mọi cửa sổ đều trượt trong kỳ này: Meta và YouTube sang 20/8 – 16/9, và LinkedIn sang 17/8 – 15/9 sau bốn lần đọc đứng yên.",
+   "BÀI NGÀY 16/9 ĐÃ BIẾN MẤT. Bài 'Before a project moves forward' không còn trong bảng Facebook, trong danh sách bài đã đăng của Meta (nay nhảy thẳng 17/9 → 15/9) và trên Instagram, nơi số bài vẫn giữ 126 dù có bài mới ngày 17/9. Bài đã bị xoá hoặc gỡ sau lần đọc hôm qua — nên xác nhận lại xem có chủ ý không.",
+   "Thay vào đó một bài mới lên ngày 17/9: 'Behind every finished space is a chain of decisions' — 48 view Facebook, 2 cảm xúc, 2 chia sẻ trong buổi tối đầu tiên, nhưng chỉ 1 reach trên Instagram.",
+   "FOLLOWER INSTAGRAM NHÚC NHÍCH LẦN ĐẦU SAU CHÍN LẦN ĐỌC: 48 → 49. Nhỏ, nhưng là follower đầu tiên báo cáo ghi nhận trên bất kỳ kênh nào trong năm ngày.",
+   "Reach Instagram rơi mạnh trở lại: 211 → 94 (▼0,9% → ▼70,3%), trả lại toàn bộ mức tăng hôm qua khi ngày đỉnh 9/9 rời khỏi cửa sổ. Tương tác đi theo, 42 → 26.",
+   "Views Instagram lùi nhẹ 2.316 → 2.258 nhưng cơ cấu dịch hẳn về follower: 1.686 → 1.779 từ người theo dõi (▲45,0%) so với 630 → 479 từ người chưa theo dõi (▼41,8%).",
+   "Views Facebook 4.436 → 4.353 khi ngày 19/8 (180) rơi ra và ngày 16/9 chỉ đóng góp 97; so với kỳ trước nới rộng ▼11,0% → ▼12,6%.",
+   "Lượt truy cập Facebook đạt đỉnh cửa sổ 400 (▲45,5% → ▲53,3%), với ngày 15/9 và 77 lượt vẫn là nguồn đóng góp lớn nhất.",
+   "Video Facebook giữ được thành quả: view 3 giây 335 → 332 (▲149,6%) và thời gian xem 1 giờ 46 phút → 1 giờ 43 phút, nhưng mức so sánh còn mạnh lên ▲125% → ▲138,3%.",
+   "Click liên kết Facebook lùi 5 → 4 (▼66,7%) và người xem 284 → 279 (▼48,9%). Tương tác giữ nguyên 153, nhưng trên nền kỳ trước cao hơn (▼5,0% → ▼10%).",
+   "Views YouTube lùi nhẹ 531 → 526 và đợt bùng của Short đã hết: view realtime 48 giờ sụp 125 → 4. Studio cũng ĐIỀU CHỈNH GIẢM view trọn đời của Short 123 → 116.",
+   "CỬA SỔ LINKEDIN CUỐI CÙNG ĐÃ DỊCH CHUYỂN và mang theo tin tốt: impression 1.466 → 1.524 với khoảng cách so kỳ trước gần như khép lại (▼4,7% → ▼0,5%), lượt xem trang 113 → 119 và khách truy cập duy nhất 40 → 41.",
+   "Tệp follower: FB 116 / IG 49 / LI 101 / YT 4. Chín ngày sự chú ý đi lên chỉ đổi được đúng một follower — CTA theo dõi và đăng ký vẫn là nút thắt trên mọi kênh."
+  ]
+ }
+}
