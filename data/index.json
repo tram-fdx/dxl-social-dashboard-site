@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-18",
+  "latest": "2026-09-19",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -275,6 +275,13 @@
       "report": "archive/2026-09-18.html",
       "label_vi": "Bài 16/9 biến mất khỏi FB+IG; bài mới 17/9 (48 view FB); IG follower 48→49 nhưng reach 211→94; cửa sổ LinkedIn dịch chuyển, impressions 1.466→1.524 (▼0,5%); realtime YT 125→4",
       "label_en": "16 Sep post vanished from FB+IG; new 17 Sep post (48 FB views); IG followers 48→49 but reach 211→94; LinkedIn window advanced, impressions 1,466→1,524 (▼0.5%); YT realtime 125→4"
+    },
+    {
+      "date": "2026-09-19",
+      "data": "data/2026-09-19.json",
+      "report": "archive/2026-09-19.html",
+      "label_vi": "FB views 4.353→4.358; IG reach 94→86; LI impressions 1.524→1.404; Short mới 18/9 đạt 140 view",
+      "label_en": "FB views 4,353→4,358; IG reach 94→86; LI impressions 1,524→1,404; new 18 Sep Short takes 140 views"
     }
   ]
 }
