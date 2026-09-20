@@ -35,7 +35,11 @@
 <div id="stage">
   <iframe class="on" src="https://tram-fdx.github.io/dxl-social-dashboard-site/"></iframe>
   <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/"></iframe>
-  <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/weekly/2026-09-04.html"></iframe>
+  <!-- Tab nay khong hardcode mot tuan nua: script ben duoi doc weekly/index.json de lay tuan moi nhat.
+       data-src chi la fallback khi fetch that bai. -->
+  <iframe id="wkFrame"
+          data-weekly="https://tram-fdx.github.io/dxliving-seo-report/weekly/"
+          data-src="https://tram-fdx.github.io/dxliving-seo-report/weekly/2026-09-18.html"></iframe>
   <iframe data-src="https://tram-fdx.github.io/dxl-seo-audit/"></iframe>
 </div>
 
@@ -57,6 +61,31 @@
 
   tabs.forEach(t => t.onclick = () => show(+t.dataset.i));
   openLink.href = urls[0];
+
+  // Tab "SEO Weekly" luon mo tuan moi nhat.
+  // Truoc day URL nay bi hardcode nen bao cao dung o tuan 04/09 du da co tuan moi.
+  // The weekly tab always opens the newest week; this URL used to be hardcoded.
+  (async () => {
+    const f = document.getElementById('wkFrame');
+    if (!f) return;
+    const base = f.dataset.weekly;
+    try {
+      const r = await fetch(base + 'index.json', { cache: 'no-store' });
+      if (!r.ok) return;
+      const j = await r.json();
+      const latest = j.latest ||
+        (Array.isArray(j.weeks) && j.weeks.length
+          ? j.weeks.map(w => w.id).sort().pop()
+          : null);
+      if (!latest) return;
+      const url = base + latest + '.html';
+      if (url === urls[2]) return;
+      urls[2] = url;
+      f.dataset.src = url;
+      if (f.src) f.src = url;                          // tab dang mo thi nap lai
+      if (tabs[2].classList.contains('on')) openLink.href = url;
+    } catch (e) { /* giu nguyen fallback trong data-src */ }
+  })();
 
   const start = ['social', 'seo', 'weekly', 'audit'].indexOf(location.hash.slice(1));
   if (start > 0) show(start);
