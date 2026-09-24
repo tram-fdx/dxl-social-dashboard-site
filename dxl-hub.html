@@ -13,7 +13,9 @@
   .tab:hover{background:#20242e;color:#d7dde6}
   .tab.on{background:#2b6cf6;color:#fff}
   #spacer{flex:1}
-  #open{color:#7f8b9c;font-size:12px;text-decoration:none;padding:6px 10px;border:1px solid #2b313d;border-radius:7px}
+  #open,#xlsx{color:#7f8b9c;font-size:12px;text-decoration:none;padding:6px 10px;border:1px solid #2b313d;border-radius:7px}
+  #xlsx{margin-right:10px}
+  #open:hover,#xlsx:hover{color:#cfd6e0;border-color:#414a59}
   #open:hover{color:#d7dde6;border-color:#3d4553}
   #stage{position:relative;height:calc(100% - 52px)}
   iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;display:none}
@@ -29,6 +31,8 @@
   <button class="tab" data-i="2">SEO Weekly</button>
   <button class="tab" data-i="3">Website Audit</button>
   <span id="spacer"></span>
+  <a id="xlsx" href="https://tram-fdx.github.io/dxl-social-dashboard-site/dxl-metrics.xlsx"
+     download title="Tải toàn bộ số liệu 3 báo cáo dưới dạng Excel — xuất lại mỗi sáng">↓ Excel</a>
   <a id="open" target="_blank" rel="noopener">Open in new tab ↗</a>
 </div>
 
