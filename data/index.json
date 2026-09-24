@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-09-23",
+  "latest": "2026-09-24",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -303,6 +303,13 @@
       "report": "archive/2026-09-23.html",
       "label_vi": "FB views 4.420→4.537 (▼8,1%); IG views 2.483→2.520 đỉnh mới, reach 96→87; LI impressions 1.336→1.317, reactions 76→60; YT 646→642",
       "label_en": "FB views 4,420→4,537 (▼8.1%); IG views 2,483→2,520 record, reach 96→87; LI impressions 1,336→1,317, reactions 76→60; YT 646→642"
+    },
+    {
+      "date": "2026-09-24",
+      "data": "data/2026-09-24.json",
+      "report": "archive/2026-09-24.html",
+      "label_vi": "Bước một ngày · FB views 4.537 → 4.514 (so sánh ▼8,1% → ▼5,3%), bài 22/9 61 → 109; IG reach ngừng rơi 87 → 86, số bài 129 → 130; YT kênh 642 → 634 nhưng video 18/9 132 → 140; LI impressions 1.317 → 1.320 ở ▼20,5%, reactions 60 → 58",
+      "label_en": "One-day step · FB views 4,537 to 4,514 (comparison ▼8.1% to ▼5.3%), the 22 Sep post 61 to 109; IG reach stopped falling 87 to 86, posts 129 to 130; YT channel 642 to 634 but the 18 Sep video 132 to 140; LI impressions 1,317 to 1,320 at ▼20.5%, reactions 60 to 58"
     }
   ]
 }
