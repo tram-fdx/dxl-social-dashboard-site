@@ -1,0 +1,713 @@
+{
+ "date": "2026-09-28",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-09-28 (~06:00-06:40 ICT) from Chrome on macOS. ALL FOUR channels were read LIVE: no figure is carried. This run covers a TWO-DAY gap: the 27 Sep run never fired, so there is no data/2026-09-27.json and every comparison below is against the 26 Sep read. Facebook and Instagram: Meta Business Suite Insights, Overview + Results pages (asset 740407369159752); the Meta window rolled TWO days to 30 Aug - 26 Sep 2026 (previous read 28 Aug - 24 Sep): 28 and 29 Aug dropped out, 25 and 26 Sep came in. All four Facebook 28-day series reconcile exactly to their KPIs: views 4483 (tile rounds to 4,5K), visits 445, interactions 144, 3-second views 352. Instagram views 2320 also reconcile exactly (1936 from followers + 384 from non-followers); Instagram reach stays de-duplicated per person so the 87 tile is below the 160 series sum. Change directions were decoded from the label colour via getComputedStyle (rgb(0,107,78) up, rgb(162,12,23) down, rgb(28,43,51) neutral), since Meta prints the percentage unsigned. Facebook link clicks came from the Insights Results page; Facebook and Instagram follower counts from business.facebook.com/latest/home; Instagram post and following counts from instagram.com/dxliving.au. YouTube Studio (channel UCuxr30df_qmARRgETsruEyw) was read live with NO permission error for Aug 30 - Sep 26, 2026; channel views are compared against typical performance (\"544 more than usual\"), not a previous period, so views_28d.change_pct is null by construction. LinkedIn company 108389291 admin Content, Followers and Visitors pages were all read live; the LinkedIn window advanced only ONE day to 27 Aug - 25 Sep 2026. LinkedIn trend directions came from the DOM classes analytics-tools-shared-trend-text__value--increase/--decrease/--neutral, and impressions_prior is derived from the displayed percentage. One caveat: the LinkedIn visitor job-function widget returned 15/5 for Arts and Design / Business Development on first paint and settled to 14/4 on two consecutive later reads; the settled values are recorded.",
+ "window": {
+  "en": "Last 28 days: 30 Aug – 26 Sep 2026",
+  "vi": "28 ngày qua: 30/8 – 26/9/2026"
+ },
+ "windows": {
+  "meta": "2026-08-30 → 2026-09-26",
+  "youtube": "2026-08-30 → 2026-09-26",
+  "linkedin": "2026-08-27 → 2026-09-25"
+ },
+ "facebook": {
+  "followers": 116,
+  "views": {
+   "v": 4483,
+   "change_pct": -5.0
+  },
+  "viewers": {
+   "v": 279,
+   "change_pct": -47.9
+  },
+  "visits": {
+   "v": 445,
+   "change_pct": 60.1
+  },
+  "interactions": {
+   "v": 144,
+   "change_pct": -22.6
+  },
+  "video_3s": {
+   "v": 352,
+   "change_pct": 147.9
+  },
+  "link_clicks": {
+   "v": 5,
+   "change_pct": 0.0
+  },
+  "net_new_followers": {
+   "v": 1,
+   "change_pct": 0.0
+  },
+  "follows": 1,
+  "unfollows": 0,
+  "views_from_followers_pct": 47.2,
+  "views_from_non_followers_pct": 52.8,
+  "views_from_followers_change_pct": 11.3,
+  "views_from_non_followers_change_pct": -8.3,
+  "interactions_from_followers": 100,
+  "interactions_from_non_followers": 44,
+  "interactions_from_followers_change_pct": -12.3,
+  "interactions_from_non_followers_change_pct": -38.9,
+  "watch_time": "2h 3m",
+  "watch_time_change_pct": 138.4,
+  "conversations_started": 1,
+  "daily": {
+   "views": [
+    52,
+    157,
+    187,
+    250,
+    187,
+    123,
+    62,
+    69,
+    159,
+    259,
+    625,
+    255,
+    109,
+    105,
+    116,
+    218,
+    215,
+    97,
+    114,
+    278,
+    59,
+    12,
+    149,
+    134,
+    187,
+    124,
+    130,
+    51
+   ],
+   "visits": [
+    7,
+    26,
+    1,
+    23,
+    6,
+    0,
+    0,
+    37,
+    27,
+    30,
+    8,
+    12,
+    6,
+    3,
+    16,
+    7,
+    77,
+    13,
+    1,
+    51,
+    9,
+    6,
+    12,
+    4,
+    31,
+    16,
+    7,
+    9
+   ],
+   "interactions": [
+    6,
+    3,
+    13,
+    7,
+    2,
+    2,
+    1,
+    0,
+    8,
+    7,
+    9,
+    10,
+    0,
+    3,
+    0,
+    8,
+    6,
+    10,
+    4,
+    7,
+    2,
+    0,
+    6,
+    6,
+    7,
+    6,
+    9,
+    2
+   ],
+   "video_3s": [
+    0,
+    5,
+    1,
+    4,
+    5,
+    6,
+    3,
+    9,
+    3,
+    30,
+    100,
+    21,
+    3,
+    2,
+    19,
+    6,
+    58,
+    9,
+    1,
+    45,
+    5,
+    2,
+    2,
+    7,
+    4,
+    2,
+    0,
+    0
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts / all_recent_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The four columns read views, reactions, comments, shares.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, opening or finish depends on the decisions, specifications and coordination behind it",
+    "reach": 98,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "24 Sep",
+    "t": "What does a bathroom remodel actually cost in Australia in 2026? — layout, materials and coordination move the number more than the finishes",
+    "reach": 37,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer the right ones before they reach site",
+    "reach": 91,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model shows what sits behind it — connected layers keep project information visible as a project develops",
+    "reach": 168,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "21 Sep",
+    "t": "What does \"ready for site\" actually mean? — a complete set of drawings does not by itself make a project ready",
+    "reach": 112,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "19 Sep",
+    "t": "What does a kitchen renovation really cost in Melbourne? — the 2026 cost guide, cabinetry to labour",
+    "reach": 52,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "25 Sep",
+    "views": 8,
+    "react": 0
+   },
+   {
+    "d": "18 Sep",
+    "views": 20,
+    "react": 0
+   }
+  ],
+  "post_true_reach_carried": {
+   "as_of": "2026-09-03",
+   "2 Sep": 82,
+   "1 Sep": 12,
+   "31 Aug": 36,
+   "28 Aug": 42,
+   "27 Aug": 18,
+   "26 Aug": 58,
+   "25 Aug": 49
+  },
+  "new_post_note": "No new Facebook post in the two days since the 26 Sep read: the 25 Sep 15:53 \"the detail is rarely just a detail\" post is still the newest item in the panel, now restated to 98 views / 5 reactions / 2 shares. The 25 Sep story also holds at 8 views.",
+  "conversations_started_change_pct": -50.0,
+  "new_contacts_change_pct": -100.0
+ },
+ "instagram": {
+  "followers": 49,
+  "posts_total": 131,
+  "following": 36,
+  "views": {
+   "v": 2320,
+   "change_pct": 119.3
+  },
+  "reach": {
+   "v": 87,
+   "change_pct": -68.4
+  },
+  "interactions": {
+   "v": 18,
+   "change_pct": -73.1
+  },
+  "views_from_followers_pct": 65.7,
+  "views_from_non_followers_pct": 34.3,
+  "views_from_followers": 1936,
+  "views_from_non_followers": 384,
+  "views_from_followers_change_pct": 19.3,
+  "views_from_non_followers_change_pct": -23.7,
+  "reach_from_followers": 14,
+  "reach_from_non_followers": 73,
+  "reach_from_followers_change_pct": -26.3,
+  "reach_from_non_followers_change_pct": -71.3,
+  "interactions_from_followers_pct": 71,
+  "interactions_from_non_followers_pct": 29,
+  "daily": {
+   "views": [
+    41,
+    59,
+    21,
+    35,
+    45,
+    42,
+    11,
+    25,
+    46,
+    84,
+    440,
+    166,
+    47,
+    74,
+    41,
+    178,
+    310,
+    102,
+    49,
+    274,
+    29,
+    7,
+    57,
+    29,
+    45,
+    29,
+    29,
+    5
+   ],
+   "reach": [
+    3,
+    2,
+    0,
+    1,
+    3,
+    8,
+    2,
+    1,
+    2,
+    10,
+    14,
+    6,
+    2,
+    3,
+    2,
+    3,
+    39,
+    6,
+    3,
+    24,
+    2,
+    0,
+    4,
+    5,
+    7,
+    2,
+    6,
+    0
+   ],
+   "interactions": [
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    4,
+    0
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series sums to 160 while the window KPI is 87. Views (2,320 = 1,936 follower + 384 non-follower) and interactions (18) reconcile exactly to their series.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "15 Sep",
+    "t": "A drawing can describe a decision, context can reveal what it means — interactive project environments",
+    "reach": 42,
+    "react": 7,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "18 Sep",
+    "t": "The site should not be the first test — decisions are easier to review while options are still open",
+    "reach": 26,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, opening or finish depends on the decisions, specifications and coordination behind it",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer the right ones before they reach site",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model shows what sits behind it — connected layers keep project information visible as a project develops",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "21 Sep",
+    "t": "What does \"ready for site\" actually mean? — a complete set of drawings does not by itself make a project ready",
+    "reach": 5,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, opening or finish depends on the decisions, specifications and coordination behind it",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer the right ones before they reach site",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model shows what sits behind it — connected layers keep project information visible as a project develops",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "21 Sep",
+    "t": "What does \"ready for site\" actually mean? — a complete set of drawings does not by itself make a project ready",
+    "reach": 5,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "18 Sep",
+    "t": "The site should not be the first test — decisions are easier to review while options are still open",
+    "reach": 26,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "17 Sep",
+    "t": "Behind every finished space is a chain of decisions — coordination keeps them aligned",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "15 Sep",
+    "t": "A drawing can describe a decision, context can reveal what it means — interactive project environments",
+    "reach": 42,
+    "react": 7,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "14 Sep",
+    "t": "What makes a concrete surface feel closer to stone? — material behaviour tested before it reaches site",
+    "reach": 3,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "post_note": "No new Instagram post in the two days since the 26 Sep read; post count holds at 131, followers 49, following 36. The 25 Sep, 23 Sep and 22 Sep posts each ticked up from 5/6/5 to 6 reach."
+ },
+ "youtube": {
+  "subscribers": 4,
+  "videos": 32,
+  "videos_long_form": 15,
+  "videos_shorts": 17,
+  "views_28d": {
+   "v": 634,
+   "change_pct": null
+  },
+  "views_change_text": "544 more than usual (YouTube Studio reports channel views against typical performance, not a previous-period percentage, so no signed change is available)",
+  "watch_time_hours": {
+   "v": 0.5,
+   "change_pct": 611.0
+  },
+  "latest_video_views": {
+   "v": 132,
+   "change_pct": null
+  },
+  "views_now": 634,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YouTube Studio read LIVE on 2026-09-28 for Aug 30 – Sep 26, 2026: no permission error, every figure below is from this read.",
+  "new_upload": {
+   "title": "DX Living | The Site Should Not Be the First Test",
+   "published": "2026-09-18",
+   "views_first_9d13h": 132,
+   "avg_pct_viewed": "29.8%",
+   "likes": 0,
+   "comments": 0,
+   "ranking_by_views": "2 of 10"
+  },
+  "top_videos": [
+   {
+    "t": "DX Living | How Project Control Keeps Decisions Moving",
+    "v": 256,
+    "dur": "0:27",
+    "avg_pct": "71.2%"
+   },
+   {
+    "t": "DX Living | The Site Should Not Be the First Test",
+    "v": 132,
+    "dur": "0:10",
+    "avg_pct": "29.8%"
+   },
+   {
+    "t": "DX Living | The Process Behind the Finish - Project 251",
+    "v": 117,
+    "dur": "0:20",
+    "avg_pct": "36.4%"
+   },
+   {
+    "t": "DX Living | When a Drawing Becomes a Decision",
+    "v": 116,
+    "dur": "0:16",
+    "avg_pct": "64.1%"
+   },
+   {
+    "t": "DX Living | Resolve earlier, build with greater certainty!",
+    "v": 3,
+    "dur": "0:05",
+    "avg_pct": "14.1%"
+   },
+   {
+    "t": "Project 251 | Explore the pond through the interactive BIM model",
+    "v": 3,
+    "dur": "0:33",
+    "avg_pct": "74.3%"
+   },
+   {
+    "t": "DX Living | Experience how natural light transforms each room",
+    "v": 1,
+    "dur": "0:17",
+    "avg_pct": "65.7%"
+   },
+   {
+    "t": "DX Living | 85 Commodore Street, Surfers Paradise Project",
+    "v": 1,
+    "dur": "0:04",
+    "avg_pct": "11.1%"
+   },
+   {
+    "t": "Project 251 | LightEFX’s StarEFX™ fibre optic ceiling",
+    "v": 1,
+    "dur": "0:14",
+    "avg_pct": "44.8%"
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
+    "v": 1,
+    "dur": "0:08",
+    "avg_pct": "27.3%"
+   }
+  ],
+  "realtime_48h_views": 0
+ },
+ "linkedin": {
+  "followers": 102,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn Content, Followers and Visitors admin pages were ALL read live on 2026-09-28. The LinkedIn window advanced only one day (26 Aug – 24 Sep to 27 Aug – 25 Sep) even though two calendar days passed, because this run happened at ~06:20 ICT rather than the 11:40 ICT slot of the 26 Sep run.",
+  "new_followers_30d": {
+   "v": 1,
+   "change_pct": -97.9
+  },
+  "impressions": {
+   "v": 1232,
+   "change_pct": -27.6
+  },
+  "reactions": {
+   "v": 43,
+   "change_pct": -38.6
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 0,
+   "change_pct": -100.0
+  },
+  "page_views": {
+   "v": 27,
+   "change_pct": -78.7
+  },
+  "unique_visitors": {
+   "v": 12,
+   "change_pct": -75.0
+  },
+  "impressions_prior": 1702,
+  "impressions_now": 1232,
+  "followers_by_location_count": {
+   "Ho Chi Minh City": 24,
+   "Melbourne": 23,
+   "Brisbane": 3,
+   "Metro Manila": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Kolkata": 1,
+   "Angeles": 1,
+   "Vacoas": 1,
+   "Other": 40
+  },
+  "followers_by_location_pct": {
+   "Ho Chi Minh City": 23.5,
+   "Melbourne": 22.5,
+   "Brisbane": 2.9,
+   "Metro Manila": 2.9,
+   "Mumbai": 2.0,
+   "Delhi": 2.0,
+   "Karachi": 2.0,
+   "Kolkata": 1.0,
+   "Angeles": 1.0,
+   "Vacoas": 1.0,
+   "Other": 39.2
+  },
+  "followers_by_location_note": "Read live on 2026-09-28 for the 27 Aug – 25 Sep window. The ten named places and their counts are unchanged from the 26 Sep read; \"Other\" is the 40 followers outside the named top ten.",
+  "visitors_by_job_function": {
+   "Arts and Design": 14,
+   "Business Development": 4,
+   "Real Estate": 2,
+   "Research": 2,
+   "Sales": 2,
+   "Community and Social Services": 2,
+   "Consulting": 2,
+   "Finance": 2,
+   "Human Resources": 1,
+   "Information Technology": 1
+  },
+  "visitors_by_job_function_note": "Read live on 2026-09-28. The panel lists the top ten functions by share of the 27 page views; Real Estate, Sales, Community and Social Services, Finance, Human Resources and Information Technology replaced Operations, Healthcare Services, Quality Assurance, Accounting, Legal and Product Management versus the 26 Sep read. The widget showed 15 and 5 for the first two rows on first paint and settled to 14 and 4 on two consecutive later reads; the settled values are recorded.",
+  "page_views_by_device": {
+   "Desktop": 24,
+   "Mobile": 3
+  },
+  "window_advanced": true
+ },
+ "notes": {
+  "en": [
+   "All four channels read live via Chrome on 28 Sep at ~06:20 ICT. THE 27 SEP RUN NEVER FIRED, so there is no 27 Sep day file and every comparison here is against 26 Sep. Meta and YouTube advanced TWO days to 30 Aug – 26 Sep; LinkedIn advanced only ONE day to 27 Aug – 25 Sep.",
+   "FACEBOOK VIEWS FELL 4,509 → 4,483 but the comparison flipped harder ▼3.8% → ▼5.0% — 28 and 29 Aug left the window at 173 and 34 views while 25 and 26 Sep entered at 130 and 51, a net loss of 26.",
+   "NO NEW POST RAN ON EITHER META CHANNEL FOR THREE DAYS — the 25 Sep 'detail is rarely just a detail' piece is still the newest item on both. Facebook has published nothing since 25 Sep 15:53, Instagram nothing since 25 Sep 15:02.",
+   "EVERY FACEBOOK POST WAS RESTATED UPWARD AGAIN: 22 Sep 155 → 168 still leads, 21 Sep 109 → 112, 23 Sep 83 → 91, the 25 Sep post 54 → 98 (the biggest two-day gain in the panel) and 19 Sep 49 → 52. The 24 Sep article post rose 33 → 37.",
+   "FACEBOOK VISITS SURGED 433 → 445 and the comparison widened ▲49.3% → ▲60.1%, helped by a 31-visit day on 25 Sep. Link clicks held at 5 for a second read, comparison level at 0%.",
+   "FACEBOOK INTERACTIONS ROSE 140 → 144 but the comparison slipped ▼22.2% → ▼22.6%; follower interactions eased 101 → 100 while non-follower interactions climbed 39 → 44. Video gave a little back: 3-second views 355 → 352 (▲147.9%) and watch time 2h 4m → 2h 3m (▲138.4%).",
+   "INSTAGRAM VIEWS FELL 2,397 → 2,320 yet the comparison IMPROVED SHARPLY ▲149.2% → ▲119.3% in level terms only — the baseline moved. 28 and 29 Aug left at 88 combined while 25 and 26 Sep added just 34. Follower share dropped to 65.7% (1,936 of 2,320).",
+   "INSTAGRAM REACH FINALLY MOVED after three static reads: 86 → 87 (▼68.7% → ▼68.4%). Follower reach held at 14 while non-follower reach rose 72 → 73.",
+   "Instagram interactions improved 15 → 18 (▼77.6% → ▼73.1%) with the follower share up to 71%. Post count frozen at 131, followers 49, following 36.",
+   "YOUTUBE WAS COMPLETELY FLAT: channel views held at exactly 634 across a two-day window roll, watch time at 0.5 hrs (▲611%) and the top-ten table is byte-identical to 26 Sep. Only the baseline moved, 554 → 544 more than usual, which is what confirms this is a fresh read.",
+   "THE 18 SEP YOUTUBE UPLOAD'S TWO FIGURES RECONCILED: its since-publish card now reads 132 views at 29.8% average viewed over 9 days 13 hours, matching the 132 in the 28-day table after the card had been stuck on 140. It now ranks 2 of 10, behind the 8 Sep video's 256.",
+   "YouTube realtime 48-hour views stayed at 0 and there has been no upload since 18 Sep — ten days. Subscribers 4 and videos 32 (15 long-form, 17 Shorts) unchanged.",
+   "LINKEDIN IMPRESSIONS EDGED UP 1,229 → 1,232 and the comparison narrowed ▼28.1% → ▼27.6%, implying a prior period of 1,702. Reactions fell again 44 → 43 (▼37.1% → ▼38.6%); comments and reposts remain 0.",
+   "LINKEDIN VISITORS KEPT SLIDING: page views 28 → 27 (▼78.1% → ▼78.7%) and unique visitors 13 → 12 (▼72.9% → ▼75.0%), desktop 25 → 24 with mobile flat at 3. New followers in 30 days still 1 (▼97.9%).",
+   "FOLLOWERS UNCHANGED ON EVERY CHANNEL for a third read: Facebook 116, Instagram 49, LinkedIn 102, YouTube 4. The visitor job-function mix churned heavily — six of the ten LinkedIn functions are new versus 26 Sep."
+  ],
+  "vi": [
+   "Cả bốn kênh được đọc trực tiếp qua Chrome ngày 28/9 lúc ~06:20 ICT. LƯỢT CHẠY NGÀY 27/9 KHÔNG KÍCH HOẠT, nên không có file dữ liệu 27/9 và mọi so sánh ở đây là với ngày 26/9. Meta và YouTube tiến HAI ngày lên 30/8 – 26/9; LinkedIn chỉ tiến MỘT ngày lên 27/8 – 25/9.",
+   "LƯỢT XEM FACEBOOK GIẢM 4.509 → 4.483 nhưng mức so sánh xấu hơn ▼3,8% → ▼5,0% — ngày 28 và 29/8 rời cửa sổ với 173 và 34 lượt xem, còn 25 và 26/9 vào với 130 và 51, ròng mất 26.",
+   "KHÔNG CÓ BÀI MỚI TRÊN CẢ HAI KÊNH META TRONG BA NGÀY — bài 'chi tiết không chỉ là chi tiết' ngày 25/9 vẫn là bài mới nhất ở cả hai nơi. Facebook không đăng gì từ 25/9 15:53, Instagram từ 25/9 15:02.",
+   "MỌI BÀI FACEBOOK LẠI ĐƯỢC ĐIỀU CHỈNH TĂNG: 22/9 155 → 168 vẫn dẫn đầu, 21/9 109 → 112, 23/9 83 → 91, bài 25/9 54 → 98 (mức tăng hai ngày lớn nhất trong bảng) và 19/9 49 → 52. Bài bài viết 24/9 tăng 33 → 37.",
+   "LƯỢT TRUY CẬP FACEBOOK TĂNG MẠNH 433 → 445 và mức so sánh mở rộng ▲49,3% → ▲60,1%, nhờ ngày 25/9 đạt 31 lượt. Lượt click liên kết giữ ở 5 lần đọc thứ hai, so sánh ngang bằng 0%.",
+   "LƯỢT TƯƠNG TÁC FACEBOOK TĂNG 140 → 144 nhưng mức so sánh tụt nhẹ ▼22,2% → ▼22,6%; tương tác từ người theo dõi giảm 101 → 100 còn từ người chưa theo dõi tăng 39 → 44. Video nhả lại một chút: lượt xem 3 giây 355 → 352 (▲147,9%) và thời gian xem 2h 4m → 2h 3m (▲138,4%).",
+   "LƯỢT XEM INSTAGRAM GIẢM 2.397 → 2.320 nhưng mức so sánh vẫn rất cao ▲149,2% → ▲119,3% — chỉ là nền so sánh đã đổi. Ngày 28 và 29/8 rời đi với tổng 88, còn 25 và 26/9 chỉ thêm 34. Tỷ trọng người theo dõi giảm về 65,7% (1.936 trên 2.320).",
+   "SỐ NGƯỜI TIẾP CẬN INSTAGRAM CUỐI CÙNG ĐÃ NHÍCH sau ba lần đọc bất động: 86 → 87 (▼68,7% → ▼68,4%). Tiếp cận từ người theo dõi giữ 14, từ người chưa theo dõi tăng 72 → 73.",
+   "Tương tác Instagram cải thiện 15 → 18 (▼77,6% → ▼73,1%) với tỷ trọng người theo dõi lên 71%. Số bài đứng yên ở 131, người theo dõi 49, đang theo dõi 36.",
+   "YOUTUBE HOÀN TOÀN ĐỨNG YÊN: lượt xem kênh giữ đúng 634 qua hai ngày cửa sổ dịch chuyển, thời gian xem 0,5 giờ (▲611%) và bảng top 10 giống y nguyên ngày 26/9. Chỉ nền so sánh đổi, 554 → 544 nhiều hơn mức thường lệ, và đó là điều xác nhận đây là số đọc mới.",
+   "HAI CON SỐ CỦA VIDEO ĐĂNG 18/9 ĐÃ KHỚP NHAU: thẻ từ lúc đăng giờ ghi 132 lượt xem, 29,8% thời lượng xem trung bình trong 9 ngày 13 giờ, trùng với 132 trong bảng 28 ngày sau khi thẻ này mắc ở 140. Video xếp 2 trên 10, sau video 8/9 với 256 lượt.",
+   "Lượt xem 48 giờ theo thời gian thực của YouTube vẫn 0 và chưa có video mới nào từ 18/9 — mười ngày. Người đăng ký 4 và số video 32 (15 dài, 17 Shorts) không đổi.",
+   "LƯỢT HIỂN THỊ LINKEDIN NHÍCH LÊN 1.229 → 1.232 và mức so sánh thu hẹp ▼28,1% → ▼27,6%, hàm ý kỳ trước là 1.702. Lượt phản ứng lại giảm 44 → 43 (▼37,1% → ▼38,6%); bình luận và chia sẻ lại vẫn 0.",
+   "NGƯỜI TRUY CẬP LINKEDIN TIẾP TỤC GIẢM: lượt xem trang 28 → 27 (▼78,1% → ▼78,7%) và người truy cập duy nhất 13 → 12 (▼72,9% → ▼75,0%), máy tính 25 → 24 còn điện thoại giữ 3. Người theo dõi mới trong 30 ngày vẫn 1 (▼97,9%).",
+   "NGƯỜI THEO DÕI KHÔNG ĐỔI Ở MỌI KÊNH lần đọc thứ ba: Facebook 116, Instagram 49, LinkedIn 102, YouTube 4. Cơ cấu ngành nghề người truy cập LinkedIn xáo trộn mạnh — sáu trên mười ngành là mới so với 26/9."
+  ]
+ }
+}
