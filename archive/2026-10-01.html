@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DX Living — Social Dashboard</title>
+<script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1" integrity="sha384-jb8JQMbMoBUzgWatfe6COACi2ljcDdZQ2OxczGA3bGNeWe+6DChMTBJemed7ZnvJ" crossorigin="anonymous"></script>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;
+--fb:#1877f2;--ig:#e1306c;--yt:#ff0000;--li:#0a66c2;--pos:#12b76a;--neg:#f04438;--rail:#0b1533;--accent:#5b6bf5;--radius:14px;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+.app{display:flex;min-height:100vh}
+.rail{width:74px;background:var(--rail);flex:none;display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:4px;position:sticky;top:0;height:100vh}
+.rail .logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#5b6bf5,#22d3ee);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;margin-bottom:10px}
+.rbtn{width:46px;height:46px;border-radius:12px;border:none;cursor:pointer;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;opacity:.5;transition:.15s;background:#26304f}
+.rbtn:hover{opacity:.85}
+.rbtn.active{opacity:1;box-shadow:0 0 0 2px #fff inset}
+.rlabel{color:#9aa6c6;font-size:9px;margin-top:-2px;margin-bottom:4px}
+.main{flex:1;padding:20px 24px;min-width:0;max-width:1400px}
+.hd{background:var(--card);border-radius:var(--radius);padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.hd .ttl{display:flex;align-items:center;gap:12px}
+.hd .badge{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
+.hd h1{font-size:18px;font-weight:800}
+.hd .per{font-size:12px;color:var(--muted)}
+.hd .right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;position:relative}
+.pdfpop{position:absolute;top:calc(100% + 8px);right:0;z-index:60;width:290px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(20,30,60,.16);padding:14px;display:none}
+.pdfpop.open{display:block}
+.pdfpop h4{font-size:12px;font-weight:800;margin-bottom:10px;letter-spacing:.02em}
+.pdfpop label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin:0 0 4px}
+.pdfpop select{width:100%;font-size:12px;font-weight:600;padding:7px 8px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);margin-bottom:9px;cursor:pointer}
+.pdfpop .pdfquick{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.pdfpop .pdfquick button{flex:1 1 auto;font-size:11px;font-weight:700;padding:5px 8px;border-radius:7px;border:1px solid var(--line);background:#f6f8fc;color:var(--ink);cursor:pointer}
+.pdfpop .pdfquick button:hover{background:#eef1f6}
+.pdfpop .pdfmeta{font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:10px}
+.pdfpop .pdfact{display:flex;gap:8px}
+.pdfpop .pdfact button{flex:1;font-size:12px;font-weight:700;padding:8px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.pdfpop .pdfact button.go{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pdfpop .pdfact button:disabled{opacity:.55;cursor:not-allowed}
+.chip{font-size:11px;background:#eef2ff;color:#3949ab;padding:5px 10px;border-radius:999px;font-weight:700}
+.tbtn{font-size:12px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.langfloat{position:fixed;right:22px;top:14px;z-index:60;display:flex;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 24px rgba(20,30,60,.20);overflow:hidden}
+.langfloat button{font-size:12px;font-weight:800;letter-spacing:.4px;padding:10px 16px;border:none;background:#fff;color:var(--ink);cursor:pointer;line-height:1}
+.langfloat button:hover{background:#eef1f6}
+.langfloat button.on{background:var(--accent);color:#fff}
+.langfloat button.on:hover{background:var(--accent)}
+@media print{.langfloat{display:none}}
+@media (max-width:640px){.langfloat{right:12px;top:10px}.langfloat button{padding:9px 13px}}
+#langBtn{display:none}
+.tbtn:hover{background:#eef1f6}
+.tbtn.p{background:var(--accent);color:#fff;border-color:var(--accent)}
+.kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:16px}
+.kpi{background:var(--card);border-radius:var(--radius);padding:15px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);border-top:3px solid var(--accent)}
+.kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.kpi .v{font-size:26px;font-weight:800;margin-top:6px}
+.kpi .c{font-size:12px;font-weight:700;margin-top:3px}
+.c.up{color:var(--pos)}.c.down{color:var(--neg)}.c.flat{color:var(--muted)}
+.grid{display:grid;gap:16px;margin-bottom:16px}
+.g2{grid-template-columns:1.5fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g2e{grid-template-columns:1fr 1fr}
+@media(max-width:900px){.g2,.g3,.g2e{grid-template-columns:1fr}}
+.panel{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06)}
+.panel h3{font-size:13px;font-weight:800;margin-bottom:12px}
+.chart{position:relative;height:250px}.chart.sm{height:210px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;color:var(--muted);letter-spacing:.4px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.post{max-width:360px;color:#3b4560}
+a{color:var(--fb);text-decoration:none}a:hover{text-decoration:underline}
+ul.clean{list-style:none}ul.clean li{font-size:13px;padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px}
+ul.clean li:last-child{border:none}ul.clean li::before{content:"▹";color:var(--accent);font-weight:800}
+.pill{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px}
+.pill.on{background:#dcfce7;color:#166534}.pill.off{background:#fef3c7;color:#92400e}.pill.none{background:#eef2ff;color:#3730a3}
+.snap{display:flex;align-items:center;gap:14px}.snap .big{font-size:40px;font-weight:800}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.foot{font-size:12px;color:#9aa6c6;margin:18px 0 6px;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(10,15,30,.5);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modal.open{display:flex}
+.modal .box{background:#fff;border-radius:16px;max-width:560px;width:100%;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal h2{font-size:17px;margin-bottom:12px}
+.modal ol{margin:0 0 8px 18px}.modal li{font-size:13px;margin:7px 0}
+.modal .x{float:right;cursor:pointer;color:var(--muted);font-weight:800;border:none;background:none;font-size:18px}
+
+/* ---- date picker / metastrip ---- */
+.metastrip{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.mtag{font-size:11.5px;font-weight:700;padding:6px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:#5b6472}
+.mtag.on{background:#e8f7ef;border-color:#bfe8d2;color:#166534}
+.mtag.hist{background:#fdeee9;border-color:#f7c9ba;color:#b4451f;text-decoration:none}
+.mtag.hist:hover{background:#fbe0d7;text-decoration:none}
+#sec-filter{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.dp-lab{display:flex;align-items:center;gap:9px;font-size:11.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ink)}
+.acc-head{width:100%;display:flex;align-items:center;gap:12px;background:none;border:none;padding:0;margin:0;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.acc-head .acc-sub{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600;white-space:nowrap}
+.acc-chev{flex:none;width:15px;height:15px;color:var(--muted);transition:transform .2s}
+.acc-head[aria-expanded="true"] .acc-chev{transform:rotate(180deg)}
+.acc-body{display:none}
+.acc-body.open{display:block}
+#sec-trend{background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.tr-sec{margin-top:14px}
+.tr-sec .th{display:flex;align-items:baseline;gap:9px;margin-bottom:8px}
+.tr-sec .th b{font-size:13px;font-weight:800}
+.tr-sec .th span{font-size:11.5px;color:var(--muted)}
+.tr-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.tr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:11px}
+.tr-card{border:1px solid var(--line);border-radius:12px;padding:10px 12px 8px}
+.tr-card .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);font-weight:700;line-height:1.3;min-height:27px}
+.tr-card .v{font-size:20px;font-weight:800;letter-spacing:-.3px}
+.tr-card .d{font-size:11.5px;font-weight:700;margin-top:1px}
+.tr-card .d.up{color:var(--pos)}.tr-card .d.down{color:var(--neg)}.tr-card .d.flat{color:var(--muted)}
+.tr-spark{height:44px;margin-top:6px}
+@media(max-width:640px){.tr-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+.dp-lab .bar{width:22px;height:3px;border-radius:2px;background:#e8543a;display:inline-block}
+.dp-help{font-size:12.5px;color:var(--muted);margin:8px 0 14px;max-width:900px;line-height:1.5}
+.dp-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:relative}
+.dp-btn{font-size:13px;font-weight:700;padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.dp-btn:hover{background:#f5f7fb}
+.dp-state{font-size:12px;font-weight:700;padding:7px 12px;border-radius:999px;background:#fdeee9;color:#b4451f}
+.dp-quick{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.dp-quick .qh{font-size:10.5px;font-weight:800;letter-spacing:.6px;color:var(--muted);text-transform:uppercase;margin-right:2px}
+.dp-chip{font-size:12px;font-weight:700;padding:7px 11px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;text-align:left}
+.dp-chip:hover{background:#f5f7fb}
+.dp-chip .cl{font-weight:500;color:var(--muted);margin-left:7px;font-size:11px}
+.dp-chip.cur{background:#e8543a;border-color:#e8543a;color:#fff}
+.dp-chip.cur .cl{color:#ffd9cf}
+.dp-pop{position:absolute;top:46px;left:0;z-index:40;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 44px rgba(20,30,60,.18);padding:16px 18px;display:none}
+.dp-pop.open{display:block}
+.dp-cal{display:flex;gap:26px}
+.dp-m{min-width:212px}
+.dp-mh{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:800;margin-bottom:8px}
+.dp-nav{border:none;background:none;cursor:pointer;color:var(--muted);font-size:15px;padding:0 4px;line-height:1}
+.dp-nav:disabled{opacity:.25;cursor:default}
+.dp-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.dp-dow{font-size:10.5px;color:var(--muted);text-align:center;padding:3px 0;font-weight:700}
+.dp-day{position:relative;height:28px;border:none;background:none;border-radius:7px;font-size:12.5px;color:var(--ink);cursor:pointer;font-family:inherit}
+.dp-day.dim{color:#c3c9d4;cursor:default}
+.dp-day.pad{visibility:hidden}
+.dp-day:not(.dim):hover{background:#f0f2f7}
+.dp-day.sel{background:#e8543a;color:#fff;font-weight:800}
+.dp-day .dot{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:#e8543a}
+.dp-day.sel .dot{background:#fff}
+.dp-foot{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.dp-sum{font-size:13px;font-weight:800;margin-bottom:2px}
+.dp-sub{font-size:11.5px;color:var(--muted);line-height:1.5}
+.dp-acts{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.dp-ok{background:#e8543a;color:#fff;border:1px solid #e8543a;font-weight:700;font-size:12.5px;padding:8px 16px;border-radius:9px;cursor:pointer}
+.dp-ok:disabled{background:#f0d4cd;border-color:#f0d4cd;cursor:not-allowed}
+.dp-cancel{background:#fff;border:1px solid var(--line);font-weight:700;font-size:12.5px;padding:8px 16px;border-radius:9px;cursor:pointer;color:var(--ink)}
+.dp-legend{font-size:11px;color:var(--muted);margin-top:10px}
+.dp-legend .d{color:#e8543a;font-weight:800}
+</style>
+</head>
+<body><div id="archive-banner" style="background:#fdf4e3;border-bottom:1px solid #f0dcb4;color:#b7791f;font-size:12.5px;padding:9px 18px;text-align:center;font-weight:600;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">🗃 Bản lưu ngày 01/10/2026 — dashboard này đã đóng băng, không cập nhật nữa. <a href="../index.html" style="color:#b4451f">Xem bản mới nhất</a> · <a href="../history.html" style="color:#b4451f">Lịch sử dữ liệu theo ngày</a><span style="opacity:.6"> · </span>Archived copy of 2026-10-01 — frozen, no longer updated.</div>
+<div class="app">
+<nav class="rail">
+<div class="logo">DX</div>
+<button class="rbtn" data-k="all" style="background:#5b6bf5">All</button><div class="rlabel">All</div>
+<button class="rbtn" data-k="linkedin" style="background:#0a66c2">in</button><div class="rlabel">LI</div>
+<button class="rbtn" data-k="instagram" style="background:#e1306c">ig</button><div class="rlabel">IG</div>
+<button class="rbtn" data-k="facebook" style="background:#1877f2">f</button><div class="rlabel">FB</div>
+<button class="rbtn" data-k="youtube" style="background:#ff0000">yt</button><div class="rlabel">YT</div>
+</nav>
+<div class="langfloat" id="langFloat" role="group" aria-label="Language / Ngôn ngữ">
+<button type="button" data-l="en" class="on">EN</button><button type="button" data-l="vi">VI</button>
+</div>
+<main class="main">
+<div class="hd">
+<div class="ttl"><div class="badge" id="hdBadge">◆</div><div><h1 id="hdTitle"></h1><div class="per" id="hdPer"></div></div></div>
+<div class="right">
+<span class="chip" id="hdChip"></span>
+<button class="tbtn" id="pdfBtn"></button>
+<button class="tbtn" id="shareBtn"></button>
+<div class="pdfpop" id="pdfPop">
+  <h4 id="pdfPopTitle"></h4>
+  <div class="pdfquick" id="pdfQuick"></div>
+  <label id="pdfFromLab"></label><select id="pdfFrom"></select>
+  <label id="pdfToLab"></label><select id="pdfTo"></select>
+  <div class="pdfmeta" id="pdfMeta"></div>
+  <div class="pdfact"><button id="pdfGo" class="go"></button><button id="pdfCancel"></button></div>
+</div>
+<button class="tbtn p" id="langBtn">VI</button>
+</div>
+</div>
+<div id="view"></div>
+
+<style id="dxr-css">
+#dxr{margin:18px 0}
+#dxr .dxr-h{display:flex;align-items:center;gap:9px;font-weight:700;font-size:15px;margin:0 0 4px}
+#dxr .dxr-badge{font-size:10.5px;font-weight:700;letter-spacing:.04em;padding:3px 7px;border-radius:5px;background:#eef1f5;color:#5b6472}
+#dxr .dxr-tabs{display:flex;gap:6px;margin:10px 0 8px;flex-wrap:wrap}
+#dxr .dxr-tab{font:inherit;font-size:12.5px;font-weight:600;padding:6px 12px;border:1px solid #cfd4da;background:#fff;color:#454c56;border-radius:7px;cursor:pointer}
+#dxr .dxr-tab.on{background:#2c3440;border-color:#2c3440;color:#fff}
+#dxr .dxr-ctrl{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 6px}
+#dxr .dxr-ctrl label{font-size:12.5px;font-weight:600;color:#454c56;display:flex;align-items:center;gap:6px}
+#dxr .dxr-ctrl select{font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid #cfd4da;border-radius:6px;background:#fff;color:#22262c}
+#dxr .dxr-hint{font-size:11.5px;color:#7b828c;font-weight:400}
+#dxr .dxr-note{font-size:11.5px;line-height:1.6;color:#5b6472;background:#f7f8fa;border:1px solid #e6e9ee;border-radius:7px;padding:9px 11px;margin:8px 0 12px}
+#dxr .dxr-warn{font-size:12.5px;line-height:1.6;color:#8a5a12;background:#fdf6e7;border:1px solid #f0e0bc;border-radius:7px;padding:10px 12px;margin:4px 0 0}
+#dxr .dxr-rangelbl{font-size:12px;font-weight:700;color:#5b6472;margin:2px 0 7px}
+#dxr .dxr-tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+#dxr .dxr-tbl th{text-align:left;font-weight:700;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#7b828c;border-bottom:1px solid #e6e9ee;padding:7px 9px}
+#dxr .dxr-tbl td{padding:7px 9px;border-bottom:1px solid #f0f2f5;vertical-align:middle}
+#dxr .dxr-tbl .dxr-n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#dxr .dxr-tbl tr:last-child td{border-bottom:none}
+#dxr .dxr-up{color:#0b7a53;font-weight:600}
+#dxr .dxr-down{color:#b4231c;font-weight:600}
+#dxr .dxr-flat{color:#7b828c}
+#dxr .dxr-sparkcell{width:130px;text-align:right}
+#dxr .dxr-spark{width:120px;height:28px;display:block;margin-left:auto}
+#dxr .dxr-nospark{font-size:11px;color:#a4abb4}
+@media(max-width:620px){#dxr .dxr-sparkcell,#dxr .dxr-tbl th:last-child{display:none}}
+#dxr .dxr-grp{margin:16px 0 0}
+#dxr .dxr-grpt{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:5px 9px;border-radius:6px;display:inline-block}
+#dxr .dxr-g-day{background:#e6f5ed;color:#0b6b49}
+#dxr .dxr-g-window28{background:#fdf1e3;color:#8a5a12}
+#dxr .dxr-g-state{background:#eef1f5;color:#4a5260}
+#dxr .dxr-grpn{font-size:11.5px;line-height:1.55;color:#6b727c;margin:6px 0 4px}
+#dxr .dxr-strong{font-weight:800;color:#12161c}
+</style>
+
+<section class="card" id="dxr" style="display:none">
+  <div class="dxr-h"><span id="dxr-title"></span><span class="dxr-badge" id="dxr-badge"></span></div>
+  <div id="dxr-body"></div>
+</section>
+<script>
+(function(){var h=document.getElementById("dxr-title"),b=document.getElementById("dxr-badge");
+var L=function(){try{return (typeof lang!=="undefined"&&lang)?lang:"vi";}catch(e){return "vi";}};
+function up(){if(h)h.textContent=(L()==="en")?"Range explorer":"Xem theo kho\u1ea3ng th\u1eddi gian";
+if(b)b.textContent=(L()==="en")?"DERIVED FROM STORED DAYS":"D\u1eaaN XU\u1ea4T T\u1eea C\u00c1C NG\u00c0Y \u0110\u00c3 L\u01afU";}
+up();setInterval(up,400);})();
+window.__DXR_CFG={rollup:"data/rollup.json",lang:function(){try{return (typeof lang!=="undefined"&&lang)?lang:"vi";}catch(e){return "vi";}}};
+/* ==== DX RANGE EXPLORER v2 =====================================
+   Đọc data/rollup.json (FILE DẪN XUẤT, dựng lại mỗi sáng từ các
+   file ngày bất biến). Mỗi chuỗi có nhãn grain và chỉ được phép
+   làm đúng phép tính hợp lệ với nhãn đó:
+     day       -> cộng dồn được trong khoảng
+     window28  -> KHÔNG cộng (các ngày chồng nhau), chỉ đầu->cuối
+     state     -> trung bình / giá trị cuối kỳ
+   Tự ẩn nếu không đọc được rollup (bản archive).
+   ================================================================ */
+(function(){
+  var CFG=window.__DXR_CFG; if(!CFG) return;
+  var S={ser:null,dates:[],mode:'trend',from:null,to:null,a:null,b:null,lang:null,ready:false};
+  function L(){ try{return CFG.lang();}catch(e){return 'vi';} }
+  function t(vi,en){ return L()==='en'?en:vi; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function nf(v,dp){ if(v===null||v===undefined||!isFinite(v)) return '—';
+    return v.toLocaleString(L()==='en'?'en-US':'vi-VN',{minimumFractionDigits:dp||0,maximumFractionDigits:dp||0}); }
+  function fd(d){ if(L()==='en') return d; var p=d.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+  function dp(k){ return /pct|ctr|position/.test(k)?(/position/.test(k)?1:2):0; }
+  function lower(k){ return /position|ttfb/.test(k); }
+
+  function spark(vals){
+    var nums=vals.filter(function(v){return v!==null;});
+    if(nums.length<2) return '<span class="dxr-nospark">'+t('chưa đủ điểm','too few points')+'</span>';
+    var mn=Math.min.apply(null,nums),mx=Math.max.apply(null,nums),rg=(mx-mn)||1,W=120,H=28,n=vals.length;
+    var seg=[],cur=[],i;
+    for(i=0;i<n;i++){ if(vals[i]===null){ if(cur.length){seg.push(cur);cur=[];} continue; }
+      cur.push(((n===1?0:i/(n-1)*W)).toFixed(1)+','+(H-2-((vals[i]-mn)/rg)*(H-6)).toFixed(1)); }
+    if(cur.length) seg.push(cur);
+    var g=seg.map(function(s){ return s.length===1
+      ?'<circle cx="'+s[0].split(',')[0]+'" cy="'+s[0].split(',')[1]+'" r="1.7" fill="currentColor"/>'
+      :'<polyline points="'+s.join(' ')+'" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>';}).join('');
+    var last=null; for(i=n-1;i>=0;i--){ if(vals[i]!==null){last=i;break;} }
+    if(last!==null) g+='<circle cx="'+((n===1?0:last/(n-1)*W)).toFixed(1)+'" cy="'+(H-2-((vals[last]-mn)/rg)*(H-6)).toFixed(1)+'" r="2.4" fill="currentColor"/>';
+    return '<svg class="dxr-spark" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" aria-hidden="true">'+g+'</svg>';
+  }
+  function deltaCell(key,a,b){
+    if(a===null||b===null) return {txt:'—',cls:'dxr-flat'};
+    var diff=b-a,better=lower(key)?diff<0:diff>0,d=dp(key);
+    var cls=diff===0?'dxr-flat':(better?'dxr-up':'dxr-down');
+    var txt=(diff===0?'▬':(diff>0?'▲':'▼'))+' '+(diff>0?'+':'')+nf(diff,d);
+    if(a!==0) txt+=' ('+(diff/Math.abs(a)*100>0?'+':'')+(diff/Math.abs(a)*100).toFixed(1)+'%)';
+    return {txt:txt,cls:cls};
+  }
+  function inR(d){ return d>=S.from && d<=S.to; }
+  function opts(sel,list){ return list.map(function(d){
+    return '<option value="'+d+'"'+(d===sel?' selected':'')+'>'+fd(d)+'</option>';}).join(''); }
+
+  var GRAINS=[
+    {g:'day',  vi:'Số theo ngày thật — cộng dồn được',      en:'True daily figures — summable'},
+    {g:'window28',vi:'Ảnh chụp cửa sổ 28 ngày — KHÔNG cộng được', en:'28-day rolling snapshots — NOT summable'},
+    {g:'state',vi:'Chỉ số trạng thái — lấy đầu kỳ / cuối kỳ',en:'State metrics — first / last of range'}
+  ];
+  function grainNote(g){
+    if(g==='day') return t('Mỗi điểm là số đo của đúng ngày đó, nên tổng trong khoảng là con số thật.',
+                           'Each point is that day’s own measurement, so the range total is a real number.');
+    if(g==='window28') return t('Mỗi điểm đã là tổng của 28 ngày trước đó; hai ngày liền nhau chồng nhau 27 ngày. Cộng lại sẽ đếm trùng, nên chỉ so đầu kỳ với cuối kỳ.',
+                           'Each point is already a 28-day total; consecutive days overlap by 27. Summing would double-count, so only the first and last are compared.');
+    return t('Giá trị tại thời điểm quét (không phải luỹ kế), nên chỉ so đầu kỳ với cuối kỳ.',
+             'A value at the moment of the scan, not a cumulative figure, so only first and last are compared.');
+  }
+
+  function render(){
+    var el=document.getElementById('dxr-body'); if(!el) return; S.lang=L();
+    var head='<div class="dxr-tabs">'+
+      '<button class="dxr-tab'+(S.mode==='trend'?' on':'')+'" data-m="trend">'+t('Xu hướng theo khoảng','Trend over a range')+'</button>'+
+      '<button class="dxr-tab'+(S.mode==='cmp'?' on':'')+'" data-m="cmp">'+t('So sánh hai ngày','Compare two days')+'</button></div>';
+    var ctrl = S.mode==='trend'
+      ? '<div class="dxr-ctrl"><label>'+t('Từ','From')+' <select id="dxr-from">'+opts(S.from,S.dates)+'</select></label>'+
+        '<label>'+t('Đến','To')+' <select id="dxr-to">'+opts(S.to,S.dates)+'</select></label>'+
+        '<span class="dxr-hint" id="dxr-count"></span></div>'
+      : '<div class="dxr-ctrl"><label>'+t('Ngày A','Day A')+' <select id="dxr-a">'+opts(S.a,S.dates)+'</select></label>'+
+        '<label>'+t('Ngày B','Day B')+' <select id="dxr-b">'+opts(S.b,S.dates)+'</select></label></div>';
+    var note='<p class="dxr-note">'+t(
+      '<b>Đọc từ <code>data/rollup.json</code></b> — file dẫn xuất dựng lại mỗi sáng từ các file ngày bất biến, không sửa tay. Mỗi chỉ số mang một <b>nhãn grain</b> và bảng dưới chỉ làm đúng phép tính hợp lệ với nhãn đó. Ngày không quét <b>không bao giờ được nội suy</b>; ô “—” nghĩa là ngày đó không đo chỉ số này.',
+      '<b>Read from <code>data/rollup.json</code></b> — a derived file rebuilt each morning from the immutable day files, never hand-edited. Every metric carries a <b>grain label</b>, and the table below only performs the arithmetic that label allows. Unscanned days are <b>never interpolated</b>; a “—” means that metric was not measured that day.')+'</p>';
+    el.innerHTML=head+ctrl+note+'<div id="dxr-out"></div>';
+    el.querySelectorAll('.dxr-tab').forEach(function(b){ b.onclick=function(){S.mode=b.dataset.m;render();};});
+    var f=document.getElementById('dxr-from'),to=document.getElementById('dxr-to'),
+        a=document.getElementById('dxr-a'),b2=document.getElementById('dxr-b');
+    if(f) f.onchange=function(){S.from=f.value; if(S.from>S.to)S.to=S.from; render();};
+    if(to) to.onchange=function(){S.to=to.value; if(S.to<S.from)S.from=S.to; render();};
+    if(a) a.onchange=function(){S.a=a.value;draw();};
+    if(b2) b2.onchange=function(){S.b=b2.value;draw();};
+    draw();
+  }
+
+  function draw(){
+    var out=document.getElementById('dxr-out'); if(!out) return;
+    var keys=Object.keys(S.ser), html='';
+    if(S.mode==='trend'){
+      var span=S.dates.filter(inR).length;
+      var c=document.getElementById('dxr-count');
+      if(c) c.innerHTML=span+' '+t('ngày có dữ liệu trong khoảng','days with data in range');
+      html='<div class="dxr-rangelbl">'+fd(S.from)+' → '+fd(S.to)+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return;
+        var any=false, rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k], pts=s.points.filter(function(p){return inR(p.d);});
+          if(!pts.length){ rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n" colspan="4">—</td></tr>'; return; }
+          any=true; var vals=pts.map(function(p){return p.v;}), d=dp(k);
+          if(G.g==='day'){
+            var sum=vals.reduce(function(x,y){return x+y;},0);
+            var avg=sum/vals.length, mx=Math.max.apply(null,vals);
+            var mxd=pts[vals.indexOf(mx)].d;
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n dxr-strong">'+nf(sum,d)+'</td><td class="dxr-n">'+nf(avg,1)+
+              '</td><td class="dxr-n">'+nf(mx,d)+' <span class="dxr-hint">'+fd(mxd)+'</span></td>'+
+              '<td class="dxr-sparkcell">'+spark(vals)+'</td></tr>';
+          } else {
+            var va=vals[0],vb=vals[vals.length-1],dd=deltaCell(k,va,vb);
+            rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+              '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td><td class="dxr-sparkcell '+dd.cls+'">'+spark(vals)+'</td></tr>';
+          }
+        });
+        var hdr = G.g==='day'
+          ? '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Tổng trong khoảng','Range total')+'</th><th class="dxr-n">'+t('TB/ngày','Per day')+'</th><th class="dxr-n">'+t('Ngày cao nhất','Peak day')+'</th><th>'+t('Đường đi','Path')+'</th>'
+          : '<th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+t('Đầu kỳ','First')+'</th><th class="dxr-n">'+t('Cuối kỳ','Last')+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th><th>'+t('Đường đi','Path')+'</th>';
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<p class="dxr-grpn">'+grainNote(G.g)+'</p>'+
+              '<table class="dxr-tbl"><thead><tr>'+hdr+'</tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+      if(!html) html='<p class="dxr-warn">'+t('Không có chỉ số nào trong khoảng này.','No metrics in this range.')+'</p>';
+    } else {
+      html='<div class="dxr-rangelbl">'+fd(S.a)+' → '+fd(S.b)+(S.a===S.b?' <span class="dxr-hint">('+t('cùng một ngày','same day')+')</span>':'')+'</div>';
+      GRAINS.forEach(function(G){
+        var ks=keys.filter(function(k){return S.ser[k].grain===G.g;});
+        if(!ks.length) return; var rows='';
+        ks.forEach(function(k){
+          var s=S.ser[k],d=dp(k);
+          function at(dt){ var p=s.points.filter(function(x){return x.d===dt;})[0]; return p?p.v:null; }
+          var va=at(S.a),vb=at(S.b),dd=deltaCell(k,va,vb);
+          rows+='<tr><td>'+esc(s.label)+'</td><td class="dxr-n">'+nf(va,d)+'</td><td class="dxr-n">'+nf(vb,d)+
+                '</td><td class="dxr-n '+dd.cls+'">'+dd.txt+'</td></tr>';
+        });
+        html+='<div class="dxr-grp"><div class="dxr-grpt dxr-g-'+G.g+'">'+t(G.vi,G.en)+'</div>'+
+              '<table class="dxr-tbl"><thead><tr><th>'+t('Chỉ số','Metric')+'</th><th class="dxr-n">'+fd(S.a)+
+              '</th><th class="dxr-n">'+fd(S.b)+'</th><th class="dxr-n">'+t('Chênh lệch','Change')+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+      });
+    }
+    out.innerHTML=html;
+  }
+
+  function hide(){ var s=document.getElementById('dxr'); if(s) s.style.display='none'; }
+  function start(){
+    fetch(CFG.rollup,{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+    .then(function(j){
+      if(!j || !j.series) throw 0;
+      S.ser=j.series;
+      var set={};
+      Object.keys(S.ser).forEach(function(k){ S.ser[k].points.forEach(function(p){ set[p.d]=1; }); });
+      S.dates=Object.keys(set).sort();
+      if(S.dates.length<2){ hide(); return; }
+      var n=S.dates.length;
+      S.to=S.dates[n-1]; S.from=S.dates[Math.max(0,n-15)];
+      S.b=S.dates[n-1]; S.a=S.dates[n-2];
+      S.ready=true;
+      var sec=document.getElementById('dxr'); if(sec) sec.style.display='';
+      render();
+      setInterval(function(){ if(S.ready&&L()!==S.lang) render(); },400);
+    }).catch(hide);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+})();
+
+</script>
+
+<div class="foot" id="foot"></div>
+</main>
+</div>
+
+<div class="modal" id="shareModal"><div class="box"><button class="x" onclick="closeShare()">×</button><div id="shareContent"></div></div></div>
+
+<script>
+// ============ REAL DATA — captured 29 Sep 2026 via Chrome (all four channels read live: FB, IG, YouTube Studio, LinkedIn Content + Followers + Visitors) ============
+const SNAPDATE="2026-10-01";
+const PERIOD_EN="Last 28 days: 2 – 29 Sep 2026", PERIOD_VI="28 ngày qua: 2 – 29/9/2026";
+const dlabels=(()=>{const a=[];const d=new Date(2026,8,2);for(let i=0;i<28;i++){a.push(d.toLocaleDateString("en-AU",{day:"numeric",month:"short"}));d.setDate(d.getDate()+1);}return a;})();
+
+const FB={ followers:116,
+kpis:[{en:"Views",vi:"Lượt xem",v:4427,c:5.6},{en:"Reach (viewers)",vi:"Người tiếp cận",v:288,c:-36.0},{en:"Facebook visits",vi:"Lượt truy cập",v:421,c:71.8},{en:"Content interactions",vi:"Tương tác ND",v:132,c:-23.3},{en:"Video 3s views",vi:"Video 3s views",v:352,c:151.4},{en:"Net new followers",vi:"Follower ròng",v:1,c:100.0}],
+viewsDaily:[250, 187, 123, 62, 69, 159, 259, 625, 255, 109, 105, 116, 218, 215, 97, 114, 278, 59, 12, 149, 134, 187, 124, 130, 51, 65, 180, 95],
+interactionsDaily:[7, 2, 2, 1, 0, 8, 7, 9, 10, 0, 3, 0, 8, 6, 10, 4, 7, 2, 0, 6, 6, 7, 6, 9, 2, 0, 6, 4],
+visitsDaily:[23, 6, 0, 0, 37, 27, 30, 8, 12, 6, 3, 16, 7, 77, 13, 1, 51, 9, 6, 12, 4, 31, 16, 7, 9, 4, 6, 0],
+video3sDaily:[4, 5, 6, 3, 9, 3, 30, 100, 21, 3, 2, 19, 6, 58, 9, 1, 45, 5, 2, 2, 7, 4, 2, 0, 0, 3, 3, 0],
+viewsSrc:[45.2,54.8], intSrc:[88,44], watch:{en:"2h 2m",vi:"2 giờ 2 phút"}, watchC:141.2,
+posts:[{"d": "22 Sep", "t": "A picture can show the outcome, a model can show what sits behind it", "reach": 171, "react": 4, "com": 0, "sh": 2}, {"d": "28 Sep", "t": "Some details are made by hand — a hand carved teak door by Bali Abundance brings depth, texture and variation to the Project 251 garden entry", "reach": 169, "react": 3, "com": 0, "sh": 1}, {"d": "25 Sep", "t": "The detail you see is rarely just a detail — a junction, an opening, a transition carries a decision made much earlier", "reach": 125, "react": 5, "com": 0, "sh": 2}, {"d": "23 Sep", "t": "A good plan does not prevent questions — it helps answer them faster", "reach": 98, "react": 3, "com": 0, "sh": 1}, {"d": "30 Sep", "t": "Hand carving changes more than the surface — it creates variation in depth, texture and light across the Project 251 teak detail", "reach": 89, "react": 5, "com": 0, "sh": 1}, {"d": "24 Sep", "t": "What does a bathroom remodel actually cost in Australia in 2026", "reach": 43, "react": 4, "com": 0, "sh": 0}, {"d": "29 Sep", "t": "A boundary does more than define where a property ends — the thatched fence panel by Bali Abundance shapes how the garden feels", "reach": 41, "react": 5, "com": 0, "sh": 1}],
+insights:{en:["2 – 29 SEP: THE WINDOW ROLLED ONE DAY. 1 Sep (187 views) left while 29 Sep entered at 95 views, so views fell 4,519 → 4,427 while the comparison held positive and eased ▲5.9% → ▲5.6%. The exact figure is the sum of the 28-day series; the tile rounds it to 4.4K.", "A NEW POST RAN ON 30 SEP 16:12 — hand carving on the Project 251 teak detail, a THIRD consecutive Bali Abundance supplier-credit piece. At 14 hours old it already carries 89 views, 5 reactions and 1 share, the strongest opening of the three.", "FACEBOOK VISITS EASED 422 → 421 but the comparison strengthened ▲69.5% → ▲71.8%; the 77-visit day on 15 Sep still anchors the series and 29 Sep contributed none. Link clicks held at 4, though the comparison improved ▼33.3% → ▼20.0%.", "INTERACTIONS FELL 141 → 132 and the comparison worsened ▼16.6% → ▼23.3%. Follower interactions dropped 99 → 88 (▼19.3%) while non-follower interactions rose 42 → 44 but stayed weak (▼30.2%).", "VIDEO HELD ITS SHAPE: 3-second views 353 → 352 with the comparison strengthening ▲146.9% → ▲151.4%, and watch time held at 2h 2m with the comparison rising ▲133.5% → ▲141.2%. Viewers rose 286 → 288 but the comparison deteriorated ▼39.9% → ▼36.0%.", "POST FIGURES WERE RESTATED UPWARD AGAIN: the 29 Sep fence panel 28 → 41 views in a day, the 28 Sep teak door 152 → 169, and 25 Sep 120 → 125. The 22 Sep piece still leads the panel at 171. The 21 Sep post dropped out of the recent-content panel as 30 Sep entered.", "NET NEW FOLLOWERS HELD AT 1 (▲100%) with one follow and no unfollows — the single follow still dates to 9 Sep. Conversations started held at 1 (▼50%) and new contacts at 0 (▼100%)."],
+vi:["2 – 29/9: CỬA SỔ LĂN MỘT NGÀY. Ngày 1/9 (187 view) rời đi trong khi 29/9 vào với 95 view, nên views giảm 4.519 → 4.427 còn mức so sánh vẫn dương và hạ nhẹ ▲5,9% → ▲5,6%. Con số chính xác là tổng chuỗi 28 ngày; ô hiển thị làm tròn thành 4,4K.", "MỘT BÀI MỚI ĐÃ LÊN NGÀY 30/9 LÚC 16:12 — chi tiết gỗ tếch chạm tay của Project 251, là bài ghi công Bali Abundance THỨ BA liên tiếp. Sau 14 giờ bài đã đạt 89 lượt xem, 5 cảm xúc và 1 chia sẻ, mở đầu mạnh nhất trong ba bài.", "LƯỢT TRUY CẬP FACEBOOK GẦN NHƯ ĐỨNG YÊN 422 → 421 nhưng mức so sánh mạnh lên ▲69,5% → ▲71,8%; ngày 15/9 với 77 lượt vẫn là điểm neo và 29/9 không đóng góp lượt nào. Lượt click liên kết giữ ở 4, mức so sánh cải thiện ▼33,3% → ▼20,0%.", "LƯỢT TƯƠNG TÁC GIẢM 141 → 132 và mức so sánh xấu đi ▼16,6% → ▼23,3%. Tương tác từ người theo dõi giảm 99 → 88 (▼19,3%) còn từ người chưa theo dõi tăng 42 → 44 nhưng vẫn yếu (▼30,2%).", "VIDEO GIỮ PHONG ĐỘ: lượt xem tối thiểu 3 giây 353 → 352 với mức so sánh mạnh lên ▲146,9% → ▲151,4%, thời gian xem giữ 2 giờ 2 phút với mức so sánh tăng ▲133,5% → ▲141,2%. Người xem tăng 286 → 288 và mức so sánh cải thiện ▼39,9% → ▼36,0%.", "SỐ LIỆU BÀI VIẾT LẠI ĐƯỢC ĐIỀU CHỈNH TĂNG: bài hàng rào 29/9 từ 28 → 41 view chỉ trong một ngày, bài cửa gỗ tếch 28/9 từ 152 → 169, và 25/9 từ 120 → 125. Bài 22/9 vẫn dẫn đầu bảng với 171. Bài 21/9 đã rời khỏi bảng nội dung mới đây khi 30/9 bước vào.", "FOLLOWER RÒNG GIỮ Ở 1 (▲100%) với một lượt theo dõi và không có lượt bỏ theo dõi — lượt theo dõi duy nhất vẫn từ ngày 9/9. Lượt bắt đầu trò chuyện giữ ở 1 (▼50%) và người liên hệ mới ở 0 (▼100%)."]},
+next:{en:["THREE SUPPLIER-CREDIT POSTS IN THREE DAYS AND EACH OPENED BETTER THAN THE LAST: 28 views, 41 views, now 89 views at 14 hours. The format is proven — lock it in as the default and keep crediting the maker by name.", "Publishing daily for three consecutive days kept views positive while the window rolled off a strong 187-view day. Hold the cadence; a single skipped day is what turned the comparison negative earlier in this run.", "Interactions are the one metric moving the wrong way (141 → 132, ▼23.3%) while views hold. The reach is arriving but the ask is missing — add one explicit question or comment prompt to each supplier-credit caption.", "Link clicks have sat at 4–5 for four reads against 4,427 views. That is the funnel leak: put a single clear link in the first comment or the caption's last line on the next three posts and watch whether it moves."],
+vi:["BA BÀI GHI CÔNG NHÀ CUNG CẤP TRONG BA NGÀY VÀ BÀI SAU MỞ ĐẦU TỐT HƠN BÀI TRƯỚC: 28 view, 41 view, nay 89 view sau 14 giờ. Định dạng đã được chứng minh — hãy chốt làm mặc định và tiếp tục ghi tên người thực hiện.", "Đăng đều ba ngày liên tiếp đã giữ views ở mức dương ngay cả khi cửa sổ đẩy ra một ngày mạnh 187 view. Hãy giữ nhịp; chỉ một ngày bỏ trống là đủ khiến so sánh chuyển âm như đầu đợt này.", "Tương tác là chỉ số duy nhất đi sai hướng (141 → 132, ▼23,3%) trong khi views vẫn giữ. Lượt tiếp cận có đến nhưng thiếu lời kêu gọi — hãy thêm một câu hỏi rõ ràng vào mỗi caption ghi công nhà cung cấp.", "Lượt click liên kết đứng ở 4–5 suốt bốn lần đọc trên nền 4.427 view. Đó chính là chỗ rò của phễu: hãy đặt một link rõ ràng ở bình luận đầu tiên hoặc dòng cuối caption cho ba bài tới và theo dõi xem có chuyển biến không."]}};
+
+const IG={ followers:49, posts:134,
+kpis:[{en:"Views",vi:"Lượt xem",v:2297,c:108.1},{en:"Reach",vi:"Người tiếp cận",v:87,c:-68.1},{en:"Content interactions",vi:"Tương tác ND",v:23,c:-64.1},{en:"Following",vi:"Đang theo dõi",v:36,c:null},{en:"Posts",vi:"Số bài",v:134,c:null},{en:"Followers",vi:"Người theo dõi",v:49,c:null}],
+viewsDaily:[35, 45, 42, 11, 25, 46, 84, 440, 166, 47, 74, 41, 178, 310, 102, 49, 274, 29, 7, 57, 29, 45, 29, 29, 5, 8, 30, 60],
+reachDaily:[1, 3, 8, 2, 1, 2, 10, 14, 6, 2, 3, 2, 3, 39, 6, 3, 24, 2, 0, 4, 5, 7, 2, 6, 0, 1, 4, 6],
+interactionsDaily:[0, 2, 1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 2, 2, 0, 4, 0, 0, 3, 3],
+viewsSrc:[68.9,31.1], reachSrc:[14,73],
+posts:[{"d": "18 Sep", "t": "The site should not be the first test — decisions are safer when they are resolved before work begins", "reach": 26, "react": 2, "com": 0, "sh": 0}, {"d": "29 Sep", "t": "A boundary does more than define where a property ends — the thatched fence panel by Bali Abundance shapes how the garden feels", "reach": 7, "react": 5, "com": 0, "sh": 1}, {"d": "23 Sep", "t": "A good plan does not prevent questions — it helps answer them faster", "reach": 7, "react": 2, "com": 0, "sh": 0}, {"d": "28 Sep", "t": "Some details are made by hand — a hand carved teak door by Bali Abundance for the Project 251 garden entry", "reach": 6, "react": 3, "com": 0, "sh": 0}, {"d": "25 Sep", "t": "The detail you see is rarely just a detail — a junction, an opening, a transition carries a decision made much earlier", "reach": 6, "react": 3, "com": 0, "sh": 0}, {"d": "22 Sep", "t": "A picture can show the outcome, a model can show what sits behind it", "reach": 6, "react": 2, "com": 0, "sh": 0}, {"d": "21 Sep", "t": "What does \"ready for site\" actually mean? Having a complete, coordinated set of information before work starts", "reach": 5, "react": 1, "com": 0, "sh": 0}, {"d": "30 Sep", "t": "Hand carving changes more than the surface — it creates variation in depth, texture and light across the Project 251 teak detail", "reach": 4, "react": 5, "com": 0, "sh": 1}],
+insights:{en:["VIEWS ROSE 2,258 → 2,297 ON A ONE-DAY ROLL: 1 Sep (21) left while 29 Sep added 60. The comparison stayed strongly positive and eased ▲107.2% → ▲108.1%.", "THE AUDIENCE KEPT NARROWING TO FOLLOWERS. Follower views are now 1,896 of 2,297 (68.9%, ▲26.2%) against 401 from non-followers (31.1%, ▼31.5%) — the non-follower share has fallen on every read this week.", "REACH HELD AT 87 FOR A FOURTH CONSECUTIVE READ (▼68.1%), with follower reach 14 and non-follower reach 73 both unchanged. Reach is de-duplicated per person over 28 days, so the daily series sums to 166 against the window tile of 87.", "INTERACTIONS ROSE 20 → 23 and the comparison improved ▼69.2% → ▼64.1%. Follower share of interactions eased to 74% from 79%, so the small lift came from non-followers.", "POST COUNT MOVED 133 → 134 with the 30 Sep publication; followers 49 and following 36 unchanged for a sixth read.", "THE 18 SEP POST STILL LEADS THE PANEL at 26 reached accounts — more than triple any post published since. The 30 Sep piece opened at only 4 reached accounts but already carries 5 reactions, the same reaction count as the 29 Sep post."],
+vi:["VIEWS TĂNG 2.258 → 2.297 TRÊN BƯỚC LĂN MỘT NGÀY: ngày 1/9 (21) rời đi còn 29/9 thêm 60. Mức so sánh vẫn dương mạnh và hạ nhẹ ▲107,2% → ▲108,1%.", "TỆP NGƯỜI XEM TIẾP TỤC THU HẸP VỀ NGƯỜI THEO DÕI. Lượt xem từ người theo dõi nay là 1.896 trên 2.297 (68,9%, ▲26,2%) so với 401 từ người chưa theo dõi (31,1%, ▼31,5%) — tỷ trọng người chưa theo dõi giảm ở mọi lần đọc tuần này.", "SỐ NGƯỜI TIẾP CẬN GIỮ Ở 87 LẦN ĐỌC THỨ TƯ LIÊN TIẾP (▼68,1%), với 14 từ người theo dõi và 73 từ người chưa theo dõi, cả hai không đổi. Reach được khử trùng lặp theo người trong 28 ngày, nên chuỗi ngày cộng lại bằng 166 trong khi ô cửa sổ hiển thị 87.", "LƯỢT TƯƠNG TÁC TĂNG 20 → 23 và mức so sánh cải thiện ▼69,2% → ▼64,1%. Tỷ trọng tương tác từ người theo dõi hạ còn 74% từ mức 79%, nên phần tăng nhỏ này đến từ người chưa theo dõi.", "SỐ BÀI TĂNG 133 → 134 nhờ bài đăng ngày 30/9; số người theo dõi 49 và đang theo dõi 36 không đổi lần đọc thứ sáu.", "BÀI NGÀY 18/9 VẪN DẪN ĐẦU BẢNG với 26 tài khoản tiếp cận — gấp hơn ba lần bất kỳ bài nào đăng sau đó. Bài 30/9 chỉ mở đầu với 4 tài khoản tiếp cận nhưng đã có 5 cảm xúc, bằng đúng bài ngày 29/9."]},
+next:{en:["Instagram matched Facebook same-day for a third consecutive day. Keep the parity, but the reach gap is stark: the same post drew 89 views on Facebook and 4 reached accounts on Instagram.", "REACH HAS BEEN FROZEN AT 87 FOR FOUR READS while views climb past 2,290. Views are being driven by a handful of days (440 on 9 Sep, 310 on 15 Sep) rather than by new people — the account is recirculating to the same 87 accounts.", "Non-follower views fell again (▼31.5%). Reels and hashtags are the only lever that reaches beyond the follower base at this size; the last four posts were static.", "49 followers against 134 posts is the core constraint. Until the follower base grows, every reach metric stays capped — prioritise follow-prompting content over publication volume."],
+vi:["Instagram đã đăng cùng ngày với Facebook ba ngày liên tiếp. Hãy giữ sự đồng bộ, nhưng khoảng cách tiếp cận rất rõ: cùng một bài đạt 89 view trên Facebook và chỉ 4 tài khoản tiếp cận trên Instagram.", "SỐ NGƯỜI TIẾP CẬN ĐỨNG YÊN Ở 87 SUỐT BỐN LẦN ĐỌC trong khi views vượt 2.290. Views được đẩy bởi vài ngày lẻ (440 ngày 9/9, 310 ngày 15/9) chứ không phải bởi người mới — tài khoản đang xoay vòng trong cùng 87 tài khoản đó.", "Lượt xem từ người chưa theo dõi lại giảm (▼31,5%). Reels và hashtag là đòn bẩy duy nhất vươn ra ngoài tệp người theo dõi ở quy mô này; bốn bài gần nhất đều là ảnh tĩnh.", "49 người theo dõi trên 134 bài là nút thắt cốt lõi. Chừng nào tệp follower chưa tăng, mọi chỉ số tiếp cận vẫn bị chặn trần — hãy ưu tiên nội dung kêu gọi theo dõi hơn là tăng số lượng bài."]}};
+
+const YT={ subs:"—", videos:"—", stale:true,
+kpis:[{en:"Views (28d)",vi:"Lượt xem (28n)",v:"—",c:null},{en:"Watch time (hrs)",vi:"Giờ xem",v:"—",c:null},{en:"Subscribers",vi:"Người đăng ký",v:"—",c:null},{en:"Videos",vi:"Số video",v:"—",c:null},{en:"Latest video views",vi:"Views video mới",v:"—",c:null}],
+viewsNow:null, viewsPrior:null,
+topVideos:[],
+insights:{en:["YOUTUBE COULD NOT BE READ TODAY. Google signed the tram@feeldx.com.au session out and YouTube Studio redirected to a \"Verify it's you\" sign-in screen, so no figure on this card was read live.", "EVERY YOUTUBE NUMBER IS THEREFORE NULL, NOT CARRIED. Channel views, watch time, the top-ten table, the latest-video card and realtime views are all shown as \"—\" rather than repeating yesterday's 634 views, in line with the standing rule never to carry a figure forward as today's.", "THE SAME SIGN-OUT BLOCKED GOOGLE SEARCH CONSOLE AND GA4, so the SEO report is affected in the same way. Facebook, Instagram and LinkedIn were unaffected — they authenticate separately and were all read live.", "TO RESTORE: sign back in to Chrome on the Mac as tram@feeldx.com.au. The next scheduled run will pick YouTube up automatically; the gap will appear as a single missing day in the rollup rather than a wrong number."],
+vi:["HÔM NAY KHÔNG ĐỌC ĐƯỢC YOUTUBE. Google đã đăng xuất phiên tram@feeldx.com.au và YouTube Studio chuyển hướng sang màn hình đăng nhập \"Verify it's you\", nên không một số liệu nào trên thẻ này được đọc trực tiếp.", "VÌ VẬY MỌI SỐ LIỆU YOUTUBE ĐỀU LÀ NULL, KHÔNG PHẢI SỐ CŨ. Lượt xem kênh, thời gian xem, bảng top 10, thẻ video mới nhất và lượt xem thời gian thực đều hiển thị \"—\" thay vì lặp lại 634 view của hôm qua, đúng theo nguyên tắc không bao giờ lấy số cũ làm số hôm nay.", "CÙNG LẦN ĐĂNG XUẤT NÀY ĐÃ CHẶN CẢ GOOGLE SEARCH CONSOLE VÀ GA4, nên báo cáo SEO cũng bị ảnh hưởng tương tự. Facebook, Instagram và LinkedIn không bị ảnh hưởng — các kênh này đăng nhập riêng và đều được đọc trực tiếp.", "ĐỂ KHÔI PHỤC: hãy đăng nhập lại Chrome trên máy Mac bằng tram@feeldx.com.au. Lần chạy theo lịch kế tiếp sẽ tự động lấy lại YouTube; khoảng trống sẽ hiện ra như một ngày thiếu dữ liệu trong rollup thay vì một con số sai."]},
+next:{en:["Sign Chrome on the Mac back in to tram@feeldx.com.au — this one action restores YouTube, Search Console and GA4 together.", "Once signed in, re-run the daily task to backfill 1 Oct rather than waiting for 2 Oct; the day JSON is immutable, so the correction has to be a re-run of this date.", "The underlying content gap has not changed: no upload since 18 Sep. Whatever the numbers turn out to be, thirteen days without a video on the only channel with a genuine view base is the thing to fix.", "Consider a second admin account with Studio access so a single Google sign-out cannot black out the whole YouTube read again."],
+vi:["Hãy đăng nhập lại Chrome trên máy Mac bằng tram@feeldx.com.au — chỉ một thao tác này khôi phục đồng thời YouTube, Search Console và GA4.", "Sau khi đăng nhập, hãy chạy lại tác vụ hằng ngày để bù dữ liệu ngày 1/10 thay vì chờ đến 2/10; file JSON của ngày là bất biến, nên việc sửa phải là một lần chạy lại đúng ngày này.", "Khoảng trống nội dung nền tảng vẫn chưa thay đổi: chưa có video mới kể từ 18/9. Dù con số cuối cùng ra sao, mười ba ngày không có video trên kênh duy nhất có nền view thực mới là điều cần xử lý.", "Nên cân nhắc thêm một tài khoản quản trị thứ hai có quyền Studio để một lần đăng xuất Google không thể làm mất trắng toàn bộ dữ liệu YouTube như hôm nay."]}};
+
+const LI={ url:"https://www.linkedin.com/company/108389291/", followers:102,
+kpis:[{en:"Followers",vi:"Người theo dõi",v:102,c:null},{en:"New followers (30d)",vi:"Follower mới (30n)",v:1,c:-97.8},{en:"Impressions",vi:"Impressions",v:1219,c:-25.7},{en:"Reactions",vi:"Cảm xúc",v:37,c:-51.3},{en:"Page views",vi:"Lượt xem trang",v:26,c:-77.6},{en:"Unique visitors",vi:"Khách duy nhất",v:11,c:-75.0}],
+locLabels:["Ho Chi Minh City","Melbourne","Brisbane","Metro Manila",{en:"Other",vi:"Khác"}], locData:[23.5,22.5,2.9,2.9,48.2],
+jobLabels:[{en:"Arts and Design",vi:"Nghệ thuật & Thiết kế"},{en:"Business Development",vi:"Phát triển KD"},{en:"Research",vi:"Nghiên cứu"},{en:"Operations",vi:"Vận hành"},{en:"Marketing",vi:"Marketing"},{en:"Information Technology",vi:"Công nghệ thông tin"},{en:"Legal",vi:"Pháp lý"},{en:"Customer Success and Support",vi:"Chăm sóc khách hàng"},{en:"Program and Project Management",vi:"Quản lý chương trình & dự án"},{en:"Finance",vi:"Tài chính"}],
+jobData:[13, 5, 3, 3, 2, 1, 1, 1, 1, 1],
+deviceLabels:[{en:"Desktop",vi:"Máy tính"},{en:"Mobile",vi:"Điện thoại"}], deviceData:[24,2],
+imprPrior:1641, imprNow:1219,
+insights:{en:["THE WINDOW ADVANCED ONE DAY to 30 Aug – 28 Sep 2026, still exactly one day behind Meta. Every comparison here is against the 30 Sep read.", "IMPRESSIONS ROSE 1,193 → 1,219 and the comparison improved ▼28.0% → ▼25.7%, implying a prior period of about 1,641. This is the first impression increase in this run.", "REACTIONS ROSE 36 → 37 but the comparison worsened ▼51.4% → ▼51.3% in level terms only; comments and reposts remain 0 for a twelfth consecutive read.", "PAGE VIEWS ROSE 24 → 26 and unique visitors 10 → 11, with the comparisons improving ▼80.5% → ▼77.6% and ▼78.3% → ▼75.0%. Desktop 24 and mobile 2 — the desktop share widened further.", "NEW FOLLOWERS IN 30 DAYS HELD AT 1 (▼97.8%) and total followers held at 102. The location panel is byte-identical to yesterday: Ho Chi Minh City 24, Melbourne 23, Brisbane 3, Metro Manila 3.", "THE VISITOR JOB-FUNCTION PANEL WIDENED from nine functions to TEN and its shape changed materially: Research 3 and Operations 3 appeared, Business Development fell 8 → 5, and Legal and Customer Success entered while Purchasing and Product Management dropped out. Arts and Design still leads at 13 of 26 page views (50%)."],
+vi:["CỬA SỔ DỊCH MỘT NGÀY sang 30/8 – 28/9/2026, vẫn chậm hơn Meta đúng một ngày. Mọi so sánh ở đây đối chiếu với lần đọc ngày 30/9.", "LƯỢT HIỂN THỊ TĂNG 1.193 → 1.219 và mức so sánh cải thiện ▼28,0% → ▼25,7%, tương ứng kỳ trước khoảng 1.641. Đây là lần tăng impressions đầu tiên trong đợt này.", "LƯỢT CẢM XÚC TĂNG 36 → 37 nhưng mức so sánh chỉ nhích ▼51,4% → ▼51,3%; bình luận và chia sẻ lại vẫn bằng 0 lần đọc thứ mười hai liên tiếp.", "LƯỢT XEM TRANG TĂNG 24 → 26 và khách truy cập duy nhất 10 → 11, với mức so sánh cải thiện ▼80,5% → ▼77,6% và ▼78,3% → ▼75,0%. Máy tính 24 và di động 2 — tỷ trọng máy tính tiếp tục mở rộng.", "NGƯỜI THEO DÕI MỚI TRONG 30 NGÀY GIỮ Ở 1 (▼97,8%) và tổng người theo dõi giữ ở 102. Bảng vị trí trùng khớp hoàn toàn với hôm qua: TP. Hồ Chí Minh 24, Melbourne 23, Brisbane 3, Metro Manila 3.", "BẢNG CHỨC NĂNG CÔNG VIỆC CỦA KHÁCH TRUY CẬP MỞ RỘNG từ chín lên MƯỜI nhóm và cơ cấu thay đổi đáng kể: Nghiên cứu 3 và Vận hành 3 xuất hiện, Phát triển KD giảm 8 → 5, Pháp lý và Chăm sóc khách hàng bước vào trong khi Thu mua và Quản lý sản phẩm rời đi. Nghệ thuật & Thiết kế vẫn dẫn đầu với 13 trên 26 lượt xem trang (50%)."]},
+next:{en:["THE PAGE HAS NOW GONE TWELVE DAYS WITHOUT PUBLISHING while both Meta channels published on 28, 29 and 30 Sep. Impressions still rose — that is the reservoir draining, not growth.", "Cross-post the three Project 251 supplier-credit pieces to LinkedIn. They are the best-performing format on Meta and LinkedIn's audience (50% Arts and Design, 19% Business Development) is exactly who cares about a named maker.", "Twelve consecutive reads at zero comments and zero reposts. Impressions without conversation means the content is being served, not engaged with — end the next post with a direct question.", "Melbourne 23 and Ho Chi Minh City 24 are effectively tied at the top of the follower base. Content that speaks to the Australian market is reaching an audience that is half Vietnamese; consider whether that split is intended."],
+vi:["TRANG ĐÃ MƯỜI HAI NGÀY KHÔNG ĐĂNG BÀI trong khi cả hai kênh Meta đã đăng ngày 28, 29 và 30/9. Impressions vẫn tăng — đó là hồ chứa đang cạn dần, không phải tăng trưởng.", "Hãy đăng lại ba bài ghi công nhà cung cấp của Project 251 lên LinkedIn. Đây là định dạng hiệu quả nhất trên Meta và tệp LinkedIn (50% Nghệ thuật & Thiết kế, 19% Phát triển KD) đúng là nhóm quan tâm đến người thực hiện được nêu tên.", "Mười hai lần đọc liên tiếp với 0 bình luận và 0 chia sẻ. Có impressions mà không có hội thoại nghĩa là nội dung được phân phối chứ không được tương tác — hãy kết bài tiếp theo bằng một câu hỏi trực tiếp.", "Melbourne 23 và TP. Hồ Chí Minh 24 gần như ngang nhau ở nhóm dẫn đầu tệp follower. Nội dung nói với thị trường Úc đang tiếp cận một tệp mà một nửa là người Việt; cần cân nhắc xem tỷ lệ đó có đúng ý đồ không."]}};
+const DAILY={en:["Reply every comment & DM within 2h across channels","Publish/verify today's scheduled post per active channel","Add 1 Story (FB/IG) with a poll or link sticker","Engage 10 target AEC / home accounts (comment, not just like)","Log each post's early numbers; note the winning format"],
+vi:["Trả lời mọi bình luận & tin nhắn trong 2h ở tất cả kênh","Đăng/kiểm tra bài đã lên lịch hôm nay của mỗi kênh","Thêm 1 Story (FB/IG) kèm poll hoặc link sticker","Tương tác 10 tài khoản AEC/nhà ở mục tiêu (bình luận, không chỉ like)","Ghi lại số liệu sớm mỗi bài; note định dạng thắng"]};
+
+const T={
+title:{facebook:{en:"Facebook Dashboard — Page Level",vi:"Facebook — Cấp Trang"},instagram:{en:"Instagram Dashboard — @dxliving.au",vi:"Instagram — @dxliving.au"},youtube:{en:"YouTube Dashboard — @DXLVNG",vi:"YouTube — @DXLVNG"},linkedin:{en:"LinkedIn — DX Living",vi:"LinkedIn — DX Living"},all:{en:"All channels — overview",vi:"Tất cả kênh — Tổng quan"}},
+live:{en:"Live · via Chrome",vi:"Trực tiếp · qua Chrome"}, share:{en:"Share ⤴",vi:"Chia sẻ ⤴"},
+pdf:{en:"PDF ⤓",vi:"PDF ⤓"}, pdfBusy:{en:"Building…",vi:"Đang tạo…"}, pdfErr:{en:"PDF tools could not load — check your internet connection and try again.",vi:"Không tải được thư viện PDF — kiểm tra kết nối internet rồi thử lại."},
+pdfTitle:{en:"Download PDF — pick a period",vi:"Tải PDF — chọn khoảng thời gian"},
+pdfFrom:{en:"From",vi:"Từ ngày"}, pdfTo:{en:"To",vi:"Đến ngày"},
+pdfGo:{en:"Download",vi:"Tải về"}, pdfCancel:{en:"Cancel",vi:"Huỷ"},
+pdfQ1:{en:"Latest day",vi:"Ngày mới nhất"}, pdfQ7:{en:"Last 7 stored",vi:"7 bản gần nhất"}, pdfQAll:{en:"All stored",vi:"Tất cả bản lưu"},
+pdfRange:{en:d=>d+" day(s) · "+(d*5)+" pages · about "+Math.max(1,Math.round(d*(d>3?2.1:3.4)))+" MB",vi:d=>d+" ngày · "+(d*5)+" trang · khoảng "+Math.max(1,Math.round(d*(d>3?2.1:3.4)))+" MB"},
+pdfBad:{en:"\"From\" must be on or before \"To\".",vi:"\"Từ ngày\" phải trước hoặc bằng \"Đến ngày\"."},
+pdfStep:{en:(i,n,d)=>"Day "+i+"/"+n+" · "+d,vi:(i,n,d)=>"Ngày "+i+"/"+n+" · "+d},
+pdfNone:{en:"No stored days found.",vi:"Không tìm thấy ngày nào đã lưu."},
+dailyViews:{en:"Daily views (28 days)",vi:"Lượt xem theo ngày (28 ngày)"},
+viewsBySrc:{en:"Views: followers vs non-followers",vi:"Lượt xem: follower vs chưa follow"},
+reachBySrc:{en:"Reach: followers vs non-followers",vi:"Reach: follower vs chưa follow"},
+intByDay:{en:"Content interactions by day",vi:"Tương tác nội dung theo ngày"},
+visitsByDay:{en:"Facebook visits by day",vi:"Lượt truy cập theo ngày"},
+videoByDay:{en:"Video 3s views by day",vi:"Video 3s views theo ngày"},
+reachByDay:{en:"Reach by day",vi:"Reach theo ngày"},
+intBySrc:{en:"Interactions: followers vs non-followers",vi:"Tương tác: follower vs chưa follow"},
+topPosts:{en:"Top posts (recent)",vi:"Top bài (gần đây)"},
+insights:{en:"Insights",vi:"Nhận định"}, next:{en:"Next steps to improve",vi:"Bước cải thiện"},
+snapshot:{en:"Snapshot",vi:"Ảnh chụp"}, viewsDrop:{en:"Views: this 28d vs prior 28d",vi:"Lượt xem: 28n này vs 28n trước"},
+topVideos:{en:"Recent videos",vi:"Video gần đây"}, foll:{en:"followers",vi:"người theo dõi"},
+followersBy:{en:"Followers by channel",vi:"Người theo dõi theo kênh"}, chStatus:{en:"Channel status",vi:"Trạng thái kênh"},
+crossInsights:{en:"Cross-channel insights",vi:"Nhận định chéo kênh"}, routine:{en:"Daily routine (all channels · ~35 min)",vi:"Việc hằng ngày (mọi kênh · ~35 phút)"},
+post:{en:"Post",vi:"Bài"},date:{en:"Date",vi:"Ngày"},reach:{en:"Reach",vi:"Reach"},react:{en:"React",vi:"Cảm xúc"},likes:{en:"Likes",vi:"Likes"},cmts:{en:"Cmts",vi:"BL"},shares:{en:"Shares",vi:"Chia sẻ"},
+channel:{en:"Channel",vi:"Kênh"},followers2:{en:"Followers",vi:"Người theo dõi"},status:{en:"Status",vi:"Trạng thái"},
+loginNeeded:{en:"login needed",vi:"cần đăng nhập"}, subs:{en:"subscribers",vi:"người đăng ký"},
+deepNote:{en:"Deeper metrics for this channel are read live via Chrome. Ask me to refresh anytime.",vi:"Số liệu sâu của kênh này được đọc trực tiếp qua Chrome. Nhờ tôi làm mới bất cứ lúc nào."},
+vsPrior:{en:"vs prior",vi:"vs kỳ trước"}, snapshotTag:{en:"snapshot",vi:"ảnh chụp"},
+footer:{en:"DX Living / FeelDX · run 1 Oct 2026 · Facebook, Instagram and LinkedIn read live via Chrome; YouTube NOT READ — Google signed the account out and Studio required re-verification, so every YouTube figure is null, not carried · 28-day window 2 – 29 Sep 2026 (window advanced one day; LinkedIn window advanced one day to 30 Aug – 28 Sep and stays one day behind) · auto-refresh scheduled daily.",vi:"DX Living / FeelDX · chạy ngày 1/10/2026 · Facebook, Instagram và LinkedIn đọc trực tiếp qua Chrome; YouTube KHÔNG ĐỌC ĐƯỢC — Google đã đăng xuất tài khoản và Studio yêu cầu xác minh lại, nên mọi số liệu YouTube là null chứ không phải số cũ · cửa sổ 28 ngày 2 – 29/9/2026 (cửa sổ dịch một ngày; cửa sổ LinkedIn dịch một ngày sang 30/8 – 28/9 và vẫn chậm hơn một ngày) · tự động làm mới theo lịch mỗi ngày.",},
+};
+const SHARE={en:`<h2>How to share this dashboard</h2><ol><li><b>Send the file</b> — it's one self-contained HTML file (<code>dxl-social-dashboard-pro.html</code>). Anyone can open it in a browser, no internet or login needed.</li><li><b>Share a link</b> — drop it on Netlify Drop (app.netlify.com/drop), Google Drive or Dropbox ('Share → anyone with link'), or your web host, then share the URL.</li><li><b>Export a PDF</b> — press <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> for a static snapshot to email or attach to a report.</li><li><b>Present</b> — open full-screen; use the left rail to walk through each channel.</li></ol><p style="font-size:12px;color:#7b8496">Numbers are a snapshot from 20 Sep 2026; Facebook, Instagram, YouTube and LinkedIn were all read live. The daily auto-refresh task re-reads them each morning and updates this file.</p>`,
+vi:`<h2>Cách chia sẻ dashboard</h2><ol><li><b>Gửi file</b> — đây là 1 file HTML tự chứa (<code>dxl-social-dashboard-pro.html</code>). Ai cũng mở được bằng trình duyệt, không cần internet hay đăng nhập.</li><li><b>Chia sẻ link</b> — thả lên Netlify Drop (app.netlify.com/drop), Google Drive/Dropbox ('Chia sẻ → bất kỳ ai có link'), hoặc web host của bạn, rồi gửi URL.</li><li><b>Xuất PDF</b> — nhấn <b>Ctrl/Cmd + P</b> → <b>Save as PDF</b> để có bản tĩnh gửi email/đính kèm báo cáo.</li><li><b>Trình chiếu</b> — mở toàn màn hình; dùng rail bên trái để đi qua từng kênh.</li></ol><p style="font-size:12px;color:#7b8496">Số liệu là ảnh chụp ngày 19/9/2026; Facebook, Instagram, YouTube và LinkedIn đều đọc trực tiếp. Tác vụ tự làm mới mỗi sáng sẽ đọc lại và cập nhật file này.</p>`};
+
+// ============ render ============
+let lang="en", current="all", charts=[];  // English is the pinned default on load
+const $=id=>document.getElementById(id);
+const tt=(o)=>o[lang];
+const num=v=>typeof v==="string"?v:v.toLocaleString();
+const COLORS=["#1877f2","#5b6bf5","#22c55e","#f59e0b","#e1306c","#06b6d4"];
+function clearCharts(){charts.forEach(c=>{try{c.destroy()}catch(e){}});charts=[];}
+function chg(c){if(c==null)return `<div class="c flat">${tt(T.snapshotTag)}</div>`;const cls=c>0?"up":(c<0?"down":"flat");const a=c>0?"▲":(c<0?"▼":"■");return `<div class="c ${cls}">${a} ${Math.abs(c)}% ${tt(T.vsPrior)}</div>`;}
+function kpis(arr){return `<div class="kpirow">`+arr.map(k=>`<div class="kpi"><div class="l">${k[lang]}</div><div class="v">${num(k.v)}</div>${chg(k.c)}</div>`).join("")+`</div>`;}
+function line(id,labels,data,color){charts.push(new Chart($(id),{type:"line",data:{labels,datasets:[{data,borderColor:color,backgroundColor:color+"22",fill:true,tension:.35,pointRadius:0,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{maxTicksLimit:7,font:{size:10}}},y:{beginAtZero:true,ticks:{font:{size:10}}}}}}));}
+function bar(id,labels,data,colors){charts.push(new Chart($(id),{type:"bar",data:{labels,datasets:[{data,backgroundColor:colors||"#5b6bf5",borderRadius:6}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}}));}
+function dough(id,labels,data){charts.push(new Chart($(id),{type:"doughnut",data:{labels,datasets:[{data,backgroundColor:COLORS,borderColor:"#fff",borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:"60%",plugins:{legend:{position:"bottom",labels:{boxWidth:12,font:{size:11}}}}}}));}
+function list(arr){return `<ul class="clean">`+arr.map(t=>`<li>${t}</li>`).join("")+`</ul>`;}
+Object.assign(T,{
+deepDive:{en:"Deep dive — computed metrics",vi:"Phân tích sâu — chỉ số tính toán"},
+topByReach:{en:"Top posts by reach",vi:"Top bài theo reach"},
+audience:{en:"Audience",vi:"Đối tượng"},
+audNote:{en:"Detailed age, gender & city breakdowns aren't available — Meta hides demographics for audiences under ~100 per segment (FB 116 / IG 49 followers). They unlock as the audience grows. Follower vs non-follower reach below is the available proxy; LinkedIn already exposes full visitor demographics.",vi:"Phân tích tuổi/giới tính/thành phố chưa có — Meta ẩn nhân khẩu học khi đối tượng dưới ~100/nhóm (FB 116 / IG 49 follower). Sẽ mở khi đối tượng lớn hơn. Tỷ lệ reach follower vs chưa follow bên dưới là chỉ số thay thế; LinkedIn đã có nhân khẩu học khách truy cập đầy đủ."},
+engRate:{en:"Engagement rate",vi:"Tỷ lệ tương tác"},
+avgReachPost:{en:"Avg reach / post",vi:"Reach TB/bài"},
+nonFollReach:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},
+avgPerDay:{en:"Avg / day",vi:"Trung bình/ngày"},
+bestDay:{en:"Best day",vi:"Ngày tốt nhất"},
+postsSampled:{en:"Posts sampled",vi:"Số bài mẫu"},
+keyInsight:{en:"Key insight",vi:"Nhận định then chốt"}
+});
+function deepCards(items){return `<div class="kpirow">`+items.map(i=>`<div class="kpi" style="border-top-color:#22c55e"><div class="l">${i.l}</div><div class="v" style="font-size:20px">${i.v}</div>${i.s?`<div class="c flat">${i.s}</div>`:""}</div>`).join("")+`</div>`;}
+function hbar(id,labels,data,color){charts.push(new Chart($(id),{type:"bar",data:{labels,datasets:[{data,backgroundColor:color,borderRadius:5}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true}}}}));}
+function audiencePanel(srcLabelA,srcLabelB,vals){return `<div class="panel"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div><div class="chart sm" style="height:180px;margin-top:8px"><canvas id="aud"></canvas></div></div>`;}
+function mean(a){return a.length?a.reduce((x,y)=>x+y,0)/a.length:0;}
+function bestOf(daily){const m=Math.max(...daily);return {v:m,label:dlabels[daily.indexOf(m)]};}
+function postsTable(posts,firstColReactLabel){return `<table><thead><tr><th>${tt(T.post)}</th><th>${tt(T.date)}</th><th class="num">${tt(T.reach)}</th><th class="num">${firstColReactLabel}</th><th class="num">${tt(T.cmts)}</th><th class="num">${tt(T.shares)}</th></tr></thead><tbody>`+posts.map(p=>`<tr><td class="post">${p.t}</td><td>${p.d}</td><td class="num">${p.reach}</td><td class="num">${p.react!=null?p.react:p.likes}</td><td class="num">${p.com}</td><td class="num">${p.sh}</td></tr>`).join("")+`</tbody></table>`;}
+
+function head(k,badge,color,per,chip){$("hdBadge").style.background=color;$("hdBadge").textContent=badge;$("hdTitle").textContent=tt(T.title[k]);$("hdPer").textContent=per;$("hdChip").textContent=chip;}
+
+function renderFacebook(){
+head("facebook","f","#1877f2",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · DX Living · "+FB.followers+" "+tt(T.foll),tt(T.live));
+const b=bestOf(FB.viewsDaily);
+const stats=[{l:tt(T.engRate),v:(132/4427*100).toFixed(1)+"%",s:tt({en:"interactions / views",vi:"tương tác / views"})},{l:tt(T.avgReachPost),v:Math.round(mean(FB.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"54.8%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(4427/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt(T.postsSampled),v:FB.posts.length}];
+const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+$("view").innerHTML=kpis(FB.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.visitsByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.videoByDay)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(FB.posts,tt(T.react))}<div class="note">${tt({en:`Post-level figures are VIEWS from the Facebook \"Nội dung mới đây\" panel, not de-duplicated reach, read live on 1 Oct. A NEW POST RAN ON 30 SEP 16:12 — hand carving on the Project 251 teak detail, the third consecutive Bali Abundance supplier-credit piece; at 14 hours old it already shows 89 views, 5 reactions and 1 share. EARLIER POSTS WERE RESTATED UPWARD AGAIN: 29 Sep 28 → 41, 28 Sep 152 → 169, 25 Sep 120 → 125, while 22 Sep held at 171, 23 Sep at 98 and 24 Sep at 43. The 21 Sep post dropped out of the panel as 30 Sep entered, so seven posts are listed. The 25 Sep story is still the only story shown, at 8 views. Link clicks held at 4 and one conversation started in the window, with no new contacts.`,vi:`Số liệu theo bài là LƯỢT XEM lấy từ bảng \"Nội dung mới đây\" của Facebook, không phải reach khử trùng lặp, đọc trực tiếp ngày 1/10. MỘT BÀI MỚI ĐÃ LÊN NGÀY 30/9 LÚC 16:12 — chi tiết gỗ tếch chạm tay của Project 251, là bài ghi công Bali Abundance thứ ba liên tiếp; sau 14 giờ bài đã có 89 lượt xem, 5 cảm xúc và 1 chia sẻ. CÁC BÀI CŨ LẠI ĐƯỢC ĐIỀU CHỈNH TĂNG: 29/9 từ 28 → 41, 28/9 từ 152 → 169, 25/9 từ 120 → 125, trong khi 22/9 giữ 171, 23/9 giữ 98 và 24/9 giữ 43. Bài 21/9 đã rời khỏi bảng khi 30/9 bước vào, nên bảng liệt kê bảy bài. Tin ngày 25/9 vẫn là tin duy nhất được hiển thị, với 8 lượt xem. Lượt click liên kết giữ ở 4 và có một cuộc trò chuyện bắt đầu trong cửa sổ, không có liên hệ mới.`})}</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.intBySrc)}</h3><div class="chart sm"><canvas id="c6"></canvas></div></div><div class="panel" style="grid-column:span 2"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(FB.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(FB.next))}</div></div>`;
+clearCharts();
+line("c1",dlabels,FB.viewsDaily,"#1877f2");dough("c2",[fl,nf],FB.viewsSrc);
+line("c3",dlabels,FB.interactionsDaily,"#5b6bf5");line("c4",dlabels,FB.visitsDaily,"#22c55e");line("c5",dlabels,FB.video3sDaily,"#f59e0b");
+hbar("cb1",FB.posts.map(p=>p.d),FB.posts.map(p=>p.reach),"#1877f2");
+dough("c6",[fl,nf],FB.intSrc);
+}
+function renderInstagram(){
+head("instagram","ig","#e1306c",tt({en:PERIOD_EN,vi:PERIOD_VI})+" · @dxliving.au · "+IG.followers+" "+tt(T.foll),tt(T.live));
+const b=bestOf(IG.viewsDaily);
+const stats=[{l:tt(T.engRate),v:(23/87*100).toFixed(1)+"%",s:tt({en:"interactions / reach",vi:"tương tác / reach"})},{l:tt(T.avgReachPost),v:Math.round(mean(IG.posts.map(p=>p.reach))).toLocaleString()},{l:tt(T.nonFollReach),v:"83.9%",s:"—"},{l:tt(T.avgPerDay),v:Math.round(2297/28)+" views"},{l:tt(T.bestDay),v:b.label+" ("+b.v+")"},{l:tt({en:"Peak day views",vi:"Views ngày đỉnh"}),v:"440",s:tt({en:"9 Sep peak",vi:"đỉnh 9/9"})}];
+const fl=tt({en:"Followers",vi:"Follower"}),nf=tt({en:"Non-followers",vi:"Chưa follow"});
+$("view").innerHTML=kpis(IG.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.dailyViews)}</h3><div class="chart"><canvas id="c1"></canvas></div></div><div class="panel"><h3>${tt(T.reachBySrc)}</h3><div class="chart"><canvas id="c2"></canvas></div></div></div>
+<div class="grid g3"><div class="panel"><h3>${tt(T.reachByDay)}</h3><div class="chart sm"><canvas id="c3"></canvas></div></div><div class="panel"><h3>${tt(T.intByDay)}</h3><div class="chart sm"><canvas id="c4"></canvas></div></div><div class="panel"><h3>${tt(T.viewsBySrc)}</h3><div class="chart sm"><canvas id="c5"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.topPosts)}</h3>${postsTable(IG.posts,tt(T.likes))}<div class="note">${tt({en:`Post-level figures are REACH, read live from the Instagram recent-content panel on 1 Oct. A NEW INSTAGRAM POST RAN ON 30 SEP 16:12 alongside the Facebook piece — the third consecutive same-day pairing. It opened at only 4 reached accounts but already carries 5 reactions, matching the 29 Sep post's reaction count on fewer accounts reached. THE 18 SEP POST STILL LEADS THE PANEL at 26 reached accounts, more than triple anything published since. Eight posts are listed. Post count moved 133 → 134; followers held at 49 for an eleventh read and following at 36, and Instagram again returned '--' for follows and unfollows.`,vi:`Số liệu theo bài là SỐ NGƯỜI TIẾP CẬN, đọc trực tiếp từ bảng nội dung mới đây của Instagram ngày 1/10. MỘT BÀI INSTAGRAM MỚI ĐÃ LÊN NGÀY 30/9 LÚC 16:12 song song với bài Facebook — là lần đăng cùng ngày thứ ba liên tiếp. Bài chỉ mở đầu với 4 tài khoản tiếp cận nhưng đã có 5 cảm xúc, bằng đúng bài ngày 29/9 dù tiếp cận ít hơn. BÀI NGÀY 18/9 VẪN DẪN ĐẦU BẢNG với 26 tài khoản tiếp cận, gấp hơn ba lần mọi bài đăng sau đó. Bảng liệt kê tám bài. Số bài tăng 133 → 134; follower giữ 49 ở kỳ đọc thứ mười một và đang theo dõi giữ 36, và Instagram lại trả về '--' cho lượt theo dõi và bỏ theo dõi.`})}</div></div><div class="panel"><h3>${tt(T.topByReach)}</h3><div class="chart"><canvas id="cb1"></canvas></div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.audience)}</h3><div class="note" style="margin-top:0">${tt(T.audNote)}</div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(IG.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(IG.next))}</div></div>`;
+clearCharts();
+line("c1",dlabels,IG.viewsDaily,"#e1306c");dough("c2",[fl,nf],IG.reachSrc);
+line("c3",dlabels,IG.reachDaily,"#8b5cf6");line("c4",dlabels,IG.interactionsDaily,"#f59e0b");dough("c5",[fl,nf],IG.viewsSrc);
+hbar("cb1",IG.posts.map(p=>p.d),IG.posts.map(p=>p.reach),"#e1306c");
+}
+function renderYoutube(){
+head("youtube","yt","#ff0000",tt({en:"NOT READ 1 Oct 2026 — Google sign-out blocked YouTube Studio",vi:"KHÔNG ĐỌC ĐƯỢC 1/10/2026 — Google đăng xuất chặn YouTube Studio"}),tt({en:"source unavailable",vi:"nguồn không đọc được"}));
+$("view").innerHTML=kpis(YT.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.viewsDrop)}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note">${tt({en:`YOUTUBE WAS NOT READ ON 1 OCT 2026. Google signed the tram@feeldx.com.au session out overnight and YouTube Studio redirected to a \"Verify it's you\" sign-in screen, which this automated run cannot pass — it is not permitted to enter passwords or complete a sign-in. EVERY FIGURE ON THIS CARD IS THEREFORE NULL, SHOWN AS \"—\", AND NOTHING HAS BEEN CARRIED FORWARD from the 30 Sep read (which showed 634 channel views). The standing rule for this report is that an unreadable source is recorded as null and stated, never repeated from the previous day. THE SAME SIGN-OUT ALSO BLOCKED GOOGLE SEARCH CONSOLE AND GA4, so the SEO report carries the same gap today. Facebook, Instagram and LinkedIn authenticate separately and were all read live as normal. TO RESTORE: sign Chrome on the Mac back in as tram@feeldx.com.au, then re-run this task for 1 Oct to backfill the day.`,vi:`YOUTUBE KHÔNG ĐƯỢC ĐỌC NGÀY 1/10/2026. Google đã đăng xuất phiên tram@feeldx.com.au trong đêm và YouTube Studio chuyển hướng sang màn hình đăng nhập \"Verify it's you\", mà lần chạy tự động này không thể vượt qua — quy trình không được phép nhập mật khẩu hay hoàn tất đăng nhập. VÌ VẬY MỌI SỐ LIỆU TRÊN THẺ NÀY ĐỀU LÀ NULL, HIỂN THỊ \"—\", VÀ KHÔNG SỐ NÀO ĐƯỢC LẤY LẠI từ lần đọc ngày 30/9 (khi đó là 634 lượt xem kênh). Nguyên tắc cố định của báo cáo này là nguồn không đọc được thì ghi null và nói rõ, không bao giờ lặp lại số của hôm trước. CÙNG LẦN ĐĂNG XUẤT NÀY CŨNG CHẶN GOOGLE SEARCH CONSOLE VÀ GA4, nên báo cáo SEO hôm nay cũng có khoảng trống tương tự. Facebook, Instagram và LinkedIn đăng nhập riêng nên vẫn được đọc trực tiếp bình thường. ĐỂ KHÔI PHỤC: hãy đăng nhập lại Chrome trên máy Mac bằng tram@feeldx.com.au, rồi chạy lại tác vụ này cho ngày 1/10 để bù dữ liệu.`})}</div></div>
+<div class="panel"><h3>${tt(T.topVideos)}</h3><table><thead><tr><th>${tt(T.post)}</th><th class="num">${tt(T.reach)}</th><th class="num">Dur</th><th class="num">CTR</th></tr></thead><tbody>${YT.topVideos.map(v=>`<tr><td class="post">${v.t}</td><td class="num">${v.v}</td><td class="num">${v.dur}</td><td class="num">${v.ctr}</td></tr>`).join("")}</tbody></table><div class="note">${tt({en:`No table today. The top-ten content rows come from YouTube Studio's period report, which was not reachable on this run, so the table is rendered empty rather than repeating the 30 Sep rows.`,vi:`Hôm nay không có bảng. Mười dòng nội dung hàng đầu lấy từ báo cáo theo kỳ của YouTube Studio, vốn không truy cập được trong lần chạy này, nên bảng được để trống thay vì lặp lại các dòng của ngày 30/9.`})}</div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards([{l:tt(T.avgPerDay),v:"—"},{l:tt({en:"Watch time",vi:"Giờ xem"}),v:"—"},{l:tt({en:"Latest video views",vi:"Views video mới"}),v:"—"},{l:tt({en:"Realtime 48h views",vi:"Views realtime 48h"}),v:"—"},{l:tt({en:"Subscribers",vi:"Người đăng ký"}),v:"—"},{l:tt({en:"Videos",vi:"Số video"}),v:"—"}])}</div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(YT.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(YT.next))}</div></div>`;
+clearCharts();bar("c1",[tt({en:"Prior 28d",vi:"28n trước"}),tt({en:"This 28d",vi:"28n này"})],[YT.viewsPrior,YT.viewsNow],["#c7ccd6","#ff0000"]);
+}
+function renderLinkedin(){
+head("linkedin","in","#0a66c2",tt({en:"Content 30 Aug – 28 Sep 2026 (window advanced 1 day) · 102 followers",vi:"Nội dung 30/8 – 28/9/2026 (cửa sổ đã dịch 1 ngày) · 102 follower"}),tt(T.live));
+const stats=[{l:tt(T.engRate),v:(37/1219*100).toFixed(1)+"%",s:tt({en:"reactions / impressions",vi:"reactions / impressions"})},{l:tt({en:"Impressions / follower",vi:"Impressions/follower"}),v:Math.round(1219/102)},{l:tt({en:"Melbourne share",vi:"Tỷ lệ Melbourne"}),v:"22.5%"},{l:tt({en:"New follower rate",vi:"Tăng follower"}),v:"▼97.8%",s:"30d · 1 new"},{l:tt({en:"Unique visitors",vi:"Khách duy nhất"}),v:"11",s:tt({en:"of 26 page views",vi:"trên 26 lượt xem"})},{l:tt({en:"Comments",vi:"Bình luận"}),v:"0",s:tt({en:"conversation gap",vi:"thiếu hội thoại"})}];
+const locLbl=LI.locLabels.map(l=>typeof l==="string"?l:tt(l));
+$("view").innerHTML=kpis(LI.kpis)+`
+<div class="grid g2"><div class="panel"><h3>${tt({en:"Followers by location",vi:"Follower theo vị trí"})}</h3><div class="chart"><canvas id="c1"></canvas></div><div class="note" style="margin-top:6px">${tt({en:`Read live on 1 Oct for the 30 Aug – 28 Sep window. The panel is byte-identical to 30 Sep: Ho Chi Minh City 24 (23.5%), Melbourne 23 (22.5%), Brisbane 3 (2.9%), Metro Manila 3 (2.9%), then Mumbai, Delhi and Karachi at 2 each and Kolkata, Angeles and Vacoas at 1 each. The ten named places total 62 of 102 followers; \"Other\" is the remaining 40 and is shown as a single 48.2% slice rather than as LinkedIn's per-place list.`,vi:`Đọc trực tiếp ngày 1/10 cho cửa sổ 30/8 – 28/9. Bảng trùng khớp hoàn toàn với ngày 30/9: TP. Hồ Chí Minh 24 (23,5%), Melbourne 23 (22,5%), Brisbane 3 (2,9%), Metro Manila 3 (2,9%), rồi Mumbai, Delhi và Karachi mỗi nơi 2 và Kolkata, Angeles, Vacoas mỗi nơi 1. Mười địa danh được nêu tên cộng lại 62 trên 102 follower; phần \"Khác\" là 40 còn lại và được gộp thành một lát 48,2% thay vì liệt kê từng nơi như LinkedIn hiển thị.`})}</div></div>
+<div class="panel"><h3>${tt({en:"Impressions vs prior 28d",vi:"Impressions vs 28n trước"})}</h3><div class="chart"><canvas id="c2"></canvas></div><div class="note" style="margin-top:6px">${tt({en:`Impressions ROSE for the first time in this run, 1,193 → 1,219, and the decline against the prior 28 days narrowed ▼28.0% → ▼25.7%. The prior bar, about 1,641, is derived from the displayed percentage rather than read directly — LinkedIn shows only the current total and the change. The Page has not published for twelve days, so this rise is the tail of earlier posts still being served, not new reach.`,vi:`Impressions TĂNG lần đầu trong đợt này, 1.193 → 1.219, và mức giảm so với 28 ngày trước thu hẹp ▼28,0% → ▼25,7%. Cột kỳ trước, khoảng 1.641, được suy ra từ tỷ lệ phần trăm hiển thị chứ không đọc trực tiếp — LinkedIn chỉ hiện tổng hiện tại và mức thay đổi. Trang đã mười hai ngày không đăng bài, nên mức tăng này là phần đuôi của các bài cũ còn được phân phối, không phải lượt tiếp cận mới.`})}</div></div></div>
+<div class="panel" style="margin-bottom:16px"><h3>${tt(T.deepDive)}</h3>${deepCards(stats)}</div>
+<div class="grid g2"><div class="panel"><h3>${tt({en:"Page visitors by job function",vi:"Khách truy cập theo chức năng"})}</h3><div class="chart"><canvas id="c3"></canvas></div><div class="note" style="margin-top:6px">${tt({en:`Read live on 1 Oct. The panel WIDENED from nine functions to TEN and its shape changed materially against 30 Sep: Research 3 and Operations 3 appeared, Business Development fell 8 → 5, Legal 1 and Customer Success and Support 1 entered, while Purchasing and Product Management dropped out. Arts and Design still leads at 13. The ten functions sum to 31 against 26 page views, because LinkedIn counts a visitor under every function that applies to them.`,vi:`Đọc trực tiếp ngày 1/10. Bảng MỞ RỘNG từ chín lên MƯỜI nhóm và cơ cấu thay đổi đáng kể so với ngày 30/9: Nghiên cứu 3 và Vận hành 3 xuất hiện, Phát triển KD giảm 8 → 5, Pháp lý 1 và Chăm sóc khách hàng 1 bước vào, trong khi Thu mua và Quản lý sản phẩm rời đi. Nghệ thuật & Thiết kế vẫn dẫn đầu với 13. Mười nhóm cộng lại 31 trên 26 lượt xem trang, vì LinkedIn tính một khách truy cập vào mọi nhóm chức năng phù hợp với họ.`})}</div></div>
+<div class="panel"><h3>${tt({en:"Page views by device",vi:"Lượt xem trang theo thiết bị"})}</h3><div class="chart"><canvas id="c4"></canvas></div><div class="note" style="margin-top:6px">${tt({en:`Desktop 24 and mobile 2 of 26 page views, read live on 1 Oct. Desktop rose 22 → 24 while mobile held at 2, so the desktop share widened further to 92.3%. A business audience reaching the Page from a work machine is consistent with the job-function panel, and it means mobile-first creative is not where the LinkedIn effort should go.`,vi:`Máy tính 24 và di động 2 trên tổng 26 lượt xem trang, đọc trực tiếp ngày 1/10. Máy tính tăng 22 → 24 trong khi di động giữ ở 2, nên tỷ trọng máy tính mở rộng thêm lên 92,3%. Một tệp khách doanh nghiệp vào Trang từ máy làm việc là hợp lý với bảng chức năng công việc, và điều đó cũng có nghĩa nội dung ưu tiên di động không phải là hướng nên đầu tư cho LinkedIn.`})}</div></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.insights)}</h3>${list(tt(LI.insights))}</div><div class="panel"><h3>${tt(T.next)}</h3>${list(tt(LI.next))}</div></div>`;
+clearCharts();
+hbar("c1",locLbl,LI.locData,"#0a66c2");
+bar("c2",[tt({en:"Prior",vi:"Kỳ trước"}),tt({en:"Now",vi:"Hiện tại"})],[LI.imprPrior,LI.imprNow],["#c7ccd6","#0a66c2"]);
+hbar("c3",LI.jobLabels.map(l=>tt(l)),LI.jobData,"#5b6bf5");
+dough("c4",LI.deviceLabels.map(l=>tt(l)),LI.deviceData);
+}
+function renderAll(){
+head("all","◆","#5b6bf5",tt({en:"Snapshot · 1 Oct 2026 · Facebook, Instagram, LinkedIn read live · YouTube not readable",vi:"Ảnh chụp · 1/10/2026 · Facebook, Instagram, LinkedIn đọc trực tiếp · YouTube không đọc được"}),tt({en:"via Chrome (no Supermetrics)",vi:"qua Chrome (không dùng Supermetrics)"}));
+const kp=[{en:"FB Views",vi:"FB Lượt xem",v:4427,c:5.6},{en:"IG Reach",vi:"IG Reach",v:87,c:-68.1},{en:"LI Impressions",vi:"LI Impressions",v:1219,c:-25.7},{en:"LI Reactions",vi:"LI Reactions",v:37,c:-51.3},{en:"YT Views",vi:"YT Lượt xem",v:"—",c:null},{en:"FB Followers",vi:"FB Follower",v:116,c:null},{en:"LI Followers",vi:"LI Follower",v:102,c:null},{en:"IG Followers",vi:"IG Follower",v:49,c:null}];
+$("view").innerHTML=kpis(kp)+`
+<div class="grid g2"><div class="panel"><h3>${tt(T.followersBy)}</h3><div class="chart"><canvas id="a1"></canvas></div></div>
+<div class="panel"><h3>${tt(T.chStatus)}</h3><table><thead><tr><th>${tt(T.channel)}</th><th>${tt(T.followers2)}</th><th>${tt(T.status)}</th></tr></thead><tbody>
+<tr><td>Facebook</td><td>116</td><td><span class="pill on">live</span></td></tr><tr><td>Instagram</td><td>49</td><td><span class="pill on">live</span></td></tr><tr><td>LinkedIn</td><td>102</td><td><span class="pill on">live</span></td></tr><tr><td>YouTube</td><td>—</td><td><span class="pill none">not read</span></td></tr><tr><td>TikTok / X</td><td>—</td><td><span class="pill none">no account</span></td></tr></tbody></table></div></div>
+<div class="grid g2e"><div class="panel"><h3>${tt(T.crossInsights)}</h3>${list(tt({en:["Facebook, Instagram and LinkedIn were read live via Chrome on 1 Oct at ~06:10–06:40 ICT. YOUTUBE WAS NOT READ: Google signed the tram@feeldx.com.au account out overnight and YouTube Studio demanded re-verification, so every YouTube figure is null rather than carried. Meta advanced one day to 2 – 29 Sep; LinkedIn advanced one day to 30 Aug – 28 Sep.", "THE SAME GOOGLE SIGN-OUT ALSO BLOCKED SEARCH CONSOLE AND GA4, so today's SEO report carries the same gap. Ahrefs, which signs in separately, was read live and is unaffected. Signing Chrome on the Mac back in as tram@feeldx.com.au restores all three Google sources at once.", "A THIRD CONSECUTIVE SUPPLIER-CREDIT POST RAN ON BOTH META CHANNELS ON 30 SEP 16:12 — hand carving on the Project 251 teak detail. Each of the three has opened stronger than the last on Facebook: 28 views, then 41, now 89 at 14 hours old. The format is now proven three times over.", "FACEBOOK VIEWS FELL 4,519 → 4,427 but the comparison held positive at ▲5.6%. The drop is purely the window rolling: 1 Sep left carrying 187 views while 29 Sep entered with 95. Three consecutive publishing days are what is keeping the comparison above water.", "FACEBOOK INTERACTIONS ARE THE ONE METRIC MOVING THE WRONG WAY, 141 → 132 with the comparison worsening ▼16.6% → ▼23.3%. Follower interactions carried the fall, 99 → 88 (▼19.3%). Views and video are both rising while engagement thins — reach is arriving without an ask attached.", "FACEBOOK VIDEO AND VISITS BOTH STRENGTHENED: 3-second views 353 → 352 in level but ▲146.9% → ▲151.4% in comparison, watch time held at 2h 2m with ▲133.5% → ▲141.2%, and visits held at 421 with ▲69.5% → ▲71.8%. Link clicks stayed at 4 for a second read (▼20.0%).", "INSTAGRAM VIEWS ROSE 2,258 → 2,297 (▲108.1%) BUT REACH HAS BEEN FROZEN AT 87 FOR FOUR READS (▼68.1%). Follower views climbed to 1,896 of 2,297 (68.9%, ▲26.2%) while non-follower views fell to 401 (▼31.5%) — the account is recirculating to people who already follow rather than finding new ones.", "INSTAGRAM INTERACTIONS ROSE 20 → 23 with the comparison improving ▼69.2% → ▼64.1%, and the follower share of interactions eased 79% → 74%, so the small lift came from non-followers. Post count moved 133 → 134; followers held at 49 and following at 36.", "LINKEDIN IMPRESSIONS ROSE FOR THE FIRST TIME IN THIS RUN, 1,193 → 1,219, with the comparison improving ▼28.0% → ▼25.7% and an implied prior period of about 1,641. Page views rose 24 → 26 and unique visitors 10 → 11, both with clearly improving comparisons.", "LINKEDIN HAS NOW GONE TWELVE DAYS WITHOUT PUBLISHING while both Meta channels published on 28, 29 and 30 Sep. Reactions rose 36 → 37 but comments and reposts remain 0 for a twelfth consecutive read. The impression rise is the tail of older posts still being served, not new reach.", "THE LINKEDIN VISITOR JOB-FUNCTION PANEL WIDENED from nine functions to ten and changed shape: Research 3 and Operations 3 appeared, Business Development fell 8 → 5, Legal and Customer Success entered, Purchasing and Product Management left. Arts and Design still leads at 13 of 26 page views. Desktop widened to 24 of 26.", "FOLLOWERS UNCHANGED ON EVERY READABLE CHANNEL for a sixth read: Facebook 116, Instagram 49, LinkedIn 102. The YouTube subscriber count could not be read, so the all-channel follower total is incomplete today rather than restated."],vi:["Facebook, Instagram và LinkedIn được đọc trực tiếp qua Chrome ngày 1/10 lúc ~06:10–06:40 ICT. YOUTUBE KHÔNG ĐỌC ĐƯỢC: Google đã đăng xuất tài khoản tram@feeldx.com.au trong đêm và YouTube Studio yêu cầu xác minh lại, nên mọi số liệu YouTube là null chứ không lấy số cũ. Meta tiến một ngày lên 2 – 29/9; LinkedIn tiến một ngày lên 30/8 – 28/9.", "CÙNG LẦN ĐĂNG XUẤT GOOGLE NÀY CŨNG CHẶN SEARCH CONSOLE VÀ GA4, nên báo cáo SEO hôm nay có khoảng trống tương tự. Ahrefs đăng nhập riêng nên vẫn đọc trực tiếp bình thường và không bị ảnh hưởng. Đăng nhập lại Chrome trên máy Mac bằng tram@feeldx.com.au sẽ khôi phục cả ba nguồn Google cùng lúc.", "BÀI GHI CÔNG NHÀ CUNG CẤP THỨ BA LIÊN TIẾP ĐÃ LÊN CẢ HAI KÊNH META NGÀY 30/9 LÚC 16:12 — chi tiết gỗ tếch chạm tay của Project 251. Cả ba bài đều mở đầu mạnh hơn bài trước trên Facebook: 28 view, rồi 41, nay 89 sau 14 giờ. Định dạng này đã được chứng minh ba lần.", "LƯỢT XEM FACEBOOK GIẢM 4.519 → 4.427 nhưng mức so sánh vẫn dương ▲5,6%. Mức giảm hoàn toàn do cửa sổ lăn: ngày 1/9 rời đi mang theo 187 view trong khi 29/9 vào với 95. Ba ngày đăng liên tiếp chính là thứ giữ cho mức so sánh không chìm xuống.", "TƯƠNG TÁC FACEBOOK LÀ CHỈ SỐ DUY NHẤT ĐI SAI HƯỚNG, 141 → 132 với mức so sánh xấu đi ▼16,6% → ▼23,3%. Phần giảm đến từ người theo dõi, 99 → 88 (▼19,3%). Views và video đều tăng trong khi tương tác mỏng đi — lượt tiếp cận có đến nhưng không kèm lời kêu gọi.", "VIDEO VÀ LƯỢT TRUY CẬP FACEBOOK ĐỀU MẠNH LÊN: lượt xem 3 giây 353 → 352 về mức nhưng ▲146,9% → ▲151,4% về so sánh, thời gian xem giữ 2 giờ 2 phút với ▲133,5% → ▲141,2%, và lượt truy cập giữ 421 với ▲69,5% → ▲71,8%. Lượt click liên kết giữ ở 4 lần đọc thứ hai (▼20,0%).", "LƯỢT XEM INSTAGRAM TĂNG 2.258 → 2.297 (▲108,1%) NHƯNG SỐ NGƯỜI TIẾP CẬN ĐỨNG YÊN Ở 87 SUỐT BỐN LẦN ĐỌC (▼68,1%). Lượt xem từ người theo dõi lên 1.896 trên 2.297 (68,9%, ▲26,2%) còn từ người chưa theo dõi giảm xuống 401 (▼31,5%) — tài khoản đang xoay vòng trong nhóm đã theo dõi thay vì tìm người mới.", "TƯƠNG TÁC INSTAGRAM TĂNG 20 → 23 với mức so sánh cải thiện ▼69,2% → ▼64,1%, và tỷ trọng tương tác từ người theo dõi hạ 79% → 74%, nên phần tăng nhỏ đến từ người chưa theo dõi. Số bài tăng 133 → 134; follower giữ 49 và đang theo dõi giữ 36.", "LƯỢT HIỂN THỊ LINKEDIN TĂNG LẦN ĐẦU TRONG ĐỢT NÀY, 1.193 → 1.219, với mức so sánh cải thiện ▼28,0% → ▼25,7% và kỳ trước suy ra khoảng 1.641. Lượt xem trang tăng 24 → 26 và khách truy cập duy nhất 10 → 11, cả hai đều có mức so sánh cải thiện rõ.", "LINKEDIN ĐÃ MƯỜI HAI NGÀY KHÔNG ĐĂNG BÀI trong khi cả hai kênh Meta đăng ngày 28, 29 và 30/9. Lượt cảm xúc tăng 36 → 37 nhưng bình luận và chia sẻ lại vẫn bằng 0 lần đọc thứ mười hai liên tiếp. Mức tăng impressions là phần đuôi của các bài cũ còn được phân phối, không phải lượt tiếp cận mới.", "BẢNG CHỨC NĂNG CÔNG VIỆC CỦA KHÁCH TRUY CẬP LINKEDIN MỞ RỘNG từ chín lên mười nhóm và đổi cơ cấu: Nghiên cứu 3 và Vận hành 3 xuất hiện, Phát triển KD giảm 8 → 5, Pháp lý và Chăm sóc khách hàng bước vào, Thu mua và Quản lý sản phẩm rời đi. Nghệ thuật & Thiết kế vẫn dẫn đầu với 13 trên 26 lượt xem trang. Máy tính mở rộng lên 24 trên 26.", "SỐ NGƯỜI THEO DÕI KHÔNG ĐỔI TRÊN MỌI KÊNH ĐỌC ĐƯỢC lần đọc thứ sáu: Facebook 116, Instagram 49, LinkedIn 102. Không đọc được số người đăng ký YouTube, nên tổng follower toàn kênh hôm nay là chưa đầy đủ chứ không phải được nêu lại."]}))}</div>
+<div class="panel"><h3>${tt(T.routine)}</h3>${list(tt(DAILY))}</div></div>`;
+clearCharts();bar("a1",["Facebook","LinkedIn","Instagram","YouTube"],[116,102,49,null],["#1877f2","#0a66c2","#e1306c","#ff0000"]);
+}
+
+function render(){const f={facebook:renderFacebook,instagram:renderInstagram,youtube:renderYoutube,linkedin:renderLinkedin,all:renderAll};f[current]();$("foot").textContent=tt(T.footer);$("shareBtn").textContent=tt(T.share);$("pdfBtn").textContent=tt(T.pdf);if(typeof pdfLabels==="function")pdfLabels();renderTrend();}
+function select(k){current=k;document.querySelectorAll(".rbtn").forEach(b=>b.classList.toggle("active",b.dataset.k===k));render();}
+document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>select(b.dataset.k)));
+function syncLangFloat(){document.querySelectorAll("#langFloat button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));}
+$("langBtn").addEventListener("click",()=>{lang=lang==="en"?"vi":"en";$("langBtn").textContent=lang==="en"?"VI":"EN";syncLangFloat();render();});
+document.querySelectorAll("#langFloat button").forEach(b=>b.addEventListener("click",()=>{if(lang!==b.dataset.l)$("langBtn").click();}));
+$("shareBtn").addEventListener("click",()=>{$("shareContent").innerHTML=SHARE[lang];$("shareModal").classList.add("open");});
+
+// ============ PDF export — pick a period, then download all five channel views per day ============
+const PDFCH=["all","linkedin","instagram","facebook","youtube"];
+let PDFDAYS=[];
+
+function pdfFmt(iso){const[y,m,d]=iso.split("-");return d+"/"+m+"/"+y;}
+function pdfSel(id){return $(id).value;}
+function pdfRangeDays(){
+  const a=PDFDAYS.indexOf(pdfSel("pdfFrom")),b=PDFDAYS.indexOf(pdfSel("pdfTo"));
+  if(a<0||b<0||a>b)return null;
+  return PDFDAYS.slice(a,b+1);
+}
+function pdfSyncMeta(){
+  const r=pdfRangeDays();
+  $("pdfMeta").textContent=r?tt(T.pdfRange)(r.length):tt(T.pdfBad);
+  $("pdfGo").disabled=!r;
+}
+function pdfLabels(){
+  $("pdfPopTitle").textContent=tt(T.pdfTitle);
+  $("pdfFromLab").textContent=tt(T.pdfFrom);
+  $("pdfToLab").textContent=tt(T.pdfTo);
+  $("pdfCancel").textContent=tt(T.pdfCancel);
+  if(!$("pdfGo").dataset.busy)$("pdfGo").textContent=tt(T.pdfGo);
+  const q=$("pdfQuick");
+  if(q.children.length===3){q.children[0].textContent=tt(T.pdfQ1);q.children[1].textContent=tt(T.pdfQ7);q.children[2].textContent=tt(T.pdfQAll);}
+  pdfSyncMeta();
+}
+function pdfFill(days){
+  PDFDAYS=days;
+  const opt=d=>'<option value="'+d+'">'+pdfFmt(d)+'</option>';
+  $("pdfFrom").innerHTML=days.map(opt).join("");
+  $("pdfTo").innerHTML=days.map(opt).join("");
+  const last=days[days.length-1];
+  $("pdfFrom").value=last;$("pdfTo").value=last;
+  pdfSyncMeta();
+}
+function pdfQuickSet(n){
+  if(!PDFDAYS.length)return;
+  const days=n===0?PDFDAYS.slice():PDFDAYS.slice(-n);
+  $("pdfFrom").value=days[0];$("pdfTo").value=days[days.length-1];
+  pdfSyncMeta();
+}
+fetch("data/index.json").then(r=>r.json()).then(j=>{
+  const days=(j.snapshots||[]).map(s=>s.date).filter(Boolean).sort();
+  if(days.length)pdfFill(days);else $("pdfMeta").textContent=tt(T.pdfNone);
+}).catch(()=>{ $("pdfMeta").textContent=tt(T.pdfNone); });
+
+// capture the five channel views of one document into the pdf
+async function pdfCaptureDoc(win,doc,addPage,scale){
+  const main=doc.querySelector(".main");
+  if(!main)return;
+  const hide=[doc.getElementById("sec-filter"),doc.getElementById("metastrip"),doc.getElementById("sec-trend"),doc.getElementById("langFloat"),doc.querySelector(".hd .right")].filter(Boolean);
+  const memo=hide.map(e=>e.style.display);
+  try{
+    for(const k of PDFCH){
+      const rb=doc.querySelector('.rbtn[data-k="'+k+'"]');
+      if(rb)rb.click();
+      hide.forEach(e=>{e.style.display="none";});
+      await new Promise(r=>setTimeout(r,900));
+      const cv=await win.html2canvas(main,{scale:scale,backgroundColor:"#ffffff",useCORS:true,logging:false,windowWidth:main.scrollWidth});
+      addPage(cv);
+    }
+  }finally{
+    hide.forEach((e,i)=>{e.style.display=memo[i];});
+  }
+}
+
+function pdfInject(win,doc,src){
+  return new Promise((ok,bad)=>{
+    if(typeof win.html2canvas==="function")return ok();
+    const sc=doc.createElement("script");sc.src=src;sc.onload=()=>ok();sc.onerror=()=>bad();doc.head.appendChild(sc);
+  });
+}
+const H2C_SRC="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js";
+
+async function downloadPdf(){
+  const go=$("pdfGo");
+  if(go.dataset.busy)return;
+  const days=pdfRangeDays();
+  if(!days)return;
+  const jsPDF=(window.jspdf||{}).jsPDF;
+  if(typeof html2canvas!=="function"||!jsPDF){alert(tt(T.pdfErr));return;}
+  go.dataset.busy="1";go.disabled=true;$("pdfCancel").disabled=true;
+  const prev=current;
+  const scale=days.length>3?1.5:2;
+  let doc=null;
+  const addPage=cv=>{
+    const w=cv.width/scale,h=cv.height/scale;
+    if(!doc)doc=new jsPDF({unit:"pt",format:[w,h],orientation:w>h?"landscape":"portrait"});
+    else doc.addPage([w,h],w>h?"landscape":"portrait");
+    doc.addImage(cv.toDataURL("image/jpeg",days.length>3?0.85:0.92),"JPEG",0,0,w,h);
+  };
+  let ifr=null;
+  try{
+    for(let i=0;i<days.length;i++){
+      const d=days[i];
+      go.textContent=tt(T.pdfStep)(i+1,days.length,pdfFmt(d));
+      if(d===SNAPDATE){
+        await pdfCaptureDoc(window,document,addPage,scale);
+      }else{
+        ifr=document.createElement("iframe");
+        ifr.setAttribute("aria-hidden","true");
+        ifr.style.cssText="position:fixed;left:-20000px;top:0;width:1440px;height:2400px;border:0;visibility:hidden";
+        const loaded=new Promise((ok,bad)=>{ifr.onload=()=>ok();ifr.onerror=()=>bad();});
+        ifr.src="archive/"+d+".html";
+        document.body.appendChild(ifr);
+        await loaded;
+        await new Promise(r=>setTimeout(r,1400));
+        const w2=ifr.contentWindow,d2=ifr.contentDocument;
+        await pdfInject(w2,d2,H2C_SRC);
+        ifr.style.height=Math.max(2400,d2.body.scrollHeight)+"px";
+        await new Promise(r=>setTimeout(r,300));
+        await pdfCaptureDoc(w2,d2,addPage,scale);
+        ifr.remove();ifr=null;
+      }
+    }
+    const from=days[0],to=days[days.length-1];
+    doc.save("DXL-social-dashboard-"+(from===to?from:from+"_to_"+to)+".pdf");
+  }catch(e){alert(tt(T.pdfErr));}
+  finally{
+    if(ifr)try{ifr.remove()}catch(e){}
+    current=prev;
+    delete go.dataset.busy;go.disabled=false;$("pdfCancel").disabled=false;
+    go.textContent=tt(T.pdfGo);
+    render();pdfSyncMeta();
+  }
+}
+
+$("pdfBtn").addEventListener("click",e=>{e.stopPropagation();pdfLabels();$("pdfPop").classList.toggle("open");});
+$("pdfCancel").addEventListener("click",()=>$("pdfPop").classList.remove("open"));
+$("pdfFrom").addEventListener("change",pdfSyncMeta);
+$("pdfTo").addEventListener("change",pdfSyncMeta);
+$("pdfGo").addEventListener("click",downloadPdf);
+$("pdfPop").addEventListener("click",e=>e.stopPropagation());
+document.addEventListener("click",()=>{if(!$("pdfGo").dataset.busy)$("pdfPop").classList.remove("open");});
+(function(){const q=$("pdfQuick");[1,7,0].forEach(n=>{const b=document.createElement("button");b.addEventListener("click",()=>pdfQuickSet(n));q.appendChild(b);});})();
+function closeShare(){$("shareModal").classList.remove("open");}
+$("shareModal").addEventListener("click",e=>{if(e.target.id==="shareModal")closeShare();});
+// ============ trend section (reads every data/*.json snapshot; charts change over time) ============
+const TRT={
+ title:{vi:"Thay đổi chỉ số theo ngày",en:"How the numbers are changing"},
+ help:{vi:"Mỗi điểm là <b>một lần quét</b> đã lưu. Số lớn là giá trị mới nhất, dòng dưới là <b>thay đổi so với lần quét trước</b>. Biểu đồ đổi theo kênh bạn đang xem ở thanh bên trái.",
+       en:"Each point is <b>one stored scan</b>. The large number is the latest value and the line below it is the <b>change since the previous scan</b>. The charts follow whichever channel is selected in the left rail."},
+ loading:{vi:"Đang tải lịch sử số liệu…",en:"Loading metric history…"},
+ none:{vi:"Chưa đọc được lịch sử số liệu (cần ít nhất 2 ngày đã lưu).",en:"No metric history available yet (at least 2 stored days are needed)."},
+ nochg:{vi:"không đổi",en:"no change"},
+ first:{vi:"lần quét đầu",en:"first scan"},
+ span:{vi:(n,a,b)=>n+" lần quét · "+a+" → "+b, en:(n,a,b)=>n+" scans · "+a+" → "+b},
+ vsPrev:{vi:"so với lần quét trước",en:"vs previous scan"}
+};
+const TRCH={
+ facebook:{name:"Facebook",color:"#1877f2"},
+ instagram:{name:"Instagram",color:"#e1306c"},
+ youtube:{name:"YouTube",color:"#ff0000"},
+ linkedin:{name:"LinkedIn",color:"#0a66c2"}
+};
+const gv=(o,...p)=>{let d=o;for(const k of p){if(d==null||typeof d!=="object")return null;d=d[k];}return (d===undefined?null:d);};
+const TRKPI={
+ facebook:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"facebook","views","v")},
+  {l:{en:"Reach (viewers)",vi:"Người tiếp cận"},g:j=>gv(j,"facebook","viewers","v")},
+  {l:{en:"Facebook visits",vi:"Lượt truy cập"},g:j=>gv(j,"facebook","visits","v")},
+  {l:{en:"Content interactions",vi:"Tương tác nội dung"},g:j=>gv(j,"facebook","interactions","v")},
+  {l:{en:"Video 3s views",vi:"Lượt xem video 3 giây"},g:j=>gv(j,"facebook","video_3s","v")},
+  {l:{en:"Net new followers",vi:"Follower ròng"},g:j=>gv(j,"facebook","net_new_followers","v")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"facebook","followers")},
+  {l:{en:"Views from non-followers %",vi:"% views từ chưa follow"},g:j=>gv(j,"facebook","views_from_non_followers_pct"),d:1,suf:"%"}
+ ],
+ instagram:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"instagram","views","v")},
+  {l:{en:"Reach (28d)",vi:"Người tiếp cận (28n)"},g:j=>gv(j,"instagram","reach","v")},
+  {l:{en:"Content interactions",vi:"Tương tác nội dung"},g:j=>gv(j,"instagram","interactions","v")},
+  {l:{en:"Reach from non-followers",vi:"Reach từ chưa follow"},g:j=>gv(j,"instagram","reach_from_non_followers")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"instagram","followers")},
+  {l:{en:"Posts published",vi:"Tổng bài đăng"},g:j=>gv(j,"instagram","posts_total")}
+ ],
+ youtube:[
+  {l:{en:"Views (28d)",vi:"Lượt xem (28n)"},g:j=>gv(j,"youtube","views_28d","v")},
+  {l:{en:"Watch time (hrs)",vi:"Giờ xem"},g:j=>gv(j,"youtube","watch_time_hours","v"),d:1},
+  {l:{en:"Subscribers",vi:"Người đăng ký"},g:j=>gv(j,"youtube","subscribers")},
+  {l:{en:"Videos published",vi:"Tổng số video"},g:j=>gv(j,"youtube","videos")}
+ ],
+ linkedin:[
+  {l:{en:"Impressions",vi:"Impressions"},g:j=>gv(j,"linkedin","impressions","v")},
+  {l:{en:"Reactions",vi:"Cảm xúc"},g:j=>gv(j,"linkedin","reactions","v")},
+  {l:{en:"Comments",vi:"Bình luận"},g:j=>gv(j,"linkedin","comments","v")},
+  {l:{en:"Reposts",vi:"Chia sẻ lại"},g:j=>gv(j,"linkedin","reposts","v")},
+  {l:{en:"Page views",vi:"Lượt xem trang"},g:j=>gv(j,"linkedin","page_views","v")},
+  {l:{en:"Unique visitors",vi:"Khách duy nhất"},g:j=>gv(j,"linkedin","unique_visitors","v")},
+  {l:{en:"Total followers",vi:"Tổng follower"},g:j=>gv(j,"linkedin","followers")},
+  {l:{en:"New followers (30d)",vi:"Follower mới (30n)"},g:j=>gv(j,"linkedin","new_followers_30d","v")}
+ ]
+};
+let TRD=null, trCharts=[], trLoaded=false;
+function trClear(){trCharts.forEach(c=>{try{c.destroy()}catch(e){}});trCharts=[];}
+const trFmtD=iso=>{const p=iso.split("-");return p[2]+"/"+p[1];};
+function trNum(v,d,suf){if(v==null)return "—";const n=(d?Number(v).toFixed(d):Math.round(v).toLocaleString());return n+(suf||"");}
+function trDelta(cur,prev,d,suf){
+  if(cur==null)return '<div class="d flat">—</div>';
+  if(prev==null)return '<div class="d flat">■ '+TRT.first[lang]+'</div>';
+  const diff=cur-prev;
+  if(Math.abs(diff)<1e-9)return '<div class="d flat">■ '+TRT.nochg[lang]+'</div>';
+  const pct=prev?Math.abs(diff/prev*100):null;
+  return '<div class="d '+(diff>0?"up":"down")+'">'+(diff>0?"▲":"▼")+" "+trNum(Math.abs(diff),d,suf)+
+         (pct!=null?" ("+pct.toFixed(1)+"%)":"")+'</div>';
+}
+function trSpark(id,labels,data,color){
+  const el=$(id); if(!el)return;
+  trCharts.push(new Chart(el,{type:"line",
+    data:{labels,datasets:[{data,borderColor:color,backgroundColor:color+"1f",fill:true,tension:.35,pointRadius:0,pointHoverRadius:4,borderWidth:2,spanGaps:true}]},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,
+      plugins:{legend:{display:false},tooltip:{displayColors:false,callbacks:{title:c=>c[0].label}}},
+      scales:{x:{display:false},y:{display:false,beginAtZero:false}}}}));
+}
+function trBlock(key){
+  const cfg=TRCH[key], defs=TRKPI[key], labels=TRD.map(r=>trFmtD(r.date));
+  let h='<div class="tr-sec"><div class="th"><span class="tr-dot" style="background:'+cfg.color+'"></span><b>'+cfg.name+'</b>'+
+        '<span>'+TRT.span[lang](TRD.length,trFmtD(TRD[0].date),trFmtD(TRD[TRD.length-1].date))+'</span></div><div class="tr-grid">';
+  const jobs=[];
+  defs.forEach((k,i)=>{
+    const series=TRD.map(r=>k.g(r.j));
+    const cur=series[series.length-1];
+    let prev=null;
+    for(let n=series.length-2;n>=0;n--){if(series[n]!=null){prev=series[n];break;}}
+    const cid="tsp_"+key+"_"+i;
+    h+='<div class="tr-card"><div class="l">'+k.l[lang]+'</div><div class="v">'+trNum(cur,k.d,k.suf)+'</div>'+
+       trDelta(cur,prev,k.d,k.suf)+'<div class="tr-spark"><canvas id="'+cid+'"></canvas></div></div>';
+    jobs.push([cid,series,cfg.color]);
+  });
+  return {html:h+'</div></div>', jobs, labels};
+}
+function renderTrend(){
+  const box=$("trBody"); if(!box)return;
+  $("trTitle").textContent=TRT.title[lang];
+  $("trHelp").innerHTML=TRT.help[lang];
+  trClear();
+  if(!trLoaded){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.loading[lang]+'</div>';return;}
+  if(!TRD||TRD.length<2){box.innerHTML='<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';return;}
+  const keys=(current==="all")?["linkedin","instagram","facebook","youtube"]:[current];
+  let html="", jobs=[], labels=[];
+  keys.forEach(k=>{if(!TRKPI[k])return;const b=trBlock(k);html+=b.html;jobs=jobs.concat(b.jobs);labels=b.labels;});
+  box.innerHTML=html||'<div class="note" style="margin-top:0">'+TRT.none[lang]+'</div>';
+  jobs.forEach(j=>trSpark(j[0],labels,j[1],j[2]));
+}
+if(document.getElementById("sec-trend")){
+  fetch("data/index.json").then(r=>r.json()).then(j=>{
+    const snaps=[...j.snapshots].sort((a,b)=>a.date.localeCompare(b.date));
+    return Promise.all(snaps.map(s=>fetch(s.data).then(r=>r.ok?r.json():null).catch(()=>null)
+      .then(d=>d?{date:s.date,j:d}:null)));
+  }).then(rows=>{
+    TRD=rows.filter(Boolean); trLoaded=true; renderTrend();
+  }).catch(()=>{
+    const sec=$("sec-trend"); if(sec)sec.style.display="none";
+  });
+}
+
+syncLangFloat();
+select("all");
+
+// ============ date picker (reads data/index.json; navigates, never recomputes) ============
+const DPT={
+ title:{vi:"Chọn ngày để xem báo cáo",en:"Pick a day to view"},
+ help:{vi:"Chọn <b>một ngày</b> rồi bấm <b>Cập nhật</b> để mở đúng bản dashboard đã lưu của ngày đó. Ngày <b>có dấu chấm</b> là ngày đã quét và có bản lưu; ngày làm mờ là chưa quét nên không mở được.",
+       en:"Pick <b>one day</b> and press <b>Update</b> to open the stored dashboard for that day. A day <b>with a dot</b> was scanned and has a saved copy; dimmed days were never scanned and cannot be opened."},
+ btn:{vi:d=>"🗓 Ngày "+d,en:d=>"🗓 "+d},
+ quick:{vi:"Mở nhanh",en:"Quick open"},
+ ok:{vi:"Cập nhật",en:"Update"}, cancel:{vi:"Hủy",en:"Cancel"},
+ legend:{vi:'<span class="d">•</span> Dấu chấm = ngày đã có bản lưu. Ngày làm mờ = chưa quét, không mở được báo cáo riêng.',
+         en:'<span class="d">•</span> A dot marks a stored day. Dimmed days were never scanned and have no report to open.'},
+ stored:{vi:"1 ngày đã lưu · ngày theo giờ Việt Nam (Asia/Ho_Chi_Minh), là giờ lúc quét",
+         en:"1 stored day · dates are Vietnam time (Asia/Ho_Chi_Minh), the timezone of the scan"},
+ nodata:{vi:"Ngày này chưa được quét nên không có bản lưu để mở.",en:"This day was never scanned, so there is no stored report to open."},
+ updated:{vi:d=>"📅 Cập nhật: "+d,en:d=>"📅 Updated: "+d},
+ histLink:{vi:"🗂 Lịch sử dữ liệu theo ngày →",en:"🗂 Daily data history →"},
+ months:{vi:["Tháng 1","Tháng 2","Tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","Tháng 11","Tháng 12"],
+         en:["January","February","March","April","May","June","July","August","September","October","November","December"]},
+ dow:{vi:["CN","T2","T3","T4","T5","T6","T7"],en:["Su","Mo","Tu","We","Th","Fr","Sa"]}
+};
+let DPI=null, dpSel=null, dpMonth=null;
+const dpFmt=iso=>{const[a,b,c]=iso.split("-");return c+"/"+b+"/"+a;};
+const dpISO=dt=>dt.getFullYear()+"-"+String(dt.getMonth()+1).padStart(2,"0")+"-"+String(dt.getDate()).padStart(2,"0");
+const dpSnap=iso=>DPI?DPI.snapshots.find(x=>x.date===iso):null;
+function dpTarget(iso){
+  if(!DPI)return null;
+  if(iso===DPI.latest)return "index.html";
+  const s=dpSnap(iso); if(!s)return null;
+  return s.report?s.report:("history.html?day="+iso);
+}
+function dpRenderMeta(){
+  if(!DPI)return;
+  const cur=DPI.latest;
+  $("metastrip").innerHTML=
+    '<span class="mtag on">✓ Facebook</span><span class="mtag on">✓ Instagram</span>'+
+    '<span class="mtag on">✓ YouTube</span><span class="mtag on">✓ LinkedIn</span>'+
+    '<span class="mtag">'+DPT.updated[lang](dpFmt(cur))+'</span>'+
+    '<a class="mtag hist" href="../history.html">'+DPT.histLink[lang]+'</a>';
+}
+function dpRenderQuick(){
+  if(!DPI)return;
+  const days=[...DPI.snapshots].sort((a,b)=>b.date.localeCompare(a.date));
+  $("dpQuick").innerHTML='<span class="qh">'+DPT.quick[lang]+'</span>'+days.map(s=>{
+    const cur=s.date===DPI.latest;
+    const lb=(lang==="vi"?s.label_vi:s.label_en)||"";
+    return '<button class="dp-chip'+(cur?' cur':'')+'" data-go="'+s.date+'">'+dpFmt(s.date)+
+      (lb?'<span class="cl">'+lb+'</span>':'')+'</button>';
+  }).join("");
+  $("dpQuick").querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>{
+    const t=dpTarget(b.dataset.go); if(t) location.href=t;
+  }));
+}
+function dpGrid(el,y,m){
+  const first=new Date(y,m,1), lead=first.getDay(), dim=new Date(y,m+1,0).getDate();
+  let h=DPT.dow[lang].map(d=>'<div class="dp-dow">'+d+'</div>').join("");
+  for(let i=0;i<lead;i++)h+='<button class="dp-day pad"></button>';
+  for(let d=1;d<=dim;d++){
+    const iso=dpISO(new Date(y,m,d)), has=!!dpSnap(iso), sel=iso===dpSel;
+    h+='<button class="dp-day'+(has?"":" dim")+(sel?" sel":"")+'"'+(has?'':' disabled')+
+       ' data-d="'+iso+'">'+d+(has?'<span class="dot"></span>':'')+'</button>';
+  }
+  el.innerHTML=h;
+  el.querySelectorAll("[data-d]:not(.dim)").forEach(b=>b.addEventListener("click",()=>{dpSel=b.dataset.d;dpDraw();}));
+}
+function dpDraw(){
+  if(!DPI)return;
+  const y=dpMonth.getFullYear(), m=dpMonth.getMonth();
+  const nx=new Date(y,m+1,1);
+  $("dpM0").textContent=DPT.months[lang][m]+" "+y;
+  $("dpM1").textContent=DPT.months[lang][nx.getMonth()]+" "+nx.getFullYear();
+  dpGrid($("dpG0"),y,m); dpGrid($("dpG1"),nx.getFullYear(),nx.getMonth());
+  const oldest=DPI.snapshots[0].date;
+  $("dpPrev").disabled = dpISO(new Date(y,m,1)) <= oldest.slice(0,8)+"01";
+  const has=!!dpSnap(dpSel);
+  $("dpSum").textContent=dpSel?dpFmt(dpSel):"—";
+  $("dpSub").textContent=has?DPT.stored[lang]:DPT.nodata[lang];
+  $("dpOk").disabled=!has;
+  $("dpBtn").textContent=DPT.btn[lang](dpFmt(dpSel||DPI.latest));
+}
+function dpRender(){
+  if(!DPI)return;
+  $("dpTitle").textContent=DPT.title[lang];
+  $("dpHelp").innerHTML=DPT.help[lang];
+  $("dpOk").textContent=DPT.ok[lang];
+  $("dpCancel").textContent=DPT.cancel[lang];
+  $("dpLegend").innerHTML=DPT.legend[lang];
+  $("dpState").textContent=(lang==="vi"?"Đang xem báo cáo ngày "+dpFmt(DPI.latest)+" (mới nhất)":"Viewing "+dpFmt(DPI.latest)+" (latest)");
+  $("dpAccSub").textContent=(lang==="vi"
+    ? dpFmt(DPI.latest)+" (mới nhất) · "+DPI.snapshots.length+" ngày đã lưu"
+    : dpFmt(DPI.latest)+" (latest) · "+DPI.snapshots.length+" stored days");
+  dpRenderMeta(); dpRenderQuick(); dpDraw();
+}
+if(document.getElementById("sec-filter")){
+fetch("data/index.json").then(r=>r.json()).then(j=>{
+  j.snapshots.sort((a,b)=>a.date.localeCompare(b.date));
+  DPI=j; dpSel=j.latest;
+  const d=new Date(j.latest+"T00:00:00"); dpMonth=new Date(d.getFullYear(),d.getMonth()-1,1);
+  dpRender();
+  const acc=$("dpAcc"), body=$("dpBody");
+  acc.addEventListener("click",e=>{
+    e.stopPropagation();
+    const open=body.classList.toggle("open");
+    acc.setAttribute("aria-expanded",open?"true":"false");
+    if(!open)$("dpPop").classList.remove("open");
+  });
+  $("dpBtn").addEventListener("click",e=>{e.stopPropagation();$("dpPop").classList.toggle("open");});
+  $("dpCancel").addEventListener("click",()=>{dpSel=DPI.latest;$("dpPop").classList.remove("open");dpDraw();});
+  $("dpOk").addEventListener("click",()=>{const t=dpTarget(dpSel);if(t)location.href=t;});
+  $("dpPrev").addEventListener("click",()=>{dpMonth=new Date(dpMonth.getFullYear(),dpMonth.getMonth()-1,1);dpDraw();});
+  $("dpNext").addEventListener("click",()=>{dpMonth=new Date(dpMonth.getFullYear(),dpMonth.getMonth()+1,1);dpDraw();});
+  $("dpPop").addEventListener("click",e=>e.stopPropagation());
+  document.addEventListener("click",()=>$("dpPop").classList.remove("open"));
+  $("langBtn").addEventListener("click",()=>dpRender());
+}).catch(()=>{
+  const sec=$("sec-filter"); if(sec)sec.style.display="none";
+  const ms=$("metastrip"); if(ms)ms.style.display="none";
+});
+}
+
+</script>
+</body>
+</html>
