@@ -1,0 +1,644 @@
+{
+ "date": "2026-10-01",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-10-01 (~06:10-07:10 ICT) from Chrome on macOS. THREE OF FOUR channels were read LIVE: Meta Business Suite overview for Facebook and Instagram (window advanced to 2-29 Sep 2026) and LinkedIn admin Content/Followers/Visitors (30 Aug - 28 Sep 2026). YOUTUBE WAS NOT READ: Google signed the tram@feeldx.com.au session out and YouTube Studio redirected to an accounts.google.com \"Verify it's you\" sign-in screen, which this unattended run is not permitted to pass. Every YouTube field is therefore null and nothing is carried forward from 2026-09-30. The same sign-out blocked Google Search Console and GA4, affecting today's SEO report in the same way; Ahrefs authenticates separately and was read live.",
+ "window": {
+  "en": "Last 28 days: 2 – 29 Sep 2026",
+  "vi": "28 ngày qua: 2 – 29/9/2026"
+ },
+ "windows": {
+  "meta": "2026-09-02 → 2026-09-29",
+  "youtube": null,
+  "linkedin": "2026-08-30 → 2026-09-28"
+ },
+ "facebook": {
+  "followers": 116,
+  "views": {
+   "v": 4427,
+   "change_pct": 5.6
+  },
+  "viewers": {
+   "v": 288,
+   "change_pct": -36.0
+  },
+  "visits": {
+   "v": 421,
+   "change_pct": 71.8
+  },
+  "interactions": {
+   "v": 132,
+   "change_pct": -23.3
+  },
+  "video_3s": {
+   "v": 352,
+   "change_pct": 151.4
+  },
+  "link_clicks": {
+   "v": 4,
+   "change_pct": -20.0
+  },
+  "net_new_followers": {
+   "v": 1,
+   "change_pct": 100.0
+  },
+  "follows": 1,
+  "unfollows": 0,
+  "views_from_followers_pct": 45.2,
+  "views_from_non_followers_pct": 54.8,
+  "views_from_followers_change_pct": 0.2,
+  "views_from_non_followers_change_pct": -0.2,
+  "interactions_from_followers": 88,
+  "interactions_from_non_followers": 44,
+  "interactions_from_followers_change_pct": -19.3,
+  "interactions_from_non_followers_change_pct": -30.2,
+  "watch_time": "2h 2m",
+  "watch_time_change_pct": 141.2,
+  "conversations_started": 1,
+  "conversations_started_change_pct": -50.0,
+  "new_contacts": 0,
+  "new_contacts_change_pct": -100.0,
+  "daily": {
+   "views": [
+    250,
+    187,
+    123,
+    62,
+    69,
+    159,
+    259,
+    625,
+    255,
+    109,
+    105,
+    116,
+    218,
+    215,
+    97,
+    114,
+    278,
+    59,
+    12,
+    149,
+    134,
+    187,
+    124,
+    130,
+    51,
+    65,
+    180,
+    95
+   ],
+   "visits": [
+    23,
+    6,
+    0,
+    0,
+    37,
+    27,
+    30,
+    8,
+    12,
+    6,
+    3,
+    16,
+    7,
+    77,
+    13,
+    1,
+    51,
+    9,
+    6,
+    12,
+    4,
+    31,
+    16,
+    7,
+    9,
+    4,
+    6,
+    0
+   ],
+   "interactions": [
+    7,
+    2,
+    2,
+    1,
+    0,
+    8,
+    7,
+    9,
+    10,
+    0,
+    3,
+    0,
+    8,
+    6,
+    10,
+    4,
+    7,
+    2,
+    0,
+    6,
+    6,
+    7,
+    6,
+    9,
+    2,
+    0,
+    6,
+    4
+   ],
+   "video_3s": [
+    4,
+    5,
+    6,
+    3,
+    9,
+    3,
+    30,
+    100,
+    21,
+    3,
+    2,
+    19,
+    6,
+    58,
+    9,
+    1,
+    45,
+    5,
+    2,
+    2,
+    7,
+    4,
+    2,
+    0,
+    0,
+    3,
+    3,
+    0
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts / all_recent_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The four columns read views, reactions, comments, shares.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model can show what sits behind it",
+    "reach": 171,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "28 Sep",
+    "t": "Some details are made by hand — a hand carved teak door by Bali Abundance brings depth, texture and variation to the Project 251 garden entry",
+    "reach": 169,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, an opening, a transition carries a decision made much earlier",
+    "reach": 125,
+    "react": 5,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer them faster",
+    "reach": 98,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "30 Sep",
+    "t": "Hand carving changes more than the surface — it creates variation in depth, texture and light across the Project 251 teak detail",
+    "reach": 89,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "24 Sep",
+    "t": "What does a bathroom remodel actually cost in Australia in 2026",
+    "reach": 43,
+    "react": 4,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "29 Sep",
+    "t": "A boundary does more than define where a property ends — the thatched fence panel by Bali Abundance shapes how the garden feels",
+    "reach": 41,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "25 Sep",
+    "views": 8,
+    "react": 0
+   }
+  ],
+  "post_true_reach_carried": {
+   "as_of": "2026-09-03",
+   "2 Sep": 82,
+   "1 Sep": 12,
+   "31 Aug": 36,
+   "28 Aug": 42,
+   "27 Aug": 18,
+   "26 Aug": 58,
+   "25 Aug": 49
+  },
+  "new_post_note": "A NEW FACEBOOK POST RAN ON 30 SEP 16:12 - hand carving on the Project 251 teak detail, the THIRD consecutive Bali Abundance supplier-credit piece. It is 14 hours old at read time and already carries 89 views, 5 reactions and 1 share - the strongest opening of the three (28, then 41, now 89). Earlier posts were restated upward again: 29 Sep 28 -> 41, 28 Sep 152 -> 169, 25 Sep 120 -> 125. The 21 Sep post dropped out of the panel as 30 Sep entered."
+ },
+ "instagram": {
+  "followers": 49,
+  "posts_total": 134,
+  "following": 36,
+  "views": {
+   "v": 2297,
+   "change_pct": 108.1
+  },
+  "reach": {
+   "v": 87,
+   "change_pct": -68.1
+  },
+  "interactions": {
+   "v": 23,
+   "change_pct": -64.1
+  },
+  "views_from_followers_pct": 68.9,
+  "views_from_non_followers_pct": 31.1,
+  "views_from_followers": 1896,
+  "views_from_non_followers": 401,
+  "views_from_followers_change_pct": 26.2,
+  "views_from_non_followers_change_pct": -31.5,
+  "reach_from_followers": 14,
+  "reach_from_non_followers": 73,
+  "reach_from_followers_change_pct": -22.2,
+  "reach_from_non_followers_change_pct": -71.1,
+  "interactions_from_followers_pct": 74,
+  "interactions_from_non_followers_pct": 26,
+  "daily": {
+   "views": [
+    35,
+    45,
+    42,
+    11,
+    25,
+    46,
+    84,
+    440,
+    166,
+    47,
+    74,
+    41,
+    178,
+    310,
+    102,
+    49,
+    274,
+    29,
+    7,
+    57,
+    29,
+    45,
+    29,
+    29,
+    5,
+    8,
+    30,
+    60
+   ],
+   "reach": [
+    1,
+    3,
+    8,
+    2,
+    1,
+    2,
+    10,
+    14,
+    6,
+    2,
+    3,
+    2,
+    3,
+    39,
+    6,
+    3,
+    24,
+    2,
+    0,
+    4,
+    5,
+    7,
+    2,
+    6,
+    0,
+    1,
+    4,
+    6
+   ],
+   "interactions": [
+    0,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    4,
+    0,
+    0,
+    3,
+    3
+   ]
+  },
+  "daily_note": "Instagram reach is de-duplicated per person over the 28-day window, so the daily reach series sums to 166 while the window tile reads 87. Views are not de-duplicated and the daily series sums exactly to the 2,297 window figure.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "18 Sep",
+    "t": "The site should not be the first test — decisions are safer when they are resolved before work begins",
+    "reach": 26,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "29 Sep",
+    "t": "A boundary does more than define where a property ends — the thatched fence panel by Bali Abundance shapes how the garden feels",
+    "reach": 7,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer them faster",
+    "reach": 7,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "28 Sep",
+    "t": "Some details are made by hand — a hand carved teak door by Bali Abundance for the Project 251 garden entry",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, an opening, a transition carries a decision made much earlier",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model can show what sits behind it",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "18 Sep",
+    "t": "The site should not be the first test — decisions are safer when they are resolved before work begins",
+    "reach": 26,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "29 Sep",
+    "t": "A boundary does more than define where a property ends — the thatched fence panel by Bali Abundance shapes how the garden feels",
+    "reach": 7,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "23 Sep",
+    "t": "A good plan does not prevent questions — it helps answer them faster",
+    "reach": 7,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "28 Sep",
+    "t": "Some details are made by hand — a hand carved teak door by Bali Abundance for the Project 251 garden entry",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "25 Sep",
+    "t": "The detail you see is rarely just a detail — a junction, an opening, a transition carries a decision made much earlier",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "22 Sep",
+    "t": "A picture can show the outcome, a model can show what sits behind it",
+    "reach": 6,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "21 Sep",
+    "t": "What does \\\"ready for site\\\" actually mean? Having a complete, coordinated set of information before work starts",
+    "reach": 5,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "30 Sep",
+    "t": "Hand carving changes more than the surface — it creates variation in depth, texture and light across the Project 251 teak detail",
+    "reach": 4,
+    "react": 5,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "post_note": "A NEW INSTAGRAM POST RAN ON 30 SEP 16:12 alongside the Facebook piece - the third consecutive same-day pairing. It opened at only 4 reached accounts but already carries 5 reactions, matching the 29 Sep post's reaction count on fewer accounts reached. The 18 Sep post still leads the panel at 26 reached accounts."
+ },
+ "youtube": {
+  "subscribers": null,
+  "videos": null,
+  "videos_long_form": null,
+  "videos_shorts": null,
+  "views_28d": {
+   "v": null,
+   "change_pct": null
+  },
+  "views_change_text": null,
+  "watch_time_hours": {
+   "v": null,
+   "change_pct": null
+  },
+  "latest_video_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "views_now": null,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": true,
+  "stale_note": "YOUTUBE WAS NOT READ ON 2026-10-01. Google signed the tram@feeldx.com.au session out and studio.youtube.com redirected to accounts.google.com \"Verify it's you - Please sign in again to continue to YouTube\". This unattended run is not permitted to enter a password or complete a sign-in, so no YouTube figure was obtained. EVERY FIELD ON THIS CARD IS NULL AND NOTHING IS CARRIED FORWARD from 2026-09-30 (which read 634 channel views, 0.5 watch hours, 4 subscribers, 32 videos). The same account sign-out simultaneously blocked Google Search Console and GA4. Remedy: sign Chrome on the Mac back in as tram@feeldx.com.au and re-run this task for 2026-10-01.",
+  "new_upload": null,
+  "top_videos": [],
+  "realtime_48h_views": null
+ },
+ "linkedin": {
+  "followers": 102,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn Content, Followers and Visitors admin pages were ALL read live on 2026-10-01 for the 30 Aug - 28 Sep 2026 window.",
+  "new_followers_30d": {
+   "v": 1,
+   "change_pct": -97.8
+  },
+  "impressions": {
+   "v": 1219,
+   "change_pct": -25.7
+  },
+  "reactions": {
+   "v": 37,
+   "change_pct": -51.3
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": 0
+  },
+  "reposts": {
+   "v": 0,
+   "change_pct": -100.0
+  },
+  "page_views": {
+   "v": 26,
+   "change_pct": -77.6
+  },
+  "unique_visitors": {
+   "v": 11,
+   "change_pct": -75.0
+  },
+  "impressions_prior": 1641,
+  "impressions_now": 1219,
+  "followers_by_location_count": {
+   "Ho Chi Minh City": 24,
+   "Melbourne": 23,
+   "Brisbane": 3,
+   "Metro Manila": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Angeles": 1,
+   "Kolkata": 1,
+   "Vacoas": 1,
+   "Other": 40
+  },
+  "followers_by_location_pct": {
+   "Ho Chi Minh City": 23.5,
+   "Melbourne": 22.5,
+   "Brisbane": 2.9,
+   "Metro Manila": 2.9,
+   "Mumbai": 2.0,
+   "Delhi": 2.0,
+   "Karachi": 2.0,
+   "Angeles": 1.0,
+   "Kolkata": 1.0,
+   "Vacoas": 1.0,
+   "Other": 39.2
+  },
+  "followers_by_location_note": "Read live on 2026-10-01 for the 30 Aug - 28 Sep window. The ten named places, their counts and percentages are byte-identical to 2026-09-30; \"Other\" is the remaining 40 of 102 followers.",
+  "visitors_by_job_function": {
+   "Arts and Design": 13,
+   "Business Development": 5,
+   "Research": 3,
+   "Operations": 3,
+   "Marketing": 2,
+   "Information Technology": 1,
+   "Legal": 1,
+   "Customer Success and Support": 1,
+   "Program and Project Management": 1,
+   "Finance": 1
+  },
+  "visitors_by_job_function_note": "Read live on 2026-10-01. The panel WIDENED from nine functions to TEN and changed shape against 2026-09-30: Research 3 and Operations 3 appeared, Business Development fell 8 -> 5, Legal and Customer Success and Support entered, while Purchasing and Product Management dropped out. The ten functions sum to 31 against 26 page views, because LinkedIn counts a visitor under every function that applies to them.",
+  "page_views_by_device": {
+   "Desktop": 24,
+   "Mobile": 2
+  },
+  "window_advanced": true
+ },
+ "notes": {
+  "en": [
+   "Facebook, Instagram and LinkedIn read live via Chrome on 1 Oct at ~06:10-06:40 ICT. YOUTUBE NOT READ - Google signed the account out and Studio demanded re-verification, so every YouTube figure is null, not carried.",
+   "The same Google sign-out blocked Search Console and GA4, so today's SEO report carries the same gap. Ahrefs signs in separately and was read live.",
+   "Meta advanced one day to 2 - 29 Sep; LinkedIn advanced one day to 30 Aug - 28 Sep and stays one day behind Meta.",
+   "A THIRD CONSECUTIVE SUPPLIER-CREDIT POST ran on both Meta channels on 30 Sep 16:12 - hand carving on the Project 251 teak detail. Facebook openings across the three: 28, then 41, now 89 views at 14 hours.",
+   "FACEBOOK VIEWS 4,519 -> 4,427 (up 5.6 pct vs prior 28d). The fall is the window rolling: 1 Sep left with 187 views, 29 Sep entered with 95. Exact figure is the sum of the 28-day series; the tile rounds to 4.4K.",
+   "FACEBOOK INTERACTIONS 141 -> 132, comparison worsening from down 16.6 pct to down 23.3 pct - the only metric moving the wrong way. Follower interactions carried the fall, 99 -> 88.",
+   "FACEBOOK VIDEO AND VISITS STRENGTHENED: 3-second views 352 (up 151.4 pct), watch time 2h 2m (up 141.2 pct), visits 421 (up 71.8 pct). Link clicks held at 4 (down 20.0 pct).",
+   "INSTAGRAM VIEWS 2,258 -> 2,297 (up 108.1 pct) but REACH FROZEN AT 87 FOR A FOURTH READ (down 68.1 pct). Follower views 1,896 of 2,297 (68.9 pct, up 26.2 pct); non-follower views 401 (down 31.5 pct).",
+   "INSTAGRAM INTERACTIONS 20 -> 23 (down 64.1 pct); follower share of interactions eased 79 -> 74 pct. Post count 133 -> 134; followers 49 and following 36 unchanged.",
+   "LINKEDIN IMPRESSIONS ROSE FOR THE FIRST TIME IN THIS RUN, 1,193 -> 1,219 (down 25.7 pct), implying a prior period of about 1,641. Page views 24 -> 26, unique visitors 10 -> 11.",
+   "LINKEDIN HAS GONE TWELVE DAYS WITHOUT PUBLISHING while both Meta channels published on 28, 29 and 30 Sep. Reactions 36 -> 37; comments and reposts remain 0 for a twelfth read.",
+   "THE LINKEDIN JOB-FUNCTION PANEL WIDENED from nine to ten functions: Research 3 and Operations 3 in, Business Development 8 -> 5, Legal and Customer Success in, Purchasing and Product Management out. Desktop widened to 24 of 26 page views.",
+   "FOLLOWERS UNCHANGED ON EVERY READABLE CHANNEL for a sixth read: Facebook 116, Instagram 49, LinkedIn 102. The YouTube subscriber count could not be read, so the all-channel total is incomplete today rather than restated."
+  ],
+  "vi": [
+   "Facebook, Instagram và LinkedIn được đọc trực tiếp qua Chrome ngày 1/10 lúc ~06:10-06:40 ICT. YOUTUBE KHÔNG ĐỌC ĐƯỢC - Google đã đăng xuất tài khoản và Studio yêu cầu xác minh lại, nên mọi số liệu YouTube là null chứ không lấy số cũ.",
+   "Cùng lần đăng xuất Google này đã chặn Search Console và GA4, nên báo cáo SEO hôm nay có khoảng trống tương tự. Ahrefs đăng nhập riêng nên vẫn đọc trực tiếp bình thường.",
+   "Meta tiến một ngày lên 2 - 29/9; LinkedIn tiến một ngày lên 30/8 - 28/9 và vẫn chậm hơn Meta một ngày.",
+   "BÀI GHI CÔNG NHÀ CUNG CẤP THỨ BA LIÊN TIẾP đã lên cả hai kênh Meta ngày 30/9 lúc 16:12 - chi tiết gỗ tếch chạm tay của Project 251. Mức mở đầu trên Facebook của ba bài: 28, rồi 41, nay 89 view sau 14 giờ.",
+   "LƯỢT XEM FACEBOOK 4.519 -> 4.427 (tăng 5,6% so với 28 ngày trước). Mức giảm là do cửa sổ lăn: ngày 1/9 rời đi với 187 view, 29/9 vào với 95. Con số chính xác là tổng chuỗi 28 ngày; ô hiển thị làm tròn thành 4,4K.",
+   "TƯƠNG TÁC FACEBOOK 141 -> 132, mức so sánh xấu đi từ giảm 16,6% xuống giảm 23,3% - chỉ số duy nhất đi sai hướng. Phần giảm đến từ người theo dõi, 99 -> 88.",
+   "VIDEO VÀ LƯỢT TRUY CẬP FACEBOOK MẠNH LÊN: lượt xem 3 giây 352 (tăng 151,4%), thời gian xem 2 giờ 2 phút (tăng 141,2%), lượt truy cập 421 (tăng 71,8%). Lượt click liên kết giữ ở 4 (giảm 20,0%).",
+   "LƯỢT XEM INSTAGRAM 2.258 -> 2.297 (tăng 108,1%) nhưng SỐ NGƯỜI TIẾP CẬN ĐỨNG YÊN Ở 87 LẦN ĐỌC THỨ TƯ (giảm 68,1%). Lượt xem từ người theo dõi 1.896 trên 2.297 (68,9%, tăng 26,2%); từ người chưa theo dõi 401 (giảm 31,5%).",
+   "TƯƠNG TÁC INSTAGRAM 20 -> 23 (giảm 64,1%); tỷ trọng tương tác từ người theo dõi hạ 79 -> 74%. Số bài 133 -> 134; follower 49 và đang theo dõi 36 không đổi.",
+   "LƯỢT HIỂN THỊ LINKEDIN TĂNG LẦN ĐẦU TRONG ĐỢT NÀY, 1.193 -> 1.219 (giảm 25,7%), tương ứng kỳ trước khoảng 1.641. Lượt xem trang 24 -> 26, khách truy cập duy nhất 10 -> 11.",
+   "LINKEDIN ĐÃ MƯỜI HAI NGÀY KHÔNG ĐĂNG BÀI trong khi cả hai kênh Meta đăng ngày 28, 29 và 30/9. Lượt cảm xúc 36 -> 37; bình luận và chia sẻ vẫn bằng 0 lần đọc thứ mười hai.",
+   "BẢNG CHỨC NĂNG CÔNG VIỆC LINKEDIN MỞ RỘNG từ chín lên mười nhóm: Nghiên cứu 3 và Vận hành 3 vào, Phát triển KD 8 -> 5, Pháp lý và Chăm sóc khách hàng vào, Thu mua và Quản lý sản phẩm ra. Máy tính mở rộng lên 24 trên 26 lượt xem trang.",
+   "SỐ NGƯỜI THEO DÕI KHÔNG ĐỔI TRÊN MỌI KÊNH ĐỌC ĐƯỢC lần đọc thứ sáu: Facebook 116, Instagram 49, LinkedIn 102. Không đọc được số người đăng ký YouTube, nên tổng toàn kênh hôm nay là chưa đầy đủ chứ không phải được nêu lại."
+  ]
+ }
+}
