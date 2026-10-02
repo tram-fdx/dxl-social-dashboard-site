@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-01",
+  "latest": "2026-10-02",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -352,6 +352,13 @@
       "report": "archive/2026-10-01.html",
       "label_vi": "1/10/2026 — FB/IG/LinkedIn đọc trực tiếp; YouTube không đọc được (Google đăng xuất)",
       "label_en": "1 Oct 2026 — FB/IG/LinkedIn read live; YouTube not readable (Google sign-out)"
+    },
+    {
+      "date": "2026-10-02",
+      "data": "data/2026-10-02.json",
+      "report": "archive/2026-10-02.html",
+      "label_vi": "YouTube trở lại sau 1 ngày null (subs 4→6, Short mới 100 view); FB views 4.427→4.339; IG reach 87→90; LI impressions 1.219→1.225",
+      "label_en": "YouTube back after one null day (subs 4→6, new Short 100 views); FB views 4,427→4,339; IG reach 87→90; LI impressions 1,219→1,225"
     }
   ]
 }
