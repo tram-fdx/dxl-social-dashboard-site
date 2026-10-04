@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-03",
+  "latest": "2026-10-05",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -366,6 +366,13 @@
       "report": "archive/2026-10-03.html",
       "label_vi": "Bài hố lửa mới + Short YouTube thứ hai (subs 6→7, views 633→736); FB views 4.339→4.412; IG reach 90→116; LI impressions 1.225→1.263",
       "label_en": "New fire-pit post + second YouTube Short (subs 6→7, views 633→736); FB views 4,339→4,412; IG reach 90→116; LI impressions 1,225→1,263"
+    },
+    {
+      "date": "2026-10-05",
+      "data": "data/2026-10-05.json",
+      "report": "archive/2026-10-05.html",
+      "label_vi": "Cập nhật 5/10: FB 4.404 views, YT 938 views",
+      "label_en": "5 Oct update: FB 4,404 views, YT 938 views"
     }
   ]
 }
