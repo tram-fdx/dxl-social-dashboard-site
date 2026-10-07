@@ -30,6 +30,7 @@
   <button class="tab" data-i="1">SEO</button>
   <button class="tab" data-i="2">SEO Weekly</button>
   <button class="tab" data-i="3">Website Audit</button>
+  <button class="tab" data-i="4">Impact Funnel</button>
   <span id="spacer"></span>
   <a id="xlsx" href="https://tram-fdx.github.io/dxl-social-dashboard-site/dxl-metrics.xlsx"
      download title="Tải toàn bộ số liệu 3 báo cáo dưới dạng Excel — xuất lại mỗi sáng">↓ Excel</a>
@@ -45,6 +46,7 @@
           data-weekly="https://tram-fdx.github.io/dxliving-seo-report/weekly/"
           data-src="https://tram-fdx.github.io/dxliving-seo-report/weekly/2026-10-02.html"></iframe>
   <iframe data-src="https://tram-fdx.github.io/dxl-seo-audit/"></iframe>
+  <iframe data-src="https://tram-fdx.github.io/dxl-impact-funnel/"></iframe>
 </div>
 
 <script>
@@ -60,7 +62,7 @@
       if (n === i && !f.src) f.src = f.dataset.src; // lazy load
     });
     openLink.href = urls[i];
-    location.hash = ['social', 'seo', 'weekly', 'audit'][i];
+    location.hash = ['social', 'seo', 'weekly', 'audit', 'funnel'][i];
   }
 
   tabs.forEach(t => t.onclick = () => show(+t.dataset.i));
@@ -91,7 +93,7 @@
     } catch (e) { /* giu nguyen fallback trong data-src */ }
   })();
 
-  const start = ['social', 'seo', 'weekly', 'audit'].indexOf(location.hash.slice(1));
+  const start = ['social', 'seo', 'weekly', 'audit', 'funnel'].indexOf(location.hash.slice(1));
   if (start > 0) show(start);
 
   // Iframes chi load duoc khi trang nay chay tren cung origin tram-fdx.github.io.
