@@ -1,0 +1,300 @@
+{
+ "date": "2026-10-07",
+ "provenance": "Read live from HubSpot CRM (connector, read-only SQL) on 2026-10-07 ICT. Weeks start Monday. Currency AUD. Last week (2026-10-05) is partial (Mon-Wed). Closed-deal weeks use closedate across BOTH pipelines (user choice 2026-10-07: merge pipelines); deals created in the window all belong to 'New Work Flow' (the 'Deal Records History' pipeline last received a deal in Oct 2025). All deals treated as FeelDX (user answer); no FDX/DXL property exists/was read.",
+ "weeks": [
+  "2026-07-06",
+  "2026-07-13",
+  "2026-07-20",
+  "2026-07-27",
+  "2026-08-03",
+  "2026-08-10",
+  "2026-08-17",
+  "2026-08-24",
+  "2026-08-31",
+  "2026-09-07",
+  "2026-09-14",
+  "2026-09-21",
+  "2026-09-28",
+  "2026-10-05"
+ ],
+ "deals_created": {
+  "n": [
+   59,
+   157,
+   86,
+   60,
+   51,
+   91,
+   80,
+   64,
+   80,
+   84,
+   83,
+   94,
+   109,
+   30
+  ],
+  "amount": [
+   53390,
+   176625,
+   136705,
+   50350,
+   140250,
+   176925,
+   99700,
+   81050,
+   187800,
+   389745,
+   275000,
+   310050,
+   482900,
+   74090
+  ]
+ },
+ "deals_won": {
+  "n": [
+   14,
+   6,
+   9,
+   11,
+   13,
+   15,
+   17,
+   9,
+   12,
+   17,
+   13,
+   14,
+   30,
+   9
+  ],
+  "amount": [
+   90965,
+   25450,
+   62150,
+   51300,
+   58305,
+   85345,
+   141550,
+   61950,
+   67600,
+   98725,
+   94650,
+   135910,
+   191400,
+   61440
+  ]
+ },
+ "deals_lost": {
+  "not_interested": [
+   59,
+   233,
+   43,
+   23,
+   148,
+   28,
+   44,
+   58,
+   84,
+   87,
+   62,
+   10,
+   23,
+   26
+  ],
+  "inhouse": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   8,
+   16,
+   19,
+   23
+  ],
+  "competitor": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   20,
+   5
+  ],
+  "other": [
+   2,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   0
+  ],
+  "amount": [
+   0,
+   105825,
+   37750,
+   17100,
+   61475,
+   43400,
+   32150,
+   59400,
+   25250,
+   71400,
+   210000,
+   49000,
+   196350,
+   164250
+  ]
+ },
+ "contacts_created": {
+  "offline": [
+   41,
+   76,
+   58,
+   35,
+   58,
+   52,
+   74,
+   59,
+   57,
+   47,
+   56,
+   48,
+   86,
+   23
+  ],
+  "direct": [
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   2,
+   148,
+   0,
+   1,
+   0,
+   0,
+   0
+  ],
+  "other_online": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "meetings": [
+  19,
+  19,
+  23,
+  17,
+  12,
+  14,
+  18,
+  14,
+  19,
+  16,
+  15,
+  4,
+  17,
+  3
+ ],
+ "open_pipeline_new_work_flow": [
+  {
+   "stage": "B6 - Awaiting for Outreach",
+   "n": 89,
+   "amount": 0
+  },
+  {
+   "stage": "B3 - Outreach Sent",
+   "n": 172,
+   "amount": 374850,
+   "note": "B3 Outreach Sent 165 + Voicemail/No Answer 6 + Redirect 1"
+  },
+  {
+   "stage": "B2 - Client Considering / Awaiting Docs",
+   "n": 64,
+   "amount": 89900
+  },
+  {
+   "stage": "B1 - Follow-Up for Approval",
+   "n": 24,
+   "amount": 198890
+  }
+ ],
+ "pipeline_totals": {
+  "new_work_flow": {
+   "closed_won": 669,
+   "closed_lost": 2021,
+   "open": 344,
+   "all": 3039
+  },
+  "deal_records_history": {
+   "closed_won": 2738,
+   "closed_lost": 3135,
+   "in_progress": 1375,
+   "pending": 25,
+   "all": 7273
+  }
+ },
+ "lifecycle_contacts": {
+  "lead": 11248,
+  "opportunity": 1428,
+  "customer": 1213
+ },
+ "contact_source_total": {
+  "OFFLINE": 13697,
+  "DIRECT_TRAFFIC": 179,
+  "PAID_SEARCH": 8,
+  "ORGANIC_SEARCH": 3,
+  "REFERRALS": 2
+ },
+ "deal_source_total": {
+  "OFFLINE": 9873,
+  "UNASSIGNED": 438,
+  "ORGANIC_SEARCH": 1
+ },
+ "contacts_28d_by_source": {
+  "OFFLINE": 240,
+  "DIRECT_TRAFFIC": 1
+ },
+ "anomalies": [
+  "Week 2026-08-31: 148 'Direct Traffic' contacts created in one week (179 Direct in total) - looks like an import/tracking artefact, not organic demand; excluded from 'true inbound' counts.",
+  "Closed-lost counts spike in single weeks (233 'Not Interested' week of 2026-07-13, 148 week of 2026-08-03) - bulk closing, so weekly win rate is noisy.",
+  "Closed-lost reasons 'In-house' and 'Competitor' only started being used from the week of 2026-09-14."
+ ]
+}
