@@ -1,13 +1,11 @@
 {
  "kind": "funnel",
  "derived": true,
- "generated_at": "2026-10-07T01:42:29Z",
- "as_of": "2026-10-07",
- "hubspot_provenance": "Read live from HubSpot CRM (connector, read-only SQL) on 2026-10-07 ICT. Weeks start Monday. Currency AUD. Last week (2026-10-05) is partial (Mon-Wed). Closed-deal weeks use closedate across BOTH pipelines (user choice 2026-10-07: merge pipelines); deals created in the window all belong to 'New Work Flow' (the 'Deal Records History' pipeline last received a deal in Oct 2025). All deals treated as FeelDX (user answer); no FDX/DXL property exists/was read.",
+ "generated_at": "2026-10-08T07:04:36Z",
+ "as_of": "2026-10-08",
+ "hubspot_provenance": "DXL view (user instruction 2026-10-08): HubSpot currently holds NO DXL data - no DXL/FDX discriminator on deals or contacts (only fdx_service, a FeelDX service field), and all existing records are FeelDX. Every HubSpot metric is therefore null for DXL; nothing carried over from the FeelDX snapshot of 2026-10-07. Funnel built from marketing data only (Social + SEO).",
  "anomalies": [
-  "Week 2026-08-31: 148 'Direct Traffic' contacts created in one week (179 Direct in total) - looks like an import/tracking artefact, not organic demand; excluded from 'true inbound' counts.",
-  "Closed-lost counts spike in single weeks (233 'Not Interested' week of 2026-07-13, 148 week of 2026-08-03) - bulk closing, so weekly win rate is noisy.",
-  "Closed-lost reasons 'In-house' and 'Competitor' only started being used from the week of 2026-09-14."
+  "HubSpot has no DXL data yet - all HubSpot funnel metrics are null (not zero)."
  ],
  "weeks": [
   {
@@ -22,17 +20,17 @@
     "video3s": 6
    },
    "hs": {
-    "deals_created": 59,
-    "deals_created_amt": 53390,
-    "won": 14,
-    "won_amt": 90965,
-    "lost": 61,
-    "lost_not_interested": 59,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 41,
-    "contacts_direct": 0,
-    "meetings": 19
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -47,17 +45,17 @@
     "video3s": 12
    },
    "hs": {
-    "deals_created": 157,
-    "deals_created_amt": 176625,
-    "won": 6,
-    "won_amt": 25450,
-    "lost": 233,
-    "lost_not_interested": 233,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 76,
-    "contacts_direct": 0,
-    "meetings": 19
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -72,17 +70,17 @@
     "video3s": 57
    },
    "hs": {
-    "deals_created": 86,
-    "deals_created_amt": 136705,
-    "won": 9,
-    "won_amt": 62150,
-    "lost": 44,
-    "lost_not_interested": 43,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 58,
-    "contacts_direct": 0,
-    "meetings": 23
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -97,17 +95,17 @@
     "video3s": 31
    },
    "hs": {
-    "deals_created": 60,
-    "deals_created_amt": 50350,
-    "won": 11,
-    "won_amt": 51300,
-    "lost": 23,
-    "lost_not_interested": 23,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 35,
-    "contacts_direct": 0,
-    "meetings": 17
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -122,17 +120,17 @@
     "video3s": 12
    },
    "hs": {
-    "deals_created": 51,
-    "deals_created_amt": 140250,
-    "won": 13,
-    "won_amt": 58305,
-    "lost": 148,
-    "lost_not_interested": 148,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 58,
-    "contacts_direct": 1,
-    "meetings": 12
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -147,17 +145,17 @@
     "video3s": 60
    },
    "hs": {
-    "deals_created": 91,
-    "deals_created_amt": 176925,
-    "won": 15,
-    "won_amt": 85345,
-    "lost": 28,
-    "lost_not_interested": 28,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 52,
-    "contacts_direct": 0,
-    "meetings": 14
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -172,17 +170,17 @@
     "video3s": 49
    },
    "hs": {
-    "deals_created": 80,
-    "deals_created_amt": 99700,
-    "won": 17,
-    "won_amt": 141550,
-    "lost": 44,
-    "lost_not_interested": 44,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 74,
-    "contacts_direct": 0,
-    "meetings": 18
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -197,17 +195,17 @@
     "video3s": 21
    },
    "hs": {
-    "deals_created": 64,
-    "deals_created_amt": 81050,
-    "won": 9,
-    "won_amt": 61950,
-    "lost": 58,
-    "lost_not_interested": 58,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 59,
-    "contacts_direct": 2,
-    "meetings": 14
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -222,17 +220,17 @@
     "video3s": 33
    },
    "hs": {
-    "deals_created": 80,
-    "deals_created_amt": 187800,
-    "won": 12,
-    "won_amt": 67600,
-    "lost": 84,
-    "lost_not_interested": 84,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 57,
-    "contacts_direct": 148,
-    "meetings": 19
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -247,17 +245,17 @@
     "video3s": 178
    },
    "hs": {
-    "deals_created": 84,
-    "deals_created_amt": 389745,
-    "won": 17,
-    "won_amt": 98725,
-    "lost": 87,
-    "lost_not_interested": 87,
-    "lost_inhouse": 0,
-    "lost_competitor": 0,
-    "contacts_offline": 47,
-    "contacts_direct": 0,
-    "meetings": 16
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -272,17 +270,17 @@
     "video3s": 126
    },
    "hs": {
-    "deals_created": 83,
-    "deals_created_amt": 275000,
-    "won": 13,
-    "won_amt": 94650,
-    "lost": 71,
-    "lost_not_interested": 62,
-    "lost_inhouse": 8,
-    "lost_competitor": 1,
-    "contacts_offline": 56,
-    "contacts_direct": 1,
-    "meetings": 15
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -297,17 +295,17 @@
     "video3s": 18
    },
    "hs": {
-    "deals_created": 94,
-    "deals_created_amt": 310050,
-    "won": 14,
-    "won_amt": 135910,
-    "lost": 27,
-    "lost_not_interested": 10,
-    "lost_inhouse": 16,
-    "lost_competitor": 1,
-    "contacts_offline": 48,
-    "contacts_direct": 0,
-    "meetings": 4
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
@@ -322,101 +320,101 @@
     "video3s": 104
    },
    "hs": {
-    "deals_created": 109,
-    "deals_created_amt": 482900,
-    "won": 30,
-    "won_amt": 191400,
-    "lost": 64,
-    "lost_not_interested": 23,
-    "lost_inhouse": 19,
-    "lost_competitor": 20,
-    "contacts_offline": 86,
-    "contacts_direct": 0,
-    "meetings": 17
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   },
   {
    "w": "2026-10-05",
-   "mkt_days": 1,
+   "mkt_days": 2,
    "mkt": {
-    "views": 340,
-    "fb_views": 197,
-    "ig_views": 143,
-    "fb_visits": 13,
-    "interactions": 51,
-    "video3s": 8
+    "views": 1032,
+    "fb_views": 718,
+    "ig_views": 314,
+    "fb_visits": 84,
+    "interactions": 57,
+    "video3s": 46
    },
    "hs": {
-    "deals_created": 30,
-    "deals_created_amt": 74090,
-    "won": 9,
-    "won_amt": 61440,
-    "lost": 54,
-    "lost_not_interested": 26,
-    "lost_inhouse": 23,
-    "lost_competitor": 5,
-    "contacts_offline": 23,
-    "contacts_direct": 0,
-    "meetings": 3
+    "deals_created": null,
+    "deals_created_amt": null,
+    "won": null,
+    "won_amt": null,
+    "lost": null,
+    "lost_not_interested": null,
+    "lost_inhouse": null,
+    "lost_competitor": null,
+    "contacts_offline": null,
+    "contacts_direct": null,
+    "meetings": null
    }
   }
  ],
  "window28": {
   "social_views": {
-   "d": "2026-10-07",
-   "v": 9252
+   "d": "2026-10-08",
+   "v": 9375
   },
   "fb_views": {
-   "d": "2026-10-07",
-   "v": 4418
+   "d": "2026-10-08",
+   "v": 4680
   },
   "ig_views": {
-   "d": "2026-10-07",
-   "v": 2707
+   "d": "2026-10-08",
+   "v": 2794
   },
   "yt_views": {
-   "d": "2026-10-07",
-   "v": 939
+   "d": "2026-10-08",
+   "v": 681
   },
   "li_impressions": {
-   "d": "2026-10-07",
-   "v": 1188
+   "d": "2026-10-08",
+   "v": 1220
   },
   "li_page_views": {
-   "d": "2026-10-07",
+   "d": "2026-10-08",
    "v": 29
   },
   "fb_visits": {
-   "d": "2026-10-07",
-   "v": 352
+   "d": "2026-10-08",
+   "v": 393
   },
   "fb_interactions": {
-   "d": "2026-10-07",
-   "v": 201
+   "d": "2026-10-08",
+   "v": 198
   },
   "ga4_sessions": {
-   "d": "2026-10-07",
-   "v": 600
+   "d": "2026-10-08",
+   "v": 616
   },
   "ga4_users": {
-   "d": "2026-10-07",
-   "v": 421
+   "d": "2026-10-08",
+   "v": 432
   },
   "ga4_key_events": {
-   "d": "2026-10-07",
+   "d": "2026-10-08",
    "v": 7
   },
   "gsc_clicks": {
-   "d": "2026-10-07",
+   "d": "2026-10-08",
    "v": 22
   },
   "gsc_impressions": {
-   "d": "2026-10-07",
+   "d": "2026-10-08",
    "v": 748
   },
   "ahrefs_ai_citations": {
-   "d": "2026-10-07",
-   "v": 13
+   "d": "2026-10-08",
+   "v": 12
   }
  },
  "correlations": [
@@ -424,108 +422,108 @@
    "mkt": "views",
    "hs": "deals_created",
    "lag0": {
-    "r": 0.21,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.39,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "views",
    "hs": "meetings",
    "lag0": {
-    "r": -0.05,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.38,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "views",
    "hs": "won",
    "lag0": {
-    "r": 0.16,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": 0.05,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "fb_visits",
    "hs": "deals_created",
    "lag0": {
-    "r": -0.08,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.32,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "fb_visits",
    "hs": "meetings",
    "lag0": {
-    "r": -0.28,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.71,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "fb_visits",
    "hs": "won",
    "lag0": {
-    "r": -0.33,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": 0.33,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "interactions",
    "hs": "deals_created",
    "lag0": {
-    "r": 0.38,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.47,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "interactions",
    "hs": "meetings",
    "lag0": {
-    "r": -0.06,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": 0.1,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   },
   {
    "mkt": "interactions",
    "hs": "won",
    "lag0": {
-    "r": 0.19,
-    "n": 13
+    "r": null,
+    "n": 0
    },
    "lag1": {
-    "r": -0.05,
-    "n": 12
+    "r": null,
+    "n": 0
    }
   }
  ],
@@ -544,65 +542,12 @@
   "2026-09-21",
   "2026-09-28"
  ],
- "open_pipeline": [
-  {
-   "stage": "B6 - Awaiting for Outreach",
-   "n": 89,
-   "amount": 0
-  },
-  {
-   "stage": "B3 - Outreach Sent",
-   "n": 172,
-   "amount": 374850,
-   "note": "B3 Outreach Sent 165 + Voicemail/No Answer 6 + Redirect 1"
-  },
-  {
-   "stage": "B2 - Client Considering / Awaiting Docs",
-   "n": 64,
-   "amount": 89900
-  },
-  {
-   "stage": "B1 - Follow-Up for Approval",
-   "n": 24,
-   "amount": 198890
-  }
- ],
- "pipeline_totals": {
-  "new_work_flow": {
-   "closed_won": 669,
-   "closed_lost": 2021,
-   "open": 344,
-   "all": 3039
-  },
-  "deal_records_history": {
-   "closed_won": 2738,
-   "closed_lost": 3135,
-   "in_progress": 1375,
-   "pending": 25,
-   "all": 7273
-  }
- },
- "lifecycle": {
-  "lead": 11248,
-  "opportunity": 1428,
-  "customer": 1213
- },
- "contact_source_total": {
-  "OFFLINE": 13697,
-  "DIRECT_TRAFFIC": 179,
-  "PAID_SEARCH": 8,
-  "ORGANIC_SEARCH": 3,
-  "REFERRALS": 2
- },
- "deal_source_total": {
-  "OFFLINE": 9873,
-  "UNASSIGNED": 438,
-  "ORGANIC_SEARCH": 1
- },
- "contacts_28d_by_source": {
-  "OFFLINE": 240,
-  "DIRECT_TRAFFIC": 1
- },
+ "open_pipeline": [],
+ "pipeline_totals": null,
+ "lifecycle": null,
+ "contact_source_total": null,
+ "deal_source_total": null,
+ "contacts_28d_by_source": null,
  "hubspot_history": [
   {
    "date": "2026-10-07",
@@ -641,6 +586,12 @@
     "ORGANIC_SEARCH": 3,
     "REFERRALS": 2
    }
+  },
+  {
+   "date": "2026-10-08",
+   "open_pipeline": [],
+   "lifecycle": null,
+   "contact_source_total": null
   }
  ]
 }
