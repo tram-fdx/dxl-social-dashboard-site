@@ -15,6 +15,7 @@ snaps = sorted(glob.glob(os.path.join(a.repo, 'data', 'hubspot', '*.json')))
 if not snaps:
     raise SystemExit('no hubspot snapshots')
 hs_all = [json.load(open(p)) for p in snaps]
+hs_all = [x for x in hs_all if x.get('pipeline_totals') is not None] if False else hs_all
 hs = hs_all[-1]
 soc = json.load(open(os.path.join(a.repo, 'data', 'rollup.json')))['series']
 seo = json.load(open(os.path.join(a.seo, 'data', 'rollup.json')))['series']
@@ -59,7 +60,7 @@ for i, w in enumerate(hs['weeks']):
             'deals_created_amt': hs['deals_created']['amount'][i],
             'won': hs['deals_won']['n'][i],
             'won_amt': hs['deals_won']['amount'][i],
-            'lost': sum(hs['deals_lost'][k][i] for k in ('not_interested', 'inhouse', 'competitor', 'other')),
+            'lost': (None if any(hs['deals_lost'][k][i] is None for k in ('not_interested', 'inhouse', 'competitor', 'other')) else sum(hs['deals_lost'][k][i] for k in ('not_interested', 'inhouse', 'competitor', 'other'))),
             'lost_not_interested': hs['deals_lost']['not_interested'][i],
             'lost_inhouse': hs['deals_lost']['inhouse'][i],
             'lost_competitor': hs['deals_lost']['competitor'][i],
@@ -87,6 +88,8 @@ def corr(mk, hk, lag):
         j = i + lag
         if j >= len(full):
             break
+        if r['mkt'][mk] is None or full[j]['hs'][hk] is None:
+            continue
         xs.append(r['mkt'][mk]); ys.append(full[j]['hs'][hk])
     return {'r': pearson(xs, ys), 'n': len(xs)}
 
