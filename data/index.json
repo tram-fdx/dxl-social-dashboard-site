@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-10-14",
+  "latest": "2026-10-15",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -422,6 +422,13 @@
       "report": "archive/2026-10-14.html",
       "label_vi": "14/10/2026",
       "label_en": "14 Oct 2026"
+    },
+    {
+      "date": "2026-10-15",
+      "data": "data/2026-10-15.json",
+      "report": "archive/2026-10-15.html",
+      "label_vi": "15/10/2026",
+      "label_en": "15 Oct 2026"
     }
   ]
 }
