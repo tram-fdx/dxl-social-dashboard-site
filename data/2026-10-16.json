@@ -1,0 +1,655 @@
+{
+ "date": "2026-10-16",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-10-16 (~06:00-07:30 ICT) from Chrome on macOS. FACEBOOK, INSTAGRAM AND YOUTUBE WERE READ LIVE; LINKEDIN COULD NOT BE READ. Meta Business Suite overview and Results pages for Facebook and Instagram (window now 17 Sep - 14 Oct 2026) and YouTube Studio (Sep 17 - Oct 14, 2026). Facebook window totals reconcile exactly against the 28-day daily series (views 4,074, visits 475, interactions 176, 3-second views 319); the views tile rounds to '4.1K'. Instagram views equal the sum of the daily series; the Views tile (1.8K) is split 1,488 on Facebook and 335 on Instagram. Instagram viewers (reach) 82 (-18%). Followers: Facebook 116 and Instagram 49 from Business Suite home, Instagram posts 143 and following 36, YouTube 7 subscribers from Studio (+3 in 28 days). Change-percent directions decoded from label colour (Meta). YouTube views change is null (Studio reports '538 more than usual'). LINKEDIN: the LinkedIn admin pages (Content, Followers, Visitors) would not open in Chrome on this run (the tab stayed on a browser error page, also on a retry in a fresh tab), so EVERY LinkedIn figure is null and NOTHING is carried forward from 15 Oct. NOT READ TODAY (null): LinkedIn (all metrics); Instagram daily reach series and reach follower/non-follower split; Instagram follows/unfollows ('--'); YouTube total video count (not re-read, so null).",
+ "window": {
+  "en": "Last 28 days: 17 Sep – 14 Oct 2026",
+  "vi": "28 ngày qua: 17/9 – 14/10/2026"
+ },
+ "windows": {
+  "meta": "2026-09-17 → 2026-10-14",
+  "youtube": "2026-09-17 → 2026-10-14",
+  "linkedin": null
+ },
+ "facebook": {
+  "followers": 116,
+  "views": {
+   "v": 4074,
+   "change_pct": -6.4
+  },
+  "viewers": {
+   "v": 281,
+   "change_pct": 0.7
+  },
+  "visits": {
+   "v": 475,
+   "change_pct": 18.8
+  },
+  "interactions": {
+   "v": 176,
+   "change_pct": 15.0
+  },
+  "video_3s": {
+   "v": 319,
+   "change_pct": -3.9
+  },
+  "link_clicks": {
+   "v": 6,
+   "change_pct": 50.0
+  },
+  "net_new_followers": {
+   "v": 0,
+   "change_pct": -100.0
+  },
+  "follows": 0,
+  "unfollows": 0,
+  "views_from_followers_pct": 48.0,
+  "views_from_non_followers_pct": 52.0,
+  "views_from_followers_change_pct": 10.6,
+  "views_from_non_followers_change_pct": -8.1,
+  "interactions_from_followers": 140,
+  "interactions_from_non_followers": 36,
+  "interactions_from_followers_change_pct": 40.0,
+  "interactions_from_non_followers_change_pct": -32.1,
+  "watch_time": "2h 40m",
+  "watch_time_change_pct": 55.1,
+  "conversations_started": 1,
+  "conversations_started_change_pct": 100.0,
+  "new_contacts": 0,
+  "new_contacts_change_pct": 0.0,
+  "daily": {
+   "views": [
+    114,
+    278,
+    59,
+    12,
+    149,
+    134,
+    187,
+    124,
+    130,
+    51,
+    65,
+    180,
+    95,
+    162,
+    189,
+    194,
+    54,
+    45,
+    197,
+    521,
+    307,
+    216,
+    39,
+    90,
+    34,
+    201,
+    71,
+    176
+   ],
+   "visits": [
+    1,
+    51,
+    9,
+    6,
+    12,
+    4,
+    31,
+    16,
+    7,
+    9,
+    4,
+    6,
+    0,
+    3,
+    6,
+    0,
+    0,
+    2,
+    13,
+    71,
+    57,
+    8,
+    2,
+    0,
+    3,
+    82,
+    16,
+    56
+   ],
+   "interactions": [
+    4,
+    7,
+    2,
+    0,
+    6,
+    6,
+    7,
+    6,
+    9,
+    2,
+    0,
+    6,
+    4,
+    15,
+    12,
+    9,
+    2,
+    0,
+    51,
+    4,
+    8,
+    4,
+    2,
+    0,
+    0,
+    2,
+    3,
+    5
+   ],
+   "video_3s": [
+    1,
+    45,
+    5,
+    2,
+    2,
+    7,
+    4,
+    2,
+    0,
+    0,
+    3,
+    3,
+    0,
+    1,
+    35,
+    55,
+    6,
+    4,
+    8,
+    38,
+    61,
+    9,
+    0,
+    0,
+    1,
+    26,
+    1,
+    0
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The panel lists five feed posts (15 Oct 15:00, 14 Oct 16:45, 13 Oct, 12 Oct, 9 Oct) plus three stories (15 Oct 15:00, 14 Oct 16:45, 12 Oct 15:00). Restated: 14 Oct 21 -> 44, 13 Oct 33 -> 35; 12 Oct (69) and 9 Oct (35) unchanged. The 8 Oct feed post and the 7 Oct story have left the panel.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "15 Oct",
+    "t": "251 PROJECT – PROGRESS UPDATE — the Level 2 staircase steel spine and the rooftop viewing platform",
+    "reach": 57,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "14 Oct",
+    "t": "A material can look right on a sample. A room can look right in a render — immersive visualisation to review decisions in context, with a link to dxliving.com",
+    "reach": 44,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "13 Oct",
+    "t": "The most expensive part of a home cinema is often the part you cannot see — what drives the cost of a home cinema in Australia and why VR review before construction matters, with a link to the dxliving.com article",
+    "reach": 35,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "12 Oct",
+    "t": "The more bespoke the home, the less room there is for assumption — Project Control and Planning for bespoke homes, with a link to dxliving.com",
+    "reach": 69,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "9 Oct",
+    "t": "A contract does more than confirm a price — 18 things to confirm before signing with a builder, with a link to the dxliving.com checklist article",
+    "reach": 35,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "15 Oct 15:00",
+    "views": 5,
+    "react": null
+   },
+   {
+    "d": "14 Oct 16:45",
+    "views": 4,
+    "react": null
+   },
+   {
+    "d": "12 Oct 15:00",
+    "views": 10,
+    "react": null
+   }
+  ],
+  "new_post_note": "A NEW FACEBOOK POST RAN ON 15 OCT 15:00 ('251 PROJECT – PROGRESS UPDATE', Level 2 staircase steel spine and rooftop viewing platform): 57 views, 2 reactions, 0 comments, 0 shares at read time. It is outside the window (ends 14 Oct)."
+ },
+ "instagram": {
+  "followers": 49,
+  "posts_total": 143,
+  "following": 36,
+  "views": {
+   "v": 1823,
+   "change_pct": -19.3
+  },
+  "reach": {
+   "v": 82,
+   "change_pct": -18.0
+  },
+  "interactions": {
+   "v": 36,
+   "change_pct": 38.5
+  },
+  "views_from_followers_pct": 73.7,
+  "views_from_non_followers_pct": 26.3,
+  "views_from_followers": 1344,
+  "views_from_non_followers": 479,
+  "views_from_followers_change_pct": 5.6,
+  "views_from_non_followers_change_pct": -13.0,
+  "reach_from_followers": null,
+  "reach_from_non_followers": null,
+  "reach_from_followers_change_pct": null,
+  "reach_from_non_followers_change_pct": null,
+  "interactions_from_followers_pct": 78,
+  "interactions_from_non_followers_pct": 22,
+  "daily": {
+   "views": [
+    49,
+    274,
+    29,
+    7,
+    57,
+    29,
+    45,
+    29,
+    29,
+    5,
+    8,
+    30,
+    60,
+    147,
+    105,
+    183,
+    17,
+    19,
+    143,
+    171,
+    112,
+    59,
+    6,
+    6,
+    9,
+    129,
+    9,
+    57
+   ],
+   "reach": null,
+   "interactions": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    4,
+    0,
+    0,
+    3,
+    3,
+    2,
+    7,
+    3,
+    1,
+    0,
+    0,
+    2,
+    2,
+    3,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  "daily_note": "Meta shows the Instagram Views tile (1.8K) split by where it was seen: 1,488 views on Facebook and 335 on Instagram. The Views daily series is read as shown; the Reach tile and daily reach series were NOT shown on this read (null, not carried); 'Người xem' (viewers) reads 82 (▼18%).",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "15 Oct 15:01",
+    "t": "251 PROJECT – PROGRESS UPDATE: Level 2 staircase steel spine and rooftop viewing platform (same-time post as Facebook)",
+    "reach": 130,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "14 Oct 17:00",
+    "t": "A material can look right on a sample. A room can look right in a render — immersive visualisation (same-time post as Facebook)",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "12 Oct 15:00",
+    "t": "The more bespoke the home, the less room there is for assumption — Project Control and Planning (same-time post as Facebook)",
+    "reach": 8,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "8 Oct 15:01",
+    "t": "A drawing can explain a space — immersive visualisation for design review (same-time post as Facebook)",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "7 Oct 15:02",
+    "t": "251 PROJECT – PROGRESS UPDATE: exterior cladding, windows and atrium framing (same-time post as Facebook)",
+    "reach": 32,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "6 Oct 15:00",
+    "t": "Luxury residential projects are becoming more complex — Project Control and Planning (Instagram caption not captured; same-time post as Facebook)",
+    "reach": 7,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Oct 17:36",
+    "t": "A boundary rarely works because of one material alone — the Bali Abundance thatched fence with hand-carved panels as the arrival feature of Project 251",
+    "reach": 11,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "15 Oct 15:01",
+    "t": "251 PROJECT – PROGRESS UPDATE: Level 2 staircase steel spine and rooftop viewing platform (same-time post as Facebook)",
+    "reach": 130,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "14 Oct 17:00",
+    "t": "A material can look right on a sample. A room can look right in a render — immersive visualisation (same-time post as Facebook)",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "12 Oct 15:00",
+    "t": "The more bespoke the home, the less room there is for assumption — Project Control and Planning (same-time post as Facebook)",
+    "reach": 8,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "8 Oct 15:01",
+    "t": "A drawing can explain a space — immersive visualisation for design review (same-time post as Facebook)",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "7 Oct 15:02",
+    "t": "251 PROJECT – PROGRESS UPDATE: exterior cladding, windows and atrium framing (same-time post as Facebook)",
+    "reach": 32,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "6 Oct 15:00",
+    "t": "Luxury residential projects are becoming more complex — Project Control and Planning (Instagram caption not captured; same-time post as Facebook)",
+    "reach": 7,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Oct 17:36",
+    "t": "A boundary rarely works because of one material alone — the Bali Abundance thatched fence with hand-carved panels as the arrival feature of Project 251",
+    "reach": 11,
+    "react": 4,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "post_note": "The Instagram 'Nội dung mới đây' panel was available on this read and every per-post figure is from today's panel (reach / likes / comments / shares): 15 Oct 15:01 130/2/0/0, 14 Oct 17:00 3/0/0/0, 12 Oct 8/1/0/0, 8 Oct 6/3/0/0, 7 Oct 32/3/0/0, 6 Oct 7/2/0/0, 5 Oct 11/4/0/2. Posts total 143 (was 142): the new 15 Oct 251 PROJECT post. Profile visits 23 (+15%).",
+  "profile_visits": {
+   "v": 23,
+   "change_pct": 15.0
+  },
+  "views_platform_split": {
+   "on_facebook": 1488,
+   "on_instagram": 335
+  },
+  "profile_visits_daily": [
+   1,
+   1,
+   0,
+   0,
+   2,
+   1,
+   2,
+   2,
+   1,
+   0,
+   0,
+   1,
+   1,
+   3,
+   3,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0
+  ]
+ },
+ "youtube": {
+  "subscribers": 7,
+  "videos": null,
+  "videos_long_form": null,
+  "videos_shorts": null,
+  "views_28d": {
+   "v": 718,
+   "change_pct": null
+  },
+  "views_change_text": "538 more than usual (YouTube Studio compares channel views against typical performance, no signed percentage)",
+  "watch_time_hours": {
+   "v": 1.1,
+   "change_pct": 133.0
+  },
+  "latest_video_views": {
+   "v": 214,
+   "change_pct": null
+  },
+  "views_now": 718,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YOUTUBE STUDIO WAS READ LIVE ON 2026-10-16 for Sep 17 - Oct 14, 2026, level with the Meta window. The total video count (35 on 15 Oct) was not re-read today, so videos is null rather than carried; the latest-content card shows the 7 Oct Short at 214 views in its first 8 days 14 hours (166.5% average viewed, 0 likes).",
+  "new_upload": {
+   "title": "251 PROJECT - Cladding, Windows & Atrium Framing",
+   "published": "2026-10-07",
+   "views_first_8d14h": 214,
+   "avg_pct_viewed": "166.5%",
+   "likes": 0,
+   "format": "Short",
+   "ranking_by_views": "rank 1 in the Sep 17 - Oct 14 window with 208 window views"
+  },
+  "top_videos": [
+   {
+    "t": "251 PROJECT - Cladding, Windows & Atrium Framing",
+    "v": 208,
+    "dur": "0:51",
+    "avg_pct": "166.5%"
+   },
+   {
+    "t": "Project 251 | What You Don’t See Behind the Fire",
+    "v": 202,
+    "dur": "0:11",
+    "avg_pct": "36.3%"
+   },
+   {
+    "t": "DX Living | The Site Should Not Be the First Test",
+    "v": 132,
+    "dur": "0:10",
+    "avg_pct": "29.8%"
+   },
+   {
+    "t": "Project 251 | From Timber to Detail: A Hand-Carved Teak Door",
+    "v": 106,
+    "dur": "0:17",
+    "avg_pct": "37.5%"
+   },
+   {
+    "t": "DX Living | Inside a DX LIVING Material Walkthrough",
+    "v": 10,
+    "dur": "0:28",
+    "avg_pct": "107.2%"
+   },
+   {
+    "t": "DX Living | Setting the visual standard for construction sites",
+    "v": 8,
+    "dur": "0:14",
+    "avg_pct": "39.2%"
+   },
+   {
+    "t": "Architecture Isn't Static: Experience Your Home From Sunrise to Nightfall",
+    "v": 7,
+    "dur": "0:18",
+    "avg_pct": "60.9%"
+   },
+   {
+    "t": "DX Living | With DX Living experience every space",
+    "v": 7,
+    "dur": "0:46",
+    "avg_pct": "146.5%"
+   },
+   {
+    "t": "DX Living | 85 Commodore Street, Surfers Paradise Project",
+    "v": 7,
+    "dur": "0:51",
+    "avg_pct": "140.0%"
+   },
+   {
+    "t": "24 Hours of Precision, 15 Seconds of Progress",
+    "v": 4,
+    "dur": "0:17",
+    "avg_pct": "55.2%"
+   }
+  ],
+  "realtime_48h_views": 0
+ },
+ "linkedin": {
+  "followers": null,
+  "url": "https://www.linkedin.com/company/108389291/",
+  "stale": true,
+  "visitors_stale": true,
+  "stale_note": "LINKEDIN COULD NOT BE READ ON 2026-10-16. The LinkedIn admin pages (Content, Followers, Visitors) did not open in Chrome (the tab stayed on a browser error page, also on a retry in a fresh tab). Every figure is null; nothing is carried from 2026-10-15 (followers 133, impressions 1,108).",
+  "new_followers_30d": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions": {
+   "v": null,
+   "change_pct": null
+  },
+  "reactions": {
+   "v": null,
+   "change_pct": null
+  },
+  "comments": {
+   "v": null,
+   "change_pct": null
+  },
+  "reposts": {
+   "v": null,
+   "change_pct": null
+  },
+  "page_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "unique_visitors": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions_prior": null,
+  "impressions_now": null,
+  "followers_by_location_count": null,
+  "followers_by_location_pct": null,
+  "followers_by_location_note": "Not read on 2026-10-16 (LinkedIn unreachable).",
+  "visitors_by_job_function": null,
+  "visitors_by_job_function_note": "Not read on 2026-10-16 (LinkedIn unreachable).",
+  "page_views_by_device": null,
+  "window_advanced": null,
+  "custom_button_clicks": null
+ },
+ "notes": {
+  "en": [
+   "Facebook, Instagram and YouTube were read live via Chrome on 16 Oct (ICT). LINKEDIN COULD NOT BE READ: its admin pages would not open in Chrome, so every LinkedIn figure is null and nothing is carried from 15 Oct. Meta and YouTube Studio are on the same window (17 Sep – 14 Oct).",
+   "FACEBOOK: views 4,074 (▼6.4%), interactions 176 (▲15%), 3-second views 319 (▼3.9%), watch time 2h 40m (▲55.1%). A new post ran on 15 Oct 15:00 (57 views so far).",
+   "INSTAGRAM: views 1,823 (▼19.3%), viewers 82 (▼18%), interactions 36 (▲38.5%). Posts total 143 (+1). Daily reach series not shown today (null).",
+   "YOUTUBE: views 718 (538 more than usual), watch time 1.1 h (▲133%); 7 subscribers; no upload since 7 Oct; realtime 0. Video count not re-read (null).",
+   "LINKEDIN: not read (null).",
+   "FOLLOWERS: Facebook 116, Instagram 49, YouTube 7 unchanged; LinkedIn not read; total of the three read channels 172."
+  ],
+  "vi": [
+   "Facebook, Instagram và YouTube được đọc trực tiếp qua Chrome ngày 16/10 (ICT). KHÔNG ĐỌC ĐƯỢC LINKEDIN: các trang quản trị không mở được trong Chrome, nên mọi số liệu LinkedIn là null và không lấy lại số của 15/10. Meta và YouTube Studio cùng cửa sổ (17/9 – 14/10).",
+   "FACEBOOK: lượt xem 4.074 (▼6,4%), tương tác 176 (▲15%), lượt xem 3 giây 319 (▼3,9%), thời gian xem 2 giờ 40 phút (▲55,1%). Một bài mới đăng ngày 15/10 lúc 15:00 (57 view đến nay).",
+   "INSTAGRAM: views 1,823 (▼19,3%), người xem 82 (▼18%), tương tác 36 (▲38,5%). Tổng số bài 143 (+1). Chuỗi reach theo ngày hôm nay không hiển thị (null).",
+   "YOUTUBE: views 718 (538 more than usual), giờ xem 1,1 (▲133%); 7 người đăng ký; chưa có video mới từ 7/10; realtime 0. Số video chưa đọc lại (null).",
+   "LINKEDIN: không đọc được (null).",
+   "NGƯỜI THEO DÕI: Facebook 116, Instagram 49, YouTube 7 không đổi; LinkedIn không đọc được; tổng ba kênh đọc được 172."
+  ]
+ }
+}
