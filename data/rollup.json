@@ -1,13 +1,13 @@
 {
  "derived": true,
- "generated_at": "2026-10-17",
+ "generated_at": "2026-10-19",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
   "window28": "Ảnh chụp cửa sổ 28 ngày trượt. KHÔNG cộng được (các ngày chồng nhau) — chỉ so đầu kỳ với cuối kỳ và vẽ xu hướng."
  },
  "kind": "rollup",
- "scanned_count": 64,
+ "scanned_count": 65,
  "scanned_days": [
   "2026-07-23",
   "2026-07-27",
@@ -72,14 +72,15 @@
   "2026-10-15",
   "2026-10-16",
   "2026-10-18",
+  "2026-10-20",
   "funnel"
  ],
  "series": {
   "fb_followers": {
    "grain": "state",
    "label": "FB — followers",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -332,14 +333,18 @@
     {
      "d": "2026-10-18",
      "v": 116
+    },
+    {
+     "d": "2026-10-20",
+     "v": 117
     }
    ]
   },
   "fb_interactions_28d": {
    "grain": "window28",
    "label": "FB — tương tác (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -592,14 +597,18 @@
     {
      "d": "2026-10-18",
      "v": 171
+    },
+    {
+     "d": "2026-10-20",
+     "v": 173
     }
    ]
   },
   "fb_interactions_day": {
    "grain": "day",
    "label": "FB — tương tác/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -1016,6 +1025,14 @@
     {
      "d": "2026-10-16",
      "v": 4
+    },
+    {
+     "d": "2026-10-17",
+     "v": 3
+    },
+    {
+     "d": "2026-10-18",
+     "v": 1
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -1023,8 +1040,8 @@
   "fb_video3s_day": {
    "grain": "day",
    "label": "FB — view 3 giây/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -1441,6 +1458,14 @@
     {
      "d": "2026-10-16",
      "v": 5
+    },
+    {
+     "d": "2026-10-17",
+     "v": 35
+    },
+    {
+     "d": "2026-10-18",
+     "v": 9
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -1448,8 +1473,8 @@
   "fb_views_28d": {
    "grain": "window28",
    "label": "FB — views (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -1702,14 +1727,18 @@
     {
      "d": "2026-10-18",
      "v": 3891
+    },
+    {
+     "d": "2026-10-20",
+     "v": 3981
     }
    ]
   },
   "fb_views_day": {
    "grain": "day",
    "label": "FB — views/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -2126,6 +2155,14 @@
     {
      "d": "2026-10-16",
      "v": 68
+    },
+    {
+     "d": "2026-10-17",
+     "v": 116
+    },
+    {
+     "d": "2026-10-18",
+     "v": 45
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -2133,8 +2170,8 @@
   "fb_visits_28d": {
    "grain": "window28",
    "label": "FB — lượt ghé (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -2387,14 +2424,18 @@
     {
      "d": "2026-10-18",
      "v": 462
+    },
+    {
+     "d": "2026-10-20",
+     "v": 490
     }
    ]
   },
   "fb_visits_day": {
    "grain": "day",
    "label": "FB — lượt ghé/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -2811,6 +2852,14 @@
     {
      "d": "2026-10-16",
      "v": 10
+    },
+    {
+     "d": "2026-10-17",
+     "v": 8
+    },
+    {
+     "d": "2026-10-18",
+     "v": 35
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -2818,8 +2867,8 @@
   "ig_followers": {
    "grain": "state",
    "label": "IG — followers",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -3072,14 +3121,18 @@
     {
      "d": "2026-10-18",
      "v": 49
+    },
+    {
+     "d": "2026-10-20",
+     "v": 49
     }
    ]
   },
   "ig_interactions_28d": {
    "grain": "window28",
    "label": "IG — tương tác (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -3332,14 +3385,18 @@
     {
      "d": "2026-10-18",
      "v": 43
+    },
+    {
+     "d": "2026-10-20",
+     "v": 44
     }
    ]
   },
   "ig_interactions_day": {
    "grain": "day",
    "label": "IG — tương tác/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -3756,6 +3813,14 @@
     {
      "d": "2026-10-16",
      "v": 3
+    },
+    {
+     "d": "2026-10-17",
+     "v": 0
+    },
+    {
+     "d": "2026-10-18",
+     "v": 1
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -3763,8 +3828,8 @@
   "ig_reach_28d": {
    "grain": "window28",
    "label": "IG — reach (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -4017,6 +4082,10 @@
     {
      "d": "2026-10-18",
      "v": 175
+    },
+    {
+     "d": "2026-10-20",
+     "v": 285
     }
    ]
   },
@@ -4436,8 +4505,8 @@
   "ig_views_28d": {
    "grain": "window28",
    "label": "IG — views (28n)",
-   "measured": 63,
-   "of_days": 64,
+   "measured": 64,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -4690,14 +4759,18 @@
     {
      "d": "2026-10-18",
      "v": 1665
+    },
+    {
+     "d": "2026-10-20",
+     "v": 1775
     }
    ]
   },
   "ig_views_day": {
    "grain": "day",
    "label": "IG — views/ngày",
-   "measured": 104,
-   "of_days": 104,
+   "measured": 106,
+   "of_days": 106,
    "points": [
     {
      "d": "2026-07-05",
@@ -5114,6 +5187,14 @@
     {
      "d": "2026-10-16",
      "v": 24
+    },
+    {
+     "d": "2026-10-17",
+     "v": 128
+    },
+    {
+     "d": "2026-10-18",
+     "v": 18
     }
    ],
    "restated_note": "Mỗi ngày giữ lần đọc mới nhất; Meta có điều chỉnh số về sau."
@@ -5121,8 +5202,8 @@
   "li_followers": {
    "grain": "state",
    "label": "LinkedIn — followers",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -5371,14 +5452,18 @@
     {
      "d": "2026-10-18",
      "v": 136
+    },
+    {
+     "d": "2026-10-20",
+     "v": 138
     }
    ]
   },
   "li_impressions_28d": {
    "grain": "window28",
    "label": "LinkedIn — impressions (28n)",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -5627,14 +5712,18 @@
     {
      "d": "2026-10-18",
      "v": 1299
+    },
+    {
+     "d": "2026-10-20",
+     "v": 1278
     }
    ]
   },
   "li_page_views_28d": {
    "grain": "window28",
    "label": "LinkedIn — lượt xem trang (28n)",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -5883,14 +5972,18 @@
     {
      "d": "2026-10-18",
      "v": 79
+    },
+    {
+     "d": "2026-10-20",
+     "v": 82
     }
    ]
   },
   "li_reactions_28d": {
    "grain": "window28",
    "label": "LinkedIn — reactions (28n)",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -6139,14 +6232,18 @@
     {
      "d": "2026-10-18",
      "v": 38
+    },
+    {
+     "d": "2026-10-20",
+     "v": 37
     }
    ]
   },
   "yt_subscribers": {
    "grain": "state",
    "label": "YouTube — subscribers",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -6395,14 +6492,18 @@
     {
      "d": "2026-10-18",
      "v": 7
+    },
+    {
+     "d": "2026-10-20",
+     "v": 7
     }
    ]
   },
   "yt_views_28d": {
    "grain": "window28",
    "label": "YouTube — views (28n)",
-   "measured": 62,
-   "of_days": 64,
+   "measured": 63,
+   "of_days": 65,
    "points": [
     {
      "d": "2026-07-23",
@@ -6651,6 +6752,10 @@
     {
      "d": "2026-10-18",
      "v": 586
+    },
+    {
+     "d": "2026-10-20",
+     "v": 780
     }
    ]
   }
