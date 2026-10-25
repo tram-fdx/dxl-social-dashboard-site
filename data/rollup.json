@@ -5478,7 +5478,7 @@
   "li_followers": {
    "grain": "state",
    "label": "LinkedIn — followers",
-   "measured": 65,
+   "measured": 66,
    "of_days": 69,
    "points": [
     {
@@ -5740,13 +5740,17 @@
     {
      "d": "2026-10-22",
      "v": 138
+    },
+    {
+     "d": "2026-10-26",
+     "v": 140
     }
    ]
   },
   "li_impressions_28d": {
    "grain": "window28",
    "label": "LinkedIn — impressions (28n)",
-   "measured": 65,
+   "measured": 66,
    "of_days": 69,
    "points": [
     {
@@ -6008,13 +6012,17 @@
     {
      "d": "2026-10-22",
      "v": 1250
+    },
+    {
+     "d": "2026-10-26",
+     "v": 1275
     }
    ]
   },
   "li_page_views_28d": {
    "grain": "window28",
    "label": "LinkedIn — lượt xem trang (28n)",
-   "measured": 65,
+   "measured": 66,
    "of_days": 69,
    "points": [
     {
@@ -6276,13 +6284,17 @@
     {
      "d": "2026-10-22",
      "v": 80
+    },
+    {
+     "d": "2026-10-26",
+     "v": 82
     }
    ]
   },
   "li_reactions_28d": {
    "grain": "window28",
    "label": "LinkedIn — reactions (28n)",
-   "measured": 65,
+   "measured": 66,
    "of_days": 69,
    "points": [
     {
@@ -6544,6 +6556,10 @@
     {
      "d": "2026-10-22",
      "v": 35
+    },
+    {
+     "d": "2026-10-26",
+     "v": 38
     }
    ]
   },

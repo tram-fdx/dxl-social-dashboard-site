@@ -2,7 +2,7 @@
  "date": "2026-10-26",
  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
  "source_commit": "",
- "provenance": "Read on 2026-10-26 (~00:10 ICT, scheduled run) from Chrome on macOS. FACEBOOK, INSTAGRAM AND YOUTUBE WERE READ LIVE; LINKEDIN COULD NOT BE READ. Meta Business Suite overview and Results pages for Facebook and Instagram (window 27 Sep - 24 Oct 2026, three days after the 23 Oct read) and YouTube Studio (Sep 27 - Oct 24, 2026). Facebook totals reconcile exactly against the 28-day daily series (views 4,270, visits 556, interactions 172, 3-second views 426, link clicks 5; the views tile rounds to '4,3K'). Instagram views equal the sum of the daily series (1,933 = 1,241 + 692 as displayed; tile 1.9K); Instagram interactions 68 and profile visits 22 equal the daily sums; viewers 336 (+277.5%). Followers: Facebook 116 and Instagram 49 from Business Suite home, Instagram posts 150 and following 36 from instagram.com/dxliving.au, YouTube 7 subscribers (+3 in 28 days) and 15 long-form + 22 Shorts from Studio. Change-percent directions decoded from label colour (Meta). YouTube views change is null (Studio reports '688 more than usual'). LINKEDIN: www.linkedin.com closed the connection (error page) on the Updates admin page, so every LinkedIn figure is null and nothing was carried forward (last live read 22 Oct: followers 138, impressions 1,250). NOT READ (null): LinkedIn (all); Instagram daily reach series and reach follower/non-follower split (Reach tile not shown; Viewers used for reach); Instagram follows/unfollows ('--'); Instagram recent-content panel returned only 5 posts on this run (the 17, 16, 15 and 14 Oct posts were not readable and are not carried). NOTE: 24-25 Oct (ICT) daily snapshots were not produced by an earlier run; this day's windows advance three days from 23 Oct.",
+ "provenance": "Read on 2026-10-26 (~00:10 ICT, scheduled run) from Chrome on macOS. FACEBOOK, INSTAGRAM, YOUTUBE AND LINKEDIN WERE ALL READ LIVE (LinkedIn re-read in a re-run at ~06:00 ICT after the ~00:10 ICT run hit a connection error). Meta Business Suite overview and Results pages for Facebook and Instagram (window 27 Sep - 24 Oct 2026, three days after the 23 Oct read) and YouTube Studio (Sep 27 - Oct 24, 2026). Facebook totals reconcile exactly against the 28-day daily series (views 4,270, visits 556, interactions 172, 3-second views 426, link clicks 5; the views tile rounds to '4,3K'). Instagram views equal the sum of the daily series (1,933 = 1,241 + 692 as displayed; tile 1.9K); Instagram interactions 68 and profile visits 22 equal the daily sums; viewers 336 (+277.5%). Followers: Facebook 116 and Instagram 49 from Business Suite home, Instagram posts 150 and following 36 from instagram.com/dxliving.au, YouTube 7 subscribers (+3 in 28 days) and 15 long-form + 22 Shorts from Studio. Change-percent directions decoded from label colour (Meta). YouTube views change is null (Studio reports '688 more than usual'). LINKEDIN (re-run ~06:00 ICT): Updates, Followers and Visitors admin pages read live, window 24 Sep - 23 Oct 2026: followers 140, new followers 30d 38 (3,700%), impressions 1,275 (up 2.4%), reactions 38 (down 17.4%), comments 0, reposts 0, page views 82 (up 182.8%), unique visitors 35 (up 150%); trend direction decoded from LinkedIn trend DOM classes; impressions_prior 1,245 derived from the displayed percentage. NOT READ (null): Instagram daily reach series and reach follower/non-follower split (Reach tile not shown; Viewers used for reach); Instagram follows/unfollows ('--'); Instagram recent-content panel returned only 5 posts on this run (the 17, 16, 15 and 14 Oct posts were not readable and are not carried). NOTE: 24-25 Oct (ICT) daily snapshots were not produced by an earlier run; this day's windows advance three days from 23 Oct.",
  "window": {
   "en": "Last 28 days: 27 Sep – 24 Oct 2026",
   "vi": "28 ngày qua: 27/9 – 24/10/2026"
@@ -10,7 +10,7 @@
  "windows": {
   "meta": "2026-09-27 → 2026-10-24",
   "youtube": "2026-09-27 → 2026-10-24",
-  "linkedin": null
+  "linkedin": "2026-09-24 → 2026-10-23"
  },
  "facebook": {
   "followers": 116,
@@ -554,63 +554,103 @@
  },
  "linkedin": {
   "url": "https://www.linkedin.com/company/108389291/",
-  "followers": null,
-  "stale": true,
-  "visitors_stale": true,
-  "stale_note": "LinkedIn could NOT be read on 2026-10-26: www.linkedin.com showed a browser error page (connection closed) on the Updates admin page. All LinkedIn figures are null and nothing is carried forward (last live read 22 Oct: followers 138, impressions 1,250).",
+  "followers": 140,
+  "stale": false,
+  "visitors_stale": false,
+  "stale_note": "LinkedIn Updates, Followers and Visitors admin pages were ALL read live on 2026-10-26 (re-run ~06:00 ICT) for the 24 Sep - 23 Oct 2026 window; the earlier ~00:10 ICT run had hit a browser connection error.",
   "new_followers_30d": {
-   "v": null,
-   "change_pct": null
+   "v": 38,
+   "change_pct": 3700.0
   },
   "impressions": {
-   "v": null,
-   "change_pct": null
+   "v": 1275,
+   "change_pct": 2.4
   },
   "reactions": {
-   "v": null,
-   "change_pct": null
+   "v": 38,
+   "change_pct": -17.4
   },
   "comments": {
-   "v": null,
-   "change_pct": null
+   "v": 0,
+   "change_pct": 0.0
   },
   "reposts": {
-   "v": null,
-   "change_pct": null
+   "v": 0,
+   "change_pct": 0.0
   },
   "page_views": {
-   "v": null,
-   "change_pct": null
+   "v": 82,
+   "change_pct": 182.8
   },
   "unique_visitors": {
-   "v": null,
-   "change_pct": null
+   "v": 35,
+   "change_pct": 150.0
   },
-  "impressions_prior": null,
-  "impressions_now": null,
-  "followers_by_location_count": null,
-  "followers_by_location_pct": null,
-  "visitors_by_job_function": null,
-  "page_views_by_device": null,
-  "window_advanced": false,
-  "custom_button_clicks": null
+  "impressions_prior": 1245,
+  "impressions_now": 1275,
+  "followers_by_location_count": {
+   "Melbourne": 41,
+   "Ho Chi Minh City": 23,
+   "Brisbane": 6,
+   "Sydney": 3,
+   "Mumbai": 2,
+   "Delhi": 2,
+   "Karachi": 2,
+   "Geelong": 2,
+   "Metro Manila": 2,
+   "Kolkata": 1,
+   "Other": 56
+  },
+  "followers_by_location_pct": {
+   "Melbourne": 29.3,
+   "Ho Chi Minh City": 16.4,
+   "Brisbane": 4.3,
+   "Sydney": 2.1,
+   "Mumbai": 1.4,
+   "Delhi": 1.4,
+   "Karachi": 1.4,
+   "Geelong": 1.4,
+   "Metro Manila": 1.4,
+   "Kolkata": 0.7,
+   "Other": 40.0
+  },
+  "visitors_by_job_function": {
+   "Arts and Design": 48,
+   "Healthcare Services": 7,
+   "Administrative": 6,
+   "Sales": 5,
+   "Purchasing": 5,
+   "Marketing": 4,
+   "Operations": 4,
+   "Business Development": 4,
+   "Engineering": 4,
+   "Finance": 4
+  },
+  "page_views_by_device": {
+   "Desktop": 41,
+   "Mobile": 41
+  },
+  "window_advanced": true,
+  "custom_button_clicks": 0,
+  "followers_by_location_note": "Read live on 2026-10-26. Greater Melbourne Area 41 (29.3%), Ho Chi Minh City 23 (16.4%), Greater Brisbane 6 (4.3%), Greater Sydney 3 (2.1%), Mumbai, Delhi, Karachi, Geelong and Metro Manila 2 each (1.4%), Greater Kolkata 1 (<1%). 'Other' (56) is derived: 140 less the ten named places (84).",
+  "visitors_by_job_function_note": "Read live on 2026-10-26. Ten functions shown; they sum to 91 against 82 page views as displayed by LinkedIn (Arts and Design 48 = 58.5%)."
  },
  "notes": {
   "en": [
-   "Facebook, Instagram and YouTube were read live via Chrome on 26 Oct (ICT). Meta and YouTube Studio are on the same window (27 Sep – 24 Oct, three days after the 23 Oct scan). LINKEDIN COULD NOT BE READ: www.linkedin.com closed the connection, so all LinkedIn figures are null and nothing is carried from 22 Oct.",
+   "Facebook, Instagram and YouTube were read live via Chrome on 26 Oct (ICT). Meta and YouTube Studio are on the same window (27 Sep – 24 Oct, three days after the 23 Oct scan). LinkedIn was re-read live in a 06:00 ICT re-run (window 24 Sep – 23 Oct).",
    "FACEBOOK: views 4,270 (▼4.8%), interactions 172 (▲19.4%), 3-second views 426 (▲21%), visits 556 (▲24.9%), watch time 2h 58m (▲44.3%). Two new posts (23 Oct 42 views, 25 Oct 21 views); the 22 Oct post grew from 33 to 160 views, the 21 Oct post from 126 to 147 and the 20 Oct post from 74 to 86.",
    "INSTAGRAM: views 1,933 (▼16.7%), viewers 336 (▲277.5%), interactions 68 (▲277.8%). Posts total 150 (+1). Daily reach series not shown (null); only five posts were readable in the panel.",
    "YOUTUBE: views 868 (688 more than usual), watch time 1.5 h (▲173%); 7 subscribers (+3 in 28 days); the Short 'Behind the rooftop progress' has 77 views after 4 days 8 hours; 37 videos (15 long-form, 22 Shorts).",
-   "LINKEDIN: not readable today (null).",
-   "FOLLOWERS: Facebook 116, Instagram 49 and YouTube 7 unchanged; LinkedIn not read; total of the three channels read 172."
+   "LINKEDIN: 140 followers (38 new in 30 days, ▲3,700%), impressions 1,275 (▲2.4%), reactions 38 (▼17.4%), comments 0, reposts 0; page views 82 (▲182.8%), unique visitors 35 (▲150%), desktop 41 / mobile 41; Arts and Design 48 of 82 page views (58.5%). Window 24 Sep – 23 Oct.",
+   "FOLLOWERS: Facebook 116, Instagram 49 and YouTube 7 unchanged; LinkedIn 140 (138 on 22 Oct); total of the four channels 312."
   ],
   "vi": [
-   "Facebook, Instagram và YouTube được đọc trực tiếp qua Chrome ngày 26/10 (ICT). Meta và YouTube Studio cùng cửa sổ (27/9 – 24/10, sau bản quét 23/10 ba ngày). KHÔNG ĐỌC ĐƯỢC LINKEDIN: www.linkedin.com đóng kết nối, nên mọi số LinkedIn là null và không lấy số cũ của 22/10.",
+   "Facebook, Instagram và YouTube được đọc trực tiếp qua Chrome ngày 26/10 (ICT). Meta và YouTube Studio cùng cửa sổ (27/9 – 24/10, sau bản quét 23/10 ba ngày). LinkedIn được đọc lại trực tiếp ở lần chạy lại 06:00 ICT (cửa sổ 24/9 – 23/10).",
    "FACEBOOK: lượt xem 4.270 (▼4,8%), tương tác 172 (▲19,4%), lượt xem 3 giây 426 (▲21%), lượt truy cập 556 (▲24,9%), thời gian xem 2 giờ 58 phút (▲44,3%). Hai bài mới (23/10: 42 view, 25/10: 21 view); bài 22/10 tăng từ 33 lên 160 view, bài 21/10 từ 126 lên 147, bài 20/10 từ 74 lên 86.",
    "INSTAGRAM: views 1.933 (▼16,7%), người xem 336 (▲277,5%), tương tác 68 (▲277,8%). Tổng số bài 150 (+1). Chuỗi reach theo ngày không hiển thị (null); bảng chỉ đọc được năm bài.",
    "YOUTUBE: views 868 (688 more than usual), giờ xem 1,5 (▲173%); 7 người đăng ký (+3 trong 28 ngày); Short 'Behind the rooftop progress' có 77 view sau 4 ngày 8 giờ; 37 video (15 dài, 22 Shorts).",
-   "LINKEDIN: hôm nay không đọc được (null).",
-   "NGƯỜI THEO DÕI: Facebook 116, Instagram 49 và YouTube 7 không đổi; LinkedIn không đọc được; tổng ba kênh đọc được 172."
+   "LINKEDIN: 140 follower (38 mới trong 30 ngày, ▲3.700%), impressions 1.275 (▲2,4%), cảm xúc 38 (▼17,4%), bình luận 0, chia sẻ lại 0; lượt xem trang 82 (▲182,8%), khách duy nhất 35 (▲150%), máy tính 41 / di động 41; Nghệ thuật & Thiết kế 48 trên 82 lượt xem (58,5%). Cửa sổ 24/9 – 23/10.",
+   "NGƯỜI THEO DÕI: Facebook 116, Instagram 49 và YouTube 7 không đổi; LinkedIn 140 (138 ngày 22/10); tổng bốn kênh 312."
   ]
  }
 }
