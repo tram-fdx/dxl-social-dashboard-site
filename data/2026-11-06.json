@@ -1,0 +1,656 @@
+{
+ "date": "2026-11-06",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-11-06 (scheduled run, ICT) live in Chrome on the Mac: Facebook and Instagram from Meta Business Suite insights overview and home, YouTube Studio analytics (period report, realtime, content counts). LinkedIn: NOT READ — the Chrome profile is signed out of LinkedIn (authwall), so all LinkedIn figures are null. Facebook link clicks (insights/results page) were not read, so null. Instagram posts total was not read (null).",
+ "window": {
+  "en": "Last 28 days: 8 Oct – 4 Nov 2026",
+  "vi": "28 ngày qua: 8/10 – 4/11/2026"
+ },
+ "windows": {
+  "meta": "2026-10-08 → 2026-11-04",
+  "youtube": "2026-10-08 → 2026-11-04",
+  "linkedin": null
+ },
+ "facebook": {
+  "followers": 119,
+  "views": {
+   "v": 3259,
+   "change_pct": -25.3
+  },
+  "viewers": {
+   "v": 202,
+   "change_pct": -32.4
+  },
+  "visits": {
+   "v": 572,
+   "change_pct": 29.4
+  },
+  "interactions": {
+   "v": 91,
+   "change_pct": -53.8
+  },
+  "video_3s": {
+   "v": 297,
+   "change_pct": -25.8
+  },
+  "link_clicks": {
+   "v": null,
+   "change_pct": null
+  },
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": 100.0
+  },
+  "follows": 3,
+  "unfollows": 0,
+  "views_from_followers_pct": 54.6,
+  "views_from_non_followers_pct": 45.4,
+  "views_from_followers_change_pct": 19.7,
+  "views_from_non_followers_change_pct": -16.5,
+  "interactions_from_followers": 69,
+  "interactions_from_non_followers": 22,
+  "interactions_from_followers_change_pct": -56.9,
+  "interactions_from_non_followers_change_pct": -40.5,
+  "watch_time": "1h 50m",
+  "watch_time_change_pct": -33.7,
+  "conversations_started": 0,
+  "conversations_started_change_pct": 0.0,
+  "new_contacts": 0,
+  "new_contacts_change_pct": 0.0,
+  "daily": {
+   "views": [
+    216,
+    39,
+    90,
+    34,
+    201,
+    71,
+    176,
+    141,
+    68,
+    116,
+    45,
+    125,
+    203,
+    287,
+    241,
+    160,
+    48,
+    103,
+    127,
+    39,
+    57,
+    47,
+    141,
+    13,
+    91,
+    196,
+    103,
+    81
+   ],
+   "visits": [
+    8,
+    2,
+    0,
+    3,
+    82,
+    16,
+    56,
+    29,
+    10,
+    8,
+    35,
+    21,
+    22,
+    45,
+    25,
+    22,
+    10,
+    46,
+    17,
+    44,
+    10,
+    0,
+    0,
+    1,
+    3,
+    17,
+    24,
+    16
+   ],
+   "interactions": [
+    4,
+    2,
+    0,
+    0,
+    2,
+    3,
+    5,
+    2,
+    4,
+    3,
+    1,
+    4,
+    12,
+    5,
+    5,
+    7,
+    2,
+    1,
+    4,
+    0,
+    1,
+    4,
+    4,
+    1,
+    0,
+    10,
+    2,
+    3
+   ],
+   "video_3s": [
+    9,
+    0,
+    0,
+    1,
+    26,
+    1,
+    0,
+    33,
+    5,
+    35,
+    9,
+    2,
+    5,
+    69,
+    9,
+    7,
+    1,
+    13,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    9,
+    39,
+    17,
+    5
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The panel on 6 Nov lists four feed posts (5 Nov 10:01, 5 Nov 06:00, 4 Nov 14:00, 4 Nov 06:00) plus four stories (1, 2, 3 and 4 views). The 3 Nov and 2 Nov posts have left the panel and are not carried.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "5 Nov 10:01",
+    "t": "Knowing when your home will be finished is only part of the picture — cash-flow analysis connected to the construction programme and 4D model",
+    "reach": 14,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 06:00",
+    "t": "If it's not in the model, it's not in the plan — what is confirmed, coordinated and still an assumption",
+    "reach": 19,
+    "react": 0,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "4 Nov 14:00",
+    "t": "A sample is lit by the showroom. Your home won't be — material finishes under morning, afternoon and evening light",
+    "reach": 32,
+    "react": 1,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "4 Nov 06:00",
+    "t": "A door swing is a decision — Project Control and Planning check swings, clearances and switches before frames are ordered",
+    "reach": 18,
+    "react": 0,
+    "com": 0,
+    "sh": 1
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "5 Nov 10:01",
+    "views": 1,
+    "react": 0
+   },
+   {
+    "d": "5 Nov 06:00",
+    "views": 2,
+    "react": 0
+   },
+   {
+    "d": "4 Nov 14:00",
+    "views": 3,
+    "react": 0
+   },
+   {
+    "d": "4 Nov 06:00",
+    "views": 4,
+    "react": 0
+   }
+  ],
+  "new_post_note": "FACEBOOK posts on the Nội dung mới đây panel read live on 6 Nov: 4 feed posts (4 Nov 06:00, 4 Nov 14:00, 5 Nov 06:00, 5 Nov 10:01) and 4 stories. Per-post figures are VIEWS, not de-duplicated reach."
+ },
+ "instagram": {
+  "followers": 50,
+  "posts_total": null,
+  "following": 37,
+  "views": {
+   "v": 1371,
+   "change_pct": -44.4
+  },
+  "reach": {
+   "v": 360,
+   "change_pct": 213.0
+  },
+  "interactions": {
+   "v": 52,
+   "change_pct": 40.5
+  },
+  "views_from_followers_pct": 36.1,
+  "views_from_non_followers_pct": 63.9,
+  "views_from_followers_change_pct": -43.0,
+  "views_from_non_followers_change_pct": 74.3,
+  "reach_from_followers": 17,
+  "reach_from_non_followers": 347,
+  "reach_from_followers_change_pct": -15.0,
+  "reach_from_non_followers_change_pct": 265.3,
+  "interactions_from_followers_pct": 77,
+  "interactions_from_non_followers_pct": 23,
+  "daily": {
+   "views": [
+    59,
+    6,
+    6,
+    9,
+    129,
+    9,
+    57,
+    141,
+    24,
+    128,
+    18,
+    49,
+    52,
+    131,
+    65,
+    30,
+    25,
+    56,
+    17,
+    8,
+    40,
+    42,
+    28,
+    6,
+    63,
+    110,
+    44,
+    19
+   ],
+   "reach": [
+    6,
+    0,
+    1,
+    2,
+    6,
+    0,
+    4,
+    120,
+    9,
+    113,
+    5,
+    6,
+    8,
+    56,
+    9,
+    5,
+    3,
+    3,
+    3,
+    2,
+    5,
+    4,
+    2,
+    0,
+    2,
+    67,
+    13,
+    7
+   ],
+   "interactions": [
+    3,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    4,
+    3,
+    0,
+    1,
+    4,
+    11,
+    5,
+    8,
+    2,
+    2,
+    0,
+    3,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  "daily_note": "Instagram Views tile shows 1.4K (▼44.4%) with two unlabelled sub-figures, 651 and 720 views, which add to the 28-day series sum 1,371; no platform split is stored. The reach daily series is a per-day figure (not additive); tile reach 360 is de-duplicated.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "5 Nov 10:03",
+    "t": "Knowing when your home will be finished (cash-flow + 4D, same-time post as Facebook)",
+    "reach": 46,
+    "react": 2,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 06:00",
+    "t": "If it's not in the model, it's not in the plan (same-time post as Facebook)",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "4 Nov 14:00",
+    "t": "A sample is lit by the showroom (same-time post as Facebook)",
+    "reach": 5,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "4 Nov 06:00",
+    "t": "A door swing is a decision (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "3 Nov 07:00",
+    "t": "Melbourne Cup Day — the working calendar (same-time post as Facebook)",
+    "reach": 5,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2 Nov 18:33",
+    "t": "3D model vs 4D visualisation (same-time post as Facebook)",
+    "reach": 75,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "29 Oct 15:39",
+    "t": "Post of 29 Oct 15:39",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "28 Oct 15:10",
+    "t": "Every project needs a memory (same-time post as Facebook)",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 2
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "4 Nov 14:00",
+    "t": "A sample is lit by the showroom (same-time post as Facebook)",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "4 Nov 06:00",
+    "t": "A door swing is a decision (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "3 Nov 07:00",
+    "t": "Melbourne Cup Day — the working calendar (same-time post as Facebook)",
+    "reach": 5,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2 Nov 18:33",
+    "t": "3D model vs 4D visualisation (same-time post as Facebook)",
+    "reach": 75,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "29 Oct 15:39",
+    "t": "Post of 29 Oct 15:39",
+    "reach": 6,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "28 Oct 15:10",
+    "t": "Every project needs a memory (same-time post as Facebook)",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "26 Oct 15:00",
+    "t": "The programme says one thing. Does the site? (same-time post as Facebook)",
+    "reach": 7,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "23 Oct 16:30",
+    "t": "The real programme lives between the tasks (same-time post as Facebook)",
+    "reach": 7,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "post_note": "Instagram per-post REACH is from the Meta Insights > Content panel (columns reach, likes, comments, shares), read live 5 Nov. Posts total is not shown to the signed-out profile page, so it is null.",
+  "views_platform_split": null,
+  "profile_visits_daily": null
+ },
+ "youtube": {
+  "subscribers": 8,
+  "videos": 39,
+  "videos_long_form": 15,
+  "videos_shorts": 24,
+  "views_28d": {
+   "v": 509,
+   "change_pct": null
+  },
+  "views_change_text": "199 more than usual (YouTube Studio compares channel views against typical performance, no signed percentage)",
+  "watch_time_hours": {
+   "v": 0.7,
+   "change_pct": -36.0
+  },
+  "latest_video_views": {
+   "v": 2,
+   "change_pct": null
+  },
+  "views_now": 509,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YOUTUBE STUDIO WAS READ LIVE ON 2026-11-06 for Oct 8 - Nov 4, 2026, level with the Meta window.",
+  "new_upload": {
+   "title": "DXL_VDO_Slide18_1021_VO",
+   "published": "2026-11-05",
+   "views_first_19h54m": 2,
+   "avg_pct_viewed": "32.8%",
+   "likes": 0,
+   "format": "video (latest content card)"
+  },
+  "top_videos": [
+   {
+    "t": "Watch the Build Before It Begins",
+    "v": 211,
+    "dur": "0:14",
+    "ctr": "29.2%"
+   },
+   {
+    "t": "Project 251 – Rooftop Progress Update | DX Living",
+    "v": 198,
+    "dur": "0:37",
+    "ctr": "63.2%"
+   },
+   {
+    "t": "Project 251 - Behind the rooftop progress",
+    "v": 77,
+    "dur": "0:13",
+    "ctr": "27.3%"
+   },
+   {
+    "t": "251 PROJECT - Cladding, Windows & Atrium Framing",
+    "v": 6,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Wellbeing starts with the space you experience",
+    "v": 3,
+    "dur": "0:24",
+    "ctr": "75.2%"
+   },
+   {
+    "t": "DX Living | How Project Control Keeps Decisions Moving",
+    "v": 2,
+    "dur": "0:23",
+    "ctr": "61.7%"
+   },
+   {
+    "t": "DX Living - Present the project with clarity",
+    "v": 2,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "DX Living | With DX Living experience every space",
+    "v": 2,
+    "dur": "0:12",
+    "ctr": "40.6%"
+   },
+   {
+    "t": "Project 251 | LightEFX’s StarEFX™ fibre optic ceiling",
+    "v": 2,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Project 251 | From Timber to Detail: A Hand-Carved Teak Door",
+    "v": 1,
+    "dur": "—",
+    "ctr": "—"
+   }
+  ],
+  "realtime_48h_views": 4
+ },
+ "linkedin": {
+  "url": "https://www.linkedin.com/company/108389291/",
+  "followers": null,
+  "stale": true,
+  "visitors_stale": true,
+  "stale_note": "LINKEDIN NOT READ ON 2026-11-06: the Chrome profile on the Mac is signed out of LinkedIn (authwall on /admin/analytics). No credentials were entered. All LinkedIn figures are null, not carried forward.",
+  "new_followers_30d": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions": {
+   "v": null,
+   "change_pct": null
+  },
+  "reactions": {
+   "v": null,
+   "change_pct": null
+  },
+  "comments": {
+   "v": null,
+   "change_pct": null
+  },
+  "reposts": {
+   "v": null,
+   "change_pct": null
+  },
+  "page_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "unique_visitors": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions_prior": null,
+  "impressions_now": null,
+  "followers_by_location_count": null,
+  "followers_by_location_pct": null,
+  "visitors_by_job_function": null,
+  "page_views_by_device": null,
+  "window_advanced": false,
+  "custom_button_clicks": null,
+  "followers_by_location_note": "Not read (signed out).",
+  "visitors_by_job_function_note": "Not read (signed out)."
+ },
+ "notes": {
+  "en": [
+   "Facebook, Instagram and YouTube were read live via Chrome on 6 Nov (ICT). LinkedIn could NOT be read: Chrome is signed out of LinkedIn, so every LinkedIn figure is null. Meta and YouTube Studio are on the 8 Oct – 4 Nov window; the previous snapshot was 5 Nov.",
+   "FACEBOOK: views 3259 (▼25.3%), viewers 202 (▼32.4%), interactions 91 (▼53.8%), 3-second views 297 (▼25.8%), visits 572 (▲29.4%), watch time 1h 50m (▼33.7%), 3 follows / 0 unfollows (net 3). Link clicks not read (null). Followers 119 (unchanged).",
+   "INSTAGRAM: views 1371 (▼44.4%), reach 360 (▲213%), interactions 52 (▲40.5%). Followers 50, following 37. Posts total not read (null). The 5 Nov 10:03 cash-flow/4D post reached 46 accounts and the 2 Nov 4D post 75.",
+   "YOUTUBE: views 509 (199 more than usual), watch time 0.7 h (▼36%), subscribers 8, 39 videos (15 long-form, 24 Shorts). The 2 Nov Short 'Watch the Build Before It Begins' still leads the window with 211 views.",
+   "LINKEDIN: not read (signed out) — null. Total followers of the three readable channels: 177."
+  ],
+  "vi": [
+   "Facebook, Instagram và YouTube được đọc trực tiếp qua Chrome ngày 6/11 (ICT). KHÔNG đọc được LinkedIn: Chrome đang đăng xuất LinkedIn nên mọi số LinkedIn là null. Meta và YouTube Studio cùng cửa sổ 8/10 – 4/11; snapshot trước là 5/11.",
+   "FACEBOOK: views 3.259 (▼25,3%), người xem 202 (▼32,4%), tương tác 91 (▼53,8%), view 3 giây 297 (▼25,8%), lượt truy cập 572 (▲29,4%), thời gian xem 1 giờ 50 phút (▼33,7%), 3 theo dõi / 0 bỏ theo dõi (ròng 3). Click liên kết không đọc (null). Người theo dõi 119 (không đổi).",
+   "INSTAGRAM: views 1.371 (▼44,4%), reach 360 (▲213%), tương tác 52 (▲40,5%). Người theo dõi 50, đang theo dõi 37. Tổng số bài không đọc (null). Bài dòng tiền/4D 5/11 10:03 tiếp cận 46 tài khoản và bài 4D ngày 2/11 là 75.",
+   "YOUTUBE: views 509 (199 more than usual), giờ xem 0,7 (▼36%), 8 người đăng ký, 39 video (15 dài, 24 Shorts). Short 2/11 'Watch the Build Before It Begins' vẫn dẫn đầu cửa sổ với 211 view.",
+   "LINKEDIN: không đọc được (đăng xuất) — null. Tổng follower của ba kênh đọc được: 177."
+  ]
+ }
+}

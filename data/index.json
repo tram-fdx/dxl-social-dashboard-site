@@ -1,7 +1,7 @@
 {
   "site": "DX Living — social dashboard",
   "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
-  "latest": "2026-11-05",
+  "latest": "2026-11-06",
   "snapshots": [
     {
       "date": "2026-07-23",
@@ -506,6 +506,13 @@
       "report": "archive/2026-11-05.html",
       "label_vi": "Social 5/11 · FB views 3.485 · LinkedIn không đọc được",
       "label_en": "Social 5 Nov · FB views 3,485 · LinkedIn not read"
+    },
+    {
+      "date": "2026-11-06",
+      "data": "data/2026-11-06.json",
+      "report": "archive/2026-11-06.html",
+      "label_vi": "Social 6/11 · FB views 3.259 · LinkedIn không đọc được",
+      "label_en": "Social 6 Nov · FB views 3,259 · LinkedIn not read"
     }
   ]
 }
