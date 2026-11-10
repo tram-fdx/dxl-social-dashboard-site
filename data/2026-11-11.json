@@ -1,0 +1,655 @@
+{
+ "date": "2026-11-11",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "source_commit": "",
+ "provenance": "Read on 2026-11-11 (scheduled run, ICT) live in Chrome on the Mac: Facebook and Instagram from Meta Business Suite insights overview and home (window 13 Oct – 9 Nov), Instagram profile page for posts/following, YouTube Studio analytics (period report, realtime, content counts; window Oct 13 – Nov 9). LinkedIn: NOT READ — the Chrome profile is signed out of LinkedIn (company analytics pages would not load), so all LinkedIn figures are null. Facebook link clicks (insights/results page) were not read, so null.",
+ "window": {
+  "en": "Last 28 days: 13 Oct – 9 Nov 2026",
+  "vi": "28 ngày qua: 13/10 – 9/11/2026"
+ },
+ "windows": {
+  "meta": "2026-10-13 → 2026-11-09",
+  "youtube": "2026-10-13 → 2026-11-09",
+  "linkedin": null
+ },
+ "facebook": {
+  "followers": 119,
+  "views": {
+   "v": 3198,
+   "change_pct": -22.7
+  },
+  "viewers": {
+   "v": 209,
+   "change_pct": -28.2
+  },
+  "visits": {
+   "v": 555,
+   "change_pct": 12.6
+  },
+  "interactions": {
+   "v": 97,
+   "change_pct": -47.3
+  },
+  "video_3s": {
+   "v": 357,
+   "change_pct": -7.3
+  },
+  "link_clicks": {
+   "v": null,
+   "change_pct": null
+  },
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": 100.0
+  },
+  "follows": 3,
+  "unfollows": 0,
+  "views_from_followers_pct": 56.3,
+  "views_from_non_followers_pct": 43.7,
+  "views_from_followers_change_pct": 16.1,
+  "views_from_non_followers_change_pct": -15.1,
+  "interactions_from_followers": 76,
+  "interactions_from_non_followers": 21,
+  "interactions_from_followers_change_pct": -49.3,
+  "interactions_from_non_followers_change_pct": -38.2,
+  "watch_time": "1h 57m",
+  "watch_time_change_pct": -34.8,
+  "conversations_started": 0,
+  "conversations_started_change_pct": -100.0,
+  "new_contacts": 0,
+  "new_contacts_change_pct": 0.0,
+  "daily": {
+   "views": [
+    71,
+    176,
+    141,
+    68,
+    116,
+    45,
+    125,
+    203,
+    287,
+    241,
+    160,
+    48,
+    103,
+    127,
+    39,
+    57,
+    47,
+    141,
+    13,
+    91,
+    196,
+    103,
+    81,
+    204,
+    74,
+    11,
+    84,
+    146
+   ],
+   "visits": [
+    16,
+    56,
+    29,
+    10,
+    8,
+    35,
+    21,
+    22,
+    45,
+    25,
+    22,
+    10,
+    46,
+    17,
+    44,
+    10,
+    0,
+    0,
+    1,
+    3,
+    17,
+    24,
+    16,
+    34,
+    0,
+    2,
+    36,
+    6
+   ],
+   "interactions": [
+    3,
+    5,
+    2,
+    4,
+    3,
+    1,
+    4,
+    12,
+    5,
+    5,
+    7,
+    2,
+    1,
+    4,
+    0,
+    1,
+    4,
+    4,
+    1,
+    0,
+    10,
+    2,
+    3,
+    6,
+    1,
+    0,
+    0,
+    7
+   ],
+   "video_3s": [
+    1,
+    0,
+    33,
+    5,
+    35,
+    9,
+    2,
+    5,
+    69,
+    9,
+    7,
+    1,
+    13,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    9,
+    39,
+    17,
+    5,
+    64,
+    16,
+    2,
+    4,
+    10
+   ]
+  },
+  "post_metric_note": "Facebook per-post figures in top_posts are VIEWS from the 'Nội dung mới đây' panel, not de-duplicated reach. The panel on 11 Nov lists six feed posts (9 Nov 02:01, 9 Nov 10:01, 9 Nov 22:00, 10 Nov 02:00, 10 Nov 10:01, 11 Nov 02:00) plus two stories (4 and 7 views). The 5 Nov and 6 Nov posts have left the panel and are not carried.",
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "9 Nov 02:01",
+    "t": "Natural stone has a front and a back — slab orientation and vein direction",
+    "reach": 46,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "10 Nov 10:01",
+    "t": "Move a window, change a ceiling height or shift a wall — what else does it affect?",
+    "reach": 44,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "9 Nov 22:00",
+    "t": "Before the TV goes on the wall, check the window — daylight, glare and screen position",
+    "reach": 40,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "10 Nov 02:00",
+    "t": "The best time to move a wall is before it exists — test layouts in the model first",
+    "reach": 35,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "9 Nov 10:01",
+    "t": "Not every task can move — float and the critical path",
+    "reach": 29,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "11 Nov 02:00",
+    "t": "Ceiling fans and pendants don't share well — one coordinated ceiling layout",
+    "reach": 0,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "stories_recent": [
+   {
+    "d": "10 Nov 10:01",
+    "views": 4,
+    "react": 0
+   },
+   {
+    "d": "6 Nov 12:08",
+    "views": 7,
+    "react": 0
+   }
+  ],
+  "new_post_note": "FACEBOOK posts on the Nội dung mới đây panel read live on 11 Nov: 6 feed posts and 2 stories. Per-post figures are VIEWS, not de-duplicated reach."
+ },
+ "instagram": {
+  "followers": 50,
+  "posts_total": 165,
+  "following": 37,
+  "views": {
+   "v": 1333,
+   "change_pct": -38.5
+  },
+  "reach": {
+   "v": 403,
+   "change_pct": 244.4
+  },
+  "interactions": {
+   "v": 50,
+   "change_pct": 28.2
+  },
+  "views_from_followers_pct": 37.6,
+  "views_from_non_followers_pct": 62.4,
+  "views_from_followers_change_pct": -43.0,
+  "views_from_non_followers_change_pct": 83.8,
+  "reach_from_followers": 16,
+  "reach_from_non_followers": 391,
+  "reach_from_followers_change_pct": -20.0,
+  "reach_from_non_followers_change_pct": 303.1,
+  "interactions_from_followers_pct": 76,
+  "interactions_from_non_followers_pct": 24,
+  "daily": {
+   "views": [
+    9,
+    57,
+    141,
+    24,
+    128,
+    18,
+    49,
+    52,
+    131,
+    65,
+    30,
+    25,
+    56,
+    17,
+    8,
+    40,
+    42,
+    28,
+    6,
+    63,
+    110,
+    44,
+    19,
+    79,
+    13,
+    2,
+    26,
+    51
+   ],
+   "reach": [
+    0,
+    4,
+    120,
+    9,
+    113,
+    5,
+    6,
+    8,
+    56,
+    9,
+    5,
+    3,
+    3,
+    3,
+    2,
+    5,
+    4,
+    2,
+    0,
+    2,
+    67,
+    13,
+    7,
+    46,
+    3,
+    1,
+    3,
+    7
+   ],
+   "interactions": [
+    0,
+    0,
+    4,
+    3,
+    0,
+    1,
+    4,
+    11,
+    5,
+    8,
+    2,
+    2,
+    0,
+    3,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    3,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "daily_note": "Instagram Views tile shows 1.3K (▼38.5%) with two unlabelled sub-figures, 512 and 821 views, which add to the 28-day series sum 1,333; no platform split is stored. The reach daily series is a per-day figure (not additive); tile reach 403 is de-duplicated.",
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "10 Nov 10:03",
+    "t": "Move a window, change a ceiling height or shift a wall (same-time post as Facebook)",
+    "reach": 63,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 10:03",
+    "t": "Knowing when your home will be finished (cash-flow + 4D (same-time post as Facebook)",
+    "reach": 53,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "9 Nov 10:01",
+    "t": "Not every task can move — the critical path (same-time post as Facebook)",
+    "reach": 5,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "9 Nov 02:03",
+    "t": "Natural stone has a front and a back (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 06:00",
+    "t": "If it's not in the model, it's not in the plan (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "10 Nov 10:01",
+    "t": "Before the TV goes on the wall, check the window (same-time post as Facebook)",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "10 Nov 02:00",
+    "t": "The best time to move a wall is before it exists (same-time post as Facebook)",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "all_recent_posts": [
+   {
+    "d": "10 Nov 10:03",
+    "t": "Move a window, change a ceiling height or shift a wall (same-time post as Facebook)",
+    "reach": 63,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 10:03",
+    "t": "Knowing when your home will be finished (cash-flow + 4D (same-time post as Facebook)",
+    "reach": 53,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "9 Nov 10:01",
+    "t": "Not every task can move — the critical path (same-time post as Facebook)",
+    "reach": 5,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "9 Nov 02:03",
+    "t": "Natural stone has a front and a back (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "5 Nov 06:00",
+    "t": "If it's not in the model, it's not in the plan (same-time post as Facebook)",
+    "reach": 4,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "10 Nov 10:01",
+    "t": "Before the TV goes on the wall, check the window (same-time post as Facebook)",
+    "reach": 4,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "10 Nov 02:00",
+    "t": "The best time to move a wall is before it exists (same-time post as Facebook)",
+    "reach": 3,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "11 Nov 02:00",
+    "t": "Ceiling fans and pendants don't share well (same-time post as Facebook)",
+    "reach": null,
+    "react": 0,
+    "com": 0,
+    "sh": 0
+   }
+  ],
+  "post_note": "Instagram per-post REACH is from the Meta Insights > Content panel (columns reach, likes, comments, shares), read live 11 Nov. The 11 Nov 02:00 post shows '--' reach (too new) and is excluded from top_posts. Posts total 165 and following 37 come from the public profile (og:description).",
+  "views_platform_split": null,
+  "profile_visits_daily": null
+ },
+ "youtube": {
+  "subscribers": 8,
+  "videos": 39,
+  "videos_long_form": 15,
+  "videos_shorts": 24,
+  "views_28d": {
+   "v": 516,
+   "change_pct": null
+  },
+  "views_change_text": "206 more than usual (YouTube Studio compares channel views against typical performance, no signed percentage)",
+  "watch_time_hours": {
+   "v": 0.8,
+   "change_pct": -35.0
+  },
+  "latest_video_views": {
+   "v": 12,
+   "change_pct": null
+  },
+  "views_now": 516,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YOUTUBE STUDIO WAS READ LIVE ON 2026-11-11 for Oct 13 - Nov 9, 2026, level with the Meta window.",
+  "new_upload": {
+   "title": "One Model for Every Conversation",
+   "published": "2026-11-10",
+   "views_first_19h55m": 12,
+   "avg_pct_viewed": "19.3%",
+   "likes": 0,
+   "format": "video (latest content card)"
+  },
+  "top_videos": [
+   {
+    "t": "Watch the Build Before It Begins",
+    "v": 212,
+    "dur": "0:13",
+    "ctr": "26.8%"
+   },
+   {
+    "t": "Project 251 – Rooftop Progress Update | DX Living",
+    "v": 198,
+    "dur": "0:37",
+    "ctr": "63.2%"
+   },
+   {
+    "t": "Project 251 - Behind the rooftop progress",
+    "v": 78,
+    "dur": "0:13",
+    "ctr": "26.4%"
+   },
+   {
+    "t": "One Model for Every Conversation",
+    "v": 8,
+    "dur": "0:05",
+    "ctr": "19.3%"
+   },
+   {
+    "t": "251 PROJECT - Cladding, Windows & Atrium Framing",
+    "v": 2,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Project 251 | LightEFX’s StarEFX™ fibre optic ceiling",
+    "v": 2,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "DX Living | How Project Control Keeps Decisions Moving",
+    "v": 2,
+    "dur": "0:23",
+    "ctr": "61.7%"
+   },
+   {
+    "t": "DX Living | With DX Living experience every space",
+    "v": 2,
+    "dur": "0:12",
+    "ctr": "40.6%"
+   },
+   {
+    "t": "DX Living - Present the project with clarity",
+    "v": 2,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Project 251 | From Timber to Detail: A Hand-Carved Teak Door",
+    "v": 2,
+    "dur": "0:29",
+    "ctr": "61.0%"
+   }
+  ],
+  "realtime_48h_views": 13,
+  "subscribers_change_28d": 1
+ },
+ "linkedin": {
+  "url": "https://www.linkedin.com/company/108389291/",
+  "followers": null,
+  "stale": true,
+  "visitors_stale": true,
+  "stale_note": "LINKEDIN NOT READ ON 2026-11-11: the company analytics pages could not be loaded in the Chrome profile on the Mac (signed out / authwall, as on 6 Nov). No credentials were entered. All LinkedIn figures are null, not carried forward.",
+  "new_followers_30d": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions": {
+   "v": null,
+   "change_pct": null
+  },
+  "reactions": {
+   "v": null,
+   "change_pct": null
+  },
+  "comments": {
+   "v": null,
+   "change_pct": null
+  },
+  "reposts": {
+   "v": null,
+   "change_pct": null
+  },
+  "page_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "unique_visitors": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions_prior": null,
+  "impressions_now": null,
+  "followers_by_location_count": null,
+  "followers_by_location_pct": null,
+  "visitors_by_job_function": null,
+  "page_views_by_device": null,
+  "window_advanced": false,
+  "custom_button_clicks": null,
+  "followers_by_location_note": "Not read (signed out).",
+  "visitors_by_job_function_note": "Not read (signed out)."
+ },
+ "notes": {
+  "en": [
+   "Facebook, Instagram and YouTube were read live via Chrome on 11 Nov (ICT). LinkedIn could NOT be read: Chrome is signed out of LinkedIn, so every LinkedIn figure is null. Meta and YouTube Studio are on the 13 Oct – 9 Nov window; the previous snapshot was 6 Nov (8 Oct – 4 Nov window).",
+   "FACEBOOK: views 3198 (▼22.7%), viewers 209 (▼28.2%), interactions 97 (▼47.3%), 3-second views 357 (▼7.3%), visits 555 (▲12.6%), watch time 1h 57m (▼34.8%), 3 follows / 0 unfollows (net 3). Link clicks not read (null). Followers 119 (unchanged).",
+   "INSTAGRAM: views 1333 (▼38.5%), reach 403 (▲244.4%), interactions 50 (▲28.2%). Followers 50, following 37, posts 165. The 10 Nov 10:03 'Move a window' post reached 63 accounts and the 5 Nov 10:03 cash-flow/4D post 53.",
+   "YOUTUBE: views 516 (206 more than usual), watch time 0.8 h (▼35%), subscribers 8, 39 videos (15 long-form, 24 Shorts). The 2 Nov Short 'Watch the Build Before It Begins' still leads the window with 212 views; the 10 Nov video 'One Model for Every Conversation' has 12 views in its first 19 h 55 min.",
+   "LINKEDIN: not read (signed out) — null. Total followers of the three readable channels: 177."
+  ],
+  "vi": [
+   "Facebook, Instagram và YouTube được đọc trực tiếp qua Chrome ngày 11/11 (ICT). KHÔNG đọc được LinkedIn: Chrome đang đăng xuất LinkedIn nên mọi số LinkedIn là null. Meta và YouTube Studio cùng cửa sổ 13/10 – 9/11; snapshot trước là 6/11 (cửa sổ 8/10 – 4/11).",
+   "FACEBOOK: views 3.198 (▼22,7%), người xem 209 (▼28,2%), tương tác 97 (▼47,3%), view 3 giây 357 (▼7,3%), lượt truy cập 555 (▲12,6%), thời gian xem 1 giờ 57 phút (▼34,8%), 3 theo dõi / 0 bỏ theo dõi (ròng 3). Click liên kết không đọc (null). Người theo dõi 119 (không đổi).",
+   "INSTAGRAM: views 1.333 (▼38,5%), reach 403 (▲244,4%), tương tác 50 (▲28,2%). Người theo dõi 50, đang theo dõi 37, 165 bài. Bài 'Move a window' 10/11 10:03 tiếp cận 63 tài khoản và bài dòng tiền/4D 5/11 10:03 là 53.",
+   "YOUTUBE: views 516 (206 more than usual), giờ xem 0,8 (▼35%), 8 người đăng ký, 39 video (15 dài, 24 Shorts). Short 2/11 'Watch the Build Before It Begins' vẫn dẫn đầu cửa sổ với 212 view; video 10/11 'One Model for Every Conversation' có 12 view trong 19 giờ 55 phút đầu.",
+   "LINKEDIN: không đọc được (đăng xuất) — null. Tổng follower của ba kênh đọc được: 177."
+  ]
+ }
+}
