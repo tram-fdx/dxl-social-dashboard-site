@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DXL Marketing Hub</title>
+<title>DXL + FDX Marketing Hub</title>
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f1115}
-  #bar{display:flex;align-items:center;gap:4px;height:52px;padding:0 14px;background:#171a21;border-bottom:1px solid #262b36;position:sticky;top:0;z-index:10}
-  #brand{color:#fff;font-weight:600;font-size:14px;margin-right:16px;letter-spacing:.02em}
-  .tab{appearance:none;border:0;background:transparent;color:#9aa4b2;font-size:13px;font-weight:500;padding:8px 16px;border-radius:8px;cursor:pointer;transition:.15s}
+  #bar{display:flex;align-items:center;gap:4px;min-height:52px;padding:6px 14px;background:#171a21;border-bottom:1px solid #262b36;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+  #brands{display:flex;gap:2px;background:#0f1115;border:1px solid #2b313d;border-radius:9px;padding:3px;margin-right:14px}
+  .brand{appearance:none;border:0;background:transparent;color:#9aa4b2;font-size:13px;font-weight:700;padding:6px 12px;border-radius:7px;cursor:pointer;letter-spacing:.03em}
+  .brand.on{background:#e5dcc7;color:#171a21}
+  .tab{appearance:none;border:0;background:transparent;color:#9aa4b2;font-size:13px;font-weight:500;padding:8px 14px;border-radius:8px;cursor:pointer;transition:.15s}
   .tab:hover{background:#20242e;color:#d7dde6}
   .tab.on{background:#2b6cf6;color:#fff}
   #spacer{flex:1}
   #open,#xlsx{color:#7f8b9c;font-size:12px;text-decoration:none;padding:6px 10px;border:1px solid #2b313d;border-radius:7px}
   #xlsx{margin-right:10px}
   #open:hover,#xlsx:hover{color:#cfd6e0;border-color:#414a59}
-  #open:hover{color:#d7dde6;border-color:#3d4553}
   #stage{position:relative;height:calc(100% - 52px)}
   iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;display:none}
   iframe.on{display:block}
@@ -25,85 +26,71 @@
 <body>
 
 <div id="bar">
-  <span id="brand">DX Living · Marketing Hub</span>
-  <button class="tab on" data-i="0">Social</button>
-  <button class="tab" data-i="1">SEO</button>
-  <button class="tab" data-i="2">SEO Weekly</button>
-  <button class="tab" data-i="3">Website Audit</button>
-  <button class="tab" data-i="4">Impact Funnel</button>
+  <div id="brands">
+    <button class="brand" data-b="dxl">DX Living</button>
+    <button class="brand" data-b="fdx">FeelDX</button>
+  </div>
+  <span id="tabs"></span>
   <span id="spacer"></span>
-  <a id="xlsx" href="https://tram-fdx.github.io/dxl-social-dashboard-site/dxl-metrics.xlsx"
-     download title="Tải toàn bộ số liệu 3 báo cáo dưới dạng Excel — xuất lại mỗi sáng">↓ Excel</a>
+  <a id="xlsx" download title="Tải số liệu dạng Excel">↓ Excel</a>
   <a id="open" target="_blank" rel="noopener">Open in new tab ↗</a>
 </div>
-
-<div id="stage">
-  <iframe class="on" src="https://tram-fdx.github.io/dxl-social-dashboard-site/"></iframe>
-  <iframe data-src="https://tram-fdx.github.io/dxliving-seo-report/"></iframe>
-  <!-- Tab nay khong hardcode mot tuan nua: script ben duoi doc weekly/index.json de lay tuan moi nhat.
-       data-src chi la fallback khi fetch that bai. -->
-  <iframe id="wkFrame"
-          data-weekly="https://tram-fdx.github.io/dxliving-seo-report/weekly/"
-          data-src="https://tram-fdx.github.io/dxliving-seo-report/weekly/2026-10-16.html"></iframe>
-  <iframe data-src="https://tram-fdx.github.io/dxl-seo-audit/"></iframe>
-  <iframe data-src="https://tram-fdx.github.io/dxl-impact-funnel/"></iframe>
-</div>
+<div id="stage"></div>
 
 <script>
-  const tabs = [...document.querySelectorAll('.tab')];
-  const frames = [...document.querySelectorAll('iframe')];
-  const openLink = document.getElementById('open');
-  const urls = frames.map(f => f.src || f.dataset.src);
+  // Một link cho cả hai thương hiệu. Hash: #dxl/social, #fdx/seo ... (hash cũ #seo vẫn hiểu là DXL).
+  const G = 'https://tram-fdx.github.io/';
+  const HUB = {
+    dxl: { xlsx: G + 'dxl-social-dashboard-site/dxl-metrics.xlsx', tabs: [
+      ['social', 'Social', G + 'dxl-social-dashboard-site/'],
+      ['seo', 'SEO', G + 'dxliving-seo-report/'],
+      ['weekly', 'SEO Weekly', G + 'dxliving-seo-report/weekly/', 'weekly'],
+      ['audit', 'Website Audit', G + 'dxl-seo-audit/'],
+      ['funnel', 'Impact Funnel', G + 'dxl-impact-funnel/'] ] },
+    fdx: { xlsx: null, tabs: [
+      ['social', 'Social', G + 'feeldx-report/feeldx-social.html'],
+      ['seo', 'SEO', G + 'feeldx-report/feeldx-seo-report.html'],
+      ['weekly', 'SEO Weekly', G + 'feeldx-report/feeldx-seo-weekly.html'],
+      ['audit', 'Website Audit', G + 'feeldx-report/feeldx-website-audit.html'],
+      ['funnel', 'Impact Funnel', G + 'feeldx-report/feeldx-impact-funnel.html'] ] }
+  };
+  const stage = document.getElementById('stage'), tabsEl = document.getElementById('tabs');
+  const openLink = document.getElementById('open'), xlsx = document.getElementById('xlsx');
+  const frames = {};   // "dxl/social" -> iframe (nạp lười, giữ lại khi chuyển tab)
+  const weeklyCache = {};
 
-  function show(i) {
-    tabs.forEach((t, n) => t.classList.toggle('on', n === i));
-    frames.forEach((f, n) => {
-      f.classList.toggle('on', n === i);
-      if (n === i && !f.src) f.src = f.dataset.src; // lazy load
-    });
-    openLink.href = urls[i];
-    location.hash = ['social', 'seo', 'weekly', 'audit', 'funnel'][i];
+  async function resolve(t) {
+    if (t[3] !== 'weekly') return t[2];
+    if (weeklyCache[t[2]]) return weeklyCache[t[2]];
+    try {   // tab Weekly luôn mở tuần mới nhất
+      const j = await (await fetch(t[2] + 'index.json', { cache: 'no-store' })).json();
+      const id = j.latest || (j.weeks || []).map(w => w.id).sort().pop();
+      if (id) return (weeklyCache[t[2]] = t[2] + id + '.html');
+    } catch (e) {}
+    return t[2];
   }
 
-  tabs.forEach(t => t.onclick = () => show(+t.dataset.i));
-  openLink.href = urls[0];
-
-  // Tab "SEO Weekly" luon mo tuan moi nhat.
-  // Truoc day URL nay bi hardcode nen bao cao dung o tuan 04/09 du da co tuan moi.
-  // The weekly tab always opens the newest week; this URL used to be hardcoded.
-  (async () => {
-    const f = document.getElementById('wkFrame');
-    if (!f) return;
-    const base = f.dataset.weekly;
-    try {
-      const r = await fetch(base + 'index.json', { cache: 'no-store' });
-      if (!r.ok) return;
-      const j = await r.json();
-      const latest = j.latest ||
-        (Array.isArray(j.weeks) && j.weeks.length
-          ? j.weeks.map(w => w.id).sort().pop()
-          : null);
-      if (!latest) return;
-      const url = base + latest + '.html';
-      if (url === urls[2]) return;
-      urls[2] = url;
-      f.dataset.src = url;
-      if (f.src) f.src = url;                          // tab dang mo thi nap lai
-      if (tabs[2].classList.contains('on')) openLink.href = url;
-    } catch (e) { /* giu nguyen fallback trong data-src */ }
-  })();
-
-  const start = ['social', 'seo', 'weekly', 'audit', 'funnel'].indexOf(location.hash.slice(1));
-  if (start > 0) show(start);
-
-  // Iframes chi load duoc khi trang nay chay tren cung origin tram-fdx.github.io.
-  if (location.protocol === 'file:') {
-    const w = document.createElement('div');
-    w.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#9aa4b2;font-size:14px;line-height:1.7;padding:40px;background:#0f1115';
-    w.innerHTML = 'Trang nay dang mo bang file:// nen 3 dashboard khong nhung duoc.<br>Deploy len <b>tram-fdx.github.io</b> (cung origin) roi mo lai la chay binh thuong.';
-    document.getElementById('stage').appendChild(w);
+  async function show(b, key) {
+    const hub = HUB[b] || HUB.dxl;
+    const t = hub.tabs.find(x => x[0] === key) || hub.tabs[0];
+    document.querySelectorAll('.brand').forEach(x => x.classList.toggle('on', x.dataset.b === b));
+    tabsEl.innerHTML = hub.tabs.map(x => `<button class="tab${x === t ? ' on' : ''}" data-k="${x[0]}">${x[1]}</button>`).join('');
+    tabsEl.querySelectorAll('.tab').forEach(x => x.onclick = () => show(b, x.dataset.k));
+    const id = b + '/' + t[0], url = await resolve(t);
+    if (!frames[id]) { const f = document.createElement('iframe'); f.src = url; stage.appendChild(f); frames[id] = f; }
+    Object.entries(frames).forEach(([k, f]) => f.classList.toggle('on', k === id));
+    openLink.href = url;
+    xlsx.style.display = hub.xlsx ? '' : 'none'; if (hub.xlsx) xlsx.href = hub.xlsx;
+    history.replaceState(null, '', '#' + id);
+    document.title = (b === 'fdx' ? 'FeelDX' : 'DX Living') + ' · ' + t[1] + ' — Marketing Hub';
   }
+
+  document.querySelectorAll('.brand').forEach(x => x.onclick = () => {
+    const cur = (location.hash.slice(1).split('/')[1]) || 'social';
+    show(x.dataset.b, cur);
+  });
+  const h = location.hash.slice(1).split('/');
+  if (HUB[h[0]]) show(h[0], h[1]); else show('dxl', h[0]);
 </script>
-
 </body>
 </html>
