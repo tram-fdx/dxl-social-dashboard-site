@@ -1,0 +1,706 @@
+{
+ "date": "2026-11-15",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "provenance": "Automated: Meta Graph API, YouTube Studio via Chrome on Mac, LinkedIn API or manual CSV (GitHub Actions, pipeline v1).",
+ "window": {
+  "vi": "28 ngày qua: 17/10 – 13/11/2026",
+  "en": "Last 28 days: 17 Oct – 13 Nov 2026"
+ },
+ "windows": {
+  "meta": "2026-10-17 → 2026-11-13",
+  "youtube": "2026-10-17 → 2026-11-13",
+  "linkedin": "2026-10-17 → 2026-11-13"
+ },
+ "facebook": {
+  "followers": 119,
+  "page_likes": 119,
+  "views": {
+   "v": 3272,
+   "change_pct": -15.9
+  },
+  "viewers": {
+   "v": 702,
+   "change_pct": -23.9
+  },
+  "visits": {
+   "v": 485,
+   "change_pct": 5.0
+  },
+  "interactions": {
+   "v": 204,
+   "change_pct": -32.5
+  },
+  "video_3s": {
+   "v": 369,
+   "change_pct": 18.3
+  },
+  "follows": 3,
+  "unfollows": 0,
+  "net_new_followers": {
+   "v": 3,
+   "change_pct": null
+  },
+  "daily_dates": [
+   "2026-10-17",
+   "2026-10-18",
+   "2026-10-19",
+   "2026-10-20",
+   "2026-10-21",
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
+   "2026-10-26",
+   "2026-10-27",
+   "2026-10-28",
+   "2026-10-29",
+   "2026-10-30",
+   "2026-10-31",
+   "2026-11-01",
+   "2026-11-02",
+   "2026-11-03",
+   "2026-11-04",
+   "2026-11-05",
+   "2026-11-06",
+   "2026-11-07",
+   "2026-11-08",
+   "2026-11-09",
+   "2026-11-10",
+   "2026-11-11",
+   "2026-11-12",
+   "2026-11-13"
+  ],
+  "daily": {
+   "views": [
+    116,
+    45,
+    125,
+    203,
+    287,
+    241,
+    160,
+    48,
+    103,
+    127,
+    39,
+    57,
+    47,
+    141,
+    13,
+    91,
+    196,
+    103,
+    81,
+    204,
+    74,
+    11,
+    84,
+    147,
+    137,
+    108,
+    201,
+    83
+   ],
+   "visits": [
+    8,
+    35,
+    21,
+    22,
+    45,
+    25,
+    22,
+    10,
+    46,
+    17,
+    44,
+    10,
+    0,
+    0,
+    1,
+    3,
+    17,
+    24,
+    16,
+    34,
+    0,
+    2,
+    36,
+    6,
+    7,
+    10,
+    24,
+    0
+   ],
+   "interactions": [
+    4,
+    3,
+    6,
+    18,
+    12,
+    31,
+    14,
+    3,
+    5,
+    13,
+    0,
+    6,
+    7,
+    6,
+    1,
+    2,
+    9,
+    6,
+    8,
+    6,
+    1,
+    0,
+    4,
+    20,
+    3,
+    8,
+    3,
+    5
+   ],
+   "video_3s": [
+    35,
+    9,
+    2,
+    5,
+    69,
+    9,
+    7,
+    1,
+    13,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    9,
+    39,
+    18,
+    5,
+    64,
+    16,
+    2,
+    4,
+    10,
+    7,
+    15,
+    22,
+    6
+   ]
+  },
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "2026-10-22 08:40",
+    "t": "A finish is more than a visual choice.\n\nStone, tapware, lighting and joinery need to look right in the space, but each selection is also a c",
+    "url": "https://www.facebook.com/122172046520990680/posts/122169165848990680",
+    "reach": 206,
+    "react": 3,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "2026-10-21 08:01",
+    "t": "𝟮𝟱𝟭 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 - 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗨𝗣𝗗𝗔𝗧𝗘\n\nThe Project 251 rooftop is becoming a place to gather: solar panels, built in planters and skylights on the w",
+    "url": "https://www.facebook.com/reel/2311491829697737/",
+    "reach": 157,
+    "react": 4,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-02 11:32",
+    "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
+    "url": "https://www.facebook.com/reel/2849470955505909/",
+    "reach": 119,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-10-26 08:00",
+    "t": "The programme says one thing. Does the site?\n\nA programme shows what should be happening. The site shows what is actually happening. On a co",
+    "url": "https://www.facebook.com/122172046520990680/posts/122169637730990680",
+    "reach": 114,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-12 03:02",
+    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
+    "url": "https://www.facebook.com/reel/2412210922646426/",
+    "reach": 111,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-05 03:01",
+    "t": "Knowing when your home will be finished is only part of the picture. Knowing when each stage needs to be funded matters just as much.\n\nAs pa",
+    "url": "https://www.facebook.com/reel/1865533551307017/",
+    "reach": 79,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-11-10 03:01",
+    "t": "Move a window, change a ceiling height or shift a wall. What else does it affect?\n\nA single decision rarely stays in one place. It flows thr",
+    "url": "https://www.facebook.com/reel/1106789358928290/",
+    "reach": 68,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-11-03 23:00",
+    "t": "A door swing is a decision.\n\nWhich way a door opens affects where the light switches sit, how furniture fits and how people move through a r",
+    "url": "https://www.facebook.com/122172046520990680/posts/122170801796990680",
+    "reach": 67,
+    "react": 1,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "2026-10-28 08:10",
+    "t": "Every project needs a memory.\n\nWhen a decision is made, the team needs to know four things: what was agreed, when it happened, who confirmed",
+    "url": "https://www.facebook.com/122172046520990680/posts/122169859958990680",
+    "reach": 65,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-10-23 09:30",
+    "t": "The real programme lives between the tasks.\n\nA construction activity rarely happens in isolation. It may depend on an earlier stage being co",
+    "url": "https://www.facebook.com/122172046520990680/posts/122169293696990680",
+    "reach": 64,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   }
+  ]
+ },
+ "instagram": {
+  "followers": 51,
+  "following": 37,
+  "posts_total": 169,
+  "views": {
+   "v": 836,
+   "change_pct": 88.7
+  },
+  "reach": {
+   "v": 361,
+   "change_pct": 107.5
+  },
+  "interactions": {
+   "v": 51,
+   "change_pct": 18.6
+  },
+  "profile_views": {
+   "v": 26,
+   "change_pct": 18.2
+  },
+  "views_from_followers_pct": 45.2,
+  "views_from_non_followers_pct": 54.8,
+  "reach_from_followers_pct": 4.7,
+  "reach_from_non_followers_pct": 95.3,
+  "reach_from_followers": 17,
+  "reach_from_non_followers": 344,
+  "daily": {
+   "reach": [
+    113,
+    5,
+    6,
+    8,
+    56,
+    9,
+    5,
+    3,
+    3,
+    3,
+    2,
+    5,
+    4,
+    2,
+    0,
+    2,
+    67,
+    13,
+    7,
+    46,
+    3,
+    1,
+    3,
+    7,
+    69,
+    7,
+    11,
+    4
+   ],
+   "views": [
+    127,
+    9,
+    28,
+    15,
+    71,
+    20,
+    21,
+    21,
+    34,
+    8,
+    2,
+    12,
+    9,
+    3,
+    0,
+    36,
+    83,
+    25,
+    18,
+    52,
+    11,
+    2,
+    14,
+    44,
+    79,
+    23,
+    40,
+    29
+   ],
+   "interactions": [
+    0,
+    1,
+    4,
+    11,
+    5,
+    8,
+    2,
+    2,
+    0,
+    3,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    3,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    3,
+    1
+   ]
+  },
+  "daily_dates": [
+   "2026-10-17",
+   "2026-10-18",
+   "2026-10-19",
+   "2026-10-20",
+   "2026-10-21",
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
+   "2026-10-26",
+   "2026-10-27",
+   "2026-10-28",
+   "2026-10-29",
+   "2026-10-30",
+   "2026-10-31",
+   "2026-11-01",
+   "2026-11-02",
+   "2026-11-03",
+   "2026-11-04",
+   "2026-11-05",
+   "2026-11-06",
+   "2026-11-07",
+   "2026-11-08",
+   "2026-11-09",
+   "2026-11-10",
+   "2026-11-11",
+   "2026-11-12",
+   "2026-11-13"
+  ],
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "2026-10-17 08:30",
+    "t": "𝟮𝟱𝟭 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 - 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗨𝗣𝗗𝗔𝗧𝗘\n\nThe rooftop brings together a pool house, sunken fire lounge, gym, yoga studio, sauna and spa, alongside a la",
+    "url": "https://www.instagram.com/reel/DelrtI4DdSe/",
+    "type": "VIDEO",
+    "reach": 122,
+    "views": 133,
+    "react": 2,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-02 11:33",
+    "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
+    "url": "https://www.instagram.com/reel/DfPNJ5wFMP4/",
+    "type": "VIDEO",
+    "reach": 77,
+    "views": 83,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-10 03:03",
+    "t": "Move a window, change a ceiling height or shift a wall. What else does it affect?\n\nA single decision rarely stays in one place. It flows thr",
+    "url": "https://www.instagram.com/reel/Dfi5Fz4lRuL/",
+    "type": "VIDEO",
+    "reach": 72,
+    "views": 78,
+    "react": 2,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-10-21 08:01",
+    "t": "𝟮𝟱𝟭 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 - 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗨𝗣𝗗𝗔𝗧𝗘\n\nThe Project 251 rooftop is becoming a place to gather: solar panels, built in planters and skylights on the w",
+    "url": "https://www.instagram.com/reel/Dev7jlolFtk/",
+    "type": "VIDEO",
+    "reach": 64,
+    "views": 79,
+    "react": 3,
+    "com": 0,
+    "sh": 1,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-05 03:03",
+    "t": "Knowing when your home will be finished is only part of the picture. Knowing when each stage needs to be funded matters just as much.\n\nAs pa",
+    "url": "https://www.instagram.com/reel/DfWBIk5lRUP/",
+    "type": "VIDEO",
+    "reach": 56,
+    "views": 66,
+    "react": 4,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-12 03:02",
+    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
+    "url": "https://www.instagram.com/reel/DfoCq0CnAhV/",
+    "type": "VIDEO",
+    "reach": 13,
+    "views": 20,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-10-20 09:30",
+    "t": "The shutdown is on the programme. Is your decision list? A planned pause is one thing. Knowing what needs to be resolved before work resumes",
+    "url": "https://www.instagram.com/p/Detg8BCCb7b/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 12,
+    "views": 22,
+    "react": 4,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-10-22 08:40",
+    "t": "A finish is more than a visual choice.\n\nStone, tapware, lighting and joinery need to look right in the space, but each selection is also a c",
+    "url": "https://www.instagram.com/p/DeykzShDEBQ/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 10,
+    "views": 17,
+    "react": 5,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-10-19 10:30",
+    "t": "What happens when craft meets coordination?\n\nThe Klaylife Valentine begins with a handmade process: clay beads are hand rolled, kiln fired, ",
+    "url": "https://www.instagram.com/p/DerDAFBDP9Q/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 10,
+    "views": 26,
+    "react": 4,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-09 03:01",
+    "t": "Not every task can move. The critical path explains why.\n\nTwo activities can run late by the same number of days and have completely differe",
+    "url": "https://www.instagram.com/p/DfgUYFJCiee/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 8,
+    "views": 23,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   }
+  ]
+ },
+ "youtube": {
+  "subscribers": 8,
+  "videos": 40,
+  "videos_long_form": 15,
+  "videos_shorts": 25,
+  "views_28d": {
+   "v": 530,
+   "change_pct": null
+  },
+  "views_change_text": "220 more than usual (YouTube Studio compares channel views against typical performance, no signed percentage)",
+  "watch_time_hours": {
+   "v": 0.8,
+   "change_pct": null
+  },
+  "latest_video_views": {
+   "v": 7,
+   "change_pct": null
+  },
+  "views_now": 530,
+  "views_prior": null,
+  "shorts_views": null,
+  "long_form_views": null,
+  "stale": false,
+  "stale_note": "YOUTUBE STUDIO WAS READ LIVE ON 2026-11-13 for Oct 15 - Nov 11, 2026, level with the Meta window.",
+  "top_videos": [
+   {
+    "t": "Watch the Build Before It Begins",
+    "v": 212,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Project 251 – Rooftop Progress Update | DX Living",
+    "v": 199,
+    "dur": "—",
+    "ctr": "—"
+   },
+   {
+    "t": "Project 251 - Behind the rooftop progress",
+    "v": 78,
+    "dur": "—",
+    "ctr": "—"
+   }
+  ],
+  "realtime_48h_views": 10,
+  "subscribers_change_28d": 1,
+  "new_upload": {
+   "title": "Is the Project Where It Should Be?",
+   "published": "2026-11-12",
+   "views_first_19h54m": 7,
+   "avg_pct_viewed": "0%",
+   "likes": 0
+  }
+ },
+ "linkedin": {
+  "url": "https://www.linkedin.com/company/108389291/",
+  "followers": null,
+  "stale": true,
+  "visitors_stale": true,
+  "stale_note": "LINKEDIN NOT READ ON 2026-11-13: Chrome on the Mac is signed out of LinkedIn (admin analytics redirected to sign-in). No credentials entered. All LinkedIn figures are null and are not carried forward.",
+  "new_followers_30d": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions": {
+   "v": null,
+   "change_pct": null
+  },
+  "reactions": {
+   "v": null,
+   "change_pct": null
+  },
+  "comments": {
+   "v": null,
+   "change_pct": null
+  },
+  "reposts": {
+   "v": null,
+   "change_pct": null
+  },
+  "page_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "unique_visitors": {
+   "v": null,
+   "change_pct": null
+  },
+  "impressions_prior": null,
+  "impressions_now": null,
+  "followers_by_location_count": null,
+  "followers_by_location_pct": null,
+  "visitors_by_job_function": null,
+  "page_views_by_device": null,
+  "window_advanced": false,
+  "custom_button_clicks": null,
+  "followers_by_location_note": "Not read (signed out).",
+  "visitors_by_job_function_note": "Not read (signed out).",
+  "source": "carried forward (no API token / CSV)"
+ },
+ "errors": [],
+ "commentary": {
+  "vi": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 51; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 51; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "by": "template"
+ },
+ "commentary_input": {
+  "report": "Social media",
+  "summary": {
+   "today": {
+    "fb_followers": 119,
+    "fb_views": 3272,
+    "fb_interactions": 204,
+    "fb_visits": 485,
+    "ig_followers": 51,
+    "ig_views": 836,
+    "ig_reach": 361,
+    "ig_interactions": 51,
+    "yt_subscribers": 8,
+    "yt_views_28d": 530,
+    "li_followers": null,
+    "li_impressions": null
+   },
+   "previous": {
+    "fb_followers": 119,
+    "fb_views": 3197,
+    "fb_interactions": 94,
+    "fb_visits": 500,
+    "ig_followers": 51,
+    "ig_views": 1385,
+    "ig_reach": 470,
+    "ig_interactions": 54,
+    "yt_subscribers": 8,
+    "yt_views_28d": 530,
+    "li_followers": null,
+    "li_impressions": null
+   },
+   "window": "2026-10-17 → 2026-11-13",
+   "collection_errors": []
+  }
+ },
+ "notes": {
+  "vi": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 51; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 51; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51."
+ }
+}
