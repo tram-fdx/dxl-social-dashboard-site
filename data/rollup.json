@@ -1,6 +1,6 @@
 {
  "derived": true,
- "generated_at": "2026-11-14",
+ "generated_at": "2026-11-15",
  "grain_legend": {
   "day": "Số đo của đúng ngày đó. CỘNG DỒN ĐƯỢC trong khoảng.",
   "state": "Chỉ số trạng thái tại thời điểm quét. Lấy trung bình hoặc giá trị cuối kỳ, không cộng.",
@@ -6392,7 +6392,7 @@
   "li_followers": {
    "grain": "state",
    "label": "LinkedIn — followers",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -6670,13 +6670,17 @@
     {
      "d": "2026-10-29",
      "v": 141
+    },
+    {
+     "d": "2026-11-15",
+     "v": 143
     }
    ]
   },
   "li_impressions_28d": {
    "grain": "window28",
    "label": "LinkedIn — impressions (28n)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -6954,13 +6958,17 @@
     {
      "d": "2026-10-29",
      "v": 1268
+    },
+    {
+     "d": "2026-11-15",
+     "v": 1136
     }
    ]
   },
   "li_page_views_28d": {
    "grain": "window28",
    "label": "LinkedIn — lượt xem trang (28n)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -7238,13 +7246,17 @@
     {
      "d": "2026-10-29",
      "v": 82
+    },
+    {
+     "d": "2026-11-15",
+     "v": 47
     }
    ]
   },
   "li_reactions_28d": {
    "grain": "window28",
    "label": "LinkedIn — reactions (28n)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -7522,13 +7534,17 @@
     {
      "d": "2026-10-29",
      "v": 39
+    },
+    {
+     "d": "2026-11-15",
+     "v": 25
     }
    ]
   },
   "li_unique_visitors_28d": {
    "grain": "window28",
    "label": "LinkedIn — khách truy cập (28n)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 79,
    "points": [
     {
@@ -7806,6 +7822,10 @@
     {
      "d": "2026-10-29",
      "v": 35
+    },
+    {
+     "d": "2026-11-15",
+     "v": 17
     }
    ]
   },
