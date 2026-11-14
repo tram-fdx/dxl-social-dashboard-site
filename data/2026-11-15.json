@@ -9,7 +9,7 @@
  "windows": {
   "meta": "2026-10-17 → 2026-11-13",
   "youtube": "2026-10-17 → 2026-11-13",
-  "linkedin": "2026-10-17 → 2026-11-13"
+  "linkedin": "2026-10-14 → 2026-11-12"
  },
  "facebook": {
   "followers": 119,
@@ -589,55 +589,39 @@
   "source": "YouTube Studio (Chrome trên Mac)"
  },
  "linkedin": {
-  "url": "https://www.linkedin.com/company/108389291/",
-  "followers": null,
-  "stale": true,
-  "visitors_stale": true,
-  "stale_note": "LINKEDIN NOT READ ON 2026-11-13: Chrome on the Mac is signed out of LinkedIn (admin analytics redirected to sign-in). No credentials entered. All LinkedIn figures are null and are not carried forward.",
-  "new_followers_30d": {
-   "v": null,
-   "change_pct": null
-  },
+  "source": "LinkedIn Page analytics (Chrome trên Mac)",
+  "stale": false,
+  "followers": 143,
+  "new_followers_28d": 10,
   "impressions": {
-   "v": null,
-   "change_pct": null
+   "v": 1136,
+   "change_pct": -9.5
   },
   "reactions": {
-   "v": null,
-   "change_pct": null
+   "v": 25,
+   "change_pct": -34.2
   },
   "comments": {
-   "v": null,
+   "v": 0,
    "change_pct": null
   },
   "reposts": {
-   "v": null,
+   "v": 0,
    "change_pct": null
   },
   "page_views": {
-   "v": null,
-   "change_pct": null
+   "v": 47,
+   "change_pct": -35.6
   },
   "unique_visitors": {
-   "v": null,
-   "change_pct": null
-  },
-  "impressions_prior": null,
-  "impressions_now": null,
-  "followers_by_location_count": null,
-  "followers_by_location_pct": null,
-  "visitors_by_job_function": null,
-  "page_views_by_device": null,
-  "window_advanced": false,
-  "custom_button_clicks": null,
-  "followers_by_location_note": "Not read (signed out).",
-  "visitors_by_job_function_note": "Not read (signed out).",
-  "source": "carried forward (no API token / CSV)"
+   "v": 17,
+   "change_pct": -45.2
+  }
  },
  "errors": [],
  "commentary": {
-  "vi": "So với 28 ngày trước đó: Instagram tăng mạnh, lượt xem 836 (+88,7%), reach 361 (+107,5%), tương tác 51 (+18,6%). Facebook giảm: lượt xem 3.272 (-15,9%), tương tác 204 (-32,5%), dù lượt vào trang tăng nhẹ lên 485 (+5%) và video 3 giây tăng 18,3%. YouTube giữ 530 lượt xem, 8 người đăng ký. Việc nên làm: đưa các nội dung đang chạy tốt trên Instagram sang Facebook để kéo lại tương tác.",
-  "en": "Versus the prior 28 days: Instagram grew strongly, with 836 views (+88.7%), 361 reach (+107.5%) and 51 interactions (+18.6%). Facebook fell: 3,272 views (-15.9%) and 204 interactions (-32.5%), although page visits edged up to 485 (+5%) and 3-second video views rose 18.3%. YouTube holds at 530 views and 8 subscribers. Next: reuse the content that is working on Instagram on Facebook to win back engagement.",
+  "vi": "So với 28 ngày trước đó: Instagram tăng mạnh, lượt xem 836 (+88,7%), reach 361 (+107,5%), tương tác 51 (+18,6%). Facebook giảm: lượt xem 3.272 (-15,9%), tương tác 204 (-32,5%), dù lượt vào trang tăng nhẹ lên 485 (+5%). LinkedIn cũng giảm: 1.136 lượt hiển thị (-9,5%), 25 reaction (-34,2%), 47 lượt xem trang (-35,6%), có 143 người theo dõi (+10 trong 30 ngày). YouTube giữ 530 lượt xem. Việc nên làm: đưa nội dung đang chạy tốt trên Instagram sang Facebook và LinkedIn, đăng LinkedIn ít nhất mỗi tuần một bài.",
+  "en": "Versus the prior 28 days: Instagram grew strongly, with 836 views (+88.7%), 361 reach (+107.5%) and 51 interactions (+18.6%). Facebook fell: 3,272 views (-15.9%) and 204 interactions (-32.5%), though page visits edged up to 485 (+5%). LinkedIn also dipped: 1,136 impressions (-9.5%), 25 reactions (-34.2%) and 47 page views (-35.6%), with 143 followers (+10 in 30 days). YouTube holds at 530 views. Next: reuse the content working on Instagram on Facebook and LinkedIn, and post on LinkedIn at least weekly.",
   "by": "Claude (Mac)"
  },
  "commentary_input": {
@@ -654,8 +638,23 @@
     "ig_interactions": 51,
     "yt_subscribers": 8,
     "yt_views_28d": 530,
-    "li_followers": null,
-    "li_impressions": null
+    "li_followers": 143,
+    "li_impressions": 1136,
+    "change_pct_vs_prior_28d": {
+     "fb_views": -15.9,
+     "fb_viewers": -23.9,
+     "fb_visits": 5.0,
+     "fb_interactions": -32.5,
+     "fb_video_3s": 18.3,
+     "ig_views": 88.7,
+     "ig_reach": 107.5,
+     "ig_interactions": 18.6,
+     "ig_profile_views": 18.2,
+     "li_impressions": -9.5,
+     "li_reactions": -34.2,
+     "li_page_views": -35.6,
+     "li_unique_visitors": -45.2
+    }
    },
    "previous": {
     "fb_followers": 119,
@@ -676,7 +675,7 @@
   }
  },
  "notes": {
-  "vi": "So với 28 ngày trước đó: Instagram tăng mạnh, lượt xem 836 (+88,7%), reach 361 (+107,5%), tương tác 51 (+18,6%). Facebook giảm: lượt xem 3.272 (-15,9%), tương tác 204 (-32,5%), dù lượt vào trang tăng nhẹ lên 485 (+5%) và video 3 giây tăng 18,3%. YouTube giữ 530 lượt xem, 8 người đăng ký. Việc nên làm: đưa các nội dung đang chạy tốt trên Instagram sang Facebook để kéo lại tương tác.",
-  "en": "Versus the prior 28 days: Instagram grew strongly, with 836 views (+88.7%), 361 reach (+107.5%) and 51 interactions (+18.6%). Facebook fell: 3,272 views (-15.9%) and 204 interactions (-32.5%), although page visits edged up to 485 (+5%) and 3-second video views rose 18.3%. YouTube holds at 530 views and 8 subscribers. Next: reuse the content that is working on Instagram on Facebook to win back engagement."
+  "vi": "So với 28 ngày trước đó: Instagram tăng mạnh, lượt xem 836 (+88,7%), reach 361 (+107,5%), tương tác 51 (+18,6%). Facebook giảm: lượt xem 3.272 (-15,9%), tương tác 204 (-32,5%), dù lượt vào trang tăng nhẹ lên 485 (+5%). LinkedIn cũng giảm: 1.136 lượt hiển thị (-9,5%), 25 reaction (-34,2%), 47 lượt xem trang (-35,6%), có 143 người theo dõi (+10 trong 30 ngày). YouTube giữ 530 lượt xem. Việc nên làm: đưa nội dung đang chạy tốt trên Instagram sang Facebook và LinkedIn, đăng LinkedIn ít nhất mỗi tuần một bài.",
+  "en": "Versus the prior 28 days: Instagram grew strongly, with 836 views (+88.7%), 361 reach (+107.5%) and 51 interactions (+18.6%). Facebook fell: 3,272 views (-15.9%) and 204 interactions (-32.5%), though page visits edged up to 485 (+5%). LinkedIn also dipped: 1,136 impressions (-9.5%), 25 reactions (-34.2%) and 47 page views (-35.6%), with 143 followers (+10 in 30 days). YouTube holds at 530 views. Next: reuse the content working on Instagram on Facebook and LinkedIn, and post on LinkedIn at least weekly."
  }
 }
