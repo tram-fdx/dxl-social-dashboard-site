@@ -264,7 +264,7 @@
     "reach": 68,
     "react": 1,
     "com": 0,
-    "sh": 2
+    "sh": 3
    },
    {
     "d": "2026-10-28 08:10",
@@ -560,33 +560,57 @@
  },
  "youtube": {
   "subscribers": 8,
-  "subscribers_net_28d": 1,
-  "videos": null,
+  "videos": 40,
+  "videos_long_form": 15,
+  "videos_shorts": 25,
   "views_28d": {
    "v": 530,
    "change_pct": null
   },
-  "watch_time_hours": 0.8,
+  "views_change_text": "220 more than usual (YouTube Studio compares channel views against typical performance, no signed percentage)",
+  "watch_time_hours": {
+   "v": 0.8,
+   "change_pct": null
+  },
+  "latest_video_views": {
+   "v": 7,
+   "change_pct": null
+  },
+  "views_now": 530,
+  "views_prior": null,
   "shorts_views": null,
   "long_form_views": null,
+  "stale": false,
+  "stale_note": "YOUTUBE STUDIO WAS READ LIVE ON 2026-11-13 for Oct 15 - Nov 11, 2026, level with the Meta window.",
   "top_videos": [
    {
-    "t": "Dx Living | Watch the Build Before It Begins",
-    "views": 212,
-    "minutes": null
+    "t": "Watch the Build Before It Begins",
+    "v": 212,
+    "dur": "—",
+    "ctr": "—"
    },
    {
     "t": "Project 251 – Rooftop Progress Update | DX Living",
-    "views": 199,
-    "minutes": null
+    "v": 199,
+    "dur": "—",
+    "ctr": "—"
    },
    {
     "t": "Project 251 - Behind the rooftop progress",
-    "views": 78,
-    "minutes": null
+    "v": 78,
+    "dur": "—",
+    "ctr": "—"
    }
   ],
-  "source": "YouTube Studio (Chrome on Mac)"
+  "realtime_48h_views": 10,
+  "subscribers_change_28d": 1,
+  "new_upload": {
+   "title": "Is the Project Where It Should Be?",
+   "published": "2026-11-12",
+   "views_first_19h54m": 7,
+   "avg_pct_viewed": "0%",
+   "likes": 0
+  }
  },
  "linkedin": {
   "url": "https://www.linkedin.com/company/108389291/",
@@ -636,22 +660,9 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "Instagram tăng mạnh so với 28 ngày trước: reach +107,5% (361) và views +88,7% (836). Facebook giảm: views -15,9% (3.272) và tương tác -32,5% (204), dù lượt truy cập trang tăng 5%. YouTube đạt 530 views trong 28 ngày với 8 subscriber.",
-  "en": "Instagram grew strongly versus the prior 28 days: reach +107.5% (361) and views +88.7% (836). Facebook declined: views -15.9% (3,272) and interactions -32.5% (204), though page visits rose 5%. YouTube reached 530 views in 28 days with 8 subscribers.",
-  "by": "Claude (Mac)",
-  "rating": "ok",
-  "verdict_vi": "Instagram tăng tốt nhưng Facebook giảm tương tác nên hiệu quả chung ở mức trung bình.",
-  "verdict_en": "Instagram is growing well but Facebook interactions dropped, so overall performance is mixed.",
-  "actions_vi": [
-   "Đăng lại định dạng đã giúp Instagram tăng 107,5% reach sang Facebook",
-   "Tăng video trên Facebook vì video 3 giây tăng 18,3% trong khi tương tác giảm 32,5%",
-   "Thêm call-to-action subscribe vào 2 video Project 251 đang dẫn đầu YouTube"
-  ],
-  "actions_en": [
-   "Reuse the formats behind Instagram's +107.5% reach on Facebook",
-   "Post more video on Facebook, since 3-second views rose 18.3% while interactions fell 32.5%",
-   "Add a subscribe call-to-action to the two leading Project 251 YouTube videos"
-  ]
+  "vi": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 52; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 52; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "by": "template"
  },
  "commentary_input": {
   "report": "Social media",
@@ -711,7 +722,7 @@
   }
  },
  "notes": {
-  "vi": "Instagram tăng mạnh so với 28 ngày trước: reach +107,5% (361) và views +88,7% (836). Facebook giảm: views -15,9% (3.272) và tương tác -32,5% (204), dù lượt truy cập trang tăng 5%. YouTube đạt 530 views trong 28 ngày với 8 subscriber.",
-  "en": "Instagram grew strongly versus the prior 28 days: reach +107.5% (361) and views +88.7% (836). Facebook declined: views -15.9% (3,272) and interactions -32.5% (204), though page visits rose 5%. YouTube reached 530 views in 28 days with 8 subscribers."
+  "vi": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 52; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3197 → 3272; fb_interactions 94 → 204; fb_visits 500 → 485; ig_followers 51 → 52; ig_views 1385 → 836; ig_reach 470 → 361; ig_interactions 54 → 51."
  }
 }
