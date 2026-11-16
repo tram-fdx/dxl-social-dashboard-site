@@ -1,7 +1,7 @@
 {
  "date": "2026-11-16",
  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
- "provenance": "Read live in Chrome on the Mac (Meta Business Suite, YouTube Studio, LinkedIn admin) by the scheduled routine on 2026-11-16. FB/IG top-post tables carried from the 2026-11-15 reading (per-post lifetime figures, not re-read today); YouTube top-3 and counts read live; IG profile views and YouTube video counts not readable today (null).",
+ "provenance": "Automated: Meta Graph API, YouTube Studio via Chrome on Mac, LinkedIn API or manual CSV (GitHub Actions, pipeline v1).",
  "window": {
   "vi": "28 ngày qua: 18/10 – 14/11/2026",
   "en": "Last 28 days: 18 Oct – 14 Nov 2026"
@@ -9,7 +9,7 @@
  "windows": {
   "meta": "2026-10-18 → 2026-11-14",
   "youtube": "2026-10-18 → 2026-11-14",
-  "linkedin": "2026-10-15 → 2026-11-13"
+  "linkedin": "2026-10-18 → 2026-11-14"
  },
  "facebook": {
   "followers": 119,
@@ -19,26 +19,26 @@
    "change_pct": -19.8
   },
   "viewers": {
-   "v": 213,
-   "change_pct": -23.4
+   "v": 682,
+   "change_pct": -26.5
   },
   "visits": {
    "v": 477,
    "change_pct": 3.5
   },
   "interactions": {
-   "v": 90,
-   "change_pct": -47.7
+   "v": 200,
+   "change_pct": -33.8
   },
   "video_3s": {
-   "v": 333,
+   "v": 334,
    "change_pct": -2.3
   },
   "follows": 3,
   "unfollows": 0,
   "net_new_followers": {
    "v": 3,
-   "change_pct": 100.0
+   "change_pct": null
   },
   "daily_dates": [
    "2026-10-18",
@@ -132,33 +132,33 @@
     0
    ],
    "interactions": [
-    1,
-    4,
-    12,
-    5,
-    5,
-    7,
-    2,
-    1,
-    4,
-    0,
-    1,
-    4,
-    4,
-    1,
-    0,
-    10,
-    2,
     3,
+    6,
+    18,
+    12,
+    31,
+    14,
+    3,
+    5,
+    13,
+    0,
+    6,
+    7,
+    6,
+    1,
+    2,
+    9,
+    6,
+    8,
     6,
     1,
     0,
-    0,
-    7,
-    2,
-    3,
-    1,
     4,
+    20,
+    3,
+    8,
+    3,
+    5,
     0
    ],
    "video_3s": [
@@ -178,7 +178,7 @@
     0,
     9,
     39,
-    17,
+    18,
     5,
     64,
     16,
@@ -222,19 +222,19 @@
     "sh": 0
    },
    {
-    "d": "2026-10-26 08:00",
-    "t": "The programme says one thing. Does the site?\n\nA programme shows what should be happening. The site shows what is actually happening. On a co",
-    "url": "https://www.facebook.com/122172046520990680/posts/122169637730990680",
-    "reach": 114,
+    "d": "2026-11-12 03:02",
+    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
+    "url": "https://www.facebook.com/reel/2412210922646426/",
+    "reach": 115,
     "react": 2,
     "com": 0,
     "sh": 1
    },
    {
-    "d": "2026-11-12 03:02",
-    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
-    "url": "https://www.facebook.com/reel/2412210922646426/",
-    "reach": 113,
+    "d": "2026-10-26 08:00",
+    "t": "The programme says one thing. Does the site?\n\nA programme shows what should be happening. The site shows what is actually happening. On a co",
+    "url": "https://www.facebook.com/122172046520990680/posts/122169637730990680",
+    "reach": 114,
     "react": 2,
     "com": 0,
     "sh": 1
@@ -264,7 +264,7 @@
     "reach": 68,
     "react": 1,
     "com": 0,
-    "sh": 3
+    "sh": 2
    },
    {
     "d": "2026-10-28 08:10",
@@ -284,19 +284,15 @@
     "com": 0,
     "sh": 0
    }
-  ],
-  "watch_time": {
-   "v": "1 h 53 min",
-   "change_pct": -22.5
-  }
+  ]
  },
  "instagram": {
   "followers": 51,
   "following": 37,
   "posts_total": 169,
   "views": {
-   "v": 1206,
-   "change_pct": -31.6
+   "v": 726,
+   "change_pct": 27.8
   },
   "reach": {
    "v": 252,
@@ -307,8 +303,8 @@
    "change_pct": 18.6
   },
   "profile_views": {
-   "v": null,
-   "change_pct": null
+   "v": 25,
+   "change_pct": 8.7
   },
   "views_from_followers_pct": 52.2,
   "views_from_non_followers_pct": 47.8,
@@ -348,33 +344,33 @@
     4
    ],
    "views": [
-    18,
-    49,
-    52,
-    131,
-    65,
-    30,
-    25,
-    56,
-    17,
-    8,
-    40,
-    42,
+    9,
     28,
-    6,
-    63,
-    110,
-    44,
-    19,
-    79,
-    13,
+    15,
+    71,
+    20,
+    21,
+    21,
+    34,
+    8,
     2,
-    26,
-    51,
-    88,
-    30,
-    59,
-    38,
+    12,
+    9,
+    3,
+    0,
+    36,
+    83,
+    25,
+    18,
+    52,
+    11,
+    2,
+    14,
+    44,
+    79,
+    23,
+    40,
+    29,
     17
    ],
    "interactions": [
@@ -440,18 +436,6 @@
   ],
   "top_posts_metric": "reach",
   "top_posts": [
-   {
-    "d": "2026-10-17 08:30",
-    "t": "𝟮𝟱𝟭 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 - 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 𝗨𝗣𝗗𝗔𝗧𝗘\n\nThe rooftop brings together a pool house, sunken fire lounge, gym, yoga studio, sauna and spa, alongside a la",
-    "url": "https://www.instagram.com/reel/DelrtI4DdSe/",
-    "type": "VIDEO",
-    "reach": 122,
-    "views": 133,
-    "react": 2,
-    "com": 0,
-    "sh": 0,
-    "saved": 0
-   },
    {
     "d": "2026-11-02 11:33",
     "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
@@ -559,6 +543,18 @@
     "com": 0,
     "sh": 0,
     "saved": 0
+   },
+   {
+    "d": "2026-11-04 07:00",
+    "t": "A sample is lit by the showroom. Your home won't be.\n\nThe same benchtop can read soft at 9am, brighter at 1pm and noticeably deeper by 8pm u",
+    "url": "https://www.instagram.com/p/DfT3vJ_AK9w/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 8,
+    "views": 23,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
    }
   ]
  },
@@ -567,10 +563,10 @@
   "subscribers_net_28d": 1,
   "videos": null,
   "views_28d": {
-   "v": 338,
+   "v": 530,
    "change_pct": null
   },
-  "watch_time_hours": 0.4,
+  "watch_time_hours": 0.8,
   "shorts_views": null,
   "long_form_views": null,
   "top_videos": [
@@ -580,13 +576,13 @@
     "minutes": null
    },
    {
-    "t": "Project 251 - Behind the rooftop progress",
-    "views": 78,
+    "t": "Project 251 – Rooftop Progress Update | DX Living",
+    "views": 199,
     "minutes": null
    },
    {
-    "t": "DX Living | One Model for Every Conversation",
-    "views": 12,
+    "t": "Project 251 - Behind the rooftop progress",
+    "views": 78,
     "minutes": null
    }
   ],
@@ -594,91 +590,55 @@
  },
  "linkedin": {
   "url": "https://www.linkedin.com/company/108389291/",
-  "followers": 142,
+  "followers": null,
+  "stale": true,
+  "visitors_stale": true,
+  "stale_note": "LINKEDIN NOT READ ON 2026-11-13: Chrome on the Mac is signed out of LinkedIn (admin analytics redirected to sign-in). No credentials entered. All LinkedIn figures are null and are not carried forward.",
   "new_followers_30d": {
-   "v": 10,
-   "change_pct": -67.7
+   "v": null,
+   "change_pct": null
   },
   "impressions": {
-   "v": 985,
-   "change_pct": -27.4
+   "v": null,
+   "change_pct": null
   },
   "reactions": {
-   "v": 24,
-   "change_pct": -36.8
+   "v": null,
+   "change_pct": null
   },
   "comments": {
-   "v": 0,
-   "change_pct": 0
+   "v": null,
+   "change_pct": null
   },
   "reposts": {
-   "v": 0,
-   "change_pct": 0
+   "v": null,
+   "change_pct": null
   },
   "page_views": {
-   "v": 38,
-   "change_pct": -51.3
+   "v": null,
+   "change_pct": null
   },
   "unique_visitors": {
-   "v": 15,
-   "change_pct": -53.1
+   "v": null,
+   "change_pct": null
   },
-  "impressions_prior": 1357,
-  "impressions_now": 985,
-  "followers_by_location_count": [
-   41,
-   23,
-   6,
-   3,
-   2
-  ],
-  "followers_by_location_pct": [
-   28.9,
-   16.2,
-   4.2,
-   2.1,
-   1.4
-  ],
-  "visitors_by_job_function": {
-   "Arts and Design": 14,
-   "Administrative": 8,
-   "Finance": 6,
-   "Engineering": 5,
-   "Marketing": 3
-  },
-  "page_views_by_device": {
-   "desktop": 25,
-   "mobile": 13
-  },
+  "impressions_prior": null,
+  "impressions_now": null,
+  "followers_by_location_count": null,
+  "followers_by_location_pct": null,
+  "visitors_by_job_function": null,
+  "page_views_by_device": null,
   "window_advanced": false,
-  "custom_button_clicks": 0,
-  "source": "LinkedIn admin analytics (Chrome on Mac), window 15 Oct – 13 Nov 2026",
-  "followers_by_location": [
-   "Greater Melbourne Area, Australia",
-   "Ho Chi Minh City Metropolitan Area, Vietnam",
-   "Greater Brisbane Area, Australia",
-   "Greater Sydney Area, Australia",
-   "Geelong, Australia"
-  ]
+  "custom_button_clicks": null,
+  "followers_by_location_note": "Not read (signed out).",
+  "visitors_by_job_function_note": "Not read (signed out).",
+  "source": "carried forward (no API token / CSV)"
  },
  "errors": [],
  "commentary": {
-  "vi": "Hiệu quả 28 ngày giảm trên hầu hết kênh: lượt xem Facebook -19,8%, tương tác Facebook -47,7%, lượt xem Instagram -31,6% và hiển thị LinkedIn -27,4%. Điểm sáng là tương tác Instagram +18,6% và người theo dõi mới trên Facebook tăng gấp đôi. YouTube có 338 lượt xem trong 28 ngày (trước đó 530) với 8 người đăng ký. Nên tăng tần suất đăng và dùng lại định dạng video đang kéo tương tác Instagram.",
-  "en": "28-day performance fell on most channels: Facebook views -19.8%, Facebook interactions -47.7%, Instagram views -31.6% and LinkedIn impressions -27.4%. Bright spots are Instagram interactions +18.6% and Facebook net new followers doubling. YouTube has 338 views in 28 days (previously 530) with 8 subscribers. Post more often and reuse the formats driving Instagram engagement.",
-  "by": "Claude (Mac)",
-  "rating": "bad",
-  "verdict_vi": "Mạng xã hội kém hơn kỳ trước: lượt xem và tương tác giảm mạnh trên Facebook, Instagram và LinkedIn.",
-  "verdict_en": "Social is underperforming the prior period, with views and engagement down sharply on Facebook, Instagram and LinkedIn.",
-  "actions_vi": [
-   "Khôi phục tương tác Facebook (-47,7%) bằng bài có câu hỏi hoặc CTA bình luận rõ ràng.",
-   "Tăng tần suất đăng LinkedIn để kéo lại page views (-51,3%) và người theo dõi mới (-67,7%).",
-   "Cắt video Project 251 thành Shorts/Reels để đẩy lượt xem YouTube và Instagram."
-  ],
-  "actions_en": [
-   "Rebuild Facebook engagement (-47.7%) with posts that ask a question or carry a clear comment CTA.",
-   "Post more often on LinkedIn to recover page views (-51.3%) and new followers (-67.7%).",
-   "Cut Project 251 footage into Shorts/Reels to lift YouTube and Instagram views."
-  ]
+  "vi": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
+  "by": "template"
  },
  "commentary_input": {
   "report": "Social media",
@@ -686,34 +646,26 @@
    "today": {
     "fb_followers": 119,
     "fb_views": 3166,
-    "fb_interactions": 90,
+    "fb_interactions": 200,
     "fb_visits": 477,
     "ig_followers": 51,
-    "ig_views": 1206,
+    "ig_views": 726,
     "ig_reach": 252,
     "ig_interactions": 51,
     "yt_subscribers": 8,
-    "yt_views_28d": 338,
-    "li_followers": 142,
-    "li_impressions": 985,
+    "yt_views_28d": 530,
+    "li_followers": null,
+    "li_impressions": null,
     "change_pct_vs_prior_28d": {
      "fb_views": -19.8,
-     "fb_viewers": -23.4,
+     "fb_viewers": -26.5,
      "fb_visits": 3.5,
-     "fb_interactions": -47.7,
+     "fb_interactions": -33.8,
      "fb_video_3s": -2.3,
-     "fb_net_new_followers": 100.0,
-     "fb_watch_time": -22.5,
-     "ig_views": -31.6,
+     "ig_views": 27.8,
      "ig_reach": -7.4,
      "ig_interactions": 18.6,
-     "li_new_followers_30d": -67.7,
-     "li_impressions": -27.4,
-     "li_reactions": -36.8,
-     "li_comments": 0,
-     "li_reposts": 0,
-     "li_page_views": -51.3,
-     "li_unique_visitors": -53.1
+     "ig_profile_views": 8.7
     }
    },
    "previous": {
@@ -746,7 +698,7 @@
   }
  },
  "notes": {
-  "vi": "Hiệu quả 28 ngày giảm trên hầu hết kênh: lượt xem Facebook -19,8%, tương tác Facebook -47,7%, lượt xem Instagram -31,6% và hiển thị LinkedIn -27,4%. Điểm sáng là tương tác Instagram +18,6% và người theo dõi mới trên Facebook tăng gấp đôi. YouTube có 338 lượt xem trong 28 ngày (trước đó 530) với 8 người đăng ký. Nên tăng tần suất đăng và dùng lại định dạng video đang kéo tương tác Instagram.",
-  "en": "28-day performance fell on most channels: Facebook views -19.8%, Facebook interactions -47.7%, Instagram views -31.6% and LinkedIn impressions -27.4%. Bright spots are Instagram interactions +18.6% and Facebook net new followers doubling. YouTube has 338 views in 28 days (previously 530) with 8 subscribers. Post more often and reuse the formats driving Instagram engagement."
+  "vi": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
+  "en": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51."
  }
 }
