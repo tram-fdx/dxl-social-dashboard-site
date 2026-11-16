@@ -663,21 +663,21 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "Facebook giảm so với 28 ngày trước: views -19,8% (3.166), tương tác -47,7% (90), người xem -23,4% (213); lượt truy cập trang +3,5% (477). Instagram: views -31,6% (1.206), reach -7,4% (252), tương tác +18,6% (51). LinkedIn: impressions 985 (-27,4%), 142 follower (+10 trong 30 ngày). YouTube 338 views/28 ngày, 8 subscriber.",
-  "en": "Facebook declined versus the prior 28 days: views -19.8% (3,166), interactions -47.7% (90), viewers -23.4% (213); page visits +3.5% (477). Instagram: views -31.6% (1,206), reach -7.4% (252), interactions +18.6% (51). LinkedIn: impressions 985 (-27.4%), 142 followers (+10 in 30 days). YouTube 338 views in 28 days, 8 subscribers.",
+  "vi": "Hiệu quả 28 ngày giảm trên hầu hết kênh: lượt xem Facebook -19,8%, tương tác Facebook -47,7%, lượt xem Instagram -31,6% và hiển thị LinkedIn -27,4%. Điểm sáng là tương tác Instagram +18,6% và người theo dõi mới trên Facebook tăng gấp đôi. YouTube có 338 lượt xem trong 28 ngày (trước đó 530) với 8 người đăng ký. Nên tăng tần suất đăng và dùng lại định dạng video đang kéo tương tác Instagram.",
+  "en": "28-day performance fell on most channels: Facebook views -19.8%, Facebook interactions -47.7%, Instagram views -31.6% and LinkedIn impressions -27.4%. Bright spots are Instagram interactions +18.6% and Facebook net new followers doubling. YouTube has 338 views in 28 days (previously 530) with 8 subscribers. Post more often and reuse the formats driving Instagram engagement.",
   "by": "Claude (Mac)",
-  "rating": "weak",
-  "verdict_vi": "Hầu hết kênh giảm so với 28 ngày trước; chỉ lượt truy cập Facebook và tương tác Instagram nhích lên.",
-  "verdict_en": "Most channels are down on the prior 28 days; only Facebook page visits and Instagram interactions edged up.",
+  "rating": "bad",
+  "verdict_vi": "Mạng xã hội kém hơn kỳ trước: lượt xem và tương tác giảm mạnh trên Facebook, Instagram và LinkedIn.",
+  "verdict_en": "Social is underperforming the prior period, with views and engagement down sharply on Facebook, Instagram and LinkedIn.",
   "actions_vi": [
-   "Tăng video trên Facebook: tương tác giảm 47,7% trong khi lượt xem 3 giây gần như đi ngang (-2,3%)",
-   "Đăng lại các định dạng đã giữ Instagram ở mức tương tác +18,6% sang Facebook",
-   "Giữ nhịp đăng LinkedIn đều hằng tuần vì impressions giảm 27,4% và lượt xem trang giảm 51,3%"
+   "Khôi phục tương tác Facebook (-47,7%) bằng bài có câu hỏi hoặc CTA bình luận rõ ràng.",
+   "Tăng tần suất đăng LinkedIn để kéo lại page views (-51,3%) và người theo dõi mới (-67,7%).",
+   "Cắt video Project 251 thành Shorts/Reels để đẩy lượt xem YouTube và Instagram."
   ],
   "actions_en": [
-   "Post more video on Facebook: interactions fell 47.7% while 3-second views were roughly flat (-2.3%)",
-   "Reuse the formats that kept Instagram interactions up 18.6% on Facebook",
-   "Keep LinkedIn posting weekly: impressions fell 27.4% and page views fell 51.3%"
+   "Rebuild Facebook engagement (-47.7%) with posts that ask a question or carry a clear comment CTA.",
+   "Post more often on LinkedIn to recover page views (-51.3%) and new followers (-67.7%).",
+   "Cut Project 251 footage into Shorts/Reels to lift YouTube and Instagram views."
   ]
  },
  "commentary_input": {
@@ -702,9 +702,18 @@
      "fb_visits": 3.5,
      "fb_interactions": -47.7,
      "fb_video_3s": -2.3,
+     "fb_net_new_followers": 100.0,
+     "fb_watch_time": -22.5,
      "ig_views": -31.6,
      "ig_reach": -7.4,
-     "ig_interactions": 18.6
+     "ig_interactions": 18.6,
+     "li_new_followers_30d": -67.7,
+     "li_impressions": -27.4,
+     "li_reactions": -36.8,
+     "li_comments": 0,
+     "li_reposts": 0,
+     "li_page_views": -51.3,
+     "li_unique_visitors": -53.1
     }
    },
    "previous": {
@@ -737,7 +746,7 @@
   }
  },
  "notes": {
-  "vi": "Facebook giảm so với 28 ngày trước: views -19,8% (3.166), tương tác -47,7% (90), người xem -23,4% (213); lượt truy cập trang +3,5% (477). Instagram: views -31,6% (1.206), reach -7,4% (252), tương tác +18,6% (51). LinkedIn: impressions 985 (-27,4%), 142 follower (+10 trong 30 ngày). YouTube 338 views/28 ngày, 8 subscriber.",
-  "en": "Facebook declined versus the prior 28 days: views -19.8% (3,166), interactions -47.7% (90), viewers -23.4% (213); page visits +3.5% (477). Instagram: views -31.6% (1,206), reach -7.4% (252), interactions +18.6% (51). LinkedIn: impressions 985 (-27.4%), 142 followers (+10 in 30 days). YouTube 338 views in 28 days, 8 subscribers."
+  "vi": "Hiệu quả 28 ngày giảm trên hầu hết kênh: lượt xem Facebook -19,8%, tương tác Facebook -47,7%, lượt xem Instagram -31,6% và hiển thị LinkedIn -27,4%. Điểm sáng là tương tác Instagram +18,6% và người theo dõi mới trên Facebook tăng gấp đôi. YouTube có 338 lượt xem trong 28 ngày (trước đó 530) với 8 người đăng ký. Nên tăng tần suất đăng và dùng lại định dạng video đang kéo tương tác Instagram.",
+  "en": "28-day performance fell on most channels: Facebook views -19.8%, Facebook interactions -47.7%, Instagram views -31.6% and LinkedIn impressions -27.4%. Bright spots are Instagram interactions +18.6% and Facebook net new followers doubling. YouTube has 338 views in 28 days (previously 530) with 8 subscribers. Post more often and reuse the formats driving Instagram engagement."
  }
 }
