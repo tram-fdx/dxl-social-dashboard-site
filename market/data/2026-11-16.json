@@ -53,11 +53,61 @@
       "posts": 0,
       "comments": 0,
       "reactions": 0
+     },
+     {
+      "name": "PREMIER3D",
+      "slug": "premier3d",
+      "src": "public",
+      "followers": 135,
+      "new_followers": null,
+      "posts": 0,
+      "comments": 0,
+      "reactions": 0
+     },
+     {
+      "name": "Harp Collective",
+      "slug": "harp-collective",
+      "src": "public",
+      "followers": 259,
+      "new_followers": null,
+      "posts": 0,
+      "comments": 0,
+      "reactions": 0
+     },
+     {
+      "name": "Shadowlab",
+      "slug": "shadowlab",
+      "src": "public",
+      "followers": 140,
+      "new_followers": null,
+      "posts": 0,
+      "comments": 0,
+      "reactions": 0
+     },
+     {
+      "name": "Studio Jam",
+      "slug": "studiojam",
+      "src": "public",
+      "followers": 272,
+      "new_followers": null,
+      "posts": 0,
+      "comments": 0,
+      "reactions": 0
+     },
+     {
+      "name": "Urban Angles",
+      "slug": "urban-angles",
+      "src": "public",
+      "followers": 1600,
+      "new_followers": null,
+      "posts": 0,
+      "comments": 0,
+      "reactions": 0
      }
     ]
    },
-   "note_en": "LinkedIn only suggests engineering pages for DX Living; none of them is a visualisation studio. The real competitors are the studios ranking on Google below — add them in LinkedIn (Analytics → Competitors → Edit) so this table tracks them daily.",
-   "note_vi": "LinkedIn chỉ gợi ý các trang kỹ thuật cho DX Living, không có studio visualisation nào. Đối thủ thật là các studio đứng top Google bên dưới — thêm họ trong LinkedIn (Analytics → Competitors → Edit) để bảng này theo dõi mỗi ngày.",
+   "note_en": "LinkedIn's free plan lets DX Living track only 1 competitor (Solid Support). The visualisation studios are read from their public LinkedIn pages instead. BASE3D has no LinkedIn company page.",
+   "note_vi": "Gói LinkedIn miễn phí chỉ cho DX Living theo dõi 1 đối thủ (Solid Support). Các studio visualisation được đọc từ trang LinkedIn công khai. BASE3D không có trang công ty trên LinkedIn.",
    "top_posts": [
     {
      "company": "Solid Support",
@@ -387,11 +437,11 @@
   "dxl": {
    "leaders_en": [
     "On Google: Premier3D (#1, DR 13), Harp Collective (#2) and Shadowlab (#3) own “3d architectural rendering melbourne”; Urban Angles has the strongest domain (DR 40).",
-    "On LinkedIn there is no tracked visualisation studio yet; Solid Support gets 103 reactions from 7 posts vs DX Living's 23 from 27."
+    "On LinkedIn, none of the 5 studios with a page posted in the last 30 days: Urban Angles (1,600 followers) last posted ~1 month ago, Studio Jam ~4 months ago; Premier3D, Harp Collective and Shadowlab show no posts. DX Living posted 27 times."
    ],
    "leaders_vi": [
     "Trên Google: Premier3D (#1, DR 13), Harp Collective (#2) và Shadowlab (#3) chiếm từ khoá “3d architectural rendering melbourne”; Urban Angles có domain mạnh nhất (DR 40).",
-    "Trên LinkedIn chưa theo dõi studio visualisation nào; Solid Support có 103 reaction từ 7 bài, DX Living có 23 từ 27 bài."
+    "Trên LinkedIn, cả 5 studio có trang đều không đăng bài nào trong 30 ngày: Urban Angles (1.600 follower) đăng lần cuối khoảng 1 tháng trước, Studio Jam khoảng 4 tháng; Premier3D, Harp Collective và Shadowlab không có bài. DX Living đăng 27 bài."
    ],
    "tactics_en": [
     "Google Maps listings with 5.0 reviews (Studio Jam 16 reviews, Shadowlab) appear above the organic results.",
@@ -416,12 +466,12 @@
     "Gộp 27 bài/tháng thành ít câu chuyện dự án hơn (trước/sau, từ BIM đến render) và gắn thẻ builder, kiến trúc sư."
    ],
    "opportunities_en": [
-    "Followers: add the 6 visualisation studios as LinkedIn competitors and engage on their audience's posts (architects, developers).",
+    "Followers: the studios are silent on LinkedIn, so DX Living can own the feed of Melbourne architects and developers — comment on their posts and invite engaged people to follow the page.",
     "Leads: the cost-guide query has no strong owner yet (#4 is a general agency, avian.net.au).",
     "Awareness: dxliving.com has DR 0 — 5–10 links from builder/partner sites would already pass Harp Collective (4.1) and BASE3D (1.4)."
    ],
    "opportunities_vi": [
-    "Follower: thêm 6 studio visualisation làm đối thủ trên LinkedIn và tương tác trên bài của tệp khán giả của họ (kiến trúc sư, chủ đầu tư).",
+    "Follower: các studio gần như im lặng trên LinkedIn, nên DX Living có thể chiếm sóng trong feed của kiến trúc sư và chủ đầu tư ở Melbourne — bình luận trên bài của họ và mời người tương tác follow trang.",
     "Lead: từ khoá hướng dẫn chi phí chưa có trang mạnh (#4 là agency chung, avian.net.au).",
     "Nhận diện: dxliving.com có DR 0 — 5–10 link từ website builder/đối tác là đủ vượt Harp Collective (4.1) và BASE3D (1.4)."
    ]
