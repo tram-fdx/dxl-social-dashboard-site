@@ -29,6 +29,7 @@
   <div id="brands">
     <button class="brand" data-b="dxl">DX Living</button>
     <button class="brand" data-b="fdx">FeelDX</button>
+    <button class="brand" data-b="mkt">Market research</button>
   </div>
   <span id="tabs"></span>
   <span id="spacer"></span>
@@ -52,7 +53,9 @@
       ['seo', 'SEO', G + 'feeldx-report/feeldx-seo-report.html'],
       ['weekly', 'SEO Weekly', G + 'feeldx-report/feeldx-seo-weekly.html'],
       ['audit', 'Website Audit', G + 'feeldx-report/feeldx-website-audit.html'],
-      ['funnel', 'Impact Funnel', G + 'feeldx-report/feeldx-impact-funnel.html'] ] }
+      ['funnel', 'Impact Funnel', G + 'feeldx-report/feeldx-impact-funnel.html'] ] },
+    mkt: { xlsx: null, tabs: [
+      ['competitors', 'Competitor scan', G + 'dxl-social-dashboard-site/market/'] ] }
   };
   const stage = document.getElementById('stage'), tabsEl = document.getElementById('tabs');
   const openLink = document.getElementById('open'), xlsx = document.getElementById('xlsx');
@@ -82,7 +85,7 @@
     openLink.href = url;
     xlsx.style.display = hub.xlsx ? '' : 'none'; if (hub.xlsx) xlsx.href = hub.xlsx;
     history.replaceState(null, '', '#' + id);
-    document.title = (b === 'fdx' ? 'FeelDX' : 'DX Living') + ' · ' + t[1] + ' — Marketing Hub';
+    document.title = ({fdx: 'FeelDX', mkt: 'Market research'}[b] || 'DX Living') + ' · ' + t[1] + ' — Marketing Hub';
   }
 
   document.querySelectorAll('.brand').forEach(x => x.onclick = () => {
