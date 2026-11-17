@@ -8,8 +8,8 @@
  },
  "windows": {
   "meta": "2026-10-18 → 2026-11-14",
-  "youtube": "2026-10-18 → 2026-11-14",
-  "linkedin": "2026-10-18 → 2026-11-14"
+  "youtube": "2026-10-19 → 2026-11-15",
+  "linkedin": "2026-10-17 → 2026-11-15"
  },
  "facebook": {
   "followers": 119,
@@ -563,10 +563,10 @@
   "subscribers_net_28d": 1,
   "videos": null,
   "views_28d": {
-   "v": 530,
+   "v": 336,
    "change_pct": null
   },
-  "watch_time_hours": 0.8,
+  "watch_time_hours": 0.4,
   "shorts_views": null,
   "long_form_views": null,
   "top_videos": [
@@ -576,69 +576,66 @@
     "minutes": null
    },
    {
-    "t": "Project 251 – Rooftop Progress Update | DX Living",
-    "views": 199,
+    "t": "Project 251 - Behind the rooftop progress",
+    "views": 78,
     "minutes": null
    },
    {
-    "t": "Project 251 - Behind the rooftop progress",
-    "views": 78,
+    "t": "DX Living | One Model for Every Conversation",
+    "views": 12,
     "minutes": null
    }
   ],
   "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "url": "https://www.linkedin.com/company/108389291/",
-  "followers": null,
-  "stale": true,
-  "visitors_stale": true,
-  "stale_note": "LINKEDIN NOT READ ON 2026-11-13: Chrome on the Mac is signed out of LinkedIn (admin analytics redirected to sign-in). No credentials entered. All LinkedIn figures are null and are not carried forward.",
-  "new_followers_30d": {
-   "v": null,
-   "change_pct": null
-  },
+  "source": "LinkedIn Page analytics (Chrome on Mac)",
+  "stale": false,
+  "followers": 142,
+  "new_followers_28d": 7,
   "impressions": {
-   "v": null,
-   "change_pct": null
+   "v": 954,
+   "change_pct": -26
   },
   "reactions": {
-   "v": null,
-   "change_pct": null
+   "v": 23,
+   "change_pct": -37.8
   },
   "comments": {
-   "v": null,
+   "v": 0,
    "change_pct": null
   },
   "reposts": {
-   "v": null,
+   "v": 0,
    "change_pct": null
   },
   "page_views": {
-   "v": null,
-   "change_pct": null
+   "v": 27,
+   "change_pct": -67.9
   },
   "unique_visitors": {
-   "v": null,
-   "change_pct": null
-  },
-  "impressions_prior": null,
-  "impressions_now": null,
-  "followers_by_location_count": null,
-  "followers_by_location_pct": null,
-  "visitors_by_job_function": null,
-  "page_views_by_device": null,
-  "window_advanced": false,
-  "custom_button_clicks": null,
-  "followers_by_location_note": "Not read (signed out).",
-  "visitors_by_job_function_note": "Not read (signed out).",
-  "source": "carried forward (no API token / CSV)"
+   "v": 11,
+   "change_pct": -68.6
+  }
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
-  "en": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
-  "by": "template"
+  "vi": "Instagram tăng 27,8% lượt xem và 18,6% tương tác so với 28 ngày trước, nhưng reach giảm 7,4%. Facebook giảm 19,8% lượt xem và 33,8% tương tác. LinkedIn đi xuống rõ: hiển thị -26%, reaction -37,8%, lượt xem trang -67,9%. YouTube có 336 lượt xem trong 28 ngày, giảm từ 530.",
+  "en": "Instagram views rose 27.8% and interactions 18.6% versus the prior 28 days, though reach fell 7.4%. Facebook views dropped 19.8% and interactions 33.8%. LinkedIn fell sharply: impressions -26%, reactions -37.8%, page views -67.9%. YouTube had 336 views over 28 days, down from 530.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả mạng xã hội giảm ở hầu hết các kênh, chỉ Instagram còn tăng trưởng.",
+  "verdict_en": "Social performance fell on most channels; only Instagram is still growing.",
+  "actions_vi": [
+   "LinkedIn: giảm còn 2–3 bài/tuần xoay quanh người có tên hoặc cột mốc dự án để kéo lại lượt hiển thị (-26%).",
+   "Facebook: dùng lại định dạng đang thắng trên Instagram (lượt xem +27,8%) để cứu tương tác -33,8%.",
+   "YouTube: làm tiếp video kiểu “Watch the Build Before It Begins” (212 lượt xem) — video top của kênh."
+  ],
+  "actions_en": [
+   "LinkedIn: cut to 2–3 posts a week built around a named person or project milestone to recover impressions (-26%).",
+   "Facebook: reuse the formats winning on Instagram (views +27.8%) to address the -33.8% interaction drop.",
+   "YouTube: make more videos like “Watch the Build Before It Begins” (212 views), the channel's top video."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -653,9 +650,9 @@
     "ig_reach": 252,
     "ig_interactions": 51,
     "yt_subscribers": 8,
-    "yt_views_28d": 530,
-    "li_followers": null,
-    "li_impressions": null,
+    "yt_views_28d": 336,
+    "li_followers": 142,
+    "li_impressions": 954,
     "change_pct_vs_prior_28d": {
      "fb_views": -19.8,
      "fb_viewers": -26.5,
@@ -665,7 +662,11 @@
      "ig_views": 27.8,
      "ig_reach": -7.4,
      "ig_interactions": 18.6,
-     "ig_profile_views": 8.7
+     "ig_profile_views": 8.7,
+     "li_impressions": -26,
+     "li_reactions": -37.8,
+     "li_page_views": -67.9,
+     "li_unique_visitors": -68.6
     }
    },
    "previous": {
@@ -698,7 +699,7 @@
   }
  },
  "notes": {
-  "vi": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51.",
-  "en": "fb_followers 119 → 119; fb_views 3272 → 3166; fb_interactions 204 → 200; fb_visits 485 → 477; ig_followers 52 → 51; ig_views 836 → 726; ig_reach 361 → 252; ig_interactions 51 → 51."
+  "vi": "Instagram tăng 27,8% lượt xem và 18,6% tương tác so với 28 ngày trước, nhưng reach giảm 7,4%. Facebook giảm 19,8% lượt xem và 33,8% tương tác. LinkedIn đi xuống rõ: hiển thị -26%, reaction -37,8%, lượt xem trang -67,9%. YouTube có 336 lượt xem trong 28 ngày, giảm từ 530.",
+  "en": "Instagram views rose 27.8% and interactions 18.6% versus the prior 28 days, though reach fell 7.4%. Facebook views dropped 19.8% and interactions 33.8%. LinkedIn fell sharply: impressions -26%, reactions -37.8%, page views -67.9%. YouTube had 336 views over 28 days, down from 530."
  }
 }

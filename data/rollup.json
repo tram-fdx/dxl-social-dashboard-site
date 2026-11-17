@@ -1,6 +1,6 @@
 {
  "derived": true,
- "generated_at": "2026-11-16",
+ "generated_at": "2026-11-17",
  "grain_legend": {
   "day": "The measurement for that exact day. Can be summed over a range.",
   "state": "A state metric at scan time. Average or take the end value, never sum.",
@@ -6458,7 +6458,7 @@
   "li_followers": {
    "grain": "state",
    "label": "LinkedIn — followers",
-   "measured": 69,
+   "measured": 70,
    "of_days": 81,
    "points": [
     {
@@ -6736,13 +6736,17 @@
     {
      "d": "2026-10-29",
      "v": 141
+    },
+    {
+     "d": "2026-11-16",
+     "v": 142
     }
    ]
   },
   "li_impressions_28d": {
    "grain": "window28",
    "label": "LinkedIn — impressions (28d)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 81,
    "points": [
     {
@@ -7020,13 +7024,17 @@
     {
      "d": "2026-10-29",
      "v": 1268
+    },
+    {
+     "d": "2026-11-16",
+     "v": 954
     }
    ]
   },
   "li_page_views_28d": {
    "grain": "window28",
    "label": "LinkedIn — page views (28d)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 81,
    "points": [
     {
@@ -7304,13 +7312,17 @@
     {
      "d": "2026-10-29",
      "v": 82
+    },
+    {
+     "d": "2026-11-16",
+     "v": 27
     }
    ]
   },
   "li_reactions_28d": {
    "grain": "window28",
    "label": "LinkedIn — reactions (28d)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 81,
    "points": [
     {
@@ -7588,13 +7600,17 @@
     {
      "d": "2026-10-29",
      "v": 39
+    },
+    {
+     "d": "2026-11-16",
+     "v": 23
     }
    ]
   },
   "li_unique_visitors_28d": {
    "grain": "window28",
    "label": "LinkedIn — unique visitors (28d)",
-   "measured": 69,
+   "measured": 70,
    "of_days": 81,
    "points": [
     {
@@ -7872,6 +7888,10 @@
     {
      "d": "2026-10-29",
      "v": 35
+    },
+    {
+     "d": "2026-11-16",
+     "v": 11
     }
    ]
   },
@@ -8503,7 +8523,7 @@
     },
     {
      "d": "2026-11-16",
-     "v": 530
+     "v": 336
     }
    ]
   },
@@ -8819,7 +8839,7 @@
     },
     {
      "d": "2026-11-16",
-     "v": 0.8
+     "v": 0.4
     }
    ]
   }
