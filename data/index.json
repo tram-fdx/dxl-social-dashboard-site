@@ -1,7 +1,7 @@
 {
  "site": "DX Living — social dashboard",
  "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
- "latest": "2026-11-17",
+ "latest": "2026-11-18",
  "snapshots": [
   {
    "date": "2026-07-23",
@@ -555,6 +555,13 @@
    "report": "archive/2026-11-17.html",
    "label_vi": "Instagram tăng, Facebook và LinkedIn giảm mạnh",
    "label_en": "Instagram grows, Facebook and LinkedIn fall sharply"
+  },
+  {
+   "date": "2026-11-18",
+   "data": "data/2026-11-18.json",
+   "report": "archive/2026-11-18.html",
+   "label_vi": "FB views 3045 · IG reach 250 · LI impressions 922",
+   "label_en": "FB views 3045 · IG reach 250 · LI impressions 922"
   }
  ]
 }
