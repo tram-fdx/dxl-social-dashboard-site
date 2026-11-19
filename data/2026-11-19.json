@@ -8,8 +8,8 @@
  },
  "windows": {
   "meta": "2026-10-21 → 2026-11-17",
-  "youtube": "2026-10-21 → 2026-11-17",
-  "linkedin": "2026-10-21 → 2026-11-17"
+  "youtube": "2026-10-22 → 2026-11-18",
+  "linkedin": "2026-10-19 → 2026-11-17"
  },
  "facebook": {
   "followers": 119,
@@ -563,43 +563,43 @@
   "subscribers_net_28d": 1,
   "videos": null,
   "views_28d": {
-   "v": 336,
+   "v": 261,
    "change_pct": null
   },
-  "watch_time_hours": 0.4,
+  "watch_time_hours": 0.3,
   "shorts_views": null,
   "long_form_views": null,
   "top_videos": [
    {
     "t": "Watch the Build Before It Begins",
-    "views": 212,
-    "minutes": null
-   },
-   {
-    "t": "Project 251 - Behind the rooftop progress",
-    "views": 78,
+    "views": 213,
     "minutes": null
    },
    {
     "t": "One Model for Every Conversation",
-    "views": 12,
+    "views": 13,
+    "minutes": null
+   },
+   {
+    "t": "Is the Project Where It Should Be?",
+    "views": 7,
     "minutes": null
    }
   ],
   "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "source": "carried forward (no API token / CSV)",
-  "stale": true,
-  "followers": 142,
-  "new_followers_28d": 7,
+  "source": "LinkedIn Page analytics (Chrome on Mac)",
+  "stale": false,
+  "followers": 143,
+  "new_followers_28d": 6,
   "impressions": {
-   "v": 922,
-   "change_pct": -27.9
+   "v": 934,
+   "change_pct": -26
   },
   "reactions": {
    "v": 23,
-   "change_pct": -37.8
+   "change_pct": -39.5
   },
   "comments": {
    "v": 0,
@@ -611,18 +611,31 @@
   },
   "page_views": {
    "v": 27,
-   "change_pct": -67.1
+   "change_pct": -66.3
   },
   "unique_visitors": {
    "v": 11,
-   "change_pct": -67.6
+   "change_pct": -66.7
   }
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_followers 119 → 119; fb_views 3045 → 2847; fb_interactions 192 → 174; fb_visits 431 → 410; ig_followers 52 → 53; ig_views 691 → 695; ig_reach 250 → 249; ig_interactions 47 → 39.",
-  "en": "fb_followers 119 → 119; fb_views 3045 → 2847; fb_interactions 192 → 174; fb_visits 431 → 410; ig_followers 52 → 53; ig_views 691 → 695; ig_reach 250 → 249; ig_interactions 47 → 39.",
-  "by": "template"
+  "vi": "So với 28 ngày trước, Facebook giảm mạnh: lượt xem -29,3%, tương tác -42,6%. Instagram lượt xem +17% và lượt xem hồ sơ +23,8%, nhưng tương tác -31,6%. LinkedIn có 143 follower (+1), hiển thị -26%, lượt xem trang -66,3%; YouTube 261 lượt xem trong 28 ngày.",
+  "en": "Versus the prior 28 days, Facebook fell sharply: views -29.3%, interactions -42.6%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn reached 143 followers (+1) with impressions -26% and page views -66.3%; YouTube had 261 views in 28 days.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả social đi xuống: tương tác giảm trên cả Facebook, Instagram và LinkedIn.",
+  "verdict_en": "Social performance is declining: engagement is down on Facebook, Instagram and LinkedIn.",
+  "actions_vi": [
+   "Facebook: đăng ít hơn nhưng có câu chuyện (người, dự án) để kéo lại tương tác đang -42,6%.",
+   "Instagram: thêm câu hỏi/CTA trong caption để biến lượt xem +17% thành tương tác.",
+   "LinkedIn: gắn thẻ đối tác và nhân sự có tên để phục hồi lượt xem trang -66,3%."
+  ],
+  "actions_en": [
+   "Facebook: post less but story-led (people, projects) to recover interactions, down 42.6%.",
+   "Instagram: add questions/CTAs in captions to turn the 17% rise in views into engagement.",
+   "LinkedIn: tag partners and named staff to recover page views, down 66.3%."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -637,9 +650,9 @@
     "ig_reach": 249,
     "ig_interactions": 39,
     "yt_subscribers": 8,
-    "yt_views_28d": 336,
-    "li_followers": 142,
-    "li_impressions": 922,
+    "yt_views_28d": 261,
+    "li_followers": 143,
+    "li_impressions": 934,
     "change_pct_vs_prior_28d": {
      "fb_views": -29.3,
      "fb_viewers": -31.4,
@@ -650,10 +663,10 @@
      "ig_reach": -10.1,
      "ig_interactions": -31.6,
      "ig_profile_views": 23.8,
-     "li_impressions": -27.9,
-     "li_reactions": -37.8,
-     "li_page_views": -67.1,
-     "li_unique_visitors": -67.6
+     "li_impressions": -26,
+     "li_reactions": -39.5,
+     "li_page_views": -66.3,
+     "li_unique_visitors": -66.7
     }
    },
    "previous": {
@@ -690,7 +703,7 @@
   }
  },
  "notes": {
-  "vi": "fb_followers 119 → 119; fb_views 3045 → 2847; fb_interactions 192 → 174; fb_visits 431 → 410; ig_followers 52 → 53; ig_views 691 → 695; ig_reach 250 → 249; ig_interactions 47 → 39.",
-  "en": "fb_followers 119 → 119; fb_views 3045 → 2847; fb_interactions 192 → 174; fb_visits 431 → 410; ig_followers 52 → 53; ig_views 691 → 695; ig_reach 250 → 249; ig_interactions 47 → 39."
+  "vi": "So với 28 ngày trước, Facebook giảm mạnh: lượt xem -29,3%, tương tác -42,6%. Instagram lượt xem +17% và lượt xem hồ sơ +23,8%, nhưng tương tác -31,6%. LinkedIn có 143 follower (+1), hiển thị -26%, lượt xem trang -66,3%; YouTube 261 lượt xem trong 28 ngày.",
+  "en": "Versus the prior 28 days, Facebook fell sharply: views -29.3%, interactions -42.6%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn reached 143 followers (+1) with impressions -26% and page views -66.3%; YouTube had 261 views in 28 days."
  }
 }
