@@ -620,21 +620,21 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "So với 28 ngày trước, Facebook giảm mạnh: lượt xem -29,3%, tương tác -42,6%. Instagram lượt xem +17% và lượt xem hồ sơ +23,8%, nhưng tương tác -31,6%. LinkedIn có 143 follower (+1), hiển thị -26%, lượt xem trang -66,3%; YouTube 261 lượt xem trong 28 ngày.",
-  "en": "Versus the prior 28 days, Facebook fell sharply: views -29.3%, interactions -42.6%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn reached 143 followers (+1) with impressions -26% and page views -66.3%; YouTube had 261 views in 28 days.",
+  "vi": "Facebook giảm so với 28 ngày trước: lượt xem -29,3%, tương tác -42,6%, lượt ghé trang -20,7%. Instagram tăng lượt xem 17% và lượt xem hồ sơ 23,8% nhưng tương tác giảm 31,6%. LinkedIn có 143 follower, hiển thị -26% và lượt xem trang -66,3%. YouTube đạt 261 lượt xem trong 28 ngày (từ 336), chủ yếu từ video \"Watch the Build Before It Begins\".",
+  "en": "Facebook is down on the prior 28 days: views -29.3%, interactions -42.6%, visits -20.7%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn has 143 followers, with impressions -26% and page views -66.3%. YouTube logged 261 views over 28 days (from 336), mostly from \"Watch the Build Before It Begins\".",
   "by": "Claude (Mac)",
   "rating": "bad",
-  "verdict_vi": "Hiệu quả social đi xuống: tương tác giảm trên cả Facebook, Instagram và LinkedIn.",
-  "verdict_en": "Social performance is declining: engagement is down on Facebook, Instagram and LinkedIn.",
+  "verdict_vi": "Hiệu quả social đang giảm trên Facebook và LinkedIn; chỉ Instagram tăng tầm nhìn.",
+  "verdict_en": "Social performance is falling on Facebook and LinkedIn; only Instagram is gaining visibility.",
   "actions_vi": [
-   "Facebook: đăng ít hơn nhưng có câu chuyện (người, dự án) để kéo lại tương tác đang -42,6%.",
-   "Instagram: thêm câu hỏi/CTA trong caption để biến lượt xem +17% thành tương tác.",
-   "LinkedIn: gắn thẻ đối tác và nhân sự có tên để phục hồi lượt xem trang -66,3%."
+   "Facebook: thử lại định dạng video/Reel vì tương tác giảm 42,6%",
+   "Instagram: thêm câu hỏi/CTA trong caption để biến lượt xem (+17%) thành tương tác",
+   "LinkedIn: đăng bài có người thật và dự án cụ thể để kéo lại lượt xem trang (-66,3%)"
   ],
   "actions_en": [
-   "Facebook: post less but story-led (people, projects) to recover interactions, down 42.6%.",
-   "Instagram: add questions/CTAs in captions to turn the 17% rise in views into engagement.",
-   "LinkedIn: tag partners and named staff to recover page views, down 66.3%."
+   "Facebook: test video/Reels again as interactions fell 42.6%",
+   "Instagram: add questions/CTAs in captions to turn views (+17%) into interactions",
+   "LinkedIn: post named people and specific projects to recover page views (-66.3%)"
   ]
  },
  "commentary_input": {
@@ -703,7 +703,7 @@
   }
  },
  "notes": {
-  "vi": "So với 28 ngày trước, Facebook giảm mạnh: lượt xem -29,3%, tương tác -42,6%. Instagram lượt xem +17% và lượt xem hồ sơ +23,8%, nhưng tương tác -31,6%. LinkedIn có 143 follower (+1), hiển thị -26%, lượt xem trang -66,3%; YouTube 261 lượt xem trong 28 ngày.",
-  "en": "Versus the prior 28 days, Facebook fell sharply: views -29.3%, interactions -42.6%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn reached 143 followers (+1) with impressions -26% and page views -66.3%; YouTube had 261 views in 28 days."
+  "vi": "Facebook giảm so với 28 ngày trước: lượt xem -29,3%, tương tác -42,6%, lượt ghé trang -20,7%. Instagram tăng lượt xem 17% và lượt xem hồ sơ 23,8% nhưng tương tác giảm 31,6%. LinkedIn có 143 follower, hiển thị -26% và lượt xem trang -66,3%. YouTube đạt 261 lượt xem trong 28 ngày (từ 336), chủ yếu từ video \"Watch the Build Before It Begins\".",
+  "en": "Facebook is down on the prior 28 days: views -29.3%, interactions -42.6%, visits -20.7%. Instagram views rose 17% and profile views 23.8%, but interactions fell 31.6%. LinkedIn has 143 followers, with impressions -26% and page views -66.3%. YouTube logged 261 views over 28 days (from 336), mostly from \"Watch the Build Before It Begins\"."
  }
 }
