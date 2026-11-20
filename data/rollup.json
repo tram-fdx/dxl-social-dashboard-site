@@ -7,7 +7,7 @@
   "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
  },
  "kind": "rollup",
- "scanned_count": 84,
+ "scanned_count": 85,
  "scanned_days": [
   "2026-07-23",
   "2026-07-27",
@@ -90,6 +90,7 @@
   "2026-11-17",
   "2026-11-18",
   "2026-11-19",
+  "2026-11-20",
   "days",
   "funnel",
   "series"
@@ -98,8 +99,8 @@
   "fb_followers": {
    "grain": "state",
    "label": "Facebook — followers",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -424,14 +425,18 @@
     {
      "d": "2026-11-19",
      "v": 119
+    },
+    {
+     "d": "2026-11-20",
+     "v": 119
     }
    ]
   },
   "fb_interactions_28d": {
    "grain": "window28",
    "label": "Facebook — interactions (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -756,14 +761,18 @@
     {
      "d": "2026-11-19",
      "v": 174
+    },
+    {
+     "d": "2026-11-20",
+     "v": 162
     }
    ]
   },
   "fb_interactions_day": {
    "grain": "day",
    "label": "Facebook — interactions (daily, scan)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -1308,6 +1317,10 @@
     {
      "d": "2026-11-17",
      "v": 0
+    },
+    {
+     "d": "2026-11-18",
+     "v": 0
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -1315,8 +1328,8 @@
   "fb_video3s_day": {
    "grain": "day",
    "label": "Facebook — 3-second views (daily, scan)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -1861,6 +1874,10 @@
     {
      "d": "2026-11-17",
      "v": 2
+    },
+    {
+     "d": "2026-11-18",
+     "v": 2
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -1868,8 +1885,8 @@
   "fb_views_28d": {
    "grain": "window28",
    "label": "Facebook — views (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -2194,14 +2211,18 @@
     {
      "d": "2026-11-19",
      "v": 2847
+    },
+    {
+     "d": "2026-11-20",
+     "v": 2566
     }
    ]
   },
   "fb_views_day": {
    "grain": "day",
    "label": "Facebook — views (daily, scan)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -2746,6 +2767,10 @@
     {
      "d": "2026-11-17",
      "v": 5
+    },
+    {
+     "d": "2026-11-18",
+     "v": 6
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -2753,8 +2778,8 @@
   "fb_visits_28d": {
    "grain": "window28",
    "label": "Facebook — Page visits (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -3079,14 +3104,18 @@
     {
      "d": "2026-11-19",
      "v": 410
+    },
+    {
+     "d": "2026-11-20",
+     "v": 374
     }
    ]
   },
   "fb_visits_day": {
    "grain": "day",
    "label": "Facebook — Page visits (daily, scan)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -3631,6 +3660,10 @@
     {
      "d": "2026-11-17",
      "v": 1
+    },
+    {
+     "d": "2026-11-18",
+     "v": 9
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -3638,8 +3671,8 @@
   "ig_followers": {
    "grain": "state",
    "label": "Instagram — followers",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -3964,14 +3997,18 @@
     {
      "d": "2026-11-19",
      "v": 53
+    },
+    {
+     "d": "2026-11-20",
+     "v": 53
     }
    ]
   },
   "ig_interactions_28d": {
    "grain": "window28",
    "label": "Instagram — interactions (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -4296,14 +4333,18 @@
     {
      "d": "2026-11-19",
      "v": 39
+    },
+    {
+     "d": "2026-11-20",
+     "v": 34
     }
    ]
   },
   "ig_interactions_day": {
    "grain": "day",
    "label": "Instagram — interactions (daily)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -4848,6 +4889,10 @@
     {
      "d": "2026-11-17",
      "v": 3
+    },
+    {
+     "d": "2026-11-18",
+     "v": 0
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -4855,8 +4900,8 @@
   "ig_profile_views_28d": {
    "grain": "window28",
    "label": "Instagram — profile views (28d)",
-   "measured": 5,
-   "of_days": 84,
+   "measured": 6,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-11-15",
@@ -4877,14 +4922,18 @@
     {
      "d": "2026-11-19",
      "v": 26
+    },
+    {
+     "d": "2026-11-20",
+     "v": 23
     }
    ]
   },
   "ig_reach_28d": {
    "grain": "window28",
    "label": "Instagram — reach (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -5209,14 +5258,18 @@
     {
      "d": "2026-11-19",
      "v": 249
+    },
+    {
+     "d": "2026-11-20",
+     "v": 200
     }
    ]
   },
   "ig_reach_day": {
    "grain": "day",
    "label": "Instagram — reach (daily, scan)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -5761,6 +5814,10 @@
     {
      "d": "2026-11-17",
      "v": 2
+    },
+    {
+     "d": "2026-11-18",
+     "v": 0
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -5768,8 +5825,8 @@
   "ig_views_28d": {
    "grain": "window28",
    "label": "Instagram — views (28d)",
-   "measured": 81,
-   "of_days": 84,
+   "measured": 82,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -6094,14 +6151,18 @@
     {
      "d": "2026-11-19",
      "v": 695
+    },
+    {
+     "d": "2026-11-20",
+     "v": 624
     }
    ]
   },
   "ig_views_day": {
    "grain": "day",
    "label": "Instagram — views (daily)",
-   "measured": 136,
-   "of_days": 136,
+   "measured": 137,
+   "of_days": 137,
    "points": [
     {
      "d": "2026-07-05",
@@ -6646,6 +6707,10 @@
     {
      "d": "2026-11-17",
      "v": 19
+    },
+    {
+     "d": "2026-11-18",
+     "v": 0
     }
    ],
    "restated_note": "Each day keeps its latest reading; Meta restates numbers later."
@@ -6653,8 +6718,8 @@
   "li_followers": {
    "grain": "state",
    "label": "LinkedIn — followers",
-   "measured": 73,
-   "of_days": 84,
+   "measured": 74,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -6947,14 +7012,18 @@
     {
      "d": "2026-11-19",
      "v": 143
+    },
+    {
+     "d": "2026-11-20",
+     "v": 143
     }
    ]
   },
   "li_impressions_28d": {
    "grain": "window28",
    "label": "LinkedIn — impressions (28d)",
-   "measured": 73,
-   "of_days": 84,
+   "measured": 74,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -7247,14 +7316,18 @@
     {
      "d": "2026-11-19",
      "v": 934
+    },
+    {
+     "d": "2026-11-20",
+     "v": 934
     }
    ]
   },
   "li_page_views_28d": {
    "grain": "window28",
    "label": "LinkedIn — page views (28d)",
-   "measured": 73,
-   "of_days": 84,
+   "measured": 74,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -7547,14 +7620,18 @@
     {
      "d": "2026-11-19",
      "v": 27
+    },
+    {
+     "d": "2026-11-20",
+     "v": 27
     }
    ]
   },
   "li_reactions_28d": {
    "grain": "window28",
    "label": "LinkedIn — reactions (28d)",
-   "measured": 73,
-   "of_days": 84,
+   "measured": 74,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -7847,14 +7924,18 @@
     {
      "d": "2026-11-19",
      "v": 23
+    },
+    {
+     "d": "2026-11-20",
+     "v": 23
     }
    ]
   },
   "li_unique_visitors_28d": {
    "grain": "window28",
    "label": "LinkedIn — unique visitors (28d)",
-   "measured": 73,
-   "of_days": 84,
+   "measured": 74,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -8147,14 +8228,18 @@
     {
      "d": "2026-11-19",
      "v": 11
+    },
+    {
+     "d": "2026-11-20",
+     "v": 11
     }
    ]
   },
   "yt_subscribers": {
    "grain": "state",
    "label": "YouTube — subscribers",
-   "measured": 80,
-   "of_days": 84,
+   "measured": 81,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -8475,14 +8560,18 @@
     {
      "d": "2026-11-19",
      "v": 8
+    },
+    {
+     "d": "2026-11-20",
+     "v": 8
     }
    ]
   },
   "yt_views_28d": {
    "grain": "window28",
    "label": "YouTube — views (28d)",
-   "measured": 80,
-   "of_days": 84,
+   "measured": 81,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -8803,14 +8892,18 @@
     {
      "d": "2026-11-19",
      "v": 261
+    },
+    {
+     "d": "2026-11-20",
+     "v": 261
     }
    ]
   },
   "yt_watch_hours_28d": {
    "grain": "window28",
    "label": "YouTube — watch hours (28d)",
-   "measured": 80,
-   "of_days": 84,
+   "measured": 81,
+   "of_days": 85,
    "points": [
     {
      "d": "2026-07-23",
@@ -9130,6 +9223,10 @@
     },
     {
      "d": "2026-11-19",
+     "v": 0.3
+    },
+    {
+     "d": "2026-11-20",
      "v": 0.3
     }
    ]
