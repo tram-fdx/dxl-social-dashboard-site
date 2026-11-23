@@ -589,17 +589,17 @@
   "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "source": "carried forward (no API token / CSV)",
-  "stale": true,
+  "source": "LinkedIn admin analytics (Chrome on Mac), window 2026-10-23 → 2026-11-21",
+  "stale": false,
   "followers": 143,
-  "new_followers_28d": 6,
+  "new_followers_28d": 4,
   "impressions": {
-   "v": 934,
-   "change_pct": -26
+   "v": 863,
+   "change_pct": -32.4
   },
   "reactions": {
-   "v": 23,
-   "change_pct": -39.5
+   "v": 27,
+   "change_pct": -25
   },
   "comments": {
    "v": 0,
@@ -610,12 +610,12 @@
    "change_pct": null
   },
   "page_views": {
-   "v": 27,
-   "change_pct": -66.3
+   "v": 29,
+   "change_pct": -64.6
   },
   "unique_visitors": {
    "v": 11,
-   "change_pct": -66.7
+   "change_pct": -68.6
   }
  },
  "errors": [],
