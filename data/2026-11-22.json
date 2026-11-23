@@ -8,7 +8,7 @@
  },
  "windows": {
   "meta": "2026-10-24 → 2026-11-20",
-  "youtube": "2026-10-24 → 2026-11-20",
+  "youtube": "2026-10-25 → 2026-11-21",
   "linkedin": "2026-10-24 → 2026-11-20"
  },
  "facebook": {
@@ -563,7 +563,7 @@
   "subscribers_net_28d": 1,
   "videos": null,
   "views_28d": {
-   "v": 261,
+   "v": 252,
    "change_pct": null
   },
   "watch_time_hours": 0.3,
@@ -620,9 +620,22 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_followers 119 → 119; fb_views 2493 → 2522; fb_interactions 138 → 124; fb_visits 361 → 350; ig_followers 53 → 53; ig_views 604 → 648; ig_reach 198 → 201; ig_interactions 26 → 25.",
-  "en": "fb_followers 119 → 119; fb_views 2493 → 2522; fb_interactions 138 → 124; fb_visits 361 → 350; ig_followers 53 → 53; ig_views 604 → 648; ig_reach 198 → 201; ig_interactions 26 → 25.",
-  "by": "template"
+  "vi": "Các kênh tiếp tục giảm so với 28 ngày trước: lượt xem Facebook -41,2%, tương tác Facebook -56,7%, tương tác Instagram -61,8%. LinkedIn có 907 hiển thị (-27,5%), lượt xem trang -57,7%; YouTube 252 lượt xem trong 28 ngày. Follower đứng yên (FB 119, IG 53, LinkedIn 143). Nên ưu tiên ít bài hơn nhưng có câu chuyện và người thật để kéo tương tác.",
+  "en": "Channels keep falling against the prior 28 days: Facebook views -41.2%, Facebook interactions -56.7%, Instagram interactions -61.8%. LinkedIn had 907 impressions (-27.5%) and page views -57.7%; YouTube logged 252 views in 28 days. Followers are flat (FB 119, IG 53, LinkedIn 143). Favour fewer, story-led posts with real people to rebuild engagement.",
+  "by": "template",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả social kém đi rõ rệt trên Facebook, Instagram và LinkedIn.",
+  "verdict_en": "Social performance has clearly weakened across Facebook, Instagram and LinkedIn.",
+  "actions_vi": [
+   "Giảm còn 2–3 bài/tuần mỗi kênh, mỗi bài có người thật hoặc mốc dự án để đảo chiều tương tác FB (-56,7%) và IG (-61,8%).",
+   "Đăng thêm video ngắn theo hướng 'Watch the Build Before It Begins' (213 lượt xem YouTube).",
+   "Kết bài bằng câu hỏi để có bình luận trên LinkedIn (hiện 0)."
+  ],
+  "actions_en": [
+   "Cut to 2–3 posts a week per channel, each with real people or a project milestone, to reverse FB (-56.7%) and IG (-61.8%) interaction drops.",
+   "Post more short videos in the style of 'Watch the Build Before It Begins' (213 YouTube views).",
+   "End posts with a question to earn LinkedIn comments (currently 0)."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -637,7 +650,7 @@
     "ig_reach": 201,
     "ig_interactions": 25,
     "yt_subscribers": 8,
-    "yt_views_28d": 261,
+    "yt_views_28d": 252,
     "li_followers": 143,
     "li_impressions": 934,
     "change_pct_vs_prior_28d": {
@@ -690,7 +703,7 @@
   }
  },
  "notes": {
-  "vi": "fb_followers 119 → 119; fb_views 2493 → 2522; fb_interactions 138 → 124; fb_visits 361 → 350; ig_followers 53 → 53; ig_views 604 → 648; ig_reach 198 → 201; ig_interactions 26 → 25.",
-  "en": "fb_followers 119 → 119; fb_views 2493 → 2522; fb_interactions 138 → 124; fb_visits 361 → 350; ig_followers 53 → 53; ig_views 604 → 648; ig_reach 198 → 201; ig_interactions 26 → 25."
+  "vi": "Các kênh tiếp tục giảm so với 28 ngày trước: lượt xem Facebook -41,2%, tương tác Facebook -56,7%, tương tác Instagram -61,8%. LinkedIn có 907 hiển thị (-27,5%), lượt xem trang -57,7%; YouTube 252 lượt xem trong 28 ngày. Follower đứng yên (FB 119, IG 53, LinkedIn 143). Nên ưu tiên ít bài hơn nhưng có câu chuyện và người thật để kéo tương tác.",
+  "en": "Channels keep falling against the prior 28 days: Facebook views -41.2%, Facebook interactions -56.7%, Instagram interactions -61.8%. LinkedIn had 907 impressions (-27.5%) and page views -57.7%; YouTube logged 252 views in 28 days. Followers are flat (FB 119, IG 53, LinkedIn 143). Favour fewer, story-led posts with real people to rebuild engagement."
  }
 }
