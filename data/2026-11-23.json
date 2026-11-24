@@ -620,9 +620,22 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_followers 119 → 119; fb_views 2522 → 2577; fb_interactions 124 → 121; fb_visits 350 → 343; ig_followers 53 → 53; ig_views 648 → 657; ig_reach 201 → 202; ig_interactions 25 → 28.",
-  "en": "fb_followers 119 → 119; fb_views 2522 → 2577; fb_interactions 124 → 121; fb_visits 350 → 343; ig_followers 53 → 53; ig_views 648 → 657; ig_reach 201 → 202; ig_interactions 25 → 28.",
-  "by": "template"
+  "vi": "Trong 28 ngày tới 21/11, lượt xem Facebook đạt 2.577 (−39,6% so với kỳ trước) và tương tác chỉ 121 (−61,9%). Instagram giữ ổn hơn với 657 lượt xem (−5,1%) nhưng tương tác giảm 58,8% còn 28. LinkedIn có 934 lượt hiển thị (−26%), lượt xem trang giảm 66,3%. Số người theo dõi đứng yên: FB 119, IG 53, LinkedIn 143, YouTube 8.",
+  "en": "In the 28 days to 21 Nov, Facebook views reached 2,577 (−39.6% vs the prior period) and interactions only 121 (−61.9%). Instagram held up better at 657 views (−5.1%), but interactions fell 58.8% to 28. LinkedIn had 934 impressions (−26%) and page views dropped 66.3%. Followers are flat: FB 119, IG 53, LinkedIn 143, YouTube 8.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả social kém: hầu hết chỉ số giảm 26–67% so với 28 ngày trước và không tăng người theo dõi.",
+  "verdict_en": "Social performance is weak: most metrics are down 26–67% vs the prior 28 days with no follower growth.",
+  "actions_vi": [
+   "Tăng tần suất đăng Facebook và ưu tiên video ngắn để kéo lại 3s video views (−40%).",
+   "Thêm câu hỏi/CTA cuối bài Instagram để phục hồi tương tác (28, −58,8%).",
+   "Đăng bài LinkedIn có link về trang công ty để kéo lại lượt xem trang (−66,3%)."
+  ],
+  "actions_en": [
+   "Post more often on Facebook and favour short video to recover 3s video views (−40%).",
+   "Add questions/CTAs to Instagram posts to rebuild interactions (28, −58.8%).",
+   "Publish LinkedIn posts that drive to the Page to recover page views (−66.3%)."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -690,7 +703,7 @@
   }
  },
  "notes": {
-  "vi": "fb_followers 119 → 119; fb_views 2522 → 2577; fb_interactions 124 → 121; fb_visits 350 → 343; ig_followers 53 → 53; ig_views 648 → 657; ig_reach 201 → 202; ig_interactions 25 → 28.",
-  "en": "fb_followers 119 → 119; fb_views 2522 → 2577; fb_interactions 124 → 121; fb_visits 350 → 343; ig_followers 53 → 53; ig_views 648 → 657; ig_reach 201 → 202; ig_interactions 25 → 28."
+  "vi": "Trong 28 ngày tới 21/11, lượt xem Facebook đạt 2.577 (−39,6% so với kỳ trước) và tương tác chỉ 121 (−61,9%). Instagram giữ ổn hơn với 657 lượt xem (−5,1%) nhưng tương tác giảm 58,8% còn 28. LinkedIn có 934 lượt hiển thị (−26%), lượt xem trang giảm 66,3%. Số người theo dõi đứng yên: FB 119, IG 53, LinkedIn 143, YouTube 8.",
+  "en": "In the 28 days to 21 Nov, Facebook views reached 2,577 (−39.6% vs the prior period) and interactions only 121 (−61.9%). Instagram held up better at 657 views (−5.1%), but interactions fell 58.8% to 28. LinkedIn had 934 impressions (−26%) and page views dropped 66.3%. Followers are flat: FB 119, IG 53, LinkedIn 143, YouTube 8."
  }
 }
