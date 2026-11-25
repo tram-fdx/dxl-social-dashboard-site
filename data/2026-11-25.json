@@ -9,7 +9,7 @@
  "windows": {
   "meta": "2026-10-27 → 2026-11-23",
   "youtube": "2026-10-27 → 2026-11-23",
-  "linkedin": "2026-10-24 → 2026-11-22"
+  "linkedin": "2026-10-25 → 2026-11-23"
  },
  "facebook": {
   "followers": 119,
@@ -364,17 +364,17 @@
   "long_form_views": null,
   "top_videos": [
    {
-    "t": "Watch the Build Before It Begins",
+    "t": "Dx Living | Watch the Build Before It Begins",
     "views": 213,
     "minutes": null
    },
    {
-    "t": "The scaffold comes down on the western facade (Project 251)",
+    "t": "Project 251 | The scaffold comes down on the western facade",
     "views": 43,
     "minutes": null
    },
    {
-    "t": "One Model for Every Conversation",
+    "t": "DX Living | One Model for Every Conversation",
     "views": 13,
     "minutes": null
    }
@@ -382,17 +382,17 @@
   "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "source": "LinkedIn company admin (Chrome on Mac)",
+  "source": "LinkedIn Page analytics (Chrome on Mac)",
   "stale": false,
   "followers": 143,
   "new_followers_28d": 4,
   "impressions": {
-   "v": 876,
-   "change_pct": -31.3
+   "v": 893,
+   "change_pct": -29.2
   },
   "reactions": {
-   "v": 24,
-   "change_pct": -36.8
+   "v": 27,
+   "change_pct": -28.9
   },
   "comments": {
    "v": 0,
@@ -404,7 +404,7 @@
   },
   "page_views": {
    "v": 32,
-   "change_pct": -61.0
+   "change_pct": -61
   },
   "unique_visitors": {
    "v": 12,
@@ -413,9 +413,22 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_views 2474 → 2513; fb_interactions 116 → 63 (Meta UI \"content interactions\" definition, not the Graph API one); fb_visits 298 → 284; ig_views 624 → 1022; ig_reach 201 → 257; yt_views_28d 252 → 294; li_impressions 863 → 876. Window moved to 27 Oct–23 Nov (live Meta UI). LinkedIn read live (was carried). IG posts/following and post tables not read.",
-  "en": "fb_views 2474 → 2513; fb_interactions 116 → 63 (Meta UI \"content interactions\" definition, not the Graph API one); fb_visits 298 → 284; ig_views 624 → 1022; ig_reach 201 → 257; yt_views_28d 252 → 294; li_impressions 863 → 876. Window moved to 27 Oct–23 Nov (live Meta UI). LinkedIn read live (was carried). IG posts/following and post tables not read.",
-  "by": "Claude on Mac (scheduled routine)"
+  "vi": "Lượt xem Instagram tăng từ 624 lên 1.022 và YouTube từ 252 lên 294 trong 28 ngày. Tương tác Facebook giảm từ 116 xuống 63 (−63,2% so với kỳ trước). LinkedIn có 893 hiển thị (−29,2%), lượt xem trang −61%.",
+  "en": "Instagram views rose from 624 to 1,022 and YouTube from 252 to 294 over 28 days. Facebook interactions fell from 116 to 63 (−63.2% vs prior period). LinkedIn had 893 impressions (−29.2%), with page views down 61%.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hầu hết chỉ số giảm mạnh so với 28 ngày trước, chỉ Instagram và YouTube khởi sắc.",
+  "verdict_en": "Most metrics fell sharply vs the prior 28 days; only Instagram and YouTube improved.",
+  "actions_vi": [
+   "Lặp lại dạng video 'Watch the Build Before It Begins' (213 lượt xem) trên Facebook và LinkedIn.",
+   "Thêm câu hỏi mở vào bài Facebook để kéo tương tác từ mức 63.",
+   "Đăng hậu trường Project 251 có người thật trên LinkedIn để cải thiện lượt xem trang (−61%)."
+  ],
+  "actions_en": [
+   "Reuse the 'Watch the Build Before It Begins' video format (213 views) on Facebook and LinkedIn.",
+   "Add open questions to Facebook posts to lift interactions from 63.",
+   "Post Project 251 behind-the-scenes with real people on LinkedIn to recover page views (−61%)."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -432,7 +445,22 @@
     "yt_subscribers": 8,
     "yt_views_28d": 294,
     "li_followers": 143,
-    "li_impressions": 876
+    "li_impressions": 893,
+    "change_pct_vs_prior_28d": {
+     "fb_views": -40.9,
+     "fb_viewers": -36.1,
+     "fb_visits": -53.4,
+     "fb_interactions": -63.2,
+     "fb_video_3s": -39.2,
+     "fb_net_new_followers": 100.0,
+     "ig_views": -48.1,
+     "ig_reach": -21.2,
+     "ig_interactions": -60.3,
+     "li_impressions": -29.2,
+     "li_reactions": -28.9,
+     "li_page_views": -61,
+     "li_unique_visitors": -65.7
+    }
    },
    "previous": {
     "fb_followers": 119,
@@ -469,7 +497,7 @@
   }
  },
  "notes": {
-  "vi": "fb_views 2474 → 2513; fb_interactions 116 → 63 (Meta UI \"content interactions\" definition, not the Graph API one); fb_visits 298 → 284; ig_views 624 → 1022; ig_reach 201 → 257; yt_views_28d 252 → 294; li_impressions 863 → 876. Window moved to 27 Oct–23 Nov (live Meta UI). LinkedIn read live (was carried). IG posts/following and post tables not read.",
-  "en": "fb_views 2474 → 2513; fb_interactions 116 → 63 (Meta UI \"content interactions\" definition, not the Graph API one); fb_visits 298 → 284; ig_views 624 → 1022; ig_reach 201 → 257; yt_views_28d 252 → 294; li_impressions 863 → 876. Window moved to 27 Oct–23 Nov (live Meta UI). LinkedIn read live (was carried). IG posts/following and post tables not read."
+  "vi": "Lượt xem Instagram tăng từ 624 lên 1.022 và YouTube từ 252 lên 294 trong 28 ngày. Tương tác Facebook giảm từ 116 xuống 63 (−63,2% so với kỳ trước). LinkedIn có 893 hiển thị (−29,2%), lượt xem trang −61%.",
+  "en": "Instagram views rose from 624 to 1,022 and YouTube from 252 to 294 over 28 days. Facebook interactions fell from 116 to 63 (−63.2% vs prior period). LinkedIn had 893 impressions (−29.2%), with page views down 61%."
  }
 }
