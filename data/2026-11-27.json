@@ -1,0 +1,691 @@
+{
+ "date": "2026-11-27",
+ "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
+ "provenance": "Live reads in Chrome on the Mac (Meta Business Suite insights, YouTube Studio, LinkedIn admin) by the scheduled daily run, 27 Nov 2026. Not read: Instagram profile (login wall) -> following/posts_total/profile_views null; per-post tables carry the 26 Nov per-post counts (posts older than the window dropped); YouTube video counts, Shorts/long split not read.",
+ "window": {
+  "vi": "28 ngày qua: 29/10 – 25/11/2026",
+  "en": "Last 28 days: 29 Oct – 25 Nov 2026"
+ },
+ "windows": {
+  "meta": "2026-10-29 → 2026-11-25",
+  "youtube": "2026-10-29 → 2026-11-25",
+  "linkedin": "2026-10-26 → 2026-11-24 (30d)"
+ },
+ "facebook": {
+  "followers": 119,
+  "page_likes": 119,
+  "views": {
+   "v": 2652,
+   "change_pct": -35.2
+  },
+  "viewers": {
+   "v": 170,
+   "change_pct": -32.8
+  },
+  "visits": {
+   "v": 248,
+   "change_pct": -62.4
+  },
+  "interactions": {
+   "v": 62,
+   "change_pct": -59.5
+  },
+  "video_3s": {
+   "v": 271,
+   "change_pct": -37.6
+  },
+  "follows": 2,
+  "unfollows": 0,
+  "net_new_followers": {
+   "v": 2,
+   "change_pct": 100.0
+  },
+  "daily_dates": [
+   "2026-10-29",
+   "2026-10-30",
+   "2026-10-31",
+   "2026-11-01",
+   "2026-11-02",
+   "2026-11-03",
+   "2026-11-04",
+   "2026-11-05",
+   "2026-11-06",
+   "2026-11-07",
+   "2026-11-08",
+   "2026-11-09",
+   "2026-11-10",
+   "2026-11-11",
+   "2026-11-12",
+   "2026-11-13",
+   "2026-11-14",
+   "2026-11-15",
+   "2026-11-16",
+   "2026-11-17",
+   "2026-11-18",
+   "2026-11-19",
+   "2026-11-20",
+   "2026-11-21",
+   "2026-11-22",
+   "2026-11-23",
+   "2026-11-24",
+   "2026-11-25"
+  ],
+  "daily": {
+   "views": [
+    47,
+    141,
+    13,
+    91,
+    196,
+    103,
+    81,
+    204,
+    74,
+    11,
+    84,
+    147,
+    137,
+    108,
+    201,
+    83,
+    10,
+    31,
+    18,
+    5,
+    6,
+    168,
+    189,
+    103,
+    0,
+    166,
+    230,
+    5
+   ],
+   "visits": [
+    0,
+    0,
+    1,
+    3,
+    17,
+    24,
+    16,
+    34,
+    0,
+    2,
+    36,
+    6,
+    7,
+    10,
+    24,
+    0,
+    0,
+    10,
+    0,
+    1,
+    9,
+    12,
+    11,
+    3,
+    1,
+    3,
+    14,
+    4
+   ],
+   "interactions": [
+    4,
+    4,
+    1,
+    0,
+    10,
+    2,
+    3,
+    6,
+    1,
+    0,
+    0,
+    7,
+    2,
+    3,
+    1,
+    4,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    9,
+    2,
+    0,
+    2,
+    0,
+    0
+   ],
+   "video_3s": [
+    0,
+    0,
+    0,
+    9,
+    39,
+    17,
+    5,
+    64,
+    16,
+    2,
+    4,
+    10,
+    7,
+    15,
+    22,
+    6,
+    0,
+    4,
+    5,
+    2,
+    2,
+    1,
+    6,
+    4,
+    0,
+    23,
+    8,
+    0
+   ]
+  },
+  "top_posts_metric": "views",
+  "top_posts": [
+   {
+    "d": "2026-11-12 03:02",
+    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
+    "url": "https://www.facebook.com/reel/2412210922646426/",
+    "reach": 137,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-02 11:32",
+    "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
+    "url": "https://www.facebook.com/reel/2849470955505909/",
+    "reach": 124,
+    "react": 3,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-11-03 23:00",
+    "t": "A door swing is a decision.\n\nWhich way a door opens affects where the light switches sit, how furniture fits and how people move through a r",
+    "url": "https://www.facebook.com/122172046520990680/posts/122170801796990680",
+    "reach": 89,
+    "react": 1,
+    "com": 0,
+    "sh": 2
+   },
+   {
+    "d": "2026-11-09 19:00",
+    "t": "The best time to move a wall is before it exists.\n\nIn the model, a wall can shift in seconds to test room proportions, circulation and furni",
+    "url": "https://www.facebook.com/122172046520990680/posts/122171480666990680",
+    "reach": 83,
+    "react": 2,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-05 03:01",
+    "t": "Knowing when your home will be finished is only part of the picture. Knowing when each stage needs to be funded matters just as much.\n\nAs pa",
+    "url": "https://www.facebook.com/reel/1865533551307017/",
+    "reach": 83,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-11-08 19:01",
+    "t": "Natural stone has a front and a back.\n\nEvery slab carries its own pattern, veining and tonal variation. Which face is shown, which way the v",
+    "url": "https://www.facebook.com/122172046520990680/posts/122171359232990680",
+    "reach": 78,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-10 03:01",
+    "t": "Move a window, change a ceiling height or shift a wall. What else does it affect?\n\nA single decision rarely stays in one place. It flows thr",
+    "url": "https://www.facebook.com/reel/1106789358928290/",
+    "reach": 76,
+    "react": 1,
+    "com": 0,
+    "sh": 0
+   },
+   {
+    "d": "2026-11-09 15:00",
+    "t": "Before the TV goes on the wall, check the window.\n\nA living room can look perfectly composed in a render, but where the screen faces matters",
+    "url": "https://www.facebook.com/122172046520990680/posts/122171461652990680",
+    "reach": 75,
+    "react": 1,
+    "com": 0,
+    "sh": 1
+   },
+   {
+    "d": "2026-11-03 00:00",
+    "t": "Melbourne Cup Day is part of the Victorian calendar, and a reminder that the working calendar matters on every project.\n\nA realistic constru",
+    "url": "https://www.facebook.com/122172046520990680/posts/122170692122990680",
+    "reach": 70,
+    "react": 3,
+    "com": 0,
+    "sh": 1
+   }
+  ]
+ },
+ "instagram": {
+  "followers": 53,
+  "following": null,
+  "posts_total": null,
+  "views": {
+   "v": 1022,
+   "change_pct": -43.5
+  },
+  "reach": {
+   "v": 260,
+   "change_pct": -19.8
+  },
+  "interactions": {
+   "v": 26,
+   "change_pct": -59.4
+  },
+  "profile_views": {
+   "v": null,
+   "change_pct": null
+  },
+  "views_from_followers_pct": 54.6,
+  "views_from_non_followers_pct": 45.4,
+  "reach_from_followers_pct": 7.3,
+  "reach_from_non_followers_pct": 92.7,
+  "reach_from_followers": 19,
+  "reach_from_non_followers": 241,
+  "daily": {
+   "reach": [
+    4,
+    2,
+    0,
+    2,
+    67,
+    13,
+    7,
+    46,
+    3,
+    1,
+    3,
+    7,
+    69,
+    7,
+    11,
+    4,
+    4,
+    3,
+    0,
+    2,
+    0,
+    0,
+    13,
+    5,
+    1,
+    61,
+    6,
+    0
+   ],
+   "views": [
+    42,
+    28,
+    6,
+    63,
+    110,
+    44,
+    19,
+    79,
+    13,
+    2,
+    26,
+    51,
+    88,
+    30,
+    59,
+    38,
+    17,
+    6,
+    1,
+    19,
+    2,
+    36,
+    82,
+    31,
+    1,
+    81,
+    47,
+    1
+   ],
+   "interactions": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    3,
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    3,
+    1,
+    0,
+    1,
+    0,
+    3,
+    0,
+    0,
+    1,
+    5,
+    0,
+    2,
+    0,
+    0
+   ]
+  },
+  "daily_dates": [
+   "2026-10-29",
+   "2026-10-30",
+   "2026-10-31",
+   "2026-11-01",
+   "2026-11-02",
+   "2026-11-03",
+   "2026-11-04",
+   "2026-11-05",
+   "2026-11-06",
+   "2026-11-07",
+   "2026-11-08",
+   "2026-11-09",
+   "2026-11-10",
+   "2026-11-11",
+   "2026-11-12",
+   "2026-11-13",
+   "2026-11-14",
+   "2026-11-15",
+   "2026-11-16",
+   "2026-11-17",
+   "2026-11-18",
+   "2026-11-19",
+   "2026-11-20",
+   "2026-11-21",
+   "2026-11-22",
+   "2026-11-23",
+   "2026-11-24",
+   "2026-11-25"
+  ],
+  "top_posts_metric": "reach",
+  "top_posts": [
+   {
+    "d": "2026-11-02 11:33",
+    "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
+    "url": "https://www.instagram.com/reel/DfPNJ5wFMP4/",
+    "type": "VIDEO",
+    "reach": 77,
+    "views": 83,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-10 03:03",
+    "t": "Move a window, change a ceiling height or shift a wall. What else does it affect?\n\nA single decision rarely stays in one place. It flows thr",
+    "url": "https://www.instagram.com/reel/Dfi5Fz4lRuL/",
+    "type": "VIDEO",
+    "reach": 73,
+    "views": 78,
+    "react": 2,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-05 03:03",
+    "t": "Knowing when your home will be finished is only part of the picture. Knowing when each stage needs to be funded matters just as much.\n\nAs pa",
+    "url": "https://www.instagram.com/reel/DfWBIk5lRUP/",
+    "type": "VIDEO",
+    "reach": 57,
+    "views": 68,
+    "react": 4,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-12 03:02",
+    "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
+    "url": "https://www.instagram.com/reel/DfoCq0CnAhV/",
+    "type": "VIDEO",
+    "reach": 13,
+    "views": 20,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-13 03:01",
+    "t": "How many people will be on site next week?\n\nA construction programme shows the activities planned and when they are expected to happen. But ",
+    "url": "https://www.instagram.com/p/DfqnhzGihet/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 9,
+    "views": 21,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-12 19:01",
+    "t": "Sill height decides what you see when you sit.\n\nA window can frame the coastline perfectly from standing height, then show mostly wall once ",
+    "url": "https://www.instagram.com/p/DfpwjPeCrF4/",
+    "type": "IMAGE",
+    "reach": 8,
+    "views": 18,
+    "react": 3,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-11 19:02",
+    "t": "Tile setout starts with the room, not just the corner.\n\nWhere the grid begins decides how joints line up and where the cut tiles fall. Start",
+    "url": "https://www.instagram.com/p/DfnLsBUCn40/",
+    "type": "IMAGE",
+    "reach": 8,
+    "views": 12,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-10 19:00",
+    "t": "Ceiling fans and pendants don't share well.\n\nA fan spinning beside a pendant can cause flicker and movement, and puts both fixtures at risk ",
+    "url": "https://www.instagram.com/p/Dfkm4Q9nQW1/",
+    "type": "IMAGE",
+    "reach": 8,
+    "views": 18,
+    "react": 0,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-10 03:01",
+    "t": "Before the TV goes on the wall, check the window.\n\nA living room can look perfectly composed in a render, but where the screen faces matters",
+    "url": "https://www.instagram.com/p/Dfi5LdiirLv/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 8,
+    "views": 23,
+    "react": 3,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   },
+   {
+    "d": "2026-11-09 03:01",
+    "t": "Not every task can move. The critical path explains why.\n\nTwo activities can run late by the same number of days and have completely differe",
+    "url": "https://www.instagram.com/p/DfgUYFJCiee/",
+    "type": "CAROUSEL_ALBUM",
+    "reach": 8,
+    "views": 23,
+    "react": 1,
+    "com": 0,
+    "sh": 0,
+    "saved": 0
+   }
+  ]
+ },
+ "youtube": {
+  "subscribers": 8,
+  "subscribers_net_28d": 0,
+  "videos": null,
+  "views_28d": {
+   "v": 304,
+   "change_pct": null
+  },
+  "watch_time_hours": 0.3,
+  "shorts_views": null,
+  "long_form_views": null,
+  "top_videos": [
+   {
+    "t": "Watch the Build Before It Begins",
+    "views": 213,
+    "minutes": null
+   },
+   {
+    "t": "Project 251 | The scaffold comes down on the western facade",
+    "views": 54,
+    "minutes": null
+   },
+   {
+    "t": "One Model for Every Conversation",
+    "views": 13,
+    "minutes": null
+   }
+  ],
+  "source": "YouTube Studio (Chrome on Mac), live read 27 Nov"
+ },
+ "linkedin": {
+  "source": "LinkedIn admin analytics (Chrome on Mac), live read 27 Nov; window 26 Oct – 24 Nov (30d)",
+  "stale": false,
+  "followers": 143,
+  "new_followers_28d": 4,
+  "impressions": {
+   "v": 921,
+   "change_pct": -26.7
+  },
+  "reactions": {
+   "v": 27,
+   "change_pct": -28.9
+  },
+  "comments": {
+   "v": 0,
+   "change_pct": null
+  },
+  "reposts": {
+   "v": 0,
+   "change_pct": null
+  },
+  "page_views": {
+   "v": 32,
+   "change_pct": -61.0
+  },
+  "unique_visitors": {
+   "v": 12,
+   "change_pct": -65.7
+  }
+ },
+ "errors": [
+  "Instagram profile (instagram.com/dxliving.au) needs login: following, posts_total, profile_views not read -> null",
+  "Per-post tables: 26 Nov counts reused for posts still in window (post list not re-scrollable in Business Suite)"
+ ],
+ "commentary": {
+  "vi": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
+  "en": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
+  "by": "daily run"
+ },
+ "commentary_input": {
+  "report": "Social media",
+  "summary": {
+   "today": {
+    "fb_followers": 119,
+    "fb_views": 2652,
+    "fb_interactions": 62,
+    "fb_visits": 248,
+    "ig_followers": 53,
+    "ig_views": 1022,
+    "ig_reach": 260,
+    "ig_interactions": 26,
+    "yt_subscribers": 8,
+    "yt_views_28d": 304,
+    "li_followers": 143,
+    "li_impressions": 921,
+    "change_pct_vs_prior_28d": {
+     "fb_views": -35.2,
+     "fb_viewers": -32.8,
+     "fb_visits": -62.4,
+     "fb_interactions": -59.5,
+     "fb_video_3s": -37.6,
+     "fb_net_new_followers": 100.0,
+     "ig_views": -43.5,
+     "ig_reach": -19.8,
+     "ig_interactions": -59.4,
+     "li_impressions": -26.7,
+     "li_reactions": -28.9,
+     "li_page_views": -61.0,
+     "li_unique_visitors": -65.7
+    }
+   },
+   "previous": {
+    "fb_followers": 119,
+    "fb_views": 2704,
+    "fb_interactions": 112,
+    "fb_visits": 254,
+    "ig_followers": 53,
+    "ig_views": 688,
+    "ig_reach": 260,
+    "ig_interactions": 26,
+    "yt_subscribers": 8,
+    "yt_views_28d": 252,
+    "li_followers": 143,
+    "li_impressions": 863,
+    "change_pct_vs_prior_28d": {
+     "fb_views": -35.6,
+     "fb_viewers": -47.9,
+     "fb_visits": -61.1,
+     "fb_interactions": -64.6,
+     "fb_video_3s": -37.1,
+     "fb_net_new_followers": 100.0,
+     "ig_views": -2.4,
+     "ig_reach": -20.2,
+     "ig_interactions": -60.6,
+     "ig_profile_views": -33.3,
+     "li_impressions": -32.4,
+     "li_reactions": -25,
+     "li_page_views": -64.6,
+     "li_unique_visitors": -68.6
+    }
+   },
+   "window": "2026-10-28 → 2026-11-24",
+   "collection_errors": []
+  }
+ },
+ "notes": {
+  "vi": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
+  "en": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921."
+ }
+}
