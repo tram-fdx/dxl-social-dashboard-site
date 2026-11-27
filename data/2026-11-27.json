@@ -1,7 +1,7 @@
 {
  "date": "2026-11-27",
  "site": "DX Living — social (Facebook / Instagram / YouTube / LinkedIn)",
- "provenance": "Live reads in Chrome on the Mac (Meta Business Suite insights, YouTube Studio, LinkedIn admin) by the scheduled daily run, 27 Nov 2026. Not read: Instagram profile (login wall) -> following/posts_total/profile_views null; per-post tables carry the 26 Nov per-post counts (posts older than the window dropped); YouTube video counts, Shorts/long split not read.",
+ "provenance": "Automated: Meta Graph API, YouTube Studio via Chrome on Mac, LinkedIn API or manual CSV (GitHub Actions, pipeline v1).",
  "window": {
   "vi": "28 ngày qua: 29/10 – 25/11/2026",
   "en": "Last 28 days: 29 Oct – 25 Nov 2026"
@@ -9,7 +9,7 @@
  "windows": {
   "meta": "2026-10-29 → 2026-11-25",
   "youtube": "2026-10-29 → 2026-11-25",
-  "linkedin": "2026-10-27 → 2026-11-25"
+  "linkedin": "2026-10-29 → 2026-11-25"
  },
  "facebook": {
   "followers": 119,
@@ -19,20 +19,20 @@
    "change_pct": -35.2
   },
   "viewers": {
-   "v": 170,
-   "change_pct": -32.8
+   "v": 446,
+   "change_pct": -47.2
   },
   "visits": {
    "v": 248,
    "change_pct": -62.4
   },
   "interactions": {
-   "v": 62,
-   "change_pct": -59.5
+   "v": 106,
+   "change_pct": -64.9
   },
   "video_3s": {
-   "v": 271,
-   "change_pct": -37.6
+   "v": 272,
+   "change_pct": -37.3
   },
   "follows": 2,
   "unfollows": 0,
@@ -132,33 +132,33 @@
     4
    ],
    "interactions": [
-    4,
-    4,
+    7,
+    6,
+    1,
+    2,
+    9,
+    6,
+    8,
+    6,
     1,
     0,
-    10,
-    2,
+    4,
+    20,
     3,
-    6,
+    8,
+    3,
+    5,
+    0,
+    0,
     1,
     0,
     0,
     7,
+    0,
+    0,
+    0,
+    7,
     2,
-    3,
-    1,
-    4,
-    0,
-    0,
-    1,
-    0,
-    0,
-    0,
-    9,
-    2,
-    0,
-    2,
-    0,
     0
    ],
    "video_3s": [
@@ -167,7 +167,7 @@
     0,
     9,
     39,
-    17,
+    18,
     5,
     64,
     16,
@@ -198,7 +198,7 @@
     "d": "2026-11-12 03:02",
     "t": "Once construction starts, knowing what is happening on site is only part of the picture. The more useful question is whether the project is ",
     "url": "https://www.facebook.com/reel/2412210922646426/",
-    "reach": 137,
+    "reach": 139,
     "react": 2,
     "com": 0,
     "sh": 1
@@ -207,7 +207,7 @@
     "d": "2026-11-02 11:32",
     "t": "A 3D model shows what your home will look like. A construction programme shows when each stage of the build should happen. On their own, eac",
     "url": "https://www.facebook.com/reel/2849470955505909/",
-    "reach": 124,
+    "reach": 126,
     "react": 3,
     "com": 0,
     "sh": 0
@@ -216,7 +216,7 @@
     "d": "2026-11-03 23:00",
     "t": "A door swing is a decision.\n\nWhich way a door opens affects where the light switches sit, how furniture fits and how people move through a r",
     "url": "https://www.facebook.com/122172046520990680/posts/122170801796990680",
-    "reach": 89,
+    "reach": 91,
     "react": 1,
     "com": 0,
     "sh": 2
@@ -225,7 +225,7 @@
     "d": "2026-11-09 19:00",
     "t": "The best time to move a wall is before it exists.\n\nIn the model, a wall can shift in seconds to test room proportions, circulation and furni",
     "url": "https://www.facebook.com/122172046520990680/posts/122171480666990680",
-    "reach": 83,
+    "reach": 85,
     "react": 2,
     "com": 0,
     "sh": 1
@@ -234,7 +234,7 @@
     "d": "2026-11-05 03:01",
     "t": "Knowing when your home will be finished is only part of the picture. Knowing when each stage needs to be funded matters just as much.\n\nAs pa",
     "url": "https://www.facebook.com/reel/1865533551307017/",
-    "reach": 83,
+    "reach": 85,
     "react": 1,
     "com": 0,
     "sh": 0
@@ -243,7 +243,7 @@
     "d": "2026-11-08 19:01",
     "t": "Natural stone has a front and a back.\n\nEvery slab carries its own pattern, veining and tonal variation. Which face is shown, which way the v",
     "url": "https://www.facebook.com/122172046520990680/posts/122171359232990680",
-    "reach": 78,
+    "reach": 80,
     "react": 1,
     "com": 0,
     "sh": 1
@@ -252,7 +252,7 @@
     "d": "2026-11-10 03:01",
     "t": "Move a window, change a ceiling height or shift a wall. What else does it affect?\n\nA single decision rarely stays in one place. It flows thr",
     "url": "https://www.facebook.com/reel/1106789358928290/",
-    "reach": 76,
+    "reach": 78,
     "react": 1,
     "com": 0,
     "sh": 0
@@ -261,7 +261,7 @@
     "d": "2026-11-09 15:00",
     "t": "Before the TV goes on the wall, check the window.\n\nA living room can look perfectly composed in a render, but where the screen faces matters",
     "url": "https://www.facebook.com/122172046520990680/posts/122171461652990680",
-    "reach": 75,
+    "reach": 77,
     "react": 1,
     "com": 0,
     "sh": 1
@@ -270,20 +270,29 @@
     "d": "2026-11-03 00:00",
     "t": "Melbourne Cup Day is part of the Victorian calendar, and a reminder that the working calendar matters on every project.\n\nA realistic constru",
     "url": "https://www.facebook.com/122172046520990680/posts/122170692122990680",
-    "reach": 70,
+    "reach": 72,
     "react": 3,
     "com": 0,
     "sh": 1
+   },
+   {
+    "d": "2026-11-12 19:01",
+    "t": "Sill height decides what you see when you sit.\n\nA window can frame the coastline perfectly from standing height, then show mostly wall once ",
+    "url": "https://www.facebook.com/122172046520990680/posts/122171832158990680",
+    "reach": 68,
+    "react": 1,
+    "com": 0,
+    "sh": 0
    }
   ]
  },
  "instagram": {
   "followers": 53,
-  "following": null,
-  "posts_total": null,
+  "following": 36,
+  "posts_total": 169,
   "views": {
-   "v": 1022,
-   "change_pct": -43.5
+   "v": 676,
+   "change_pct": -1.7
   },
   "reach": {
    "v": 260,
@@ -294,8 +303,8 @@
    "change_pct": -59.4
   },
   "profile_views": {
-   "v": null,
-   "change_pct": null
+   "v": 16,
+   "change_pct": -27.3
   },
   "views_from_followers_pct": 54.6,
   "views_from_non_followers_pct": 45.4,
@@ -335,34 +344,34 @@
     0
    ],
    "views": [
-    42,
-    28,
-    6,
-    63,
-    110,
-    44,
-    19,
-    79,
-    13,
-    2,
-    26,
-    51,
-    88,
-    30,
-    59,
-    38,
-    17,
-    6,
-    1,
-    19,
-    2,
+    9,
+    3,
+    0,
     36,
-    82,
-    31,
+    83,
+    25,
+    18,
+    52,
+    11,
+    2,
+    14,
+    44,
+    79,
+    23,
+    40,
+    29,
+    17,
+    2,
+    0,
+    19,
+    0,
+    0,
+    65,
+    30,
     1,
-    81,
-    47,
-    1
+    66,
+    8,
+    0
    ],
    "interactions": [
     1,
@@ -551,10 +560,10 @@
  },
  "youtube": {
   "subscribers": 8,
-  "subscribers_net_28d": 0,
+  "subscribers_net_28d": 1,
   "videos": null,
   "views_28d": {
-   "v": 304,
+   "v": 252,
    "change_pct": null
   },
   "watch_time_hours": 0.3,
@@ -562,35 +571,35 @@
   "long_form_views": null,
   "top_videos": [
    {
-    "t": "Dx Living | Watch the Build Before It Begins",
+    "t": "Watch the Build Before It Begins",
     "views": 213,
     "minutes": null
    },
    {
-    "t": "Project 251 | The scaffold comes down on the western facade",
-    "views": 54,
+    "t": "One Model for Every Conversation",
+    "views": 13,
     "minutes": null
    },
    {
-    "t": "DX Living | One Model for Every Conversation",
-    "views": 13,
+    "t": "Is the Project Where It Should Be?",
+    "views": 7,
     "minutes": null
    }
   ],
   "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "source": "LinkedIn Page analytics (Chrome on Mac)",
-  "stale": false,
+  "source": "carried forward (no API token / CSV)",
+  "stale": true,
   "followers": 143,
   "new_followers_28d": 4,
   "impressions": {
-   "v": 912,
-   "change_pct": -27.6
+   "v": 863,
+   "change_pct": -32.4
   },
   "reactions": {
-   "v": 26,
-   "change_pct": -33.3
+   "v": 27,
+   "change_pct": -25
   },
   "comments": {
    "v": 0,
@@ -601,35 +610,19 @@
    "change_pct": null
   },
   "page_views": {
-   "v": 32,
-   "change_pct": -61
+   "v": 29,
+   "change_pct": -64.6
   },
   "unique_visitors": {
-   "v": 12,
-   "change_pct": -65.7
+   "v": 11,
+   "change_pct": -68.6
   }
  },
- "errors": [
-  "Instagram profile (instagram.com/dxliving.au) needs login: following, posts_total, profile_views not read -> null",
-  "Per-post tables: 26 Nov counts reused for posts still in window (post list not re-scrollable in Business Suite)"
- ],
+ "errors": [],
  "commentary": {
-  "vi": "So với 28 ngày trước, mọi kênh đều giảm: lượt xem Facebook −35,2%, tương tác Facebook −59,5%, lượt xem Instagram −43,5% và hiển thị LinkedIn −27,6%. Lượt xem YouTube 28 ngày lên 304 (hôm qua 252), chủ yếu từ video 'Watch the Build Before It Begins'. Follower giữ nguyên trên Facebook (119), Instagram (53) và LinkedIn (143). Nên dồn sức vào nội dung video vì đây là định dạng duy nhất đang tăng.",
-  "en": "Against the prior 28 days every channel is down: Facebook views −35.2%, Facebook interactions −59.5%, Instagram views −43.5% and LinkedIn impressions −27.6%. YouTube 28-day views rose to 304 (from 252), led by 'Watch the Build Before It Begins'. Followers held at 119 on Facebook, 53 on Instagram and 143 on LinkedIn. Lean into video, the only format growing.",
-  "by": "Claude (Mac)",
-  "rating": "bad",
-  "verdict_vi": "Hiệu quả social kém: tương tác giảm khoảng 60% trên Facebook và Instagram so với kỳ trước.",
-  "verdict_en": "Social performance is weak: interactions are down about 60% on Facebook and Instagram versus the prior period.",
-  "actions_vi": [
-   "Cắt video 'Watch the Build Before It Begins' (213 lượt xem) thành Reels/Shorts cho Facebook và Instagram.",
-   "Đăng ít bài hơn nhưng có người thật và câu hỏi cuối bài để kéo lại tương tác Facebook (−59,5%).",
-   "Đăng hậu trường Project 251 trên LinkedIn để kéo lại lượt xem trang (−61%)."
-  ],
-  "actions_en": [
-   "Cut 'Watch the Build Before It Begins' (213 views) into Reels/Shorts for Facebook and Instagram.",
-   "Post less but feature real people and end with a question to recover Facebook interactions (−59.5%).",
-   "Share Project 251 behind-the-scenes on LinkedIn to win back page views (−61%)."
-  ]
+  "vi": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
+  "en": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
+  "by": "template"
  },
  "commentary_input": {
   "report": "Social media",
@@ -637,30 +630,31 @@
    "today": {
     "fb_followers": 119,
     "fb_views": 2652,
-    "fb_interactions": 62,
+    "fb_interactions": 106,
     "fb_visits": 248,
     "ig_followers": 53,
-    "ig_views": 1022,
+    "ig_views": 676,
     "ig_reach": 260,
     "ig_interactions": 26,
     "yt_subscribers": 8,
-    "yt_views_28d": 304,
+    "yt_views_28d": 252,
     "li_followers": 143,
-    "li_impressions": 912,
+    "li_impressions": 863,
     "change_pct_vs_prior_28d": {
      "fb_views": -35.2,
-     "fb_viewers": -32.8,
+     "fb_viewers": -47.2,
      "fb_visits": -62.4,
-     "fb_interactions": -59.5,
-     "fb_video_3s": -37.6,
+     "fb_interactions": -64.9,
+     "fb_video_3s": -37.3,
      "fb_net_new_followers": 100.0,
-     "ig_views": -43.5,
+     "ig_views": -1.7,
      "ig_reach": -19.8,
      "ig_interactions": -59.4,
-     "li_impressions": -27.6,
-     "li_reactions": -33.3,
-     "li_page_views": -61,
-     "li_unique_visitors": -65.7
+     "ig_profile_views": -27.3,
+     "li_impressions": -32.4,
+     "li_reactions": -25,
+     "li_page_views": -64.6,
+     "li_unique_visitors": -68.6
     }
    },
    "previous": {
@@ -693,12 +687,12 @@
      "li_unique_visitors": -68.6
     }
    },
-   "window": "2026-10-28 → 2026-11-24",
+   "window": "2026-10-29 → 2026-11-25",
    "collection_errors": []
   }
  },
  "notes": {
-  "vi": "So với 28 ngày trước, mọi kênh đều giảm: lượt xem Facebook −35,2%, tương tác Facebook −59,5%, lượt xem Instagram −43,5% và hiển thị LinkedIn −27,6%. Lượt xem YouTube 28 ngày lên 304 (hôm qua 252), chủ yếu từ video 'Watch the Build Before It Begins'. Follower giữ nguyên trên Facebook (119), Instagram (53) và LinkedIn (143). Nên dồn sức vào nội dung video vì đây là định dạng duy nhất đang tăng.",
-  "en": "Against the prior 28 days every channel is down: Facebook views −35.2%, Facebook interactions −59.5%, Instagram views −43.5% and LinkedIn impressions −27.6%. YouTube 28-day views rose to 304 (from 252), led by 'Watch the Build Before It Begins'. Followers held at 119 on Facebook, 53 on Instagram and 143 on LinkedIn. Lean into video, the only format growing."
+  "vi": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
+  "en": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26."
  }
 }
