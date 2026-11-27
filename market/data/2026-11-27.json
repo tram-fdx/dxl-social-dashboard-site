@@ -1,0 +1,620 @@
+{
+ "date": "2026-11-27",
+ "scanned_at": "2026-11-27 (Chrome on Mac)",
+ "brands": {
+  "dxl": {
+   "label": "DX Living — luxury residential visualisation",
+   "linkedin": {
+    "window": "27 Oct – 25 Nov 2026",
+    "rows": [
+     {
+      "name": "DX Living",
+      "slug": "dxliving",
+      "followers": 143,
+      "new_followers": 4,
+      "new_followers_chg_pct": -89.2,
+      "posts": 19,
+      "posts_chg_pct": -13.6,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 26,
+      "reactions_chg_pct": -33.3,
+      "you": true
+     },
+     {
+      "name": "Solid Support Pty Ltd",
+      "slug": "solidsupportaustralia",
+      "followers": 3524,
+      "new_followers": 36,
+      "new_followers_chg_pct": 227.3,
+      "posts": 11,
+      "posts_chg_pct": 120,
+      "comments": 5,
+      "comments_chg_pct": -16.7,
+      "reactions": 184,
+      "reactions_chg_pct": 38.3
+     },
+     {
+      "name": "FeelDX (sister page)",
+      "slug": "feeldx",
+      "followers": 3145,
+      "new_followers": 9,
+      "new_followers_chg_pct": -67.9,
+      "posts": 14,
+      "posts_chg_pct": 55.6,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 47,
+      "reactions_chg_pct": 11.9
+     },
+     {
+      "name": "IGS Engineering",
+      "slug": "igs-engineering",
+      "followers": 958,
+      "new_followers": 1,
+      "new_followers_chg_pct": -75,
+      "posts": 0,
+      "posts_chg_pct": null,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 0,
+      "reactions_chg_pct": null
+     },
+     {
+      "name": "PREMIER3D",
+      "slug": "premier3d",
+      "src": "public",
+      "followers": 135,
+      "new_followers": 0,
+      "posts": 0,
+      "reactions": 0,
+      "comments": 0,
+      "new_followers_since": "2026-11-26"
+     },
+     {
+      "name": "Harp Collective",
+      "slug": "harp-collective",
+      "src": "public",
+      "followers": 259,
+      "new_followers": 0,
+      "posts": 0,
+      "reactions": 0,
+      "comments": 0,
+      "new_followers_since": "2026-11-26"
+     },
+     {
+      "name": "Shadowlab",
+      "slug": "shadowlab",
+      "src": "public",
+      "followers": 140,
+      "new_followers": 0,
+      "posts": 0,
+      "reactions": 0,
+      "comments": 0,
+      "new_followers_since": "2026-11-26"
+     },
+     {
+      "name": "Studio Jam",
+      "slug": "studiojam",
+      "src": "public",
+      "followers": 273,
+      "new_followers": 0,
+      "posts": 0,
+      "reactions": 0,
+      "comments": 0,
+      "new_followers_since": "2026-11-26"
+     },
+     {
+      "name": "Urban Angles",
+      "slug": "urban-angles",
+      "src": "public",
+      "followers": 1600,
+      "new_followers": 0,
+      "posts": 0,
+      "reactions": 0,
+      "comments": 0,
+      "new_followers_since": "2026-11-26"
+     }
+    ]
+   },
+   "note_en": "LinkedIn's free plan lets DX Living track only 1 competitor (Solid Support). The 5 render studios (PREMIER3D, Harp Collective, Shadowlab, Studio Jam, Urban Angles) were read from public pages: no posts in the last 30 days. BASE3D has no LinkedIn page. DR values carried over from the last scan because the Ahrefs MCP tool is not signed in.",
+   "note_vi": "Gói LinkedIn miễn phí chỉ cho DX Living theo dõi 1 đối thủ (Solid Support). 5 studio render (PREMIER3D, Harp Collective, Shadowlab, Studio Jam, Urban Angles) đọc từ trang công khai: không có bài trong 30 ngày. BASE3D không có trang LinkedIn. DR giữ từ lần quét trước vì công cụ Ahrefs MCP chưa đăng nhập.",
+   "top_posts": [
+    {
+     "company": "Solid Support",
+     "age": "3d",
+     "format": "event/booth",
+     "react": 33,
+     "com": 2,
+     "rep": 1,
+     "text": "🏟️ We're in. Stand 7 is up at the MCG and ready for two big days. Hemang Panchal and Sanne Zwetsloot set up today for Project Controls Expo Australia, and the view from the stand isn't bad either. Th",
+     "tactic_vi": "Ảnh gian hàng sự kiện có tên người thật, đăng ngay ngày dựng.",
+     "tactic_en": "Event booth photo naming real staff, posted on set-up day."
+    },
+    {
+     "company": "Solid Support",
+     "age": "2d",
+     "format": "event/live",
+     "react": 20,
+     "com": 0,
+     "rep": 0,
+     "text": "Live from Stand 7, and it's buzzing. The team is in its element. Good conversations, sharp questions and a lot of interest in the new release of Asta Powerproject. Away from the stand, Daren Maynard p",
+     "tactic_vi": "Cập nhật trực tiếp từ sự kiện, gắn với bản phát hành mới.",
+     "tactic_en": "Live event update tied to a new product release."
+    },
+    {
+     "company": "Solid Support",
+     "age": "2w",
+     "format": "client story",
+     "react": 20,
+     "com": 0,
+     "rep": 1,
+     "text": "This week we visited a client in Sydney, delivering Forensic Planning training to their project team. Estimators, project coordinators and contract administrators all in one room, looking at how delay",
+     "tactic_vi": "Kể buổi đào tạo tại văn phòng khách hàng.",
+     "tactic_en": "Story of on-site training at a client's office."
+    }
+   ],
+   "web": {
+    "keywords": [
+     "3d architectural rendering melbourne"
+    ],
+    "sites": [
+     {
+      "domain": "dxliving.com",
+      "dr": 0,
+      "pos": {},
+      "you": true
+     },
+     {
+      "domain": "premier3d.com.au",
+      "dr": 13,
+      "pos": {
+       "3d architectural rendering melbourne": 1
+      },
+      "note": "Holds #1"
+     },
+     {
+      "domain": "harpcollective.com.au",
+      "dr": 4.1,
+      "pos": {
+       "3d architectural rendering melbourne": 2
+      },
+      "note": "Up from #5 to #2"
+     },
+     {
+      "domain": "base3d.com.au",
+      "dr": 1.4,
+      "pos": {
+       "3d architectural rendering melbourne": 3
+      },
+      "note": "Holds #3"
+     },
+     {
+      "domain": "shadowlab.com.au",
+      "dr": 0,
+      "pos": {
+       "3d architectural rendering melbourne": 4
+      },
+      "note": "Up from #8 to #4"
+     },
+     {
+      "domain": "avian.net.au",
+      "dr": 12,
+      "pos": {
+       "3d architectural rendering melbourne": 5
+      },
+      "note": "Down from #4 to #5"
+     },
+     {
+      "domain": "urbanangles.com",
+      "dr": 40,
+      "pos": {
+       "3d architectural rendering melbourne": 6
+      },
+      "note": "Holds #6"
+     },
+     {
+      "domain": "omegarender.com",
+      "dr": 47,
+      "pos": {
+       "3d architectural rendering melbourne": 7
+      },
+      "note": "Holds #7; strongest domain in the set (DR 47)"
+     },
+     {
+      "domain": "konan.com.au",
+      "dr": null,
+      "pos": {
+       "3d architectural rendering melbourne": 8
+      },
+      "note": "New in top results"
+     },
+     {
+      "domain": "cleanpix.com.au",
+      "dr": null,
+      "pos": {},
+      "note": "Dropped out of top results (was #2)"
+     },
+     {
+      "domain": "studiojam.com.au",
+      "dr": 10,
+      "pos": {},
+      "note": "Still outside top results"
+     }
+    ]
+   }
+  },
+  "fdx": {
+   "label": "FeelDX — construction project controls",
+   "linkedin": {
+    "window": "27 Oct – 25 Nov 2026",
+    "rows": [
+     {
+      "name": "FeelDX",
+      "slug": "feeldx",
+      "followers": 3145,
+      "new_followers": 9,
+      "new_followers_chg_pct": -67.9,
+      "posts": 14,
+      "posts_chg_pct": 55.6,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 47,
+      "reactions_chg_pct": 11.9,
+      "you": true
+     },
+     {
+      "name": "Hickory",
+      "slug": "hickory-aus",
+      "followers": 41679,
+      "new_followers": 324,
+      "new_followers_chg_pct": -26.5,
+      "posts": 4,
+      "posts_chg_pct": -50,
+      "comments": 24,
+      "comments_chg_pct": -7.7,
+      "reactions": 406,
+      "reactions_chg_pct": -47.5
+     },
+     {
+      "name": "Laminar Projects",
+      "slug": "laminarprojects",
+      "followers": 104728,
+      "new_followers": 301,
+      "new_followers_chg_pct": 5.6,
+      "posts": 4,
+      "posts_chg_pct": 0,
+      "comments": 2,
+      "comments_chg_pct": null,
+      "reactions": 139,
+      "reactions_chg_pct": 18.8
+     },
+     {
+      "name": "Solid Support Pty Ltd",
+      "slug": "solidsupportaustralia",
+      "followers": 3524,
+      "new_followers": 36,
+      "new_followers_chg_pct": 227.3,
+      "posts": 11,
+      "posts_chg_pct": 120,
+      "comments": 5,
+      "comments_chg_pct": -16.7,
+      "reactions": 184,
+      "reactions_chg_pct": 38.3
+     },
+     {
+      "name": "Water Infrastructure Services",
+      "slug": "water-infrastructure-services",
+      "followers": 751,
+      "new_followers": 28,
+      "new_followers_chg_pct": 40,
+      "posts": 0,
+      "posts_chg_pct": null,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 1,
+      "reactions_chg_pct": null
+     },
+     {
+      "name": "DX Living",
+      "slug": "dxliving",
+      "followers": 143,
+      "new_followers": 4,
+      "new_followers_chg_pct": -89.2,
+      "posts": 19,
+      "posts_chg_pct": -13.6,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 26,
+      "reactions_chg_pct": -33.3
+     },
+     {
+      "name": "VISUAL5D GROUP (V5D)",
+      "slug": "visual-5d",
+      "followers": 3642,
+      "new_followers": 3,
+      "new_followers_chg_pct": -62.5,
+      "posts": 2,
+      "posts_chg_pct": null,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 13,
+      "reactions_chg_pct": null
+     },
+     {
+      "name": "Greenwich Planning",
+      "slug": "greenwich-planning",
+      "followers": 185,
+      "new_followers": 1,
+      "new_followers_chg_pct": 0,
+      "posts": 0,
+      "posts_chg_pct": null,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 0,
+      "reactions_chg_pct": null
+     },
+     {
+      "name": "Time Planning & Programming",
+      "slug": "timeplanningau",
+      "followers": 644,
+      "new_followers": 1,
+      "new_followers_chg_pct": -93.3,
+      "posts": 0,
+      "posts_chg_pct": -100,
+      "comments": 0,
+      "comments_chg_pct": null,
+      "reactions": 0,
+      "reactions_chg_pct": -100
+     }
+    ]
+   },
+   "note_en": "Fluor Corporation (1.16M followers, 33 posts, 12.6K reactions) was removed from the table as a global corporation outside FeelDX's segment. DR values carried over (Ahrefs MCP not signed in).",
+   "note_vi": "Đã bỏ Fluor Corporation (1,16 triệu follower, 33 bài, 12,6K reaction) khỏi bảng vì là tập đoàn toàn cầu ngoài phân khúc FeelDX. DR giữ từ lần trước (Ahrefs MCP chưa đăng nhập).",
+   "top_posts": [
+    {
+     "company": "Hickory",
+     "age": "2w",
+     "format": "event/speakers",
+     "react": 131,
+     "com": 5,
+     "rep": 3,
+     "text": "Across two days, four members of our team will take to the stage at Melbourne Build Expo 2026, sharing their perspectives across modern methods of construction, buildability, the future of Melbourne a",
+     "tactic_vi": "Giới thiệu đội ngũ lên sân khấu sự kiện ngành tại Melbourne.",
+     "tactic_en": "Team speakers at a Melbourne industry event."
+    },
+    {
+     "company": "Hickory",
+     "age": "1d",
+     "format": "staff story",
+     "react": 113,
+     "com": 10,
+     "rep": 1,
+     "text": "Since joining Hickory as a Construction Graduate in 2018, Arthan Ioannou has worked across six projects and gained experience spanning structures, fit-out, services, design, handover and commissioning",
+     "tactic_vi": "Câu chuyện sự nghiệp một nhân viên, kể qua các dự án đã làm.",
+     "tactic_en": "One employee's career told through the projects they worked on."
+    },
+    {
+     "company": "Hickory",
+     "age": "4w",
+     "format": "new hire",
+     "react": 76,
+     "com": 7,
+     "rep": 1,
+     "text": "We’re pleased to welcome Katherine B. to Hickory as our new Chief Legal Officer. Katherine brings extensive experience across legal, compliance and risk management, built through senior leadership rol",
+     "tactic_vi": "Chào đón lãnh đạo mới bằng tên và kinh nghiệm.",
+     "tactic_en": "Welcoming a new executive by name and track record."
+    },
+    {
+     "company": "Laminar Projects",
+     "age": "2w",
+     "format": "thought leadership",
+     "react": 70,
+     "com": 1,
+     "rep": 8,
+     "text": "There’s a difference between being on a project and being part of it. An outside team is usually brought in for a defined scope, and the relationship is built around it: clear deliverables, clear boun",
+     "tactic_vi": "Bài quan điểm về vai trò đội tư vấn trong dự án; nhiều lượt chia sẻ (8).",
+     "tactic_en": "Opinion piece on the consultant's role in a project; strong reposts (8)."
+    },
+    {
+     "company": "Laminar Projects",
+     "age": "1w",
+     "format": "insight",
+     "react": 38,
+     "com": 0,
+     "rep": 4,
+     "text": "The opening date for your line is public. The access dates beneath it keep moving. With each slip, the systems programmes get compressed to protect your opening date. But reports stay green until test",
+     "tactic_vi": "Chỉ ra rủi ro tiến độ ẩn sau báo cáo 'xanh'.",
+     "tactic_en": "Exposes schedule risk hidden behind 'green' reports."
+    },
+    {
+     "company": "Solid Support",
+     "age": "3d",
+     "format": "event/booth",
+     "react": 33,
+     "com": 2,
+     "rep": 1,
+     "text": "🏟️ We're in. Stand 7 is up at the MCG and ready for two big days. Hemang Panchal and Sanne Zwetsloot set up today for Project Controls Expo Australia, and the view from the stand isn't bad either. Th",
+     "tactic_vi": "Ảnh gian hàng Project Controls Expo có tên người thật.",
+     "tactic_en": "Project Controls Expo booth photo naming real staff."
+    }
+   ],
+   "web": {
+    "keywords": [
+     "construction project controls consultants melbourne"
+    ],
+    "sites": [
+     {
+      "domain": "feeldx.com",
+      "dr": 0.7,
+      "pos": {},
+      "you": true
+     },
+     {
+      "domain": "totalpmo.com.au",
+      "dr": 15,
+      "pos": {
+       "construction project controls consultants melbourne": 1
+      },
+      "note": "Holds #1"
+     },
+     {
+      "domain": "connectpm.com.au",
+      "dr": 8,
+      "pos": {
+       "construction project controls consultants melbourne": 2
+      },
+      "note": "Holds #2"
+     },
+     {
+      "domain": "mastt.com",
+      "dr": 54,
+      "pos": {
+       "construction project controls consultants melbourne": 3
+      },
+      "note": "Holds #3; software vendor, strongest domain"
+     },
+     {
+      "domain": "lewiswoolcott.com",
+      "dr": 35,
+      "pos": {
+       "construction project controls consultants melbourne": 4
+      },
+      "note": "Holds #4"
+     },
+     {
+      "domain": "specialisedmg.com.au",
+      "dr": 3.3,
+      "pos": {
+       "construction project controls consultants melbourne": 5
+      },
+      "note": "Holds #5"
+     },
+     {
+      "domain": "touchprojects.com.au",
+      "dr": 7,
+      "pos": {
+       "construction project controls consultants melbourne": 6
+      },
+      "note": "Holds #6"
+     },
+     {
+      "domain": "kubri.com.au",
+      "dr": 4.5,
+      "pos": {
+       "construction project controls consultants melbourne": 7
+      },
+      "note": "Holds #7"
+     },
+     {
+      "domain": "laminarprojects.com",
+      "dr": 20,
+      "pos": {},
+      "note": "LinkedIn leader; not in Google top results"
+     },
+     {
+      "domain": "solidsupport.com.au",
+      "dr": 7,
+      "pos": {},
+      "note": "Asta reseller + planning services"
+     }
+    ]
+   }
+  }
+ },
+ "analysis": {
+  "by": "Claude (Mac)",
+  "summary": {
+   "verdict_vi": "Solid Support tiếp tục dẫn đà (+36 follower, +227,3%; 184 reaction) nhờ Project Controls Expo; DX Living vẫn đứng ở 4 follower mới, 26 reaction (−33,3%) và 0 bình luận.",
+   "verdict_en": "Solid Support kept its lead (+36 followers, +227.3%; 184 reactions) on the back of Project Controls Expo; DX Living stayed at 4 new followers, 26 reactions (−33.3%) and 0 comments.",
+   "text_vi": "Kỳ 27/10–25/11: Solid Support lên 36 follower mới (hôm trước 33) và 184 reaction (hôm trước 178); bài gian hàng MCG lên 33 reaction. Bài câu chuyện nhân viên của Hickory tăng từ 91 lên 113 reaction, 10 bình luận; Hickory tổng 406 reaction, 24 bình luận từ 4 bài. DX Living còn 19 bài, 26 reaction, 0 bình luận. Trên Google, harpcollective lên #2 và shadowlab lên #4 cho từ khoá render Melbourne, cleanpix rớt khỏi top; từ khoá project controls giữ nguyên thứ hạng 1–7.",
+   "text_en": "27 Oct–25 Nov: Solid Support rose to 36 new followers (from 33) and 184 reactions (from 178); its MCG booth post climbed to 33 reactions. Hickory's staff career story grew from 91 to 113 reactions and 10 comments; Hickory totals 406 reactions and 24 comments from 4 posts. DX Living is at 19 posts, 26 reactions, 0 comments. On Google, harpcollective rose to #2 and shadowlab to #4 for the Melbourne rendering query while cleanpix dropped out; the project controls query held positions 1–7.",
+   "actions_vi": [
+    "FeelDX: đăng một câu chuyện sự nghiệp nhân sự kể qua các dự án, như bài Hickory đạt 113 reaction, 10 bình luận.",
+    "DX Living: giảm số bài (19 bài chỉ 26 reaction), mỗi bài có người thật và kết bằng câu hỏi để có bình luận đầu tiên.",
+    "DX Living: làm trang đích \"3D rendering Melbourne\"; top 8 Google vẫn xáo trộn (harpcollective lên #2, cleanpix rớt khỏi top)."
+   ],
+   "actions_en": [
+    "FeelDX: post a staff career story told through projects, like Hickory's post with 113 reactions and 10 comments.",
+    "DX Living: post less (19 posts earned only 26 reactions); feature real people and end with a question to win first comments.",
+    "DX Living: build a \"3D rendering Melbourne\" landing page; Google's top 8 is still shifting (harpcollective up to #2, cleanpix out)."
+   ]
+  },
+  "dxl": {
+   "leaders_vi": [
+    "Solid Support: 36 follower mới (+227,3%), 184 reaction (+38,3%), 11 bài.",
+    "FeelDX (trang chị em): 9 follower mới, 47 reaction (+11,9%), 14 bài.",
+    "5 studio render (PREMIER3D, Harp, Shadowlab, Studio Jam, Urban Angles): 0 bài trong 30 ngày."
+   ],
+   "leaders_en": [
+    "Solid Support: 36 new followers (+227.3%), 184 reactions (+38.3%), 11 posts.",
+    "FeelDX (sister page): 9 new followers, 47 reactions (+11.9%), 14 posts.",
+    "5 render studios (PREMIER3D, Harp, Shadowlab, Studio Jam, Urban Angles): 0 posts in 30 days."
+   ],
+   "tactics_vi": [
+    "Ảnh gian hàng sự kiện có tên người thật (33 reaction).",
+    "Cập nhật trực tiếp từ sự kiện gắn với bản phát hành mới (20 reaction).",
+    "Kể buổi đào tạo tại khách hàng (20 reaction)."
+   ],
+   "tactics_en": [
+    "Named-people event booth photo (33 reactions).",
+    "Live event update tied to a new release (20 reactions).",
+    "Client on-site training story (20 reactions)."
+   ],
+   "apply_vi": [
+    "Đăng hậu trường Project 251 có người thật trên công trường, gắn tên người, thay cho render tĩnh.",
+    "Gộp bớt bài: 19 bài chỉ có 26 reaction, ưu tiên 2–3 bài/tuần chất lượng hơn."
+   ],
+   "apply_en": [
+    "Post Project 251 behind-the-scenes with named people on site instead of static renders.",
+    "Consolidate: 19 posts earned just 26 reactions; focus on 2–3 stronger posts a week."
+   ],
+   "opportunities_vi": [
+    "Các studio render đối thủ vẫn im lặng trên LinkedIn 30 ngày: DX Living có thể chiếm kênh này.",
+    "Top Google cho \"render Melbourne\" xáo trộn hằng ngày (harpcollective #5→#2, shadowlab #8→#4, cleanpix rớt khỏi top): một trang đích tốt có cơ hội chen vào."
+   ],
+   "opportunities_en": [
+    "Rival render studios remain silent on LinkedIn for 30 days: DX Living can own the channel.",
+    "Google's top results for \"rendering Melbourne\" reshuffle daily (harpcollective #5→#2, shadowlab #8→#4, cleanpix out): a strong landing page could break in."
+   ]
+  },
+  "fdx": {
+   "leaders_vi": [
+    "Hickory: 324 follower mới, 406 reaction, 24 bình luận từ 4 bài.",
+    "Laminar Projects: 301 follower mới, 139 reaction, 4 bài.",
+    "Solid Support: 36 follower mới (+227,3%), 184 reaction, 11 bài."
+   ],
+   "leaders_en": [
+    "Hickory: 324 new followers, 406 reactions, 24 comments from 4 posts.",
+    "Laminar Projects: 301 new followers, 139 reactions, 4 posts.",
+    "Solid Support: 36 new followers (+227.3%), 184 reactions, 11 posts."
+   ],
+   "tactics_vi": [
+    "Đội ngũ lên sân khấu sự kiện ngành (131 reaction).",
+    "Câu chuyện sự nghiệp một nhân viên qua 6 dự án (113 reaction, 10 bình luận).",
+    "Bài quan điểm về vai trò đội tư vấn, nhiều chia sẻ (70 reaction, 8 repost)."
+   ],
+   "tactics_en": [
+    "Team on stage at an industry event (131 reactions).",
+    "One employee's career across 6 projects (113 reactions, 10 comments).",
+    "Opinion piece on the consultant's role, widely reposted (70 reactions, 8 reposts)."
+   ],
+   "apply_vi": [
+    "Đăng câu chuyện một chuyên viên FeelDX kể qua các dự án đã kiểm soát tiến độ/chi phí.",
+    "Viết bài insight kiểu Laminar: rủi ro tiến độ ẩn sau báo cáo \"xanh\", có ví dụ dự án Úc."
+   ],
+   "apply_en": [
+    "Post a FeelDX specialist's story told through the projects they controlled.",
+    "Write a Laminar-style insight: schedule risk hidden behind \"green\" reports, with an Australian project example."
+   ],
+   "opportunities_vi": [
+    "FeelDX đăng 14 bài nhưng 0 bình luận: thêm câu hỏi mở cho dân project controls.",
+    "Thứ hạng Google cho \"project controls consultants melbourne\" đứng yên 1–7; feeldx.com chưa vào top, cần trang dịch vụ Melbourne riêng."
+   ],
+   "opportunities_en": [
+    "FeelDX posted 14 times with 0 comments: add open questions aimed at project controls professionals.",
+    "Google positions 1–7 for \"project controls consultants melbourne\" held steady; feeldx.com is not in the top results and needs a dedicated Melbourne service page."
+   ]
+  }
+ }
+}

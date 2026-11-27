@@ -9,7 +9,7 @@
  "windows": {
   "meta": "2026-10-29 → 2026-11-25",
   "youtube": "2026-10-29 → 2026-11-25",
-  "linkedin": "2026-10-26 → 2026-11-24 (30d)"
+  "linkedin": "2026-10-27 → 2026-11-25"
  },
  "facebook": {
   "followers": 119,
@@ -562,7 +562,7 @@
   "long_form_views": null,
   "top_videos": [
    {
-    "t": "Watch the Build Before It Begins",
+    "t": "Dx Living | Watch the Build Before It Begins",
     "views": 213,
     "minutes": null
    },
@@ -572,25 +572,25 @@
     "minutes": null
    },
    {
-    "t": "One Model for Every Conversation",
+    "t": "DX Living | One Model for Every Conversation",
     "views": 13,
     "minutes": null
    }
   ],
-  "source": "YouTube Studio (Chrome on Mac), live read 27 Nov"
+  "source": "YouTube Studio (Chrome on Mac)"
  },
  "linkedin": {
-  "source": "LinkedIn admin analytics (Chrome on Mac), live read 27 Nov; window 26 Oct – 24 Nov (30d)",
+  "source": "LinkedIn Page analytics (Chrome on Mac)",
   "stale": false,
   "followers": 143,
   "new_followers_28d": 4,
   "impressions": {
-   "v": 921,
-   "change_pct": -26.7
+   "v": 912,
+   "change_pct": -27.6
   },
   "reactions": {
-   "v": 27,
-   "change_pct": -28.9
+   "v": 26,
+   "change_pct": -33.3
   },
   "comments": {
    "v": 0,
@@ -602,7 +602,7 @@
   },
   "page_views": {
    "v": 32,
-   "change_pct": -61.0
+   "change_pct": -61
   },
   "unique_visitors": {
    "v": 12,
@@ -614,9 +614,22 @@
   "Per-post tables: 26 Nov counts reused for posts still in window (post list not re-scrollable in Business Suite)"
  ],
  "commentary": {
-  "vi": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
-  "en": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
-  "by": "daily run"
+  "vi": "So với 28 ngày trước, mọi kênh đều giảm: lượt xem Facebook −35,2%, tương tác Facebook −59,5%, lượt xem Instagram −43,5% và hiển thị LinkedIn −27,6%. Lượt xem YouTube 28 ngày lên 304 (hôm qua 252), chủ yếu từ video 'Watch the Build Before It Begins'. Follower giữ nguyên trên Facebook (119), Instagram (53) và LinkedIn (143). Nên dồn sức vào nội dung video vì đây là định dạng duy nhất đang tăng.",
+  "en": "Against the prior 28 days every channel is down: Facebook views −35.2%, Facebook interactions −59.5%, Instagram views −43.5% and LinkedIn impressions −27.6%. YouTube 28-day views rose to 304 (from 252), led by 'Watch the Build Before It Begins'. Followers held at 119 on Facebook, 53 on Instagram and 143 on LinkedIn. Lean into video, the only format growing.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả social kém: tương tác giảm khoảng 60% trên Facebook và Instagram so với kỳ trước.",
+  "verdict_en": "Social performance is weak: interactions are down about 60% on Facebook and Instagram versus the prior period.",
+  "actions_vi": [
+   "Cắt video 'Watch the Build Before It Begins' (213 lượt xem) thành Reels/Shorts cho Facebook và Instagram.",
+   "Đăng ít bài hơn nhưng có người thật và câu hỏi cuối bài để kéo lại tương tác Facebook (−59,5%).",
+   "Đăng hậu trường Project 251 trên LinkedIn để kéo lại lượt xem trang (−61%)."
+  ],
+  "actions_en": [
+   "Cut 'Watch the Build Before It Begins' (213 views) into Reels/Shorts for Facebook and Instagram.",
+   "Post less but feature real people and end with a question to recover Facebook interactions (−59.5%).",
+   "Share Project 251 behind-the-scenes on LinkedIn to win back page views (−61%)."
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -633,7 +646,7 @@
     "yt_subscribers": 8,
     "yt_views_28d": 304,
     "li_followers": 143,
-    "li_impressions": 921,
+    "li_impressions": 912,
     "change_pct_vs_prior_28d": {
      "fb_views": -35.2,
      "fb_viewers": -32.8,
@@ -644,9 +657,9 @@
      "ig_views": -43.5,
      "ig_reach": -19.8,
      "ig_interactions": -59.4,
-     "li_impressions": -26.7,
-     "li_reactions": -28.9,
-     "li_page_views": -61.0,
+     "li_impressions": -27.6,
+     "li_reactions": -33.3,
+     "li_page_views": -61,
      "li_unique_visitors": -65.7
     }
    },
@@ -685,7 +698,7 @@
   }
  },
  "notes": {
-  "vi": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921.",
-  "en": "fb_views 2704 → 2652; fb_interactions 112 → 62; fb_visits 254 → 248; ig_views 688 → 1022; ig_reach 260 → 260; ig_interactions 26 → 26; followers FB 119, IG 53, YT 8, LI 143 (unchanged); li_impressions 863 → 921."
+  "vi": "So với 28 ngày trước, mọi kênh đều giảm: lượt xem Facebook −35,2%, tương tác Facebook −59,5%, lượt xem Instagram −43,5% và hiển thị LinkedIn −27,6%. Lượt xem YouTube 28 ngày lên 304 (hôm qua 252), chủ yếu từ video 'Watch the Build Before It Begins'. Follower giữ nguyên trên Facebook (119), Instagram (53) và LinkedIn (143). Nên dồn sức vào nội dung video vì đây là định dạng duy nhất đang tăng.",
+  "en": "Against the prior 28 days every channel is down: Facebook views −35.2%, Facebook interactions −59.5%, Instagram views −43.5% and LinkedIn impressions −27.6%. YouTube 28-day views rose to 304 (from 252), led by 'Watch the Build Before It Begins'. Followers held at 119 on Facebook, 53 on Instagram and 143 on LinkedIn. Lean into video, the only format growing."
  }
 }
