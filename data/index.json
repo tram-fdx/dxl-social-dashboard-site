@@ -1,7 +1,7 @@
 {
  "site": "DX Living — social dashboard",
  "description": "Lịch sử snapshot dashboard social theo ngày / Daily social dashboard snapshot history. Mỗi ngày một file data/YYYY-MM-DD.json + bản HTML đóng băng archive/YYYY-MM-DD.html.",
- "latest": "2026-11-27",
+ "latest": "2026-11-28",
  "snapshots": [
   {
    "date": "2026-07-23",
@@ -625,6 +625,13 @@
    "report": "archive/2026-11-27.html",
    "label_vi": "Tương tác giảm mạnh, YouTube tăng lên 300 views",
    "label_en": "Engagement down sharply, YouTube up to 300 views"
+  },
+  {
+   "date": "2026-11-28",
+   "data": "data/2026-11-28.json",
+   "report": "archive/2026-11-28.html",
+   "label_vi": "FB views 2682 · IG reach 260 · LI impressions 863",
+   "label_en": "FB views 2682 · IG reach 260 · LI impressions 863"
   }
  ]
 }
