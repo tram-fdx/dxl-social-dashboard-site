@@ -8,7 +8,7 @@
  },
  "windows": {
   "meta": "2026-10-29 → 2026-11-25",
-  "youtube": "2026-10-29 → 2026-11-25",
+  "youtube": "2026-10-30 → 2026-11-26",
   "linkedin": "2026-10-29 → 2026-11-25"
  },
  "facebook": {
@@ -560,10 +560,10 @@
  },
  "youtube": {
   "subscribers": 8,
-  "subscribers_net_28d": 1,
+  "subscribers_net_28d": 0,
   "videos": null,
   "views_28d": {
-   "v": 252,
+   "v": 300,
    "change_pct": null
   },
   "watch_time_hours": 0.3,
@@ -571,18 +571,18 @@
   "long_form_views": null,
   "top_videos": [
    {
-    "t": "Watch the Build Before It Begins",
+    "t": "Dx Living | Watch the Build Before It Begins",
     "views": 213,
     "minutes": null
    },
    {
-    "t": "One Model for Every Conversation",
-    "views": 13,
+    "t": "Project 251 | The scaffold comes down on the western facade",
+    "views": 54,
     "minutes": null
    },
    {
-    "t": "Is the Project Where It Should Be?",
-    "views": 7,
+    "t": "DX Living | One Model for Every Conversation",
+    "views": 13,
     "minutes": null
    }
   ],
@@ -620,9 +620,22 @@
  },
  "errors": [],
  "commentary": {
-  "vi": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
-  "en": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
-  "by": "template"
+  "vi": "So với 28 ngày trước, Facebook giảm mạnh: views -35,2%, tương tác -64,9%, lượt ghé trang -62,4%. Instagram views gần như giữ (-1,7%) nhưng tương tác -59,4%; LinkedIn page views -64,6%. YouTube là điểm sáng với 300 views trong 28 ngày (252 lần trước).",
+  "en": "Versus the prior 28 days, Facebook fell sharply: views -35.2%, interactions -64.9%, page visits -62.4%. Instagram views held (-1.7%) but interactions dropped 59.4%; LinkedIn page views fell 64.6%. YouTube is the bright spot at 300 views in 28 days (252 last time).",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Hiệu quả social giảm rõ so với kỳ trước, trừ YouTube.",
+  "verdict_en": "Social performance is clearly down on the prior period, except YouTube.",
+  "actions_vi": [
+   "Tăng tần suất đăng và thêm câu hỏi/CTA để kéo lại tương tác Facebook (-64,9%) và Instagram (-59,4%)",
+   "Cắt video YouTube đang tốt thành Reels/Shorts cho Facebook và Instagram",
+   "Đăng đều trên LinkedIn để phục hồi page views (-64,6%)"
+  ],
+  "actions_en": [
+   "Post more often with questions/CTAs to recover Facebook (-64.9%) and Instagram (-59.4%) interactions",
+   "Cut the performing YouTube videos into Reels/Shorts for Facebook and Instagram",
+   "Post consistently on LinkedIn to rebuild page views (-64.6%)"
+  ]
  },
  "commentary_input": {
   "report": "Social media",
@@ -637,7 +650,7 @@
     "ig_reach": 260,
     "ig_interactions": 26,
     "yt_subscribers": 8,
-    "yt_views_28d": 252,
+    "yt_views_28d": 300,
     "li_followers": 143,
     "li_impressions": 863,
     "change_pct_vs_prior_28d": {
@@ -692,7 +705,7 @@
   }
  },
  "notes": {
-  "vi": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26.",
-  "en": "fb_followers 119 → 119; fb_views 2704 → 2652; fb_interactions 112 → 106; fb_visits 254 → 248; ig_followers 53 → 53; ig_views 688 → 676; ig_reach 260 → 260; ig_interactions 26 → 26."
+  "vi": "So với 28 ngày trước, Facebook giảm mạnh: views -35,2%, tương tác -64,9%, lượt ghé trang -62,4%. Instagram views gần như giữ (-1,7%) nhưng tương tác -59,4%; LinkedIn page views -64,6%. YouTube là điểm sáng với 300 views trong 28 ngày (252 lần trước).",
+  "en": "Versus the prior 28 days, Facebook fell sharply: views -35.2%, interactions -64.9%, page visits -62.4%. Instagram views held (-1.7%) but interactions dropped 59.4%; LinkedIn page views fell 64.6%. YouTube is the bright spot at 300 views in 28 days (252 last time)."
  }
 }
